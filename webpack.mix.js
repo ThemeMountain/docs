@@ -8,6 +8,7 @@ let AfterBuild = require('on-build-webpack');
 let BrowserSync = require('browser-sync');
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let Watch = require('webpack-watch');
+let SearchIndex = require('./tasks/search-index');
 
 const env = argv.e || argv.env || 'local';
 const port = argv.p || argv.port || 3000;
@@ -25,6 +26,8 @@ let plugins = [
 
             command.get(jigsaw.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
                 console.log(error ? stderr : stdout);
+
+                SearchIndex.rebuild();
 
                 if (browserSyncInstance) {
                     browserSyncInstance.reload();
@@ -56,8 +59,3 @@ let plugins = [
 mix.webpackConfig({ plugins });
 mix.disableNotifications();
 mix.setPublicPath('source');
-
-
-mix.js('source/_assets/js/main.js', 'js/')
-    .sass('source/_assets/sass/main.scss', 'css/')
-    .version();

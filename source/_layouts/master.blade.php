@@ -2,11 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <title>{{ $page->title ? $page->title . ' - DocsFlow' : 'DocsFlow - A Jigsaw-powered Documentation Generator' }}</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+        <meta name="author" content="ThemeMountain">
+        <meta name="description" content="{{ $page->description ?? '' }}">
+        <meta name="keywords" content="{{ $page->keywords ?? '' }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-        @yield('body')
+        @yield('content')
     </body>
 </html>

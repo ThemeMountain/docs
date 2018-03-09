@@ -1,3 +1,9 @@
+---
+title: "Main page"
+description: "'tis the main page, this!"
+keywords: main, home, index
+---
+
 @extends('_layouts.master')
 
 @section('body')
