@@ -3,5 +3,10 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'collections' => [],
+    'pretty' => true,
+    'collections' => [
+        'docs' => [
+            'path' =>'{filename}',
+        ]
+    ],
 ];

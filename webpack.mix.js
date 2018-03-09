@@ -1,4 +1,3 @@
-let config = require('./config');
 let fs = require('fs');
 let argv = require('yargs').argv;
 let command = require('node-cmd');
@@ -9,24 +8,28 @@ let AfterBuild = require('on-build-webpack');
 let BrowserSync = require('browser-sync');
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let Watch = require('webpack-watch');
-let SearchIndex = require('./tasks/search-index');
 
 const env = argv.e || argv.env || 'local';
 const port = argv.p || argv.port || 3000;
 
+let config;
 let browserSyncInstance;
 
 let plugins = [
     new AfterBuild(() => {
 
-        command.get(jigsaw.path() + ' build ' + env, (error, stdout, stderr) => {
-            console.log(error ? stderr : stdout);
+        command.get('php tasks/getconfig -e' + env, (error, stdout, stderr) => {
+            config = error ? null : JSON.parse(stdout);
 
-            SearchIndex.rebuild();
+            let pretty = (typeof config !== 'undefined' && config.pretty == false) ? '--pretty=false ' : '';
 
-            if (browserSyncInstance) {
-                browserSyncInstance.reload();
-            }
+            command.get(jigsaw.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
+                console.log(error ? stderr : stdout);
+
+                if (browserSyncInstance) {
+                    browserSyncInstance.reload();
+                }
+            });
         });
 
     }),
