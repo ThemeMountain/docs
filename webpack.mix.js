@@ -19,7 +19,7 @@ let browserSyncInstance
 let plugins = [
     new AfterBuild(() => {
 
-        command.get('php tasks/php/getconfig -e' + env, (error, stdout, stderr) => {
+        command.get('php tasks/php/config -e' + env, (error, stdout, stderr) => {
             if (error) {
                 console.log(stderr)
                 process.exit(1)
