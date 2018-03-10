@@ -2,13 +2,13 @@ let fs = require('fs')
 let argv = require('yargs').argv
 let command = require('node-cmd')
 let mix = require('laravel-mix')
-let jigsaw = require('./tasks/bin')
+let jigsaw = require('./tasks/js/bin')
 
 let AfterBuild = require('on-build-webpack')
 let BrowserSync = require('browser-sync')
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 let Watch = require('webpack-watch')
-let SearchIndex = require('./tasks/search-index')
+let SearchIndex = require('./tasks/js/search-index')
 
 const env = argv.e || argv.env || 'local'
 const port = argv.p || argv.port || 3000
