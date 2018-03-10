@@ -10,6 +10,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
-        @yield('content')
+        <aside>Sidebar Nav</aside>
+
+        <main class="main">
+            @yield('content')
+        </main>
+
+        <footer class="footer">
+            <p>Tha footer</p>
+        </footer>
     </body>
 </html>

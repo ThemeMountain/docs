@@ -1,4 +1,4 @@
-let fs = require('fs')
+let fs = require('fs-extra')
 let argv = require('yargs').argv
 let command = require('node-cmd')
 let mix = require('laravel-mix')
@@ -8,7 +8,7 @@ let AfterBuild = require('on-build-webpack')
 let BrowserSync = require('browser-sync')
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 let Watch = require('webpack-watch')
-let SearchIndex = require('./tasks/js/search-index')
+let Search = require('./tasks/js/search-index')
 
 const env = argv.e || argv.env || 'local'
 const port = argv.p || argv.port || 3000
@@ -32,7 +32,7 @@ let plugins = [
             command.get(jigsaw.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
                 console.log(error ? stderr : stdout)
 
-                SearchIndex.rebuild()
+                Search.buildIndexes()
 
                 if (browserSyncInstance) {
                     browserSyncInstance.reload()

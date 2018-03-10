@@ -1,8 +1,8 @@
 ---
 extends: _layouts.master
-title: "Getting Started"
-description: "Getting started with this product"
-keywords: getting, asdflj, gntu, NEWWWW
+title: Getting Started
+description: Getting started with this product
+keywords: email
 ---
 
 # Heading 1

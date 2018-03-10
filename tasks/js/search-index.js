@@ -1,45 +1,65 @@
-let fs = require('fs');
-let path = require('path');
-let glob = require("glob-all");
-let cheerio = require('cheerio');
-let argv = require('yargs').argv;
+let fs = require('fs-extra')
+let path = require('path')
+let glob = require("glob-all")
+let cheerio = require('cheerio')
+let argv = require('yargs').argv
+let command = require('node-cmd')
+let plaintext = require('html2plaintext')
 
-const env = argv.e || argv.env || 'local';
+const env = argv.e || argv.env || 'local'
 
-module.exports = {
-    rebuild: function() {
+truncate = (str, max) => {
+  return str.length > max ? str.substr(0, max-1) : str
+}
 
-        const build_path = 'build_' + env;
-
-        let data = [];
-        let files = glob.sync([build_path+"/**/*.html"]);
-
-        if(files) {
-            files.forEach((file) => {
-
-                let key = path.parse(file)['dir'].split('/').pop();
-                let $ = cheerio.load( fs.readFileSync(file) );
-
-                key = key == build_path ? 'home' : key;
-
-                data.push({
-                    title: $('title').text(),
-                    description: $('meta[name="description"]').attr('content'),
-                    keywords: $('meta[name="keywords"]').attr('content')
-                });
-
-                 const json = JSON.stringify(data, null, false ? 0 : 2);
-                 const out = fs.openSync('source/_data/search-index.json', 'w+');
-                 fs.writeSync(out, json + '\n');
-                 fs.closeSync(out);
-
-            })
+module.exports.buildIndexes = () => {
+    command.get('php tasks/php/config -e' + env, (error, stdout, stderr) => {
+        if (error) {
+            console.log(stderr)
+            process.exit(1)
         }
 
-        if (!fs.existsSync(build_path + '/data')){
-            fs.mkdirSync(build_path + '/data');
-        }
-        fs.copyFileSync('source/_data/search-index.json', build_path + '/data/search-index.json');
+        const config = JSON.parse(stdout)
+        const build_path = config.build.destination
 
-    }
-};
+        let data = []
+        let folders = fs.readdirSync(build_path).filter(f => fs.statSync(path.join(build_path, f)).isDirectory())
+
+        folders.forEach(folder => {
+
+            let files = glob.sync([build_path + '/' + folder + '/**/*.html'])
+            let indexFile = build_path + '/' + folder + '/data/search-index.json'
+
+            fs.outputFile(indexFile, '')
+                .then(() => {
+
+                    files.forEach(file => {
+
+                        let out = fs.openSync(indexFile, 'w+')
+                        let $ = cheerio.load( fs.readFileSync(file) )
+
+                        data.push({
+                            title: $('title').text(),
+                            description: $('meta[name="description"]').attr('content'),
+                            keywords: $('meta[name="keywords"]').attr('content'),
+                            preview: truncate( plaintext($('main').text()), 100).trim()
+                        });
+
+                        let json = JSON.stringify(data, null, false ? 0 : 2)
+                        fs.writeSync(out, json + '\n')
+                        fs.closeSync(out)
+
+                    })
+
+                    data = []
+
+                })
+                .catch(err => {
+                    console.error(err)
+                })
+
+        })
+
+    })
+
+}
