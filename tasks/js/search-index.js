@@ -28,14 +28,15 @@ module.exports.buildIndexes = () => {
         folders.forEach(folder => {
 
             let files = glob.sync([build_path + '/' + folder + '/**/*.html'])
-            let indexFile = build_path + '/' + folder + '/data/search-index.json'
+            let indexJSON = build_path + '/' + folder + '/data/search-index.json'
+            let indexJS = build_path + '/' + folder + '/data/search-index.js'
 
-            fs.outputFile(indexFile, '')
+            fs.outputFile(indexJSON, '')
                 .then(() => {
 
                     files.forEach(file => {
 
-                        let out = fs.openSync(indexFile, 'w+')
+                        let out = fs.openSync(indexJSON, 'w+')
                         let $ = cheerio.load( fs.readFileSync(file) )
 
                         data.push({
@@ -53,6 +54,9 @@ module.exports.buildIndexes = () => {
 
                     data = []
 
+                })
+                .then(() => {
+                    fs.outputFile(indexJS, 'const data = ' + fs.readFileSync(indexJSON))
                 })
                 .catch(err => {
                     console.error(err)
