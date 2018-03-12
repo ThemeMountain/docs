@@ -1,8 +1,8 @@
 ---
-extends: _layouts.master
+extends: _layouts.email
 title: Getting Started
-description: Getting started with this product
-keywords: email
+description: Getting started with this email template
+keywords: email, introduction, start
 ---
 
 # Heading 1

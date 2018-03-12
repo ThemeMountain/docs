@@ -1,8 +1,8 @@
 ---
-extends: _layouts.master
-title: "System Requirements"
-description: "Sys reqs for DocsFlow development"
-keywords: email
+extends: _layouts.email
+title: System Requirements
+description: Sys reqs for DocsFlow development
+keywords: email, system, required, software
 ---
 
 # PHP

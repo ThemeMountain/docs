@@ -1,14 +1,16 @@
-let fs = require('fs-extra')
-let argv = require('yargs').argv
-let command = require('node-cmd')
-let mix = require('laravel-mix')
-let jigsaw = require('./tasks/js/bin')
+const fs = require('fs-extra')
+const argv = require('yargs').argv
+const command = require('node-cmd')
+const mix = require('laravel-mix')
+const jigsaw = require('./tasks/js/bin')
+const tailwind = require('tailwindcss')
+require('laravel-mix-purgecss')
 
-let AfterBuild = require('on-build-webpack')
-let BrowserSync = require('browser-sync')
-let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-let Watch = require('webpack-watch')
-let Search = require('./tasks/js/search-index')
+const AfterBuild = require('on-build-webpack')
+const BrowserSync = require('browser-sync')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const Watch = require('webpack-watch')
+const Search = require('./tasks/js/search-index')
 
 const env = argv.e || argv.env || 'local'
 const port = argv.p || argv.port || 3000
@@ -16,7 +18,7 @@ const port = argv.p || argv.port || 3000
 let config
 let browserSyncInstance
 
-let plugins = [
+const plugins = [
     new AfterBuild(() => {
 
         command.get('php tasks/php/config -e' + env, (error, stdout, stderr) => {
@@ -45,7 +47,7 @@ let plugins = [
     new BrowserSyncPlugin({
         proxy: null,
         port: port,
-        server: { baseDir: 'build_' + env },
+        server: { baseDir: 'builds/' + env },
         notify: false,
     },
     {
@@ -59,8 +61,22 @@ let plugins = [
         paths: ['source/**/*.md', 'source/**/*.php', '*.php', '*.js'],
         options: { ignoreInitial: true }
     }),
-];
+]
 
 mix.webpackConfig({ plugins })
 mix.disableNotifications()
-mix.setPublicPath('source')
+mix.setPublicPath('source/assets/')
+
+mix.sass('source/_assets/sass/main.scss', 'css/')
+    .options({
+        processCssUrls: false,
+        postCss: [
+          tailwind('tailwind.js'),
+        ]
+      })
+    .purgeCss({
+        globs: [
+            path.join(__dirname, "source/**/*.blade.php"),
+        ],
+    })
+    .version()

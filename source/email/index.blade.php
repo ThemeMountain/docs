@@ -6,7 +6,7 @@ keywords: email
 
 @extends('_layouts.master')
 
-@section('content')
+@section('body')
 <h1>TM Email Templates</h1>
 
     <ul>

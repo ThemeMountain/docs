@@ -1,10 +1,10 @@
-let fs = require('fs-extra')
-let path = require('path')
-let glob = require("glob-all")
-let cheerio = require('cheerio')
-let argv = require('yargs').argv
-let command = require('node-cmd')
-let plaintext = require('html2plaintext')
+const fs = require('fs-extra')
+const path = require('path')
+const glob = require('glob-all')
+const cheerio = require('cheerio')
+const argv = require('yargs').argv
+const command = require('node-cmd')
+const plaintext = require('html2plaintext')
 
 const env = argv.e || argv.env || 'local'
 
@@ -31,36 +31,40 @@ module.exports.buildIndexes = () => {
             let indexJSON = build_path + '/' + folder + '/data/search-index.json'
             let indexJS = build_path + '/' + folder + '/data/search-index.js'
 
-            fs.outputFile(indexJSON, '')
-                .then(() => {
+            if (files.length) {
 
-                    files.forEach(file => {
+                fs.outputFile(indexJSON, '')
+                    .then(() => {
 
-                        let out = fs.openSync(indexJSON, 'w+')
-                        let $ = cheerio.load( fs.readFileSync(file) )
+                        files.forEach(file => {
 
-                        data.push({
-                            title: $('title').text(),
-                            description: $('meta[name="description"]').attr('content'),
-                            keywords: $('meta[name="keywords"]').attr('content'),
-                            preview: truncate( plaintext($('main').text()), 100).trim()
-                        });
+                            let out = fs.openSync(indexJSON, 'w+')
+                            let $ = cheerio.load( fs.readFileSync(file) )
 
-                        let json = JSON.stringify(data, null, false ? 0 : 2)
-                        fs.writeSync(out, json + '\n')
-                        fs.closeSync(out)
+                            data.push({
+                                title: $('title').text(),
+                                description: $('meta[name="description"]').attr('content'),
+                                keywords: $('meta[name="keywords"]').attr('content'),
+                                preview: truncate( plaintext($('main').text()), 100).trim()
+                            });
+
+                            let json = JSON.stringify(data, null, false ? 0 : 2)
+                            fs.writeSync(out, json + '\n')
+                            fs.closeSync(out)
+
+                        })
+
+                        data = []
 
                     })
+                    .then(() => {
+                        fs.outputFile(indexJS, 'const data = ' + fs.readFileSync(indexJSON))
+                    })
+                    .catch(err => {
+                        console.error(err)
+                    })
 
-                    data = []
-
-                })
-                .then(() => {
-                    fs.outputFile(indexJS, 'const data = ' + fs.readFileSync(indexJSON))
-                })
-                .catch(err => {
-                    console.error(err)
-                })
+            }
 
         })
 

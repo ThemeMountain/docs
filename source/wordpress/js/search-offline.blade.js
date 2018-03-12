@@ -1,1 +1,0 @@
-const searchIndex = {!! $page->searchIndex !!}

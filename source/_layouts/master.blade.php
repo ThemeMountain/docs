@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ $page->title ? $page->title . ' - DocsFlow' : 'DocsFlow - A Jigsaw-powered Documentation Generator' }}</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-        <meta name="author" content="ThemeMountain">
-        <meta name="description" content="{{ $page->description ?? '' }}">
-        <meta name="keywords" content="{{ $page->keywords ?? '' }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
-    <body>
-        <aside>Sidebar Nav</aside>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ $page->title ? $page->title . ' - ThemeMountain Documentation' : 'Home - ThemeMountain Documentation' }}</title>
+  @yield('meta')
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="{{ mix('/css/main.css') }}">
+</head>
+<body class="font-source-sans bg-pink-lightest font-normal text-black leading-normal">
 
-        <main class="main">
-            @yield('content')
-        </main>
+@yield('body')
 
-        <footer class="footer">
-            <p>Tha footer</p>
-        </footer>
-    </body>
+@stack('scripts')
+
+</body>
 </html>
