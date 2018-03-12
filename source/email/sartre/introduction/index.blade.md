@@ -1,8 +1,8 @@
 ---
-extends: _layouts.email
+extends: _layouts.documentation
 title: Getting Started
 description: Getting started with this email template
-keywords: email, introduction, start
+tags: email, introduction, start
 ---
 
 # Heading 1

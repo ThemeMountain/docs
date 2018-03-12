@@ -193,12 +193,26 @@ module.exports = {
   */
 
   fonts: {
-    'sans': [
+    'hind-madurai': [
+      '"Hind Madurai"',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
       'Segoe UI',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
+    ],
+    'sans-serif': [
       'Roboto',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '-apple-system',
+      'Segoe UI',
       'Oxygen',
       'Ubuntu',
       'Cantarell',
@@ -629,6 +643,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
   },
 
 
@@ -657,6 +672,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
   },
 
 
@@ -820,7 +836,7 @@ module.exports = {
     borderColors: ['responsive', 'hover'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
-    borderWidths: ['responsive'],
+    borderWidths: ['responsive', 'hover'],
     cursor: ['responsive'],
     display: ['responsive'],
     flexbox: ['responsive'],
@@ -842,7 +858,7 @@ module.exports = {
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive'],
+    shadows: ['responsive', 'hover'],
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],

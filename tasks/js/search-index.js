@@ -45,7 +45,7 @@ module.exports.buildIndexes = () => {
                                 title: $('title').text(),
                                 description: $('meta[name="description"]').attr('content'),
                                 keywords: $('meta[name="keywords"]').attr('content'),
-                                preview: truncate( plaintext($('main').text()), 100).trim()
+                                preview: truncate( plaintext($('.content').text()), 100).trim()
                             });
 
                             let json = JSON.stringify(data, null, false ? 0 : 2)
