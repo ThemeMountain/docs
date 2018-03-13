@@ -22,6 +22,7 @@ return [
 
         'email' => [
             'theme' => 'green',
+
             'sartre' => [
                 'theme' => 'purple'
             ],
@@ -130,8 +131,4 @@ return [
 
     'baseUrl' => '',
     'production' => false,
-    'build' => [
-        'source' => 'source',
-        'destination' => 'builds/local',
-    ],
 ];

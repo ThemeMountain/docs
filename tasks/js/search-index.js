@@ -20,7 +20,7 @@ module.exports.buildIndexes = () => {
         }
 
         const config = JSON.parse(stdout)
-        const build_path = config.build.destination
+        const build_path = 'build_' + env
 
         let data = []
         let folders = fs.readdirSync(build_path).filter(f => fs.statSync(path.join(build_path, f)).isDirectory())
