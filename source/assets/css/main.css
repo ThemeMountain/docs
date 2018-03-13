@@ -672,6 +672,10 @@ a {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -1355,6 +1359,10 @@ a {
 
 .bg-repeat-y {
   background-repeat: repeat-y;
+}
+
+.bg-auto {
+  background-size: auto;
 }
 
 .bg-cover {
@@ -2377,6 +2385,14 @@ a {
   cursor: pointer;
 }
 
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -2641,7 +2657,7 @@ a {
   font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.font-sans-serif {
+.font-sans {
   font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -3453,14 +3469,20 @@ a {
   overflow: scroll;
 }
 
-.overflow-x-scroll {
+.overflow-x-auto {
   overflow-x: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .overflow-y-scroll {
-  overflow-y: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
 }
 
 .scrolling-touch {
@@ -3763,6 +3785,11 @@ a {
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .pin-none {
@@ -4523,7 +4550,7 @@ a {
   font-style: italic;
 }
 
-.roman {
+.not-italic {
   font-style: normal;
 }
 
@@ -4569,7 +4596,7 @@ a {
   font-style: italic;
 }
 
-.hover\:roman:hover {
+.hover\:not-italic:hover {
   font-style: normal;
 }
 
@@ -5501,6 +5528,10 @@ a {
 
   .sm\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .sm\:bg-auto {
+    background-size: auto;
   }
 
   .sm\:bg-cover {
@@ -6523,6 +6554,14 @@ a {
     cursor: pointer;
   }
 
+  .sm\:cursor-wait {
+    cursor: wait;
+  }
+
+  .sm\:cursor-move {
+    cursor: move;
+  }
+
   .sm\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -6787,7 +6826,7 @@ a {
     font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  .sm\:font-sans-serif {
+  .sm\:font-sans {
     font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
@@ -7599,14 +7638,20 @@ a {
     overflow: scroll;
   }
 
-  .sm\:overflow-x-scroll {
+  .sm\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .sm\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .sm\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .sm\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .sm\:scrolling-touch {
@@ -7909,6 +7954,11 @@ a {
 
   .sm\:relative {
     position: relative;
+  }
+
+  .sm\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .sm\:pin-none {
@@ -8661,7 +8711,7 @@ a {
     font-style: italic;
   }
 
-  .sm\:roman {
+  .sm\:not-italic {
     font-style: normal;
   }
 
@@ -8707,7 +8757,7 @@ a {
     font-style: italic;
   }
 
-  .sm\:hover\:roman:hover {
+  .sm\:hover\:not-italic:hover {
     font-style: normal;
   }
 
@@ -9640,6 +9690,10 @@ a {
 
   .md\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .md\:bg-auto {
+    background-size: auto;
   }
 
   .md\:bg-cover {
@@ -10662,6 +10716,14 @@ a {
     cursor: pointer;
   }
 
+  .md\:cursor-wait {
+    cursor: wait;
+  }
+
+  .md\:cursor-move {
+    cursor: move;
+  }
+
   .md\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -10926,7 +10988,7 @@ a {
     font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  .md\:font-sans-serif {
+  .md\:font-sans {
     font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
@@ -11738,14 +11800,20 @@ a {
     overflow: scroll;
   }
 
-  .md\:overflow-x-scroll {
+  .md\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .md\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .md\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .md\:scrolling-touch {
@@ -12048,6 +12116,11 @@ a {
 
   .md\:relative {
     position: relative;
+  }
+
+  .md\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .md\:pin-none {
@@ -12800,7 +12873,7 @@ a {
     font-style: italic;
   }
 
-  .md\:roman {
+  .md\:not-italic {
     font-style: normal;
   }
 
@@ -12846,7 +12919,7 @@ a {
     font-style: italic;
   }
 
-  .md\:hover\:roman:hover {
+  .md\:hover\:not-italic:hover {
     font-style: normal;
   }
 
@@ -13779,6 +13852,10 @@ a {
 
   .lg\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .lg\:bg-auto {
+    background-size: auto;
   }
 
   .lg\:bg-cover {
@@ -14801,6 +14878,14 @@ a {
     cursor: pointer;
   }
 
+  .lg\:cursor-wait {
+    cursor: wait;
+  }
+
+  .lg\:cursor-move {
+    cursor: move;
+  }
+
   .lg\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -15065,7 +15150,7 @@ a {
     font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  .lg\:font-sans-serif {
+  .lg\:font-sans {
     font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
@@ -15877,14 +15962,20 @@ a {
     overflow: scroll;
   }
 
-  .lg\:overflow-x-scroll {
+  .lg\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .lg\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .lg\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .lg\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .lg\:scrolling-touch {
@@ -16187,6 +16278,11 @@ a {
 
   .lg\:relative {
     position: relative;
+  }
+
+  .lg\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .lg\:pin-none {
@@ -16939,7 +17035,7 @@ a {
     font-style: italic;
   }
 
-  .lg\:roman {
+  .lg\:not-italic {
     font-style: normal;
   }
 
@@ -16985,7 +17081,7 @@ a {
     font-style: italic;
   }
 
-  .lg\:hover\:roman:hover {
+  .lg\:hover\:not-italic:hover {
     font-style: normal;
   }
 
@@ -17918,6 +18014,10 @@ a {
 
   .xl\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .xl\:bg-auto {
+    background-size: auto;
   }
 
   .xl\:bg-cover {
@@ -18940,6 +19040,14 @@ a {
     cursor: pointer;
   }
 
+  .xl\:cursor-wait {
+    cursor: wait;
+  }
+
+  .xl\:cursor-move {
+    cursor: move;
+  }
+
   .xl\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -19204,7 +19312,7 @@ a {
     font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  .xl\:font-sans-serif {
+  .xl\:font-sans {
     font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
@@ -20016,14 +20124,20 @@ a {
     overflow: scroll;
   }
 
-  .xl\:overflow-x-scroll {
+  .xl\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .xl\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .xl\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .xl\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .xl\:scrolling-touch {
@@ -20326,6 +20440,11 @@ a {
 
   .xl\:relative {
     position: relative;
+  }
+
+  .xl\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .xl\:pin-none {
@@ -21078,7 +21197,7 @@ a {
     font-style: italic;
   }
 
-  .xl\:roman {
+  .xl\:not-italic {
     font-style: normal;
   }
 
@@ -21124,7 +21243,7 @@ a {
     font-style: italic;
   }
 
-  .xl\:hover\:roman:hover {
+  .xl\:hover\:not-italic:hover {
     font-style: normal;
   }
 

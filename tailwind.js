@@ -24,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-let defaultConfig = require('tailwindcss/defaultConfig')()
+// let defaultConfig = require('tailwindcss/defaultConfig')()
 
 
 /*
@@ -207,7 +207,7 @@ module.exports = {
       'Helvetica Neue',
       'sans-serif',
     ],
-    'sans-serif': [
+    'sans': [
       'Roboto',
       'system-ui',
       'BlinkMacSystemFont',
@@ -373,6 +373,26 @@ module.exports = {
   */
 
   backgroundColors: colors,
+
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Background sizes               https://tailwindcss.com/docs/background-size
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your background sizes. We provide some common
+  | values that are useful in most projects, but feel free to add other sizes
+  | that are specific to your project here as well.
+  |
+  | Class name: .bg-{size}
+  |
+  */
+
+  backgroundSize: {
+    'auto': 'auto',
+    'cover': 'cover',
+    'contain': 'contain',
+  },
 
 
   /*
@@ -821,7 +841,12 @@ module.exports = {
   | Here is where you control which modules are generated and what variants are
   | generated for each of those modules.
   |
-  | Currently supported variants: 'responsive', 'hover', 'focus', 'group-hover'
+  | Currently supported variants:
+  |   - responsive
+  |   - hover
+  |   - focus
+  |   - active
+  |   - group-hover
   |
   | To disable a module completely, use `false` instead of an array.
   |
@@ -881,15 +906,21 @@ module.exports = {
   | Plugins                                https://tailwindcss.com/docs/plugins
   |-----------------------------------------------------------------------------
   |
-  | Here is where you can register any additional plugins you'd like to use in
-  | your project.
+  | Here is where you can register any plugins you'd like to use in your
+  | project. Tailwind's built-in `container` plugin is enabled by default to
+  | give you a Bootstrap-style responsive container component out of the box.
   |
   | Be sure to view the complete plugin documentation to learn more about how
   | the plugin system works.
   |
   */
 
-  plugins: [],
+  plugins: [
+    require('tailwindcss/plugins/container')({
+      center: true,
+      padding: '1rem',
+    }),
+  ],
 
 
   /*

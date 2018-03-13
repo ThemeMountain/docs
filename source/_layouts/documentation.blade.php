@@ -2,7 +2,7 @@
 
 @section('body')
 
-<body class="font-sans-serif font-normal text-black leading-normal">
+<body class="font-sans font-normal text-black leading-normal">
 
     <main>
         @yield('content')

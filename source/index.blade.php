@@ -7,14 +7,14 @@ tags: main, home, index
 
 @section('body')
 
-<body class="bg-grey-lighter font-sans-serif font-normal text-black leading-normal">
+<body class="bg-grey-lighter font-sans font-normal text-black leading-normal">
 
     <div class="bg-gradient-light-ocean h-screen">
         @include('_partials.sections.navigation', ['theme' => 'blue'])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center search-content">
-                <h1 class="text-white text-3xl md:text-5xl font-sans-serif font-light">ThemeMountain Docs</h1>
+                <h1 class="text-white text-3xl md:text-5xl font-sans font-light">ThemeMountain Docs</h1>
                 <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">Create something beautiful for your users with Faulkner's APIs and web tools.</p>
                 <a href="#intro" class="bg-transparent hover:shadow-lg hover:bg-white hover:text-blue text-white text-xs py-3 px-6 border border-white rounded inline-flex items-center">
                     <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
@@ -28,7 +28,7 @@ tags: main, home, index
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-3 mb-8">
                 <div class="w-full sm:w-2/5 px-3">
-                    <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Open Source</h2>
+                    <h2 class="text-3xl font-sans font-light leading-none text-grey-darkest">Open Source</h2>
                 </div>
                 <div class="w-full sm:w-3/5 px-3 text-left sm:text-right mt-2 sm:mt-0">
                     <p class="font-hind-madurai text-grey-dark text-lg">Our open source projects.</p>
@@ -65,11 +65,11 @@ tags: main, home, index
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-end -mx-3 mb-8">
                 <div class="w-full sm:w-1/2 px-3">
-                    <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">WordPress Themes</h2>
+                    <h2 class="text-3xl font-sans font-light leading-none text-grey-darkest">WordPress Themes</h2>
                     <p class="font-hind-madurai text-grey-dark text-lg mt-2 sm:mt-6">Our WordPress themes.</p>
                 </div>
                 <div class="w-full sm:w-1/2 mt-4 px-3">
-                    <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Site Templates</h2>
+                    <h2 class="text-3xl font-sans font-light leading-none text-grey-darkest">Site Templates</h2>
                     <p class="font-hind-madurai text-grey-dark text-lg mt-2 sm:mt-6">Our HTML site templates.</p>
                 </div>
             </div>
@@ -97,7 +97,7 @@ tags: main, home, index
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-3 mb-8">
                 <div class="w-full sm:w-2/5 px-3">
-                    <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Email Templates</h2>
+                    <h2 class="text-3xl font-sans font-light leading-none text-grey-darkest">Email Templates</h2>
                 </div>
                 <div class="w-full sm:w-3/5 px-3 mt-2 sm:mt-0">
                     <p class="font-hind-madurai text-grey-dark text-lg">Detailed documentation for our email template products. Whether you're just starting out or are already familiar with HTML emails, this would be a good place to start.</p>
