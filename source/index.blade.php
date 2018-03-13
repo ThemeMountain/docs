@@ -7,9 +7,9 @@ tags: main, home, index
 
 @section('body')
 
-<body class="bg-gradient-light-ocean font-sans-serif font-normal text-black leading-normal">
+<body class="bg-grey-lighter font-sans-serif font-normal text-black leading-normal">
 
-    <div class="h-screen">
+    <div class="bg-gradient-light-ocean h-screen">
         @include('_partials.sections.navigation', ['theme' => 'blue'])
 
         <div class="flex h-screen items-center">
@@ -24,13 +24,13 @@ tags: main, home, index
         </div>
     </div>
 
-    <div class="bg-grey-lighter py-4 md:py-8 lg:py-16">
+    <div class="pt-8 lg:py-16">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap-mx-3 mb-8">
+            <div class="flex flex-wrap -mx-3 mb-8">
                 <div class="w-full sm:w-2/5 px-3">
                     <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Open Source</h2>
                 </div>
-                <div class="w-full sm:w-3/5 px-3 text-left sm:text-right">
+                <div class="w-full sm:w-3/5 px-3 text-left sm:text-right mt-2 sm:mt-0">
                     <p class="font-hind-madurai text-grey-dark text-lg">Our open source projects.</p>
                 </div>
             </div>
@@ -61,16 +61,16 @@ tags: main, home, index
         </div>
     </div>
 
-    <div class="bg-grey-lighter py-4 md:py-8 lg:py-16">
+    <div class="pt-8 lg:py-16">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-end -mx-3 mb-8">
                 <div class="w-full sm:w-1/2 px-3">
                     <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">WordPress Themes</h2>
-                    <p class="font-hind-madurai text-grey-dark text-lg mt-6">Our WordPress themes.</p>
+                    <p class="font-hind-madurai text-grey-dark text-lg mt-2 sm:mt-6">Our WordPress themes.</p>
                 </div>
                 <div class="w-full sm:w-1/2 mt-4 px-3">
                     <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Site Templates</h2>
-                    <p class="font-hind-madurai text-grey-dark text-lg mt-6">Our HTML site templates.</p>
+                    <p class="font-hind-madurai text-grey-dark text-lg mt-2 sm:mt-6">Our HTML site templates.</p>
                 </div>
             </div>
 
@@ -93,13 +93,13 @@ tags: main, home, index
         </div>
     </div>
 
-    <div class="bg-grey-lighter py-4 md:py-8 lg:py-16">
+    <div class="pt-8 lg:py-16">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-3 mb-8">
                 <div class="w-full sm:w-2/5 px-3">
                     <h2 class="text-3xl font-sans-serif font-light leading-none text-grey-darkest">Email Templates</h2>
                 </div>
-                <div class="w-full sm:w-3/5 px-3">
+                <div class="w-full sm:w-3/5 px-3 mt-2 sm:mt-0">
                     <p class="font-hind-madurai text-grey-dark text-lg">Detailed documentation for our email template products. Whether you're just starting out or are already familiar with HTML emails, this would be a good place to start.</p>
                 </div>
             </div>
@@ -130,7 +130,7 @@ tags: main, home, index
         </div>
     </div>
 
-    <div class="bg-grey-light py-4 md:py-8 lg:py-16">
+    <div class="bg-grey-light mt-8 py-8 lg:py-16">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center -mx-3">
                 <div class="w-full sm:w-3/5 md:w-4/5 px-3 mb-4 sm:mb-0">

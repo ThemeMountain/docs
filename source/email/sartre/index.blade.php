@@ -11,10 +11,7 @@ tags: main, home, index
 <body class="bg-gradient-purple font-sans-serif font-normal text-black leading-normal">
 
     <div class="h-screen">
-        @include('_partials.sections.navigation', [
-            'theme' => $page->sites->email->sartre->theme,
-            'type' => 'fixed'
-            ])
+        @include('_partials.sections.navigation', ['theme' => $page->sites->email->sartre->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center search-content">
