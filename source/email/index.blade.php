@@ -11,7 +11,7 @@ tags: email, templates, listing
 <body class="bg-gradient-green font-sans-serif font-normal text-black leading-normal">
 
     <section class="h-screen">
-       @include('_partials.sections.navigation.main', ['theme' => $page->sites->email->theme])
+       @include('_partials.sections.navigation', ['theme' => $page->sites->email->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center search-content">

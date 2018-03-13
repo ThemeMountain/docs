@@ -10,7 +10,7 @@ tags: main, home, index
 <body class="bg-gradient-light-ocean font-sans-serif font-normal text-black leading-normal">
 
     <div class="h-screen">
-        @include('_partials.sections.navigation.main', ['theme' => 'blue'])
+        @include('_partials.sections.navigation', ['theme' => 'blue'])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center search-content">
