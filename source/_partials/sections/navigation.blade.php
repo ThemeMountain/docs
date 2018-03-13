@@ -6,7 +6,7 @@
         <div class="w-3/4">
             <ul class="list-reset flex justify-end">
                 <li class="mx-6">
-                <a href="{{ $page->sites->support ? $page->support[$page->sites->support] : $page->support->email }}" class="font-bold text-sm text-{{ $theme }}-lighter hover:text-{{ $theme }}-lightest pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
+                <a href="{{ $page->support_url }}" class="font-bold text-sm text-{{ $theme }}-lighter hover:text-{{ $theme }}-lightest pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
                 </li>
                 <li class="dropdown mx-6 relative">
                     <a href="{{ $page->social->envato }}" class="font-bold text-sm text-{{ $theme }}-lighter hover:text-{{ $theme }}-lightest pb-4 inline-block">Our Products</a>

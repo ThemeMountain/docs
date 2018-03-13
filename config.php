@@ -7,7 +7,7 @@ return [
     | Theme
     |--------------------------------------------------------------------------
     |
-    | Set the default theme colour. Can be overridden at a 'site' level.
+    | Set the default theme colour. Can be overridden at a Site level.
     |
     */
 
@@ -35,9 +35,9 @@ return [
     | Here you can customize each documentation site in particular, by simply
     | overriding DocsFlow's defaults.
     |
-    | Each 'site' is a folder that contains Blade/Markdown files, from your
-    | 'source' directory. A site can also have any number of subfolders,
-    | each of those being a site on its own.
+    | Each 'site' is a folder that contains Blade/Markdown files, from
+    | your 'source' directory. A site can also have any number of
+    | subfolders, each of those being a site on its own.
     |
     */
 
@@ -88,18 +88,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Support
+    | Support URL
     |--------------------------------------------------------------------------
     |
-    | Define your support channels. By default, the 'email' support channel
-    | will be used, unless you override it in the 'sites' config.
+    | Define your support channel. This is used by DocsFlow in different
+    | areas of the site. You can also use a mailto: link, if you want
+    | visitors to email you directly (not recommended).
     |
     */
 
-    'support' => [
-        'email' => 'mailto:info@thememountain.com',
-        'external' => 'https://thememountain.ticksy.com',
-    ],
+    'support_url' => 'https://thememountain.ticksy.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -157,7 +155,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Internals
+    | Jigsaw Internals
     |--------------------------------------------------------------------------
     |
     | Leave these settings alone, unless you really know what you're doing.
