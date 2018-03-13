@@ -16,16 +16,30 @@ return [
     |
     */
 
-    'sites' => [
+    'docs' => [
 
-        'support' => 'external',
+        'sartre' => [
+            'version' => '1.0.0',
+            'title' => 'Sartre',
+            'description' => 'Documentation for our latest email template.',
+            'slug' => 'sartre',
+            'theme' => 'red',
+        ],
 
-        'email' => [
+        'marquez' => [
+            'version' => '2.0.2',
+            'title' => 'Marquez',
+            'description' => 'Marquez, the email for creative agencies.',
+            'slug' => 'marquez',
+            'theme' => 'red',
+        ],
+
+        'kant' => [
+            'version' => '2.4.0',
+            'title' => 'Kant',
+            'description' => 'Kant, the email toolkit for startups.',
+            'slug' => 'kant',
             'theme' => 'green',
-
-            'sartre' => [
-                'theme' => 'purple'
-            ],
         ],
 
     ],
@@ -83,7 +97,7 @@ return [
     | Search Drivers
     |--------------------------------------------------------------------------
     |
-    | Configure defaults for the search drivers DocsFlow supports.
+    | Configure defaults for the search 'drivers' DocsFlow supports.
     | Defaults to 'js' for all sites, unless overriden.
     |
     | "js":         Path to file containing JavaScript variable.
@@ -96,13 +110,19 @@ return [
     */
 
     'search' => [
-        'js' => 'data/search-index.js',
-        'json' => 'data/search-index.json',
-        'algolia' => [
-            'apiKey' => '',
-            'indexName' => '',
-            'inputSelector' => '#docsearch',
+
+        'default' => 'js',
+
+        'drivers' => [
+            'js' => 'data/search-index.js',
+            'json' => 'data/search-index.json',
+            'algolia' => [
+                'apiKey' => '',
+                'indexName' => '',
+                'inputSelector' => '#docsearch',
+            ],
         ],
+
     ],
 
     /*
@@ -111,6 +131,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | Configure defaults for the analytics services DocsFlow supports.
+    | Applies globally unless overridden.
+    |
+    | 'ga': Google Analytics tracking id
     |
     */
 

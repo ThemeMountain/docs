@@ -11,7 +11,7 @@ tags: email, templates, listing
 <body class="bg-grey-lighter font-sans-serif font-normal text-black leading-normal">
 
     <div class="bg-gradient-green h-screen">
-       @include('_partials.sections.navigation', ['theme' => $page->sites->email->theme])
+       @include('_partials.sections.navigation', ['theme' => 'green'])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center search-content">
@@ -37,27 +37,20 @@ tags: email, templates, listing
             </div>
 
             <div class="flex flex-wrap -mx-3">
+                @foreach ($page->docs as $site => $option)
                 <div class="w-full sm:w-1/3 mb-4 px-3">
                     <div class="p-6 bg-white h-48 sm:h-64 flex flex-wrap content-between rounded">
-                        <h3 class="font-light">Sartre</h3>
-                        <p class="w-full text-sm text-grey-dark">Documentation for our latest email template.</p>
-                        <a href="" class="text-sm text-blue hover:underline">Sartre documentation &rarr;</a>
+                        <header class="w-full">
+                            <h3 class="font-light inline-block">
+                                <a href="{{ $option->slug ?? '#' }}" class="text-black hover:text-grey-darkest">{{ $option->title }}</a>
+                            </h3>
+                            <a href="{{ $option->slug ? $option->slug . '/changelog' : '#' }}" class="text-xxs border p-1 rounded font-normal float-right block text-grey hover:text-grey-dark">v{{ $option->version }}</a>
+                        </header>
+                        <p class="w-full text-sm text-grey-dark">{{ $option->description }}</p>
+                        <a href="{{ $option->slug ?? '#' }}" class="text-sm text-blue hover:underline">{{ $option->title }} documentation &rarr;</a>
                     </div>
                 </div>
-                <div class="w-full sm:w-1/3 mb-4 px-3">
-                    <div class="p-6 bg-white h-48 sm:h-64 flex flex-wrap content-between rounded">
-                        <h3 class="font-light">Marquez</h3>
-                        <p class="w-full text-sm text-grey-dark">Marquez, the email for creative agencies.</p>
-                        <a href="" class="text-sm text-blue hover:underline">Marquez documentation &rarr;</a>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/3 mb-4 px-3">
-                    <div class="p-6 bg-white h-48 sm:h-64 flex flex-wrap content-between rounded">
-                        <h3 class="font-light">Kant</h3>
-                        <p class="w-full text-sm text-grey-dark">Kant, the email toolkit for startups.</p>
-                        <a href="" class="text-sm text-blue hover:underline">Kant documentation &rarr;</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
