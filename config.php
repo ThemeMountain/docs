@@ -4,6 +4,31 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Theme
+    |--------------------------------------------------------------------------
+    |
+    | Set the default theme colour. Can be overridden at a 'site' level.
+    |
+    */
+
+    'theme' => 'blue',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Pretty URLs (permalinks)       http://jigsaw.tighten.co/docs/pretty-urls/
+    |--------------------------------------------------------------------------
+    |
+    | When set to 'true', each Blade/Markdown file will be compiled to an
+    | index.html file and placed in its own folder, named after the
+    | original file. Set to false to disable and have DocsFlow
+    | preserve the original file names and folders.
+    |
+    */
+
+    'pretty' => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Sites
     |--------------------------------------------------------------------------
     |
@@ -23,7 +48,7 @@ return [
             'title' => 'Sartre',
             'description' => 'Documentation for our latest email template.',
             'slug' => 'sartre',
-            'theme' => 'red',
+            'theme' => 'purple',
         ],
 
         'marquez' => [
@@ -43,20 +68,6 @@ return [
         ],
 
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Pretty URLs (permalinks)       http://jigsaw.tighten.co/docs/pretty-urls/
-    |--------------------------------------------------------------------------
-    |
-    | When set to 'true', each Blade/Markdown file will be compiled to an
-    | index.html file and placed in its own folder, named after the
-    | original file. Set to false to disable and have DocsFlow
-    | preserve the original file names and folders.
-    |
-    */
-
-    'pretty' => true,
 
     /*
     |--------------------------------------------------------------------------
