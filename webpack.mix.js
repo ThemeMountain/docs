@@ -47,7 +47,7 @@ const plugins = [
     new BrowserSyncPlugin({
         proxy: null,
         port: port,
-        server: { baseDir: 'builds/' + env },
+        server: { baseDir: 'build_' + env },
         notify: false,
     },
     {
