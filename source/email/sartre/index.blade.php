@@ -14,7 +14,7 @@ tags: main, home, index
         @include('_partials.sections.navigation', ['theme' => $page->docs->sartre->theme ? $page->docs->sartre->theme : $page->theme])
 
         <div class="flex h-screen items-center">
-            <div class="mx-auto text-center search-content">
+            <div class="mx-auto text-center content">
                 <a href="changelog" class="bg-transparent hover:bg-white text-sm text-white font-semibold hover:text-purple py-1 px-2 border border-white rounded no-underline">
                   v{{ $page->docs->sartre->version }}
                 </a>

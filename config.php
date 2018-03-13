@@ -47,7 +47,7 @@ return [
             'version' => '1.0.0',
             'title' => 'Sartre',
             'description' => 'Documentation for our latest email template.',
-            'slug' => 'sartre',
+            'path' => 'email/sartre',
             'theme' => 'purple',
         ],
 
@@ -55,7 +55,7 @@ return [
             'version' => '2.0.2',
             'title' => 'Marquez',
             'description' => 'Marquez, the email for creative agencies.',
-            'slug' => 'marquez',
+            'path' => 'email/marquez',
             'theme' => 'red',
         ],
 
@@ -63,7 +63,7 @@ return [
             'version' => '2.4.0',
             'title' => 'Kant',
             'description' => 'Kant, the email toolkit for startups.',
-            'slug' => 'kant',
+            'path' => 'email/kant',
             'theme' => 'green',
         ],
 
@@ -101,20 +101,19 @@ return [
         'external' => 'https://thememountain.ticksy.com',
     ],
 
-    'collections' => [],
-
     /*
     |--------------------------------------------------------------------------
     | Search Drivers
     |--------------------------------------------------------------------------
     |
     | Configure defaults for the search 'drivers' DocsFlow supports.
-    | Defaults to 'js' for all sites, unless overriden.
+    | Defaults to 'offline' for all sites, unless overriden.
     |
-    | "js":         Path to file containing JavaScript variable.
+    | "offline":    Name of file containing JavaScript variable.
     |               Client-side, works offline.
     |
-    | "json":       Path to JSON file. AJAX-based, only works online.
+    | "online":     Name of JSON file. Client-side AJAX.
+    |               Only works online in Chrome.
     |
     | "algolia":    For open source docs that use Algolia's DocSearch.
     |
@@ -122,16 +121,18 @@ return [
 
     'search' => [
 
-        'default' => 'js',
-
         'drivers' => [
-            'js' => 'data/search-index.js',
-            'json' => 'data/search-index.json',
+
+            'offline' => 'search-index.js',
+
+            'online' => 'search-index.json',
+
             'algolia' => [
                 'apiKey' => '',
                 'indexName' => '',
                 'inputSelector' => '#docsearch',
             ],
+
         ],
 
     ],
@@ -165,4 +166,5 @@ return [
 
     'baseUrl' => '',
     'production' => false,
+    'collections' => [],
 ];

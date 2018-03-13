@@ -14,7 +14,7 @@ tags: email, templates, listing
        @include('_partials.sections.navigation', ['theme' => 'green'])
 
         <div class="flex h-screen items-center">
-            <div class="mx-auto text-center search-content">
+            <div class="mx-auto text-center content">
                 <h1 class="text-white text-3xl md:text-5xl font-sans font-light">ThemeMountain Email Docs</h1>
                 <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">Create something beautiful for your users with Faulkner's APIs and web tools.</p>
                 <a href="#intro" class="bg-transparent hover:shadow-lg hover:bg-white hover:text-green text-white text-xs py-3 px-6 border border-white rounded inline-flex items-center">

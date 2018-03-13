@@ -23,50 +23,65 @@ module.exports.buildIndexes = () => {
         const build_path = 'build_' + env
 
         let data = []
-        let folders = fs.readdirSync(build_path).filter(f => fs.statSync(path.join(build_path, f)).isDirectory())
+        let sites = config.docs
 
-        folders.forEach(folder => {
+        for (let key in sites) {
 
-            let files = glob.sync([build_path + '/' + folder + '/**/*.html'])
-            let indexJSON = build_path + '/' + folder + '/data/search-index.json'
-            let indexJS = build_path + '/' + folder + '/data/search-index.js'
+            let p = path.join(build_path, sites[key].path)
 
-            if (files.length) {
+            if ( sites[key].hasOwnProperty('search') && sites[key].search == 'algolia' ) {
+                console.info(sites[key].title, ': skipping search index build, site is configured to use Algolia DocSearch.')
+                return
+            }
 
-                fs.outputFile(indexJSON, '')
-                    .then(() => {
+            if (fs.existsSync(p)) {
 
-                        files.forEach(file => {
+                let files = glob.sync([p + '/**/*.html'])
+                let indexJSON = p + '/data/' + config.search.drivers.online
 
-                            let out = fs.openSync(indexJSON, 'w+')
-                            let $ = cheerio.load( fs.readFileSync(file) )
+                if (files.length) {
 
-                            data.push({
-                                title: $('title').text(),
-                                description: $('meta[name="description"]').attr('content'),
-                                keywords: $('meta[name="keywords"]').attr('content'),
-                                preview: truncate( plaintext($('.content').text()), 100).trim()
-                            });
+                    fs.outputFile(indexJSON, '')
+                        .then(() => {
 
-                            let json = JSON.stringify(data, null, false ? 0 : 2)
-                            fs.writeSync(out, json + '\n')
-                            fs.closeSync(out)
+                            files.forEach(file => {
+
+                                let out = fs.openSync(indexJSON, 'w+')
+                                let $ = cheerio.load( fs.readFileSync(file) )
+
+                                data.push({
+                                    title: $('title').text(),
+                                    description: $('meta[name="description"]').attr('content'),
+                                    keywords: $('meta[name="keywords"]').attr('content'),
+                                    preview: truncate( plaintext($('.content').text()), 100).trim()
+                                });
+
+                                let json = JSON.stringify(data, null, false ? 0 : 2)
+                                fs.writeSync(out, json + '\n')
+                                fs.closeSync(out)
+
+                            })
+
+                            data = []
 
                         })
+                        .then(() => {
+                            if ( sites[key].hasOwnProperty('search') && sites[key].search == 'online' ) {
+                            } else {
+                                let indexJS = p + '/data/' + config.search.drivers.offline
+                                fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
+                                fs.unlinkSync(indexJSON)
+                            }
+                        })
+                        .catch(err => {
+                            console.error(err)
+                        })
 
-                        data = []
-
-                    })
-                    .then(() => {
-                        fs.outputFile(indexJS, 'const data = ' + fs.readFileSync(indexJSON))
-                    })
-                    .catch(err => {
-                        console.error(err)
-                    })
+                }
 
             }
 
-        })
+        }
 
     })
 

@@ -4,7 +4,7 @@
 
 <body class="font-sans font-normal text-black leading-normal">
 
-    <main>
+    <main class="content">
         @yield('content')
     </main>
 
