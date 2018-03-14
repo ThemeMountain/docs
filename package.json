@@ -18,6 +18,7 @@
     "html2plaintext": "^2.0.1",
     "laravel-mix": "^2.0.0",
     "laravel-mix-purgecss": "^1.0.5",
+    "lodash": "^4.17.5",
     "node-cmd": "^3.0.0",
     "on-build-webpack": "^0.1.0",
     "tailwindcss": "^0.5.1",

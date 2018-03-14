@@ -5,14 +5,11 @@ const cheerio = require('cheerio')
 const argv = require('yargs').argv
 const command = require('node-cmd')
 const plaintext = require('html2plaintext')
+const _ = require('lodash')
 
 const env = argv.e || argv.env || 'local'
 
-truncate = (str, max) => {
-  return str.length > max ? str.substr(0, max-1) : str
-}
-
-module.exports.buildIndexes = () => {
+module.exports.index = () => {
     command.get('php tasks/php/config -e' + env, (error, stdout, stderr) => {
         if (error) {
             console.log(stderr)
@@ -24,15 +21,26 @@ module.exports.buildIndexes = () => {
 
         let data = []
         let sites = config.docs
+        let paths = []
 
         for (let key in sites) {
 
-            let p = path.join(build_path, sites[key].path)
+             let categories = sites[key]
+             let items = _.keysIn(categories)
 
-            if ( sites[key].hasOwnProperty('search') && sites[key].search == 'algolia' ) {
-                console.info(sites[key].title, ': skipping search index build, site is configured to use Algolia DocSearch.')
-                return
-            }
+             _.forEach(items, (item) => {
+
+                let itemObject = typeof _.get(categories, item) == 'object' ? _.get(categories, item) : _.get(sites, key)
+                let p = path.join(build_path, 'docs/' + key + (_.has(itemObject, item) ? '' : '/' + item) )
+
+                paths.push(p)
+
+            })
+        }
+
+        paths = _.uniqBy(paths, e => {return e})
+
+        _.forEach(paths, p => {
 
             if (fs.existsSync(p)) {
 
@@ -46,14 +54,14 @@ module.exports.buildIndexes = () => {
 
                             files.forEach(file => {
 
-                                let out = fs.openSync(indexJSON, 'w+')
+                                let out = fs.openSync(indexJSON, 'rs+')
                                 let $ = cheerio.load( fs.readFileSync(file) )
 
                                 data.push({
                                     title: $('title').text(),
                                     description: $('meta[name="description"]').attr('content'),
                                     keywords: $('meta[name="keywords"]').attr('content'),
-                                    preview: truncate( plaintext($('.content').text()), 100).trim()
+                                    preview: _.truncate(plaintext($('.content').text()), {'length': 200, 'omission': ''})
                                 });
 
                                 let json = JSON.stringify(data, null, false ? 0 : 2)
@@ -66,23 +74,14 @@ module.exports.buildIndexes = () => {
 
                         })
                         .then(() => {
-                            if ( sites[key].hasOwnProperty('search') && sites[key].search == 'online' ) {
-                            } else {
-                                let indexJS = p + '/data/' + config.search.drivers.offline
-                                fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
-                                fs.unlinkSync(indexJSON)
-                            }
+                            let indexJS = p + '/data/' + config.search.drivers.offline
+                            fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
                         })
                         .catch(err => {
                             console.error(err)
                         })
-
                 }
-
             }
-
-        }
-
+        })
     })
-
 }

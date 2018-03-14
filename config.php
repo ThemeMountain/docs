@@ -43,28 +43,36 @@ return [
 
     'docs' => [
 
-        'sartre' => [
+        'email' => [
+
+            'sartre' => [
+                'version' => '1.0.0',
+                'title' => 'Sartre',
+                'description' => 'Documentation for our latest email template.',
+                'theme' => 'purple',
+            ],
+
+            'marquez' => [
+                'version' => '2.0.2',
+                'title' => 'Marquez',
+                'description' => 'Marquez, the email for creative agencies.',
+                'theme' => 'red',
+            ],
+
+            'kant' => [
+                'version' => '2.4.0',
+                'title' => 'Kant',
+                'description' => 'Kant, the email toolkit for startups.',
+                'theme' => 'green',
+            ],
+
+        ],
+
+        'wordpress' => [
             'version' => '1.0.0',
-            'title' => 'Sartre',
-            'description' => 'Documentation for our latest email template.',
-            'path' => 'email/sartre',
-            'theme' => 'purple',
-        ],
-
-        'marquez' => [
-            'version' => '2.0.2',
-            'title' => 'Marquez',
-            'description' => 'Marquez, the email for creative agencies.',
-            'path' => 'email/marquez',
-            'theme' => 'red',
-        ],
-
-        'kant' => [
-            'version' => '2.4.0',
-            'title' => 'Kant',
-            'description' => 'Kant, the email toolkit for startups.',
-            'path' => 'email/kant',
-            'theme' => 'green',
+            'title' => 'WordPress Docs',
+            'description' => 'Documentation for our WordPress themes.',
+            'theme' => 'blue',
         ],
 
     ],
