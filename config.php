@@ -50,6 +50,10 @@ return [
                 'title' => 'Sartre',
                 'description' => 'Documentation for our latest email template.',
                 'theme' => 'purple',
+                'search' => [
+                    'driver' => 'algolia',
+                    'indexName' => 'sartre_email'
+                ],
             ],
 
             'marquez' => [
@@ -73,6 +77,10 @@ return [
             'title' => 'WordPress Docs',
             'description' => 'Documentation for our WordPress themes.',
             'theme' => 'blue',
+            'search' => [
+                'driver' => 'algolia',
+                'indexName' => 'sartre_wordpress'
+            ],
         ],
 
     ],
@@ -127,18 +135,10 @@ return [
 
     'search' => [
 
-        'drivers' => [
-
-            'offline' => 'search-index.js',
-
-            'online' => 'search-index.json',
-
-            'algolia' => [
-                'apiKey' => '',
-                'indexName' => '',
-                'inputSelector' => '#docsearch',
-            ],
-
+        'algolia' => [
+            'appID' => getenv('ALGOLIA_APP_ID'),
+            'apiKey' => getenv('ALGOLIA_API_KEY'),
+            'docsearchIndexName' => getenv('ALGOLIA_DOCSEARCH_INDEX_NAME'),
         ],
 
     ],

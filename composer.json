@@ -1,5 +1,6 @@
 {
     "require": {
-        "tightenco/jigsaw": "^1.0"
+        "tightenco/jigsaw": "^1.0",
+        "vlucas/phpdotenv": "^2.4"
     }
 }
