@@ -5,13 +5,16 @@
     "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js",
     "dev": "npm run development",
     "prod": "npm run production",
-    "watch": "npm run development -- --watch"
+    "watch": "npm run development -- --watch",
+    "algolia": "node ./tasks/js/algolia-index"
   },
   "devDependencies": {
+    "algoliasearch": "^3.25.1",
     "browser-sync": "^2.23.6",
     "browser-sync-webpack-plugin": "^2.0.1",
     "cheerio": "latest",
     "cross-env": "^3.2.3",
+    "dotenv": "^5.0.1",
     "fs-extra": "^5.0.0",
     "glob-all": "^3.1.0",
     "hasbin": "^1.2.3",

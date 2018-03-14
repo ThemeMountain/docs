@@ -20,68 +20,72 @@ module.exports.index = () => {
         const build_path = 'build_' + env
 
         let data = []
-        let sites = config.docs
+        let sites = []
         let paths = []
 
-        for (let key in sites) {
+        for (let key in config.docs) {
 
-             let categories = sites[key]
-             let items = _.keysIn(categories)
+            let categories = config.docs[key]
+            let items = _.keysIn(categories)
 
-             _.forEach(items, (item) => {
-
-                let itemObject = typeof _.get(categories, item) == 'object' ? _.get(categories, item) : _.get(sites, key)
-                let p = path.join(build_path, 'docs/' + key + (_.has(itemObject, item) ? '' : '/' + item) )
-
+            for (let i = 0; i < items.length; i++) {
+                let itemObject = typeof _.get(categories, items[i]) == 'object' ? _.get(categories, items[i]) : _.get(config.docs, key)
+                let p = path.join(build_path, 'docs/' + key + (_.has(itemObject, items[i]) ? '' : '/' + items[i]) )
+                sites.push(p)
                 paths.push(p)
-
-            })
+            }
         }
 
         paths = _.uniqBy(paths, e => {return e})
+        sites = _.uniqBy(sites, e => {return e})
 
-        _.forEach(paths, p => {
+        let filePath, indexJSON, indexJS
+        for (let i = 0; i < paths.length; i++) {
+            if (fs.existsSync(paths[i])) {
 
-            if (fs.existsSync(p)) {
-
-                let files = glob.sync([p + '/**/*.html'])
-                let indexJSON = p + '/data/' + config.search.drivers.online
+                let files = glob.sync([paths[i] + '/**/*.html'])
+                indexJSON = paths[i] + '\\data\\search-index.json'
 
                 if (files.length) {
 
-                    fs.outputFile(indexJSON, '')
-                        .then(() => {
+                    fs.outputFileSync(indexJSON, '')
 
-                            files.forEach(file => {
+                    for (let i = 0; i < files.length; i++) {
 
-                                let out = fs.openSync(indexJSON, 'rs+')
-                                let $ = cheerio.load( fs.readFileSync(file) )
+                        if (config.pretty) {
+                            filePath = _.replace(path.parse(files[i]).dir, build_path + '/', '')
+                        } else {
+                            let parsed = path.parse(files[i])
+                            filePath = _.replace(parsed.dir + '/' + parsed.base, build_path + '/', '')
+                        }
 
-                                data.push({
-                                    title: $('title').text(),
-                                    description: $('meta[name="description"]').attr('content'),
-                                    keywords: $('meta[name="keywords"]').attr('content'),
-                                    preview: _.truncate(plaintext($('.content').text()), {'length': 200, 'omission': ''})
-                                });
+                        let out = fs.openSync(indexJSON, 'rs+')
+                        let $ = cheerio.load( fs.readFileSync(files[i]) )
 
-                                let json = JSON.stringify(data, null, false ? 0 : 2)
-                                fs.writeSync(out, json + '\n')
-                                fs.closeSync(out)
+                        data.push({
+                            title: $('title').text(),
+                            description: $('meta[name="description"]').attr('content'),
+                            keywords: $('meta[name="keywords"]').attr('content'),
+                            preview: _.truncate(plaintext($('.content').text()), {'length': 200, 'omission': ''}),
+                            url: filePath
+                        });
 
-                            })
+                        let json = JSON.stringify(data, null, false ? 0 : 2)
+                        fs.writeSync(out, json + '\n')
+                        fs.closeSync(out)
 
-                            data = []
+                    }
 
-                        })
-                        .then(() => {
-                            let indexJS = p + '/data/' + config.search.drivers.offline
-                            fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
-                        })
-                        .catch(err => {
-                            console.error(err)
-                        })
+                    data = []
                 }
             }
-        })
+
+            indexJS = _.replace(indexJSON, '.json', '.js')
+            fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
+
+        }
+
+        console.info('Please remember to update the Algolia indexes!')
+
     })
 }
