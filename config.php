@@ -53,7 +53,7 @@ return [
                 'search' => [
                     'driver' => 'algolia',
                     'indexName' => 'sartre_email',
-                    'autoUpdate' => false, // values: false (disabled) | array [environments] (comma-separated array of environment values)
+                    'syncOnBuild' => true, // false or omitted means disabled
                 ],
             ],
 
@@ -81,7 +81,7 @@ return [
             'search' => [
                 'driver' => 'algolia',
                 'indexName' => 'sartre_wordpress',
-                'autoUpdate' => ['production'], // values: false (disabled) | array [environments] (comma-separated array of environment values)
+                'syncOnBuild' => true,
             ],
         ],
 

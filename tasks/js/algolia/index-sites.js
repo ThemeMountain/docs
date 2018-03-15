@@ -2,7 +2,6 @@ const yargs = require('yargs')
 const argv = yargs.argv
 const command = require('node-cmd')
 
-const AlgoliaSites = require('../helpers/get-algolia-sites')
 const SearchIndexJSONPath = require('../helpers/get-search-index-json-path')
 const SitesFromArgv = require('../helpers/get-algolia-sites-argv')
 const AlgoliaIndex = require('./algolia-sync')

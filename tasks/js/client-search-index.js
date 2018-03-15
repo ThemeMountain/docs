@@ -7,9 +7,12 @@ const command = require('node-cmd')
 const plaintext = require('html2plaintext')
 const _ = require('lodash')
 
+const AlgoliaSites = require('./helpers/get-algolia-sites')
+const AlgoliaIndex = require('./algolia/algolia-sync')
+
 const env = argv.e || argv.env || 'local'
 
-module.exports.index = () => {
+module.exports.run = () => {
     command.get('php tasks/php/config -e' + env, (error, stdout, stderr) => {
         if (error) {
             console.log(stderr)
@@ -80,9 +83,26 @@ module.exports.index = () => {
                 }
             }
 
-            indexJS = _.replace(indexJSON, '.json', '.js')
-            fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
+        }
 
+        indexJS = _.replace(indexJSON, '.json', '.js')
+        fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
+
+        // Auto-sync to Algolia
+        let algoliaSites = AlgoliaSites.get(config.docs)
+        let syncOnBuildSites = []
+
+        for (var j = 0; j < algoliaSites.length; j++) {
+           let site = _.pickBy(algoliaSites[j], o => { return _.has(o, 'search') && o.search.syncOnBuild } )
+
+           if (!_.isEmpty(site)) {
+            console.log()
+            syncOnBuildSites.push(site)
+           }
+        }
+
+        if (!_.isEmpty(syncOnBuildSites) && env == 'production') {
+            AlgoliaIndex.sync(syncOnBuildSites)
         }
 
     })

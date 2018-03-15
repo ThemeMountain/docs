@@ -5,7 +5,7 @@ exports.get = source => {
 
     for (let site in source) {
 
-        if (_.has(source[site], 'search')) {
+        if (_.has(source[site], 'search') && source[site].search.driver == 'algolia') {
             sitesUsingAlgoliaSearch.push( _.pick(source, [site]) )
         } else {
             for (let s in source[site]) {

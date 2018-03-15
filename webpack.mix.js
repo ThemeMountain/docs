@@ -10,7 +10,7 @@ const AfterBuild = require('on-build-webpack')
 const BrowserSync = require('browser-sync')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const Watch = require('webpack-watch')
-const ClientSearch = require('./tasks/js/client-search-index')
+const SearchIndexer = require('./tasks/js/client-search-index')
 
 const env = argv.e || argv.env || 'local'
 const port = argv.p || argv.port || 3000
@@ -27,14 +27,14 @@ const plugins = [
                 process.exit(1)
             }
 
-            config = error ? null : JSON.parse(stdout)
+            config = JSON.parse(stdout)
 
             let pretty = (config && config.pretty == false) ? '--pretty=false ' : ''
 
             command.get(jigsaw.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
                 console.log(error ? stderr : stdout)
 
-                ClientSearch.index()
+                SearchIndexer.run()
 
                 if (browserSyncInstance) {
                     browserSyncInstance.reload()
