@@ -85,7 +85,5 @@ module.exports.index = () => {
 
         }
 
-        console.info('Please remember to update the Algolia indexes!')
-
     })
 }

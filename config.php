@@ -52,7 +52,8 @@ return [
                 'theme' => 'purple',
                 'search' => [
                     'driver' => 'algolia',
-                    'indexName' => 'sartre_email'
+                    'indexName' => 'sartre_email',
+                    'autoUpdate' => false, // values: false (disabled) | array [environments] (comma-separated array of environment values)
                 ],
             ],
 
@@ -79,7 +80,8 @@ return [
             'theme' => 'blue',
             'search' => [
                 'driver' => 'algolia',
-                'indexName' => 'sartre_wordpress'
+                'indexName' => 'sartre_wordpress',
+                'autoUpdate' => ['production'], // values: false (disabled) | array [environments] (comma-separated array of environment values)
             ],
         ],
 
