@@ -65,7 +65,12 @@ const plugins = [
 
 mix.webpackConfig({ plugins })
 mix.disableNotifications()
-mix.setPublicPath('source/assets/')
+mix.setPublicPath('source/assets')
+
+
+mix.js(['source/_assets/js/toggle/toggle.js'], 'js/vendor.js')
+    .js('source/_assets/js/app.js', 'js/app.js')
+    .version()
 
 mix.sass('source/_assets/sass/main.scss', 'css/')
     .options({
@@ -80,3 +85,6 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
         ],
     })
     .version()
+
+mix.copy('source/_assets/img', 'source/assets/img', false)
+

@@ -11,10 +11,14 @@ a {
   text-decoration: none;
 }
 
+img {vertical-align: middle;}
+
 ol,
 ul {
   @apply .list-reset;
 }
+
+.outline-0 {outline: none;}
 
 ::selection {
     background: #333;

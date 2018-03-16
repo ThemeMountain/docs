@@ -1,0 +1,10 @@
+h1, h2, h3, h4, h5, h6 {
+    @apply .font-light .leading-tight .mb-6;
+}
+
+.single {
+    p {
+        @apply .font-hind-madurai .mb-8 .text-sm .text-grey-darker;
+        line-height: 1.8;
+    }
+}

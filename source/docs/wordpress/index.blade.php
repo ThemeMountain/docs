@@ -4,14 +4,14 @@ description: Documentation for the Sartre WordPress Theme
 tags: main, home, index
 ---
 
-@extends('_layouts.master')
+@extends('_themes.default.master')
 
 @section('body')
 
 <body class="bg-gradient-{{ $page->docs->email->sartre->theme ? $page->docs->email->sartre->theme : $page->theme }} font-sans font-normal text-black leading-normal">
 
     <div class="h-screen">
-        @include('_partials.sections.navigation', ['theme' => $page->docs->email->sartre->theme ? $page->docs->email->sartre->theme : $page->theme])
+        @include('_themes.default._partials.sections.navigation', ['theme' => $page->docs->email->sartre->theme ? $page->docs->email->sartre->theme : $page->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center content">

@@ -1,0 +1,7 @@
+.placeholder-grey-darkest::placeholder {
+  @apply .text-grey-darkest .opacity-100;
+}
+
+.placeholder-grey-darkest:focus::placeholder {
+  @apply .text-blue .opacity-100;
+}

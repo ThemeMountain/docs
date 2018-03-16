@@ -2,3 +2,27 @@
     visibility: visible;
     opacity: 1;
 }
+
+[aria-expanded="false"] {
+  max-height: 0;
+}
+
+[aria-expanded="true"] {
+  max-height: 50rem;
+}
+
+.sidebar-navigation {
+
+    .toggle-trigger {
+
+        &.active::after {
+            content: "\2014";
+        }
+
+        &::after {
+            @apply .ml-3 .font-bold;
+            content: "+";
+            position: relative;
+        }
+    }
+}

@@ -4,14 +4,14 @@ description: Documentation listing for all ThemeMountain email templates
 tags: email, templates, listing
 ---
 
-@extends('_layouts.master')
+@extends('_themes.default.master')
 
 @section('body')
 
 <body class="bg-grey-lighter font-sans font-normal text-black leading-normal">
 
     <div class="bg-gradient-green h-screen">
-       @include('_partials.sections.navigation', ['theme' => 'green'])
+       @include('_themes.default._partials.sections.navigation', ['theme' => 'green'])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center content">
@@ -55,6 +55,6 @@ tags: email, templates, listing
         </div>
     </div>
 
-     @include('_partials.sections.footer')
+     @include('_themes.default._partials.sections.footer')
 
 @endsection

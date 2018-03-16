@@ -1,5 +1,5 @@
 ---
-extends: _layouts.documentation
+extends: _themes.default.documentation
 title: System Requirements
 description: Sys reqs for DocsFlow development
 tags: email, system, required, software
