@@ -10,7 +10,9 @@ const env = argv.e || argv.env || 'local'
 
 exports.command = 'sync:sites <sites..>'
 
-exports.describe = 'Sync index for the specified Algolia Search-enabled sites.'
+exports.describe = `Sync the search index for specified sites only.
+                    \nMultiple sites need to be separated by a space. Example: npm run algolia sync:sites firstSite secondSite
+                    \nFor site groups, use dot notation. Example: npm run algolia sync:sites groupName.siteName`
 
 exports.handler = argv => {
 

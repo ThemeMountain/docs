@@ -69,8 +69,8 @@ module.exports.run = () => {
                             title: $('title').text(),
                             description: $('meta[name="description"]').attr('content'),
                             keywords: $('meta[name="keywords"]').attr('content'),
-                            preview: _.truncate(plaintext($('.content').text()), {'length': 200, 'omission': ''}),
-                            url: filePath
+                            body: _.truncate(plaintext($('.content').text()), {'length': 200, 'omission': ''}),
+                            path: filePath
                         });
 
                         let json = JSON.stringify(data, null, false ? 0 : 2)

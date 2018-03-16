@@ -21,13 +21,13 @@ exports.get = (source, sites) => {
 
         if (!site) { // dot notation not used, it's a top level site
 
-            if ( _.has(rootKey, 'search.driver') && rootKey.search.driver == 'algolia' && rootKey.search.indexName ) {
+            if ( _.has(rootKey, 'search.driver') && rootKey.search.driver == 'algolia' ) {
                 sitesUsingAlgoliaSearch.push( _.pick(source, category) )
             }
 
         } else {
 
-            if ( _.has(rootKey[site], 'search.driver') && rootKey[site].search.driver == 'algolia' && rootKey[site].search.indexName ) {
+            if ( _.has(rootKey[site], 'search.driver') && rootKey[site].search.driver == 'algolia' ) {
                 sitesUsingAlgoliaSearch.push( _.pick(source[category], site) )
             }
 

@@ -10,7 +10,7 @@ const env = argv.e || argv.env || 'local'
 
 exports.command = 'sync:all'
 
-exports.describe = 'Sync index for all Algolia Search-enabled sites.'
+exports.describe = 'Sync the search index for all sites.\n\n'
 
 exports.handler = argv => {
 

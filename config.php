@@ -7,7 +7,8 @@ return [
     | Theme
     |--------------------------------------------------------------------------
     |
-    | Set the default theme colour. Can be overridden at a Site level.
+    | Set the default theme colour. You can override it at a Site level.
+    | This works together with classes from your Tailwind CSS config.
     |
     */
 
@@ -39,6 +40,9 @@ return [
     | your 'source' directory. A site can also have any number of
     | subfolders, each of those being a site on its own.
     |
+    | You can also create site groups, like we did with 'email' below.
+    | More documentation on that will be coming soon.
+    |
     */
 
     'docs' => [
@@ -52,8 +56,11 @@ return [
                 'theme' => 'purple',
                 'search' => [
                     'driver' => 'algolia',
+                    'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),
+                    'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
+                    'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
                     'indexName' => 'sartre_email',
-                    'syncOnBuild' => true, // false or omitted means disabled
+                    'syncOnBuild' => true, // set to false or omit it, to disable
                 ],
             ],
 
@@ -122,16 +129,25 @@ return [
     | Search Drivers
     |--------------------------------------------------------------------------
     |
-    | Configure defaults for the search 'drivers' DocsFlow supports.
-    | Defaults to 'offline' for all sites, unless overriden.
+    | Configure the third-party search drivers DocsFlow supports. Currently,
+    | DocsFlow ships with an Algolia driver. These credentials are pulled
+    | from your .env file, and will be used as the defaults for any
+    | site that specifies it uses Algolia Search.
     |
-    | "offline":    Name of file containing JavaScript variable.
-    |               Client-side, works offline.
+    | However, since Algolia allows creating multiple accounts under the same
+    | username, you can override these defaults at a site level. This way,
+    | you can use one Community plan per site instead of sharing limits
+    | across all your sites.
     |
-    | "online":     Name of JSON file. Client-side AJAX.
-    |               Only works online in Chrome.
+    | Finally, DocsFlow also supports Algolia's DocSearch. If you want
+    | to use that for your documentation, make sure to fill in the
+    | API search key and index name in your .env file.
     |
-    | "algolia":    For open source docs that use Algolia's DocSearch.
+    | "algolia":            Gets the default Algolia credentials defined
+    |                       in the .env file.
+    |
+    | "algolia-docsearch":  Gets the search key and index name for docs
+    |                       that use Algolia's DocSearch.
     |
     */
 
@@ -139,9 +155,14 @@ return [
 
         'algolia' => [
             'appID' => getenv('ALGOLIA_APP_ID'),
-            'apiKey' => getenv('ALGOLIA_API_KEY'),
-            'docsearchIndexName' => getenv('ALGOLIA_DOCSEARCH_INDEX_NAME'),
+            'appSecret' => getenv('ALGOLIA_SECRET'),
+            'searchKey' => getenv('ALGOLIA_SEARCH'),
         ],
+
+        'algolia-docsearch' => [
+            'searchKey' => getenv('ALGOLIA_DOCSEARCH'),
+            'indexName' => getenv('ALGOLIA_DOCSEARCH_INDEX'),
+        ]
 
     ],
 
