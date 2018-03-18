@@ -1,7 +1,8 @@
 const fs = require('fs-extra')
 const argv = require('yargs').argv
-const command = require('node-cmd')
+const ngrok = require('ngrok')
 const mix = require('laravel-mix')
+const command = require('node-cmd')
 const jigsaw = require('./tasks/js/bin')
 const tailwind = require('tailwindcss')
 require('laravel-mix-purgecss')
@@ -17,6 +18,25 @@ const port = argv.p || argv.port || 3000
 
 let config
 let browserSyncInstance
+
+/*
+|--------------------------------------------------------------------------
+| Code and Tell (ngrok localhost tunnel)
+|--------------------------------------------------------------------------
+|
+| DocsFlow allows you to expose your localhost to the web when developing.
+| This means you can share a live preview URL of what you're working on
+| with anyone in the world. Works only when using 'npm run watch'.
+|
+*/
+
+const tunnel = false
+
+/*
+|--------------------------------------------------------------------------
+| Webpack Plugins
+|--------------------------------------------------------------------------
+*/
 
 const plugins = [
     new AfterBuild(() => {
@@ -52,8 +72,15 @@ const plugins = [
     },
     {
         reload: false,
-        callback: function() {
+        callback: () => {
             browserSyncInstance = BrowserSync.get('bs-webpack-plugin')
+
+            if (tunnel) {
+                ngrok.connect(port).then(url => {
+                    console.log('Public URL: ' + url)
+                })
+            }
+
         },
     }),
 
