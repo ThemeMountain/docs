@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'hello' => function($expression) {
-        return '<?php echo "Hello ' . str_replace("'", '', $expression) . '"; ?>';
+    'mix' => function($expression) {
+        return '<?php echo $page->getAsset('.$expression.'); ?>';
     },
 ];

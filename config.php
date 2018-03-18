@@ -4,11 +4,63 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Sites                          http://jigsaw.tighten.co/docs/collections/
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you define your DocsFlow sites.
+    |
+    | Each site is a Jigsaw collection item, and can define any number of
+    | key-value pairs of settings that can be used in layouts and pages.
+    |
+    | Sites inherit all other settings defined in this configuration
+    | file, but you can override them for each site in particular.
+    |
+    */
+
+    'collections' => [
+
+        'sartre' => [
+            'version' => '1.0.0',
+            'title' => 'Sartre',
+            'theme' => 'purple',
+            'group' => 'email',
+            'path' => '{group}/{collection}/{-filename}',
+            'search' => [
+                'algolia' => [
+                    'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),
+                    'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
+                    'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
+                    'indexName' => 'sartre_email_docs',
+                    'syncOnBuild' => true, // set to false or omit it, to disable
+                ]
+            ],
+        ],
+
+        'wordpress' => [
+            'version' => '1.0.0',
+            'title' => 'WordPress Documentation',
+            'theme' => 'red',
+            'group' => '',
+            'path' => '{group}/{collection}/{-filename}',
+            'search' => [
+                'algolia' => [
+                    'indexName' => 'wordpress_docs',
+                    'syncOnBuild' => true, // set to false or omit it, to disable
+                ]
+            ],
+        ],
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Theme
     |--------------------------------------------------------------------------
     |
-    | Set the default theme colour. You can override it at a Site level.
-    | This works together with classes from your Tailwind CSS config.
+    | Set the default theme color.
+    |
+    | DocsFlow will use this together with the literal color class names from
+    | your Tailwind CSS config. You can override it for each site.
     |
     */
 
@@ -22,7 +74,7 @@ return [
     | When set to 'true', each Blade/Markdown file will be compiled to an
     | index.html file and placed in its own folder, named after the
     | original file. Set to false to disable and have DocsFlow
-    | preserve the original file names and folders.
+    | preserve the original file names.
     |
     */
 
@@ -30,78 +82,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Sites
-    |--------------------------------------------------------------------------
-    |
-    | Here you can customize each documentation site in particular, by simply
-    | overriding DocsFlow's defaults.
-    |
-    | Each 'site' is a folder that contains Blade/Markdown files, from
-    | your 'source' directory. A site can also have any number of
-    | subfolders, each of those being a site on its own.
-    |
-    | You can also create site groups, like we did with 'email' below.
-    | More documentation on that will be coming soon.
-    |
-    */
-
-    'docs' => [
-
-        'email' => [
-
-            'sartre' => [
-                'version' => '1.0.0',
-                'title' => 'Sartre',
-                'description' => 'Documentation for our latest email template.',
-                'theme' => 'purple',
-                'search' => [
-                    'driver' => 'algolia',
-                    'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),
-                    'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
-                    'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
-                    'indexName' => 'sartre_email',
-                    'syncOnBuild' => true, // set to false or omit it, to disable
-                ],
-            ],
-
-            'marquez' => [
-                'version' => '2.0.2',
-                'title' => 'Marquez',
-                'description' => 'Marquez, the email for creative agencies.',
-                'theme' => 'red',
-            ],
-
-            'kant' => [
-                'version' => '2.4.0',
-                'title' => 'Kant',
-                'description' => 'Kant, the email toolkit for startups.',
-                'theme' => 'green',
-            ],
-
-        ],
-
-        'wordpress' => [
-            'version' => '1.0.0',
-            'title' => 'WordPress Docs',
-            'description' => 'Documentation for our WordPress themes.',
-            'theme' => 'blue',
-            'search' => [
-                'driver' => 'algolia',
-                'indexName' => 'sartre_wordpress',
-                'syncOnBuild' => true,
-            ],
-        ],
-
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
     | Social
     |--------------------------------------------------------------------------
     |
     | Here is where you can specify the URLs to your social profiles.
-    | DocsFlow uses these in headers and footers, but you can use
-    | them anywhere in layouts or pages.
+    | DocsFlow uses these in headers and footers by default, but
+    | you can use them anywhere in layouts or pages.
     |
     */
 
@@ -143,27 +129,29 @@ return [
     | to use that for your documentation, make sure to fill in the
     | API search key and index name in your .env file.
     |
-    | "algolia":            Gets the default Algolia credentials defined
-    |                       in the .env file.
+    | "offline":    Default. An offline JS search engine will be used.
+    |               Data is stored in a global variable set in a
+    |               .js file. Use this only for small sites.
     |
-    | "algolia-docsearch":  Gets the search key and index name for docs
-    |                       that use Algolia's DocSearch.
+    | "algolia":    Gets the default Algolia credentials defined
+    |               in the .env file.
+    |
+    | "docsearch":  Gets the search key and index name for docs
+    |               that use Algolia's DocSearch.
     |
     */
 
     'search' => [
-
+        'offline',
         'algolia' => [
             'appID' => getenv('ALGOLIA_APP_ID'),
             'appSecret' => getenv('ALGOLIA_SECRET'),
             'searchKey' => getenv('ALGOLIA_SEARCH'),
         ],
-
-        'algolia-docsearch' => [
+        'docsearch' => [
             'searchKey' => getenv('ALGOLIA_DOCSEARCH'),
             'indexName' => getenv('ALGOLIA_DOCSEARCH_INDEX'),
-        ]
-
+        ],
     ],
 
     /*
@@ -174,15 +162,34 @@ return [
     | Configure defaults for the analytics services DocsFlow supports.
     | Applies globally unless overridden.
     |
-    | 'ga': Google Analytics tracking id
+    | 'google': Google Analytics tracking id
     |
     */
 
     'analytics' => [
-        'ga' => [
+        'google' => [
             'tracking_id' => ''
         ]
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Helper Functions
+    |
+    | http://jigsaw.tighten.co/docs/collections-variables-and-functions/
+    |--------------------------------------------------------------------------
+    |
+    | Some helper functions that DocsFlow uses. You can add your own
+    | here, and even override them for each site in particular.
+    |
+    */
+
+    'getAsset' => function ($page, $assetPath) {
+        $path = $page->getPath();
+        $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $path);
+
+        return ltrim($relativePath, '/') . mix($assetPath);
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -195,5 +202,4 @@ return [
 
     'baseUrl' => '',
     'production' => false,
-    'collections' => [],
 ];

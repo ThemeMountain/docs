@@ -6,7 +6,7 @@
     "dev": "npm run development",
     "prod": "npm run production",
     "watch": "npm run development -- --watch",
-    "algolia": "node ./tasks/js/algolia/algolia-sync-service"
+    "algolia": "node ./tasks/js/algolia/commands/index"
   },
   "devDependencies": {
     "algoliasearch": "^3.25.1",

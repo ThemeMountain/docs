@@ -4,11 +4,7 @@
 }
 
 [aria-expanded="false"] {
-  max-height: 0;
-}
-
-[aria-expanded="true"] {
-  max-height: 50rem;
+  display: none;
 }
 
 .sidebar-navigation {

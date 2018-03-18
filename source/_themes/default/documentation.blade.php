@@ -1,8 +1,7 @@
 @extends('_themes.default.master')
+@section('body-classes', 'single')
 
 @section('body')
-
-<body class="font-sans font-normal text-black leading-normal single">
 
     <div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-40">
         <div class="container flex py-1 items-center">
@@ -49,8 +48,8 @@
                     <ul class="py-8 mt-6">
 
                         <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-0">Getting Started</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="true">
+                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Getting Started</h5>
+                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
                               <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Introduction</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">File Structure</a></li>
@@ -60,9 +59,9 @@
                         </li>
 
                         <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal">Sections</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="true">
-                              <ul class="text-xs leading-loose text-grey-dark">
+                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Sections</h5>
+                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
+                              <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Preheaders</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Headers</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">HERO</a></li>
@@ -85,9 +84,9 @@
                         </li>
 
                         <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal">Templates</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
-                              <ul class="text-xs leading-loose text-grey-dark">
+                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-0">Templates</h5>
+                            <div class="toggle overflow-hidden mt-3" aria-expanded="false">
+                              <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Marketing</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Notifications</a></li>
                               </ul>
@@ -95,9 +94,16 @@
                         </li>
 
                         <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal">Integrations</h5>
+                          <ul class="text-xs leading-loose text-grey-dark">
+                            <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Marketing</a></li>
+                            <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Notifications</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="py-2">
+                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Integrations</h5>
                             <div class="toggle overflow-hidden transition-all" aria-expanded="false">
-                              <ul class="text-xs leading-loose text-grey-dark">
+                              <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Campaign Monitor</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">MailChimp</a></li>
                                 <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Mailster</a></li>
@@ -143,11 +149,9 @@
 
     {{-- @include('_themes.default._partials.sections.footer') --}}
 
-    @push('scripts')
-        <script src="{{ mix('/js/vendor.js') }}"></script>
-        <script src="{{ mix('/js/app.js') }}"></script>
-    @endpush
-
-</body>
+@push('scripts')
+    <script src="@mix('/js/vendor.js')"></script>
+    <script src="@mix('/js/app.js')"></script>
+@endpush
 
 @endsection
