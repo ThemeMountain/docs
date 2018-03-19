@@ -85,7 +85,7 @@ const plugins = [
     }),
 
     new Watch({
-        paths: ['source/**/*.md', 'source/**/*.php', '*.php', '*.js'],
+        paths: ['source/**/*.md', 'source/**/*.scss', '*.php', '*.js'],
         options: { ignoreInitial: true }
     }),
 ]
