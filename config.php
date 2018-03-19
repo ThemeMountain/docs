@@ -174,6 +174,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Broadcast
+    |--------------------------------------------------------------------------
+    |
+    | DocsFlow allows you to expose your localhost to the web when developing,
+    | by creating a http-https-tcp tunnel with ngrok.io.
+    |
+    | This means you can share a live preview URL of what you're working on
+    | with anyone in the world. Works only when using 'npm run watch'.
+    |
+    */
+
+    'broadcast' => false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Helper Functions
     |
     | http://jigsaw.tighten.co/docs/collections-variables-and-functions/

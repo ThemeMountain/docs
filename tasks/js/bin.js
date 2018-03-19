@@ -1,9 +1,9 @@
-var hasbin = require('hasbin');
-var fs = require('fs');
-var path = require('path');
+let hasbin = require('hasbin');
+let fs = require('fs');
+let path = require('path');
 
 module.exports = {
-    path: function() {
+    path: () => {
         if (fs.existsSync('./vendor/bin/jigsaw')) {
             return path.normalize('./vendor/bin/jigsaw')
         }
