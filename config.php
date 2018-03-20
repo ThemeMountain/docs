@@ -32,7 +32,7 @@ return [
                     'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
                     'indexName' => 'sartre_email_docs',
                     'syncOnBuild' => true, // set to false or omit it, to disable
-                ]
+                ],
             ],
         ],
 
@@ -46,7 +46,7 @@ return [
                 'algolia' => [
                     'indexName' => 'wordpress_docs',
                     'syncOnBuild' => true, // set to false or omit it, to disable
-                ]
+                ],
             ],
         ],
 
@@ -169,7 +169,7 @@ return [
     'analytics' => [
         'google' => [
             'tracking_id' => ''
-        ]
+        ],
     ],
 
     /*
@@ -204,6 +204,7 @@ return [
         $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $path);
 
         return ltrim($relativePath, '/') . mix($assetPath);
+        // return 'test path';
     },
 
     /*

@@ -137,7 +137,7 @@ tags: main, home, index
                     <p class="text-grey-dark text-center sm:text-left text-xl font-hind-madurai">Can't find the answer you're looking for? Get in touch and let us know.</p>
                 </div>
                 <div class="w-full sm:w-2/5 md:w-1/5 px-3 text-center sm:text-right">
-                    <a href="{{ $page->support->app }}" class="bg-blue hover:bg-blue-dark text-white text-xs py-4 px-8 inline-block rounded">Open a Ticket</a>
+                    <a href="{{ $page->support_url }}" class="bg-blue hover:bg-blue-dark text-white text-xs py-4 px-8 inline-block rounded">Open a Ticket</a>
                 </div>
             </div>
         </div>

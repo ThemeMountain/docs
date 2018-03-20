@@ -42,82 +42,30 @@
     </div>
 
     <div class="container flex flex-row">
+
         <nav class="sidebar-navigation w-2/5">
             <div class="sticky top-20 pr-16">
                 <div class="overflow-y-auto" style="height:calc(100vh - 5rem)">
                     <ul class="py-8 mt-6">
-
+                    {{-- @foreach($page->navigation as $section => $item)
                         <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Getting Started</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
+                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">{{ $section }}</h5>
+                            <div class="toggle overflow-hidden transition-all" aria-expanded="true">
                               <ul class="px-2 text-xs leading-loose text-grey-dark">
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Introduction</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">File Structure</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Sections Quick Reference</a></li>
+                                @foreach($item as $title => $link)
+                                    <li class="pb-1">
+                                        <a href="../{{ $link }}" class="hover:text-grey-darkest">{{ $title }}</a>
+                                    </li>
+                                @endforeach
                               </ul>
                             </div>
                         </li>
-
-                        <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Sections</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
-                              <ul class="px-2 text-xs leading-loose text-grey-dark">
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Preheaders</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Headers</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">HERO</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Intro</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Feature</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Blog</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Portfolio</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Call to Action</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Coupon</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Interactive</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Team</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Testimonial</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Timeline</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Pricing Table</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Stats</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Social</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Footers</a></li>
-                              </ul>
-                            </div>
-                        </li>
-
-                        <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-0">Templates</h5>
-                            <div class="toggle overflow-hidden mt-3" aria-expanded="false">
-                              <ul class="px-2 text-xs leading-loose text-grey-dark">
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Marketing</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Notifications</a></li>
-                              </ul>
-                            </div>
-                        </li>
-
-                        <li class="py-2">
-                          <ul class="text-xs leading-loose text-grey-dark">
-                            <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Marketing</a></li>
-                            <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Notifications</a></li>
-                          </ul>
-                        </li>
-
-                        <li class="py-2">
-                            <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">Integrations</h5>
-                            <div class="toggle overflow-hidden transition-all" aria-expanded="false">
-                              <ul class="px-2 text-xs leading-loose text-grey-dark">
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Campaign Monitor</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">MailChimp</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Mailster</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Shopify</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">StampReady</a></li>
-                                <li class="pb-1"><a href="#" class="hover:text-grey-darkest">Other ESPs</a></li>
-                              </ul>
-                            </div>
-                        </li>
-
+                    @endforeach --}}
                     </ul>
                 </div>
             </div>
         </nav>
+
         <main class="content w-full pt-32">
             @yield('content')
 

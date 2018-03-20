@@ -1,11 +1,12 @@
 ---
 extends: _themes.default.documentation
-title: SECTIONS HERO
-description: Getting started with this email template
-tags: email, introduction, start
+title: Sections Quick Reference
+description: A reference guide to template sections
+tags: sections, reference, screenshots, modules
+navgroup: Getting Started
 ---
 
-# Some words about the HERO section
+# This would be the sections q reference page!
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non neque diam. Maecenas fermentum enim et magna rutrum interdum. Sed ut ligula rutrum, tempus libero a, tempor erat. Sed aliquam, ex vitae tristique vulputate, nunc felis condimentum elit, a iaculis nisl enim at libero. Quisque dictum hendrerit metus, nec congue nisl imperdiet nec.
 
