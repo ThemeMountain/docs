@@ -38,7 +38,7 @@ $events->afterCollections(function ($jigsaw) {
         if (! $file->exists('tmp')) {
             $file->makeDirectory('tmp');
         }
-        $file->put('tmp/' . $key . '-nav.json', json_encode($menu));
+        $file->put(__DIR__ . '/tmp/' . $key . '-nav.json', json_encode($menu));
     });
 });
 

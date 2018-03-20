@@ -734,6 +734,10 @@ h6 {
   display: none;
 }
 
+.sidebar-navigation .wrapper {
+  height: calc(100vh - 5rem);
+}
+
 .sidebar-navigation .toggle-trigger.active::after {
   content: "\2014";
 }
@@ -743,6 +747,10 @@ h6 {
   font-weight: 700;
   content: "+";
   position: relative;
+}
+
+.toc .wrapper {
+  height: calc(100vh - 8rem);
 }
 
 .container {

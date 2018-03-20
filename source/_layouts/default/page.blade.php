@@ -43,50 +43,17 @@
 
     <div class="container flex flex-row">
 
-        <nav class="sidebar-navigation w-2/5">
-            <div class="sticky top-20 pr-16">
-                <div class="overflow-y-auto" style="height:calc(100vh - 5rem)">
-                    <ul class="py-8 mt-6">
-                    @foreach($page->getNavigation() as $category => $sections)
-                        @if($category == 'categories')
-                            @foreach($sections as $heading => $items)
-                            <li class="py-2">
-                                <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">{{ $heading }}</h5>
-                                <div class="toggle overflow-hidden transition-all" aria-expanded="true">
-                                    <ul class="px-2 text-xs leading-loose text-grey-dark">
-                                        @foreach($items as $item)
-                                            <li class="pb-1">
-                                                <a href="{{ $item['path'] }}" class="hover:text-grey-darkest">{{ $item['title'] }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </li>
-                            @endforeach
-                        @endif
-                        @if($category == 'uncategorized')
-                            <ul class="text-xs leading-loose text-grey-dark">
-                            @foreach($sections as $item)
-                                <li class="pb-1">
-                                    <a href="{{ $item['path'] }}" class="hover:text-grey-darkest">{{ $item['title'] }}</a>
-                                </li>
-                            @endforeach
-                            </ul>
-                        @endif
-                    @endforeach
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        @include('_layouts.default.partials.navigation')
 
         <main class="content w-full pt-32">
             @yield('content')
 
             <div class="border-t border-grey-light py-6 mt-8 text-sm text-grey-dark">Optional footer, only if really really needed.</div>
         </main>
-        <aside class="w-1/3 pt-12">
+
+        <aside class="w-1/3 pt-12 toc">
             <div class="pl-16 sticky top-32">
-                <div class="overflow-y-auto" style="height:calc(100vh - 8rem)">
+                <div class="overflow-y-auto wrapper">
                     <h4 class="font-normal text-grey-darkest mb-4">Quickies</h4>
                     <ul class="list-reset text-xs text-grey-dark leading-loose">
                         <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
@@ -107,8 +74,6 @@
             </div>
         </aside>
     </div>
-
-    {{-- @include('_layouts.default.partials.sections.footer') --}}
 
 @push('scripts')
     <script src="@mix('/js/vendor.js')"></script>

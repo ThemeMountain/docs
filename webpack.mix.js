@@ -13,11 +13,6 @@ mix.webpackConfig({
     ]
 });
 
-
-mix.js(['source/_assets/js/toggle/toggle.js'], 'js/vendor.js')
-    .js('source/_assets/js/app.js', 'js/app.js')
-    .version()
-
 mix.sass('source/_assets/sass/main.scss', 'css/')
     .options({
         processCssUrls: false,
@@ -30,6 +25,8 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
             path.join(__dirname, "source/**/*.blade.php"),
         ],
     })
+    .js(['source/_assets/js/toggle/toggle.js'], 'js/vendor.js')
+    .js('source/_assets/js/app.js', 'js/app.js')
     .version()
 
 mix.copy('source/_assets/img', 'source/assets/img', false)

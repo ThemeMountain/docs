@@ -1,13 +1,13 @@
 @tailwind preflight;
 
-@import "resets";
-@import "spacing";
-@import "gradients";
-@import "animation";
-@import "typography";
-@import "navigation";
+@import "components/resets";
+@import "components/spacing";
+@import "components/gradients";
+@import "components/animation";
+@import "components/typography";
+@import "components/navigation";
 
 @tailwind components;
 @tailwind utilities;
 
-@import "forms";
+@import "components/forms";
