@@ -1,5 +1,5 @@
 .env
+/tmp/
 /build_local/
-/source/_tmp/
 /node_modules/
 /vendor/

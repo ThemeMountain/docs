@@ -208,7 +208,7 @@ return [
 
     'getNavigation' => function($page) {
         $name = $page->getCollection();
-        $file = __DIR__ . '/source/_tmp/' . $name . '-nav.json';
+        $file = __DIR__ . '/tmp/' . $name . '-nav.json';
         return collect(json_decode(file_get_contents($file), true));
     },
 

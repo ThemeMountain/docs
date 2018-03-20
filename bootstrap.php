@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Filesystem\Filesystem;
+
 $dotenv = new \Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
@@ -9,15 +11,12 @@ $dotenv->load();
 
 $events->afterCollections(function ($jigsaw) {
 
+    $file = new Filesystem();
     $config = $jigsaw->getConfig();
-
     $collections = $config->collections;
 
-    $collections->each(function ($item, $key) use ($jigsaw) {
+    $collections->each(function ($item, $key) use ($jigsaw, $file) {
         $site = $jigsaw->getCollection($key);
-
-        // var_dump($site);
-        // $jigsaw->writeSourceFile('_'.$key.'-config.json', json_encode($site));
 
         $menu = [];
         foreach ($site as $s) {
@@ -36,7 +35,10 @@ $events->afterCollections(function ($jigsaw) {
             }
         }
 
-        $jigsaw->writeSourceFile('_tmp/' . $key . '-nav.json', json_encode($menu));
+        if (! $file->exists('tmp')) {
+            $file->makeDirectory('tmp');
+        }
+        $file->put('tmp/' . $key . '-nav.json', json_encode($menu));
     });
 });
 
