@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: Introduction
 description: A few words about the template
 tags: email, introduction, start

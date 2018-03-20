@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: Preheader
 description: Add useful information above your header
 tags: email, sections, modules, basic, social

@@ -3,14 +3,14 @@ description: Listing of all ThemeMountain documentation sites
 tags: main, home, index
 ---
 
-@extends('_themes.default.master')
+@extends('_layouts.default.master')
 
 @section('body')
 
 <body class="bg-grey-lighter font-sans font-normal text-black leading-normal">
 
     <div class="bg-gradient-{{ $page->theme }} h-screen">
-        @include('_themes.default._partials.sections.navigation', ['theme' => $page->theme])
+        @include('_layouts.default.partials.sections.navigation', ['theme' => $page->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center content">
@@ -143,6 +143,6 @@ tags: main, home, index
         </div>
     </div>
 
-     @include('_themes.default._partials.sections.footer')
+     @include('_layouts.default.partials.sections.footer')
 
 @endsection

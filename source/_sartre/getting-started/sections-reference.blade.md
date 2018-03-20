@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: Sections Quick Reference
 description: A reference guide to template sections
 tags: sections, reference, screenshots, modules

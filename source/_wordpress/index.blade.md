@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: WordPress index page
 description: Starting page of WordPress docs
 tags: wordpress, index, start

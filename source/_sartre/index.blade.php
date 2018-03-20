@@ -4,13 +4,13 @@ description: Documentation for the Sartre Email Template
 tags: main, home, index
 ---
 
-@extends('_themes.default.master')
+@extends('_layouts.default.master')
 @section('body-classes', 'bg-gradient-' . $page->theme)
 
 @section('body')
 
     <div class="h-screen">
-        @include('_themes.default._partials.sections.navigation', ['theme' => $page->theme])
+        @include('_layouts.default.partials.sections.navigation', ['theme' => $page->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center content">

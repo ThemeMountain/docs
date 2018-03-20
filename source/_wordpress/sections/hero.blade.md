@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: SECTIONS HERO WORDPRESS
 description: Docs for HERO in WordPress theme
 tags: wordpress, introduction, start

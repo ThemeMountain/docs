@@ -1,4 +1,4 @@
-@extends('_themes.default.master')
+@extends('_layouts.default.master')
 @section('body-classes', 'single')
 
 @section('body')
@@ -108,7 +108,7 @@
         </aside>
     </div>
 
-    {{-- @include('_themes.default._partials.sections.footer') --}}
+    {{-- @include('_layouts.default.partials.sections.footer') --}}
 
 @push('scripts')
     <script src="@mix('/js/vendor.js')"></script>

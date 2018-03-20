@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: File Structure
 description: How the template is organised
 tags: files, structure, organization

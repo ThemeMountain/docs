@@ -1,5 +1,5 @@
 ---
-extends: _themes.default.documentation
+extends: _layouts.default.page
 title: Getting Started
 description: Getting started with this WordPress template
 tags: wordpress, introduction, start
