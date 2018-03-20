@@ -204,7 +204,12 @@ return [
         $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $path);
 
         return ltrim($relativePath, '/') . mix($assetPath);
-        // return 'test path';
+    },
+
+    'getNavigation' => function($page) {
+        $name = $page->getCollection();
+        $file = __DIR__ . '/source/_tmp/' . $name . '-nav.json';
+        return collect(json_decode(file_get_contents($file), true));
     },
 
     /*

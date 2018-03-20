@@ -28,7 +28,7 @@ module.exports = {
 
             command.get(bin.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
                 if(error) {
-                    console.log('Jigsaw build failed, please check the log.', stderr)
+                    console.log('\nJigsaw build failed.\n', stderr)
                     process.exit(1)
                 }
                 console.log(stdout)

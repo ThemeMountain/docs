@@ -3,7 +3,8 @@ extends: _themes.default.documentation
 title: Introduction
 description: A few words about the template
 tags: email, introduction, start
-navgroup: Getting Started
+navigation:
+  group: Getting Started
 ---
 
 # This would be the introduction page!

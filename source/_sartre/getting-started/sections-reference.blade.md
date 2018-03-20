@@ -3,7 +3,8 @@ extends: _themes.default.documentation
 title: Sections Quick Reference
 description: A reference guide to template sections
 tags: sections, reference, screenshots, modules
-navgroup: Getting Started
+navigation:
+  group: Getting Started
 ---
 
 # This would be the sections q reference page!

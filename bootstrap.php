@@ -16,30 +16,28 @@ $events->afterCollections(function ($jigsaw) {
     $collections->each(function ($item, $key) use ($jigsaw) {
         $site = $jigsaw->getCollection($key);
 
+        // var_dump($site);
+        // $jigsaw->writeSourceFile('_'.$key.'-config.json', json_encode($site));
+
         $menu = [];
         foreach ($site as $s) {
-            if ($s->has('navgroup')) {
-                $menu['categories'][$s->navgroup][] = [
-                    'title' => $s->title,
-                    'url' => $s->_meta->url->first(),
-                ];
-            } else {
+            if ($s->has('navigation')) {
+                if (isset($s->navigation['group'])) {
+                    $menu['categories'][$s->navigation['group']][] = [
+                        'title' => $s->title,
+                        'path' => $s->_meta->path->first(),
+                    ];
+                } else {
                 $menu['uncategorized'][] = [
                     'title' => $s->title,
-                    'url' => $s->_meta->url->first(),
+                    'path' => $s->_meta->path->first(),
                 ];
+                }
             }
         }
 
-        // var_dump($menu);
-
-        // nici nu trebuie JSON encode, pur si simplu $jigsaw->setConfig($key, $menu) - vezi cum setezi $key, testeaza cu getKey() mai intai. Dot notation!!! Poti folosi $jigsaw->setConfig('collections.'$key, $menu)
-        $jigsaw->setConfig('collections.' . $key . '.navigation', $menu);
-        $jigsaw->writeSourceFile('_'.$key.'.json', json_encode($menu));
-        var_dump($jigsaw->getConfig('collections.' . $key . '.navigation'));
+        $jigsaw->writeSourceFile('_tmp/' . $key . '-nav.json', json_encode($menu));
     });
-
-
 });
 
 

@@ -3,6 +3,8 @@ extends: _themes.default.documentation
 title: Preheader
 description: Add useful information above your header
 tags: email, sections, modules, basic, social
+navigation:
+  group: Sections
 ---
 
 # Some words about the Preheader section

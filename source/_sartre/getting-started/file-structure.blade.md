@@ -3,7 +3,8 @@ extends: _themes.default.documentation
 title: File Structure
 description: How the template is organised
 tags: files, structure, organization
-navgroup: Getting Started
+navigation:
+  group: Getting Started
 ---
 
 # This would be the file structure page!
