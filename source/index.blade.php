@@ -10,7 +10,7 @@ tags: main, home, index
 <body class="bg-grey-lighter font-sans font-normal text-black leading-normal">
 
     <div class="bg-gradient-{{ $page->theme }} h-screen">
-        @include('_layouts.default.partials.header', ['theme' => $page->theme])
+        @include('_layouts.default.partials.headers.master', ['theme' => $page->theme])
 
         <div class="flex h-screen items-center">
             <div class="mx-auto text-center content">
