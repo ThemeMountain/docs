@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "local": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --env=local --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "offline": "cross-env NODE_ENV=offline node_modules/webpack/bin/webpack.js --progress --hide-modules --env=offline --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js",
     "dev": "npm run local",
     "prod": "npm run production",

@@ -5,6 +5,7 @@ description: How the template is organised
 tags: files, structure, organization
 navigation:
   group: Getting Started
+  sort: 1
 ---
 
 # This would be the file structure page!

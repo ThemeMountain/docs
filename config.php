@@ -31,7 +31,7 @@ return [
                     'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
                     'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
                     'indexName' => 'sartre_email_docs',
-                    'syncOnBuild' => true, // set to false or omit it, to disable
+                    'syncOnBuild' => true, // set to false or omit it, to disable. Remove this shit, we should always sync to Algolia when building for production
                 ],
             ],
         ],
@@ -185,7 +185,7 @@ return [
     |
     */
 
-    'broadcast' => false,
+    'broadcast' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -200,10 +200,17 @@ return [
     */
 
     'getAsset' => function ($page, $assetPath) {
-        $path = $page->getPath();
-        $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $path);
+        $env = getenv('NODE_ENV');
 
-        return ltrim($relativePath, '/') . mix($assetPath);
+        if ($env == 'offline') {
+            $path = $page->getPath();
+            $path_parts = pathinfo($path);
+            $dir = $path_parts['dirname'];
+            $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $dir);
+            return ltrim($relativePath, '/') . mix($assetPath);
+        }
+
+        return mix($assetPath);
     },
 
     'getNavigation' => function($page) {
