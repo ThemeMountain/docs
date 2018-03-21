@@ -9,7 +9,7 @@ mix.webpackConfig({
     plugins: [
         build.jigsaw,
         build.browserSync(),
-        build.watch(['source/**/*.md', 'source/**/*.blade.php', 'source/**/*.scss', '*.php', '*.js']),
+        build.watch(['source/**/*.md', 'source/**/*.blade.php', '*.php', '*.js']),
     ]
 });
 
@@ -28,6 +28,4 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
     .js(['source/_assets/js/toggle/toggle.js'], 'js/vendor.js')
     .js('source/_assets/js/app.js', 'js/app.js')
     .version()
-
-mix.copy('source/_assets/img', 'source/assets/img', false)
 
