@@ -19,7 +19,11 @@ $events->afterCollections(function ($jigsaw) {
     $collections->each(function ($item, $key) use ($jigsaw, $file, $env) {
         $site = $jigsaw->getCollection($key);
 
-        $menu = [];
+        $menu = [
+            'categories' => [],
+            'uncategorized' => []
+        ];
+
         foreach ($site as $s) {
             if ($s->has('navigation')) {
 
