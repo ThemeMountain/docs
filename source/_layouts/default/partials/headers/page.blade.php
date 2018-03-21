@@ -3,7 +3,7 @@
         <div class="flex flex-1 items-center">
             <div class="w-2/5">
                 <a href="#">
-                    <img src="/assets/img/logo-dark.png" alt="Logo" width="150">
+                    <img src="/img/logo-dark.png" alt="Logo" width="150">
                 </a>
             </div>
             <div class="w-full py-4">

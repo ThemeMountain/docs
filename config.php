@@ -214,8 +214,8 @@ return [
     },
 
     'getNavigation' => function($page) {
-        $name = $page->getCollection();
-        $file = __DIR__ . '/tmp/' . $name . '-nav.json';
+        $collection = $page->getCollection();
+        $file = __DIR__ . '/source/_assets/json/' . $collection . '-navigation.json';
         return collect(json_decode(file_get_contents($file), true));
     },
 

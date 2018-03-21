@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Filesystem\Filesystem;
-
 $dotenv = new \Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
@@ -11,12 +9,11 @@ $dotenv->load();
 
 $events->afterCollections(function ($jigsaw) {
 
-    $file = new Filesystem();
     $env = getenv('NODE_ENV');
     $config = $jigsaw->getConfig();
     $collections = $config->collections;
 
-    $collections->each(function ($item, $key) use ($jigsaw, $file, $env) {
+    $collections->each(function ($item, $key) use ($jigsaw, $env) {
         $site = $jigsaw->getCollection($key);
 
         $menu = [
@@ -58,10 +55,7 @@ $events->afterCollections(function ($jigsaw) {
             }
         }
 
-        if (! $file->exists('tmp')) {
-            $file->makeDirectory('tmp');
-        }
-        $file->put(__DIR__ . '/tmp/' . $key . '-nav.json', json_encode($menu));
+        $jigsaw->writeSourceFile('_assets/json/' . $key . '-navigation.json' , json_encode($menu));
     });
 });
 
