@@ -198,7 +198,7 @@ return [
     |
     */
 
-    'getAsset' => function ($page, $assetPath) {
+    'getAssetPath' => function ($page, $assetPath) {
         $env = getenv('NODE_ENV');
 
         if ($env == 'offline') {
@@ -206,10 +206,10 @@ return [
             $path_parts = pathinfo($path);
             $dir = $path_parts['dirname'];
             $relativePath = preg_replace('/\b([a-zA-Z0-9]*-?[a-zA-Z0-9]*)\w+\b/', '..', $dir);
-            return ltrim($relativePath, '/') . mix($assetPath);
+            return ltrim($relativePath, '/');
         }
 
-        return mix($assetPath);
+        return '';
     },
 
     'getNavigation' => function($page) {
