@@ -40,8 +40,8 @@ return [
             'version' => '1.0.0',
             'title' => 'WordPress Documentation',
             'theme' => 'red',
-            'group' => '',
-            'path' => '{group}/{collection}/{-filename}',
+            'group' => 'wordpress',
+            'path' => '{collection}/{-filename}',
             'search' => [
                 'algolia' => [
                     'indexName' => 'wordpress_docs',
@@ -217,6 +217,13 @@ return [
         $name = $page->getCollection();
         $file = __DIR__ . '/tmp/' . $name . '-nav.json';
         return collect(json_decode(file_get_contents($file), true));
+    },
+
+    'active' => function ($page, $path) {
+        $pages = collect(array_wrap($page));
+        return $pages->contains(function ($page) use ($path) {
+            return str_contains($page->getPath(), $path);
+        });
     },
 
     /*

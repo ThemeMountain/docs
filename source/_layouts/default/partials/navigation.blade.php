@@ -11,7 +11,7 @@
                             <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 @foreach($items as $item)
                                     <li class="pb-1">
-                                        <a href="{{ $item['path'] }}" class="hover:text-grey-darkest">{{ $item['title'] }}</a>
+                                        <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item) ? 'text-grey-darkest' : '' }}">{{ $item['title'] }}</a>
                                     </li>
                                 @endforeach
                             </ul>
