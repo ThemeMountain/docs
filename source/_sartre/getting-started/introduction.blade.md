@@ -1,109 +1,45 @@
 ---
 extends: _layouts.default.page
 title: Introduction
-description: A few words about the template
+description: A few words before diving in
 tags: email, introduction, start
 navigation:
   group: Getting Started
   order: 1
 ---
 
-# This would be the introduction page!
+# A few words before diving in
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non neque diam. Maecenas fermentum enim et magna rutrum interdum. Sed ut ligula rutrum, tempus libero a, tempor erat. Sed aliquam, ex vitae tristique vulputate, nunc felis condimentum elit, a iaculis nisl enim at libero. Quisque dictum hendrerit metus, nec congue nisl imperdiet nec.
+## Framework
 
-## Heading 2
+The product is built using our own [Pine Email Framework](https://thememountain.github.io/pine/1.0.1).
 
-Some more content
+If you want to customise layouts, change columns, or do anything that affects structure, besides HTML knowledge we strongly suggest you first read the framework documentation.
 
-### Heading 3
+The documentation you're looking at now provides template-related guidance only. For anything else, you will find links to the framework documentation, which goes in-depth on code and framework-related topics, and provides practical examples.
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+---
 
-## Heading 2
+## Required Software
 
-Some more content
+#### Code Editing
 
-### Heading 3
+If you plan on customizing the HTML code of this product, you will need a text editor. There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) to build the framework and template, so we definitely recommend it.
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+#### Email Service Provider Integrations
 
-## Heading 2
+The product includes dedicated integrations for the following email service providers:
 
-Some more content
+- [Shopify](https://www.shopify.com/)
+- [MailChimp](https://mailchimp.com/)
+- [StampReady](https://www.stampready.net/)
+- [Mailster for WordPress](https://mailster.co/)
+- [Campaign Monitor](https://www.campaignmonitor.com/)
 
-### Heading 3
+With the exception of Shopify, each of these services offers an online email builder that you can use to visually build your layouts. We recommend StampReady, simply because it's the best in class and you can export your layouts to use with other services. If you're using WordPress, the recommendation is obvious.
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+#### Email Testing
 
-## Heading 2
+After you customize the template to suit your needs, always test before sending out an email. Our email templates and framework have been tested with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
 
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+If you don't have access to a testing tool, at the very least send yourself a test email before launching a campaign, and check it on as many devices and email clients as you can. And whatever you do, never send out a mass email from your personal Gmail or Outlook.

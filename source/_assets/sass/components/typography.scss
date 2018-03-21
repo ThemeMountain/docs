@@ -1,10 +1,33 @@
-h1, h2, h3, h4, h5, h6 {
-    @apply .font-light .leading-tight .mb-6;
+.content {
+    a {
+        @apply .border-b;
+
+        &:hover {
+            @apply .text-blue;
+        }
+    }
+
+    ol,
+    ul {
+      @apply .mb-4;
+    }
+
+    li a {
+        @apply .text-xs .border-none;
+    }
+
+    h1 {
+        @apply .font-light .leading-tight .pb-6;
+    }
+
+    h2, h3, h4, h5, h6 {
+        @apply .font-light .leading-tight .pb-6 .pt-4;
+    }
 }
 
 .single {
     p {
-        @apply .font-hind-madurai .mb-8 .text-sm .text-grey-darker;
+        @apply .font-hind-madurai .mb-4 .text-sm .text-grey-darker;
         line-height: 1.8;
     }
 }

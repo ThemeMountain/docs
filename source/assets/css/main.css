@@ -648,12 +648,6 @@ img {
   vertical-align: middle;
 }
 
-ol,
-ul {
-  list-style: none;
-  padding: 0;
-}
-
 .outline-0 {
   outline: none;
 }
@@ -706,20 +700,44 @@ ul {
   transition: all .3s cubic-bezier(.86, 0, .07, 1) 0s;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.content a {
+  border-bottom-width: 1px;
+}
+
+.content a:hover {
+  color: #3490dc;
+}
+
+.content ol,
+.content ul {
+  margin-bottom: 1rem;
+}
+
+.content li a {
+  font-size: .75rem;
+  border-style: none;
+}
+
+.content h1 {
   font-weight: 300;
   line-height: 1.25;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: 300;
+  line-height: 1.25;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
 }
 
 .single p {
   font-family: "Hind Madurai", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: .875rem;
   color: #606f7b;
   line-height: 1.8;
