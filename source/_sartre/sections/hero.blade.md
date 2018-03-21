@@ -1,14 +1,14 @@
 ---
 extends: _layouts.default.page
-title: File Structure
-description: How the template is organised
-tags: files, structure, organization
+title: HERO
+description: Add useful information above your header
+tags: email, sections, modules, basic, social
 navigation:
-  group: Getting Started
+  group: Sections
   order: 2
 ---
 
-# This would be the file structure page!
+# Some words about the HERO section
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non neque diam. Maecenas fermentum enim et magna rutrum interdum. Sed ut ligula rutrum, tempus libero a, tempor erat. Sed aliquam, ex vitae tristique vulputate, nunc felis condimentum elit, a iaculis nisl enim at libero. Quisque dictum hendrerit metus, nec congue nisl imperdiet nec.
 

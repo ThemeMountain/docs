@@ -5,6 +5,7 @@ description: A few words about the template
 tags: email, introduction, start
 navigation:
   group: Getting Started
+  order: 1
 ---
 
 # This would be the introduction page!

@@ -33,12 +33,26 @@ $events->afterCollections(function ($jigsaw) {
                     $menu['categories'][$s->navigation['group']][] = [
                         'title' => $s->title,
                         'path' => $path,
+                        'order' => isset($s->navigation['order']) && is_numeric($s->navigation['order']) ? $s->navigation['order'] : 2e10,
                     ];
+                    usort($menu['categories'][$s->navigation['group']], create_function('$a, $b', '
+                            $a = $a["order"];
+                            $b = $b["order"];
+                            if ($a == $b) return 0;
+                            return ($a < $b) ? -1 : 1;
+                        '));
                 } else {
-                $menu['uncategorized'][] = [
-                    'title' => $s->title,
-                    'path' => $path,
-                ];
+                    $menu['uncategorized'][] = [
+                        'title' => $s->title,
+                        'path' => $path,
+                        'order' => isset($s->navigation['order']) && is_numeric($s->navigation['order']) ? $s->navigation['order'] : 2e10,
+                    ];
+                    usort($menu['uncategorized'], create_function('$a, $b', '
+                            $a = $a["order"];
+                            $b = $b["order"];
+                            if ($a == $b) return 0;
+                            return ($a < $b) ? -1 : 1;
+                        '));
                 }
 
             }
