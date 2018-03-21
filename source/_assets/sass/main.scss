@@ -6,13 +6,8 @@
 @import "components/animation";
 @import "components/typography";
 @import "components/navigation";
-
-.sticky {
-    position: fixed;
-    position: sticky;
-}
+@import "components/forms";
 
 @tailwind components;
 @tailwind utilities;
 
-@import "components/forms";

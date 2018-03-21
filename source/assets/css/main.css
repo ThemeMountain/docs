@@ -668,6 +668,12 @@ ul {
   color: #fff;
 }
 
+.sticky {
+  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .top-20 {
   top: 5rem;
 }
@@ -747,10 +753,44 @@ h6 {
   height: calc(100vh - 8rem);
 }
 
-.sticky {
-  position: fixed;
-  position: -webkit-sticky;
-  position: sticky;
+.placeholder-grey-darkest::-webkit-input-placeholder {
+  color: #3d4852;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest:-ms-input-placeholder {
+  color: #3d4852;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest::-ms-input-placeholder {
+  color: #3d4852;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest::placeholder {
+  color: #3d4852;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest:focus::-webkit-input-placeholder {
+  color: #3490dc;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest:focus:-ms-input-placeholder {
+  color: #3490dc;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest:focus::-ms-input-placeholder {
+  color: #3490dc;
+  opacity: 1;
+}
+
+.placeholder-grey-darkest:focus::placeholder {
+  color: #3490dc;
+  opacity: 1;
 }
 
 .container {
@@ -5411,46 +5451,6 @@ h6 {
 
 .z-auto {
   z-index: auto;
-}
-
-.placeholder-grey-darkest::-webkit-input-placeholder {
-  color: #3d4852;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest:-ms-input-placeholder {
-  color: #3d4852;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest::-ms-input-placeholder {
-  color: #3d4852;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest::placeholder {
-  color: #3d4852;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest:focus::-webkit-input-placeholder {
-  color: #3490dc;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest:focus:-ms-input-placeholder {
-  color: #3490dc;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest:focus::-ms-input-placeholder {
-  color: #3490dc;
-  opacity: 1;
-}
-
-.placeholder-grey-darkest:focus::placeholder {
-  color: #3490dc;
-  opacity: 1;
 }
 
 @media (min-width: 576px) {
