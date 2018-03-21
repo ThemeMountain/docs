@@ -188,17 +188,160 @@ var Options = {
 
 /***/ }),
 
+/***/ "./source/_assets/js/toggle/polyfills.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/**
+ * Polyfill method class
+ * @type {Object}
+ */
+var Polyfill = {
+  /**
+   * Determine if the element is an object
+   * @param {Object} el
+   * @return {Boolean}
+   */
+  objectAssign: function objectAssign() {
+    if (typeof Object.assign != 'function') {
+      // Must be writable: true, enumerable: false, configurable: true
+      Object.defineProperty(Object, "assign", {
+        value: function assign(target, varArgs) {
+          // .length of function is 2
+          'use strict';
+
+          if (target == null) {
+            // TypeError if undefined or null
+            throw new TypeError('Cannot convert undefined or null to object');
+          }
+
+          var to = Object(target);
+
+          for (var index = 1; index < arguments.length; index++) {
+            var nextSource = arguments[index];
+
+            if (nextSource != null) {
+              // Skip over if undefined or null
+              for (var nextKey in nextSource) {
+                // Avoid bugs when hasOwnProperty is shadowed
+                if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                  to[nextKey] = nextSource[nextKey];
+                }
+              }
+            }
+          }
+          return to;
+        },
+        writable: true,
+        configurable: true
+      });
+    }
+  },
+  arrayFrom: function arrayFrom() {
+    if (!Array.from) {
+      Array.from = function () {
+        var toStr = Object.prototype.toString;
+        var isCallable = function isCallable(fn) {
+          return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+        };
+        var toInteger = function toInteger(value) {
+          var number = Number(value);
+          if (isNaN(number)) {
+            return 0;
+          }
+          if (number === 0 || !isFinite(number)) {
+            return number;
+          }
+          return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+        };
+        var maxSafeInteger = Math.pow(2, 53) - 1;
+        var toLength = function toLength(value) {
+          var len = toInteger(value);
+          return Math.min(Math.max(len, 0), maxSafeInteger);
+        };
+
+        // The length property of the from method is 1.
+        return function from(arrayLike /*, mapFn, thisArg */) {
+          // 1. Let C be the this value.
+          var C = this;
+
+          // 2. Let items be ToObject(arrayLike).
+          var items = Object(arrayLike);
+
+          // 3. ReturnIfAbrupt(items).
+          if (arrayLike == null) {
+            throw new TypeError('Array.from requires an array-like object - not null or undefined');
+          }
+
+          // 4. If mapfn is undefined, then let mapping be false.
+          var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+          var T;
+          if (typeof mapFn !== 'undefined') {
+            // 5. else
+            // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
+            if (!isCallable(mapFn)) {
+              throw new TypeError('Array.from: when provided, the second argument must be a function');
+            }
+
+            // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
+            if (arguments.length > 2) {
+              T = arguments[2];
+            }
+          }
+
+          // 10. Let lenValue be Get(items, "length").
+          // 11. Let len be ToLength(lenValue).
+          var len = toLength(items.length);
+
+          // 13. If IsConstructor(C) is true, then
+          // 13. a. Let A be the result of calling the [[Construct]] internal method
+          // of C with an argument list containing the single item len.
+          // 14. a. Else, Let A be ArrayCreate(len).
+          var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+
+          // 16. Let k be 0.
+          var k = 0;
+          // 17. Repeat, while k < len… (also steps a - h)
+          var kValue;
+          while (k < len) {
+            kValue = items[k];
+            if (mapFn) {
+              A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+            } else {
+              A[k] = kValue;
+            }
+            k += 1;
+          }
+          // 18. Let putStatus be Put(A, "length", len, true).
+          A.length = len;
+          // 20. Return A.
+          return A;
+        };
+      }();
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Polyfill);
+
+/***/ }),
+
 /***/ "./source/_assets/js/toggle/toggle.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__options__ = __webpack_require__("./source/_assets/js/toggle/options.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utility__ = __webpack_require__("./source/_assets/js/toggle/utility.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__polyfills__ = __webpack_require__("./source/_assets/js/toggle/polyfills.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utility__ = __webpack_require__("./source/_assets/js/toggle/utility.js");
 /*! toggle.js v1.1.0 | MIT License | https://github.com/oldrivercreative/toggle */
 
 
 
+
+
+__WEBPACK_IMPORTED_MODULE_1__polyfills__["a" /* default */].objectAssign();
+__WEBPACK_IMPORTED_MODULE_1__polyfills__["a" /* default */].arrayFrom();
 
 /**
  * Create new toggle object
@@ -237,7 +380,7 @@ var Toggle = function Toggle() {
   };
 
   // Configure
-  __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].merge(this.options, __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].clone(__WEBPACK_IMPORTED_MODULE_0__options__["a" /* default */]), config);
+  __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].merge(this.options, __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].clone(__WEBPACK_IMPORTED_MODULE_0__options__["a" /* default */]), config);
 
   // Target scaffolding
   this.targets = {};
@@ -327,7 +470,7 @@ var Toggle = function Toggle() {
 
     // Scoped to parent
     var next = button.nextElementSibling;
-    if (next && __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(next, _this.options.targetSelector)) return [next];else return [];
+    if (next && __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(next, _this.options.targetSelector)) return [next];else return [];
   };
 
   /**
@@ -394,7 +537,7 @@ var Toggle = function Toggle() {
 
     // Scoped to parent
     var prev = target.previousElementSibling;
-    if (prev && __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(prev, _this.options.buttonSelector)) return [prev];else return [];
+    if (prev && __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(prev, _this.options.buttonSelector)) return [prev];else return [];
   };
 
   /**
@@ -407,12 +550,12 @@ var Toggle = function Toggle() {
 
     // Scoped to [href]/[id] pair
     if (_this.options.buttonSelector === '#{id}') {
-      button = __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(e.target, '[href], [data-href]') ? e.target : __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].closest(e.target, '[href], [data-href]');
+      button = __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(e.target, '[href], [data-href]') ? e.target : __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].closest(e.target, '[href], [data-href]');
     }
 
     // Scoped to parent
     else {
-        button = __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(e.target, _this.options.buttonSelector) ? e.target : __WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].closest(e.target, _this.options.buttonSelector);
+        button = __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(e.target, _this.options.buttonSelector) ? e.target : __WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].closest(e.target, _this.options.buttonSelector);
       }
 
     if (button) return button;else return null;
@@ -455,7 +598,7 @@ var Toggle = function Toggle() {
   this.blur = function () {
     var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-    if (e === null || _this.options.blur && _this.options.blurFilter && !__WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(e.target, _this.options.blurFilter)) {
+    if (e === null || _this.options.blur && _this.options.blurFilter && !__WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(e.target, _this.options.blurFilter)) {
       _this.targets.setAll(false);
     }
   };
@@ -468,7 +611,7 @@ var Toggle = function Toggle() {
   this.blurSiblings = function (target) {
     Array.from(target.parentNode.parentNode.children).forEach(function (parent) {
       Array.from(parent.children).forEach(function (child) {
-        if (__WEBPACK_IMPORTED_MODULE_1__utility__["a" /* default */].matches(child, _this.options.targetSelector)) _this.targets.set(child, false);
+        if (__WEBPACK_IMPORTED_MODULE_2__utility__["a" /* default */].matches(child, _this.options.targetSelector)) _this.targets.set(child, false);
       });
     });
   };

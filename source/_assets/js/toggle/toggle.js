@@ -1,7 +1,11 @@
 /*! toggle.js v1.1.0 | MIT License | https://github.com/oldrivercreative/toggle */
 
 import Options from './options'
+import Polyfill from './polyfills'
 import Utility from './utility'
+
+Polyfill.objectAssign()
+Polyfill.arrayFrom()
 
 /**
  * Create new toggle object
