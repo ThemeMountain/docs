@@ -700,12 +700,12 @@ img {
   transition: all .3s cubic-bezier(.86, 0, .07, 1) 0s;
 }
 
-.content a {
+.content p a {
   border-bottom-width: 1px;
 }
 
-.content a:hover {
-  color: #3490dc;
+.content p a:hover {
+  border-color: #3490dc;
 }
 
 .content ol,

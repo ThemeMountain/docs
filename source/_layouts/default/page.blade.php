@@ -18,19 +18,7 @@
         <aside class="w-1/3 pt-12 toc">
             <div class="pl-16 sticky top-32">
                 <div class="overflow-y-auto wrapper">
-                    <h4 class="font-normal text-grey-darkest mb-4 mt-2">Quickies</h4>
-                    <ul class="list-reset text-xs text-grey-dark leading-loose">
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                        <li class="pb-1"><a href="" class="hover:text-grey-darkest">Section title</a></li>
-                    </ul>
+                    <table-of-contents></table-of-contents>
                     <footer class="border-t border-grey-lighter pt-4 mt-4">
                         <p>&copy; {{ date('Y') }} ThemeMountain.</p>
                     </footer>

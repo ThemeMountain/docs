@@ -1,9 +1,9 @@
 .content {
-    a {
+    p a {
         @apply .border-b;
 
         &:hover {
-            @apply .text-blue;
+            @apply .border-blue;
         }
     }
 
