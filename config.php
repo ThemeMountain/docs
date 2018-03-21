@@ -40,7 +40,6 @@ return [
             'version' => '1.0.0',
             'title' => 'WordPress Documentation',
             'theme' => 'red',
-            'group' => 'wordpress',
             'path' => '{collection}/{-filename}',
             'search' => [
                 'algolia' => [

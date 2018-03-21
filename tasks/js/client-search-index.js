@@ -30,7 +30,7 @@ module.exports.run = () => {
             const name = s
             const site = sites[s]
 
-            const sitePath = path.join(build_path, site.group, name)
+            const sitePath = site.group ? path.join(build_path, site.group, name) : path.join(build_path, name)
 
             if (fs.existsSync(sitePath)) {
 
