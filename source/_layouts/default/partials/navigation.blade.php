@@ -7,7 +7,7 @@
                     @foreach($sections as $heading => $items)
                     <li class="py-2">
                         <h5 class="toggle-trigger cursor-pointer text-black hover:text-blue text-sm font-normal mb-3">{{ $heading }}</h5>
-                        <div class="toggle overflow-hidden transition-all" aria-expanded="true">
+                        <div class="toggle overflow-hidden transition-all" aria-expanded="{{ $page->hasChildrenActive($items) ? 'true' : 'false'}}">
                             <ul class="px-2 text-xs leading-loose text-grey-dark">
                                 @foreach($items as $item)
                                     <li class="pb-1">
@@ -19,7 +19,7 @@
                     </li>
                     @endforeach
                 @endif
-                @if($category == 'uncategorized')
+                @if($category == 'uncategorized' && ! empty($sections))
                     <ul class="text-xs leading-loose text-grey-dark">
                     @foreach($sections as $item)
                         <li class="pb-1">

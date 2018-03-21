@@ -226,6 +226,13 @@ return [
         });
     },
 
+    'hasChildrenActive' => function ($page, $children) {
+        $children = collect($children);
+        return $children->contains(function ($link) use ($page) {
+            return $page->getPath() == $link['path'];
+        });
+    },
+
     /*
     |--------------------------------------------------------------------------
     | Jigsaw Internals
