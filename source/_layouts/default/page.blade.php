@@ -14,9 +14,9 @@
             @include('_layouts.default.components.pagenav', ['page' => $page])
         </main>
 
-        <aside class="w-1/3 pt-12 toc">
-            <div class="pl-16 sticky top-32">
-                <div class="overflow-y-auto wrapper">
+        <aside class="w-1/3 sidebar-navigation mt-20">
+            <div class="pl-16 sticky top-20">
+                <div class="overflow-y-auto wrapper py-12">
                     <table-of-contents></table-of-contents>
                     <footer class="border-t border-grey-lighter pt-4 mt-4">
                         <p>&copy; {{ date('Y') }} ThemeMountain.</p>

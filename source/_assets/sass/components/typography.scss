@@ -26,8 +26,12 @@
 }
 
 .single {
+    p, li {
+        @apply .font-hind-madurai .text-sm .text-grey-darker;
+    }
+
     p {
-        @apply .font-hind-madurai .mb-4 .text-sm .text-grey-darker;
+        @apply .mb-4;
         line-height: 1.8;
     }
 }

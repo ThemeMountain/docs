@@ -9,102 +9,18 @@ navigation:
   order: 1
 ---
 
-# Some words about the Preheader section
+# Add useful information above your header
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non neque diam. Maecenas fermentum enim et magna rutrum interdum. Sed ut ligula rutrum, tempus libero a, tempor erat. Sed aliquam, ex vitae tristique vulputate, nunc felis condimentum elit, a iaculis nisl enim at libero. Quisque dictum hendrerit metus, nec congue nisl imperdiet nec.
+Preheader sections come in two types:
 
-## Heading 2
+- Basic
+- Social
 
-Some more content
+They can be used to add aside information above the fold. The text inside will also show up in the email preview, so you can use them as attention grabbers.
 
-### Heading 3
+---
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+## Basic Preheader
 
-## Heading 2
+The Basic Preheader is made up of two columns with text links inside. If you want, you can replace the two columns with just one (12-col.html from the grid), and use only text.
 
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```

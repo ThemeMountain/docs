@@ -9,102 +9,61 @@ navigation:
   order: 2
 ---
 
-# This would be the file structure page!
+# How the template is organised
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non neque diam. Maecenas fermentum enim et magna rutrum interdum. Sed ut ligula rutrum, tempus libero a, tempor erat. Sed aliquam, ex vitae tristique vulputate, nunc felis condimentum elit, a iaculis nisl enim at libero. Quisque dictum hendrerit metus, nec congue nisl imperdiet nec.
+The product has the following folder structure:
 
-## Heading 2
+@component('_layouts.default.components.filetree')
+├── Documentation
+├── Files
+│   ├── campaign-monitor
+│       ├── all-in-one
+│       ├── components
+│       ├── grid
+│       ├── layout
+│       ├── sections
+│   └── html
+│       ├── templates <sup>[2]</sup>
+│   └── images
+│   └── mailchimp <sup>[1]</sup>
+│   └── shopify <sup>[3]</sup>
+│   └── stampready <sup>[1]</sup>
+│   └── mailster <sup>[1]</sup>
+├── PSD
+@endcomponent
 
-Some more content
+1. Same structure as the `campaign-monitor` folder.
+2. HTML version doesn't have an all-in-one. Pre-built layouts are provided instead.
+3. The `shopify` folder contains only the pre-built, Shopify-integrated templates.
 
-### Heading 3
+## Boilerplate
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+If you're into coding, the product offers a boilerplate layout file inside the `layout` folder, which you can use as a base for your custom email templates, by copying sections from the `sections` folder, one on top of each other.
 
-## Heading 2
+This file contains meta tags and CSS in the `<head>`. Much of it is needed, but some parts (like menu styles) are optional. If you want to remove certain styles because you're not using the sections they're meant for, or if you want to customise them further, we recommend using [EmailComb](https://emailcomb.com/) to clean up unused CSS. If you're unsure of what a specific CSS rule does, please refer to the [framework documentation](https://thememountain.github.io/email/).
 
-Some more content
+## Pre-built HTML Templates
 
-### Heading 3
+This product includes pre-built HTML templates, for you to use right away:
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+`Marketing` templates are for your regular marketing/promotional/newsletter campaign.
 
-## Heading 2
+`Notifications` are transactional email templates. They are used in user-initiated scenarios, like a password reset or purchase confirmation. You can use them with [SparkPost](https://www.sparkpost.com/) or [MailGun](http://www.mailgun.com/).
 
-Some more content
+## Sections
 
-### Heading 3
+Sections are individual, stackable blocks of content that you can use to create an email. The product includes dozens of sections, most of them being email counterparts to the ones in our HTML and WordPress products.
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+You can customize the text, buttons, images, and colours in all sections.
 
-## Heading 2
+<abbr title="Email Service Provider">ESP</abbr>-integrated versions of the product also include individual section files in their `sections` folder, which you can copy/paste to the boilerplate file in a text editor, in order to build your own custom templates for that provider<sup>[1]</sup>.
 
-Some more content
+<small><sup>[1]</sup> With the exception of the Shopify integration.</small>
 
-### Heading 3
+## Components
 
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+We've also included a small set of useful components from our [Acorn Email Framework](https://thememountain.github.io/acorn/). These are provided as a convenience, for you to quickly copy/paste a button or a spacer in an email that you're custom coding based off of the product.
 
-## Heading 2
+## The Grid
 
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
-
-## Heading 2
-
-Some more content
-
-### Heading 3
-
-```html
-<html>
-  <head>
-    <body>
-      <p>here's some code</p>
-    </body>
-  </head>
-</html>
-```
+Also as a convenience, the product includes standard and collapsed grid examples from our framework. If you want to learn more about using the grid, please refer to the [framework documentation](https://thememountain.github.io/acorn/layout/grid.html).
