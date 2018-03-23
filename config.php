@@ -199,6 +199,9 @@ return [
     |
     */
 
+    'getEnv' => function($page) {
+        return getenv('NODE_ENV');
+    },
     'getAssetPath' => function ($page, $assetPath) {
         $env = getenv('NODE_ENV');
 
@@ -212,13 +215,11 @@ return [
 
         return '';
     },
-
     'getNavigation' => function($page) {
         $collection = $page->getCollection();
         $file = __DIR__ . '/source/_assets/json/' . $collection . '-navigation.json';
         return collect(json_decode(file_get_contents($file), true));
     },
-
     'active' => function ($page, $path) {
         $pages = collect(array_wrap($page));
         $env = getenv('NODE_ENV');
@@ -230,7 +231,6 @@ return [
             return str_contains($page->getPath(), $path['path']);
         });
     },
-
     'hasChildrenActive' => function ($page, $children) {
         $children = collect($children);
         $env = getenv('NODE_ENV');
