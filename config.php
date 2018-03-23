@@ -220,14 +220,24 @@ return [
 
     'active' => function ($page, $path) {
         $pages = collect(array_wrap($page));
-        return $pages->contains(function ($page) use ($path) {
-            return str_contains($page->getPath(), $path);
+        $env = getenv('NODE_ENV');
+
+        return $pages->contains(function ($page) use ($path, $env) {
+            if ($env == 'offline') {
+                return str_contains($path['path'], $page->getFilename());
+            }
+            return str_contains($page->getPath(), $path['path']);
         });
     },
 
     'hasChildrenActive' => function ($page, $children) {
         $children = collect($children);
-        return $children->contains(function ($link) use ($page) {
+        $env = getenv('NODE_ENV');
+
+        return $children->contains(function ($link) use ($page, $env) {
+            if ($env == 'offline') {
+                return str_contains($page->getPath(), basename($link['path']));
+            }
             return $page->getPath() == $link['path'];
         });
     },

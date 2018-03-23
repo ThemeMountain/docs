@@ -14,25 +14,25 @@ $events->afterCollections(function ($jigsaw) {
     $collections = $config->collections;
 
     $collections->each(function ($item, $key) use ($jigsaw, $env) {
-        $site = $jigsaw->getCollection($key);
+        $pages = $jigsaw->getCollection($key);
 
         $menu = [
             'categories' => [],
             'uncategorized' => []
         ];
 
-        foreach ($site as $s) {
-            if ($s->has('navigation')) {
+        foreach ($pages as $page) {
+            if ($page->has('navigation')) {
 
-                $path = $env == 'offline' ? '../' . $s->_meta->collection . '/' . $s->_meta->filename . '.html' : $s->_meta->path->first();
+                $path = $env == 'offline' ? '../' . $page->_meta->collection . '/' . $page->_meta->filename . '.html' : $page->_meta->path->first();
 
-                if (isset($s->navigation['group'])) {
-                    $menu['categories'][$s->navigation['group']][] = [
-                        'title' => $s->title,
+                if (isset($page->navigation['group'])) {
+                    $menu['categories'][$page->navigation['group']][] = [
+                        'title' => $page->title,
                         'path' => $path,
-                        'order' => isset($s->navigation['order']) && is_numeric($s->navigation['order']) ? $s->navigation['order'] : 2e10,
+                        'order' => isset($page->navigation['order']) && is_numeric($page->navigation['order']) ? $page->navigation['order'] : 2e10,
                     ];
-                    usort($menu['categories'][$s->navigation['group']], create_function('$a, $b', '
+                    usort($menu['categories'][$page->navigation['group']], create_function('$a, $b', '
                             $a = $a["order"];
                             $b = $b["order"];
                             if ($a == $b) return 0;
@@ -40,9 +40,9 @@ $events->afterCollections(function ($jigsaw) {
                         '));
                 } else {
                     $menu['uncategorized'][] = [
-                        'title' => $s->title,
+                        'title' => $page->title,
                         'path' => $path,
-                        'order' => isset($s->navigation['order']) && is_numeric($s->navigation['order']) ? $s->navigation['order'] : 2e10,
+                        'order' => isset($page->navigation['order']) && is_numeric($page->navigation['order']) ? $page->navigation['order'] : 2e10,
                     ];
                     usort($menu['uncategorized'], create_function('$a, $b', '
                             $a = $a["order"];
