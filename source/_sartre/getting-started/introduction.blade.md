@@ -3,6 +3,7 @@ extends: _layouts.default.page
 title: Introduction
 description: A few words before diving in
 tags: email, introduction, start
+order: 1
 navigation:
   group: Getting Started
   order: 1

@@ -11,8 +11,7 @@
 
         <main class="content w-full pt-32">
             @yield('content')
-
-            <div class="border-t border-grey-light py-6 mt-8 text-sm text-grey-dark">Optional footer, only if really really needed.</div>
+            @include('_layouts.default.components.pagenav', ['page' => $page])
         </main>
 
         <aside class="w-1/3 pt-12 toc">

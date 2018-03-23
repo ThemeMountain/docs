@@ -3,6 +3,7 @@ extends: _layouts.default.page
 title: File Structure
 description: How the template is organised
 tags: files, structure, organization
+order: 2
 navigation:
   group: Getting Started
   order: 2

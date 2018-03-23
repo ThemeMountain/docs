@@ -3,6 +3,7 @@ extends: _layouts.default.page
 title: Preheader
 description: Add useful information above your header
 tags: email, sections, modules, basic, social
+order: 4
 navigation:
   group: Sections
   order: 1

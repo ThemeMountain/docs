@@ -3,6 +3,7 @@ extends: _layouts.default.page
 title: Sections Quick Reference
 description: A reference guide to template sections
 tags: sections, reference, screenshots, modules
+order: 3
 navigation:
   group: Getting Started
 ---

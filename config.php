@@ -25,6 +25,7 @@ return [
             'theme' => 'purple',
             'group' => 'email',
             'path' => '{group}/{collection}/{-filename}',
+            'sort' => 'order',
             'search' => [
                 'algolia' => [
                     'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),

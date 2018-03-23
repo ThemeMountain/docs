@@ -3,6 +3,7 @@ extends: _layouts.default.page
 title: HERO
 description: Add useful information above your header
 tags: email, sections, modules, basic, social
+order: 5
 navigation:
   group: Sections
   order: 2
