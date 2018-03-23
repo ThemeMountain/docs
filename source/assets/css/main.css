@@ -648,6 +648,13 @@ img {
   vertical-align: middle;
 }
 
+hr {
+  height: 1px;
+  background-color: #dae1e7;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .outline-0 {
   outline: none;
 }
@@ -732,7 +739,7 @@ img {
   font-weight: 300;
   line-height: 1.25;
   padding-bottom: 1.5rem;
-  padding-top: 1rem;
+  padding-top: .5rem;
 }
 
 .single p {
