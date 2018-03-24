@@ -1,6 +1,6 @@
 window.Vue = require('vue')
 
-Vue.component('table-of-contents', require('./components/TableOfContents.vue'))
+Vue.component('table-of-contents', require('./components/TableOfContents.vue').default)
 
 const app = new Vue({
   el: '#app'

@@ -1,4 +1,3 @@
-const dotenv = require('dotenv').config()
 const _ = require('lodash')
 const path = require('path')
 const fs = require('fs-extra')
@@ -22,16 +21,6 @@ exports.sync = (sites, config) => {
         process.exit()
     }
 
-    if (dotenv.error) {
-        console.error('No .env file found, please create it from .env.example and add your Algolia credentials.')
-        process.exit()
-    }
-
-    if (!process.env.ALGOLIA_APP_ID && !process.env.ALGOLIA_SECRET) {
-        console.error('Please first set your default Algolia credentials in the .env file.')
-        process.exit()
-    }
-
     for (let s in sites) {
         const site = sites[s]
         const title = site.title
@@ -42,8 +31,13 @@ exports.sync = (sites, config) => {
             continue
         }
 
-        const appID = algoliaConfig.appID && algoliaConfig.appID.length > 0 ? algoliaConfig.appID : process.env.ALGOLIA_APP_ID
-        const appSecret = algoliaConfig.appSecret && algoliaConfig.appSecret.length > 0 ? algoliaConfig.appSecret : process.env.ALGOLIA_SECRET
+        const appID = algoliaConfig.appID && algoliaConfig.appID.length > 0 ? algoliaConfig.appID : false
+        const appSecret = algoliaConfig.appSecret && algoliaConfig.appSecret.length > 0 ? algoliaConfig.appSecret : false
+
+        if (!appID || !appSecret) {
+            console.error('[' + title + ']', 'Algolia credentials not found in config.php for this site. Skipping...')
+            continue
+        }
 
         let siteKey = Object.keys(_.pickBy(config.collections, o => {return _.isEqual(o, site)} )).toString()
         let jsonFile = getSearchIndexJSON(siteKey, build_path)

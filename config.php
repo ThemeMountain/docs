@@ -31,7 +31,6 @@ return [
                     'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
                     'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
                     'indexName' => 'sartre_email_docs',
-                    'syncOnBuild' => true, // set to false or omit it, to disable. Remove this shit, we should always sync to Algolia when building for production
                 ],
             ],
         ],
@@ -42,8 +41,10 @@ return [
             'theme' => 'red',
             'search' => [
                 'algolia' => [
+                    'appID' => getenv('WORDPRESS_ALGOLIA_APP_ID'),
+                    'appSecret' => getenv('WORDPRESS_ALGOLIA_SECRET'),
+                    'searchKey' => getenv('WORDPRESS_ALGOLIA_SEARCH'),
                     'indexName' => 'wordpress_docs',
-                    'syncOnBuild' => true, // set to false or omit it, to disable
                 ],
             ],
         ],

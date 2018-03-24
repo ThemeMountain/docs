@@ -71,12 +71,12 @@ module.exports.run = () => {
                 }
             }
 
-            if (site.search == 'offline') {
+            if ( !_.has(site, 'search') || site.search == 'offline') {
                 let indexJS = _.replace(indexJSON, '.json', '.js')
                 fs.outputFile(indexJS, 'window.data = ' + fs.readFileSync(indexJSON))
             }
 
-            if (site.search.algolia.syncOnBuild) {
+            if (_.has(site.search, 'algolia')) {
                 algoliaSyncOnBuildSites.push(site)
             }
         }

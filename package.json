@@ -16,7 +16,6 @@
     "browser-sync-webpack-plugin": "^2.0.1",
     "cheerio": "latest",
     "cross-env": "^3.2.3",
-    "dotenv": "^5.0.1",
     "fs-extra": "^5.0.0",
     "glob-all": "^3.1.0",
     "hasbin": "^1.2.3",
@@ -29,6 +28,7 @@
     "on-build-webpack": "^0.1.0",
     "tailwindcss": "^0.5.1",
     "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
     "webpack-watch": "^0.2.0",
     "yargs": "^4.6.0"
   },
