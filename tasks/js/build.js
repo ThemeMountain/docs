@@ -10,16 +10,17 @@ let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let Watch = require('webpack-watch');
 let SearchIndexer = require('./client-search-index');
 
-let config
+let config;
 let browserSyncInstance;
 let env = argv.e || argv.env || 'local';
 let port = argv.p || argv.port || 3000;
 
 module.exports = {
     jigsaw: new AfterWebpack(() => {
+
         command.get('php ./tasks/php/config -e' + env, (error, stdout, stderr) => {
             if (error) {
-                console.log('Could not get config, please check the tasks/php/config script.', stderr)
+                console.log('\nCould not get config, please check the tasks/php/config script.\n', stderr)
                 process.exit(1)
             }
 

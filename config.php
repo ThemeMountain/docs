@@ -93,8 +93,9 @@ return [
 
     'social' => [
         'envato' => 'https://themeforest.net/user/thememountain/portfolio?ref=thememountain',
-        'github' => 'https://github.com/ThemeMountain',
         'twitter' => 'https://twitter.com/thememountainco',
+        'github' => 'https://github.com/ThemeMountain',
+        'support' => 'https://thememountain.ticksy.com',
     ],
 
     /*
@@ -218,6 +219,9 @@ return [
     'getNavigation' => function($page) {
         $site = $page->collections[$page->getCollection()];
         return $site->nav;
+    },
+    'getSVG' => function($name) {
+        return __DIR__ . '/source/img/icons/'.$name.'.svg';
     },
     'active' => function ($page, $path) {
         $pages = collect(array_wrap($page));
