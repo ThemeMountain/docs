@@ -11,7 +11,7 @@
                             <ul class="px-2 text-xs leading-loose text-grey-dark list-reset">
                                 @foreach($items as $item)
                                     <li class="pb-1">
-                                        <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item) ? 'text-grey-darkest' : '' }}">
+                                        <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item) ? 'text-blue pointer-events-none' : '' }}">
                                             {{ $item['title'] }}
                                         </a>
                                     </li>
@@ -25,7 +25,7 @@
                     <ul class="text-xs leading-loose text-grey-dark list-reset">
                     @foreach($sections as $item)
                         <li class="pb-1">
-                            <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item['path']) ? 'text-grey-darkest' : '' }}">
+                            <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item['path']) ? 'text-blue pointer-events-none' : '' }}">
                                 {{ $item['title'] }}
                             </a>
                         </li>

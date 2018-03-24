@@ -13,6 +13,7 @@ $events->afterCollections(function ($jigsaw) {
     $collections = $jigsaw->getCollections();
 
     $collections->each(function ($item, $key) use ($jigsaw, $env) {
+
         $menu = [
             'categories' => [],
             'uncategorized' => []
@@ -53,9 +54,8 @@ $events->afterCollections(function ($jigsaw) {
             }
         }
 
-        $jigsaw->writeSourceFile('_assets/json/' . $key . '-navigation.json' , json_encode($menu));
+        $jigsaw->setConfig('collections.'.$key.'.nav', $menu);
     });
-
 });
 
 

@@ -216,9 +216,8 @@ return [
         return '';
     },
     'getNavigation' => function($page) {
-        $collection = $page->getCollection();
-        $file = __DIR__ . '/source/_assets/json/' . $collection . '-navigation.json';
-        return collect(json_decode(file_get_contents($file), true));
+        $site = $page->collections[$page->getCollection()];
+        return $site->nav;
     },
     'active' => function ($page, $path) {
         $pages = collect(array_wrap($page));
