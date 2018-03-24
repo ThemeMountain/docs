@@ -24,7 +24,6 @@ return [
             'title' => 'Sartre',
             'theme' => 'purple',
             'group' => 'email',
-            'path' => '{group}/{collection}/{-filename}',
             'sort' => 'order',
             'search' => [
                 'algolia' => [
@@ -41,7 +40,6 @@ return [
             'version' => '1.0.0',
             'title' => 'WordPress Documentation',
             'theme' => 'red',
-            'path' => '{collection}/{-filename}',
             'search' => [
                 'algolia' => [
                     'indexName' => 'wordpress_docs',
@@ -54,17 +52,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Theme
+    | Path                     http://jigsaw.tighten.co/docs/collections-paths/
     |--------------------------------------------------------------------------
     |
-    | Set the default theme color.
+    | Here you can specify how DocsFlow should organize sites in the build
+    | folders. This uses Jigsaw collection paths, and you can override
+    | it for each site in particular.
     |
-    | DocsFlow will use this together with the literal color class names from
-    | your Tailwind CSS config. You can override it for each site.
+    | With this default setting, if we add 'group' => 'open-source' to the
+    | config of a site collection named 'jigsaw', DocsFlow will output
+    | that site at: build_{env}/partners/blog
+    |
+    | So you can basically group collection items (sites) into a folder.
+    |
     |
     */
 
-    'theme' => 'blue',
+    'path' => '{group}/{collection}/{-filename}',
 
     /*
     |--------------------------------------------------------------------------
@@ -79,6 +83,20 @@ return [
     */
 
     'pretty' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Theme
+    |--------------------------------------------------------------------------
+    |
+    | Set the default theme color.
+    |
+    | DocsFlow will use this together with the literal color class names from
+    | your Tailwind CSS config. You can override it for each site.
+    |
+    */
+
+    'theme' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
