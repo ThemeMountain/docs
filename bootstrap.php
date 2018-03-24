@@ -10,29 +10,27 @@ $dotenv->load();
 $events->afterCollections(function ($jigsaw) {
 
     $env = getenv('NODE_ENV');
-    $config = $jigsaw->getConfig();
-    $collections = $config->collections;
+    $collections = $jigsaw->getCollections();
 
     $collections->each(function ($item, $key) use ($jigsaw, $env) {
-        $pages = $jigsaw->getCollection($key);
-
         $menu = [
             'categories' => [],
             'uncategorized' => []
         ];
 
-        foreach ($pages as $page) {
-            if ($page->has('navigation')) {
+        foreach ($item as $page => $data) {
 
-                $path = $env == 'offline' ? '../' . $page->_meta->collection . '/' . $page->_meta->filename . '.html' : $page->_meta->path->first();
+            if ($data->has('navigation')) {
 
-                if (isset($page->navigation['group'])) {
-                    $menu['categories'][$page->navigation['group']][] = [
-                        'title' => $page->title,
+                $path = $env == 'offline' ? '../' . $data->_meta->collection . '/' . $data->_meta->filename . '.html' : $data->_meta->path->first();
+
+                if (isset($data->navigation['group'])) {
+                    $menu['categories'][$data->navigation['group']][] = [
+                        'title' => $data->title,
                         'path' => $path,
-                        'order' => isset($page->navigation['order']) && is_numeric($page->navigation['order']) ? $page->navigation['order'] : 2e10,
+                        'order' => isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : 2e10,
                     ];
-                    usort($menu['categories'][$page->navigation['group']], create_function('$a, $b', '
+                    usort($menu['categories'][$data->navigation['group']], create_function('$a, $b', '
                             $a = $a["order"];
                             $b = $b["order"];
                             if ($a == $b) return 0;
@@ -40,9 +38,9 @@ $events->afterCollections(function ($jigsaw) {
                         '));
                 } else {
                     $menu['uncategorized'][] = [
-                        'title' => $page->title,
+                        'title' => $data->title,
                         'path' => $path,
-                        'order' => isset($page->navigation['order']) && is_numeric($page->navigation['order']) ? $page->navigation['order'] : 2e10,
+                        'order' => isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : 2e10,
                     ];
                     usort($menu['uncategorized'], create_function('$a, $b', '
                             $a = $a["order"];
@@ -57,6 +55,7 @@ $events->afterCollections(function ($jigsaw) {
 
         $jigsaw->writeSourceFile('_assets/json/' . $key . '-navigation.json' , json_encode($menu));
     });
+
 });
 
 
