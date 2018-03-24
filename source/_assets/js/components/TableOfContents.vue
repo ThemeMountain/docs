@@ -3,7 +3,7 @@
     <h4 class="font-normal text-grey-darkest mb-4 mt-2">Quickies</h4>
     <ul class="list-reset text-xs text-grey-dark" v-if="links.length > 0">
       <li class="mb-3" :class="link.isChild ? 'pl-2' : ''" v-for="link in links">
-        <a :href="link.href" class="text-grey-dark hover:text-grey-darkest">{{ link.text }}</a>
+        <a :href="link.href" v-on:click.prevent="scrollTo" class="quickie text-grey-dark hover:text-grey-darkest">{{ link.text }}</a>
       </li>
     </ul>
   </div>
@@ -12,7 +12,9 @@
 <script>
 import includes from 'lodash/includes'
 const anchorJS = require('anchor-js')
+const scrollToElement = require('scroll-to-element')
 const anchors = new anchorJS()
+
 function getHeadingText(element) {
   let text = ''
   for (var i = 0; i < element.childNodes.length; ++i) {
@@ -22,17 +24,20 @@ function getHeadingText(element) {
   }
   return text
 }
+
 export default {
-  props: ['rows'],
   data() {
     return {
       links: []
     }
   },
   methods: {
-    scrollTo(el) {
-      const bounds = el.getBoundingClientRect()
-      document.body.scrollBy(0, 200)
+    scrollTo: function(event) {
+      scrollToElement(event.target.hash, {
+        offset: -100,
+        ease: 'in-out-expo',
+        duration: 400
+      })
     }
   },
   mounted() {

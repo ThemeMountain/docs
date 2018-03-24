@@ -717,8 +717,11 @@ hr {
 }
 
 .content li a {
-  font-size: .75rem;
   border-style: none;
+}
+
+.content li a:hover {
+  color: #3490dc;
 }
 
 .content h1 {

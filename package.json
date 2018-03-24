@@ -26,6 +26,7 @@
     "ngrok": "^3.0.1",
     "node-cmd": "^3.0.0",
     "on-build-webpack": "^0.1.0",
+    "scroll-to-element": "^2.0.0",
     "tailwindcss": "^0.5.1",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.2",
