@@ -39,3 +39,7 @@
         line-height: 1.8;
     }
 }
+
+code {
+    @apply .bg-grey-lighter .text-xs .text-grey-dark .py-1 .px-2;
+}

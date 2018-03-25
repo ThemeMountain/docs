@@ -18,7 +18,7 @@
             <div class="pl-16 sticky top-20">
                 <div class="overflow-y-auto wrapper py-12">
                     <table-of-contents></table-of-contents>
-                    <footer class="border-t border-grey-lighter pt-4 mt-4">
+                    <footer>
                         <p>&copy; {{ date('Y') }} ThemeMountain.</p>
                     </footer>
                 </div>

@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h4 class="font-normal text-grey-darkest mb-4 mt-2">Quickies</h4>
+    <h4 class="font-normal text-grey-darkest mb-4 mt-2" v-if="links.length > 0">Quickies</h4>
     <ul class="list-reset text-xs text-grey-dark" v-if="links.length > 0">
       <li class="mb-3" :class="link.isChild ? 'pl-2' : ''" v-for="link in links">
         <a :href="link.href" v-on:click.prevent="scrollTo" class="quickie text-grey-dark hover:text-grey-darkest">{{ link.text }}</a>
       </li>
     </ul>
+    <hr class="h-px bg-grey-lighter my-4" v-if="links.length > 0">
   </div>
 </template>
 

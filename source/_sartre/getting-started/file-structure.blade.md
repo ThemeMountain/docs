@@ -46,9 +46,9 @@ This file contains meta tags and CSS in the `<head>`. Much of it is needed, but 
 
 This product includes pre-built HTML templates, for you to use right away:
 
-`Marketing` templates are for your regular marketing/promotional/newsletter campaign.
+**Marketing** templates are for your regular marketing/promotional/newsletter campaign.
 
-`Notifications` are transactional email templates. They are used in user-initiated scenarios, like a password reset or purchase confirmation. You can use them with [SparkPost](https://www.sparkpost.com/) or [MailGun](http://www.mailgun.com/).
+**Notifications** are transactional email templates. They are used in user-initiated scenarios, like a password reset or purchase confirmation. You can use them with [SparkPost](https://www.sparkpost.com/) or [MailGun](http://www.mailgun.com/).
 
 ## Sections
 

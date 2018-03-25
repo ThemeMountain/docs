@@ -1,4 +1,4 @@
- <div class="flex justify-between border-t border-grey-light py-6 mt-8">
+ <div class="flex justify-between border-t border-grey-lighter py-6 mt-8">
     <p>
         @if($page->getPrevious() && $page->getFirst()->_meta->url !== $page->getPrevious()->_meta->url)
         <a href="{{ $page->getEnv() == 'offline' ? $page->getPrevious()->_meta->filename . '.html' : $page->getPrevious()->_meta->url }}">
