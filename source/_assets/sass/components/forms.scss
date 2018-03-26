@@ -14,6 +14,17 @@
 
 .aa-dropdown-menu {
     @apply .w-full .bg-white .mt-5 .border .border-t-0 .border-grey-lighter;
+
+    &::before {
+        @apply .w-full .h-full .fixed .pin-l .pin-t .mt-20;
+        content: "";
+        background: rgba(255,255,255,0.9);
+        z-index: -1;
+    }
+
+    .aa-dataset-1 {
+        @apply .border;
+    }
 }
 .aa-suggestion {
     @apply .border-b .border-grey-lighter;
