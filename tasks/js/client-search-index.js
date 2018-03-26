@@ -81,7 +81,7 @@ module.exports.run = () => {
             }
         }
 
-        if (algoliaSyncOnBuildSites.length > 0 && ['production', 'offline'].indexOf(env) > -1) { // TODO: sync only in production, not offline too!
+        if (algoliaSyncOnBuildSites.length > 0 && env == 'production') {
             AlgoliaSync.sync(algoliaSyncOnBuildSites, config)
         }
     })
