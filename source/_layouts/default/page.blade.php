@@ -17,7 +17,7 @@
         <aside class="w-1/3 sidebar-navigation mt-20">
             <div class="pl-16 sticky top-20">
                 <div class="overflow-y-auto wrapper py-12">
-                    <table-of-contents></table-of-contents>
+                    <table-of-contents :theme="'{{ $page->theme }}'"></table-of-contents>
                     <footer>
                         <p>&copy; {{ date('Y') }} ThemeMountain.</p>
                     </footer>
@@ -27,8 +27,10 @@
     </div>
 
 @push('scripts')
+
     <script src="@mix('/js/vendor.js')"></script>
     <script src="@mix('/js/app.js')"></script>
+    @include('_layouts.default.partials.search', ['env' => getenv('NODE_ENV')])
 @endpush
 
 @endsection

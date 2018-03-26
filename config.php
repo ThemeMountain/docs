@@ -161,18 +161,20 @@ return [
     |
     */
 
-    'search' => [
-        'offline',
-        'algolia' => [
-            'appID' => getenv('ALGOLIA_APP_ID'),
-            'appSecret' => getenv('ALGOLIA_SECRET'),
-            'searchKey' => getenv('ALGOLIA_SEARCH'),
-        ],
-        'docsearch' => [
-            'searchKey' => getenv('ALGOLIA_DOCSEARCH'),
-            'indexName' => getenv('ALGOLIA_DOCSEARCH_INDEX'),
-        ],
-    ],
+   // KEEPING THIS FOR REF ONLY, WILL DOCUMENT AND REMOVE IT
+
+    // 'search' => [
+    //     'offline',
+    //     'algolia' => [
+    //         'appID' => getenv('ALGOLIA_APP_ID'),
+    //         'appSecret' => getenv('ALGOLIA_SECRET'),
+    //         'searchKey' => getenv('ALGOLIA_SEARCH'),
+    //     ],
+    //     'docsearch' => [
+    //         'searchKey' => getenv('ALGOLIA_DOCSEARCH'),
+    //         'indexName' => getenv('ALGOLIA_DOCSEARCH_INDEX'),
+    //     ],
+    // ],
 
     /*
     |--------------------------------------------------------------------------

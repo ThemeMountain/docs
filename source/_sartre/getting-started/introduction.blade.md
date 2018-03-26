@@ -23,11 +23,11 @@ The documentation you're looking at now provides template-related guidance only.
 
 ## Required Software
 
-#### Code Editing
+### Code Editing
 
 If you plan on customizing the HTML code of this product, you will need a text editor. There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) to build the framework and template, so we definitely recommend it.
 
-#### Email Service Provider Integrations
+### Email Service Provider Integrations
 
 The product includes dedicated integrations for the following email service providers:
 
@@ -39,7 +39,7 @@ The product includes dedicated integrations for the following email service prov
 
 With the exception of Shopify, each of these services offers an online email builder that you can use to visually build your layouts. We recommend StampReady, simply because it's the best in class and you can export your layouts to use with other services. If you're using WordPress, the recommendation is obvious.
 
-#### Email Testing
+### Email Testing
 
 After you customize the template to suit your needs, always test before sending out an email. Our email templates and framework have been tested with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
 
