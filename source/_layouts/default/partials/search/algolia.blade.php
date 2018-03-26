@@ -4,9 +4,23 @@
 var client = algoliasearch('{{ $page->search->algolia->appID }}', '{{ $page->search->algolia->searchKey }}');
 var index = client.initIndex('{{ $page->search->algolia->indexName }}');
 autocomplete('#search',
-{ hint: false }, {
+    {
+        debug: true,
+        hint: false
+    },
+    {
     source: autocomplete.sources.hits(index, {hitsPerPage: 10}),
     templates: {
+        header: function () {
+            return `<div class="flex p-4">
+                        <span class="block text-sm text-grey-dark">Search results:</span>
+                    </div>`;
+        },
+        footer: function () {
+            return `<div class="flex justify-end p-2">
+                        <a href="https://www.algolia.com" target="_blank" rel="noopener" class="aa-footer-logo">Search by Algolia</a>
+                    </div>`;
+        },
         suggestion: function(suggestion) {
             var path = 'offline' == '{{ $env }}' ? suggestion.path.split('/').pop() + '.html' : '/' + suggestion.path ;
 
