@@ -16,16 +16,19 @@
     @apply .w-full .bg-white .mt-5 .border .border-t-0 .border-grey-lighter;
 }
 .aa-suggestion {
-    padding: 12px;
-    cursor: pointer;
+    @apply .border-b .border-grey-lighter;
 
-    + .aa-suggestion {
-        border-top: 1px solid rgba(228, 228, 228, 0.6);
+    &:last-child {
+        @apply .border-0;
+    }
+
+    em {
+        @apply .bg-yellow-light .px-1 .roman;
     }
 }
-.aa-suggestion:hover,
-.aa-suggestion.aa-cursor {
-    background-color: rgba(241, 241, 241, 0.35);
+.aa-suggestion:hover a,
+.aa-suggestion.aa-cursor a {
+    @apply .bg-grey-lightest;
 }
 
 .aa-footer-logo{
