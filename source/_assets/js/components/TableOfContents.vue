@@ -3,7 +3,7 @@
     <h4 class="font-normal text-grey-darkest mb-4 mt-2" v-if="links.length > 0">Quickies</h4>
     <ul class="list-reset text-xs text-grey-dark" v-if="links.length > 0">
       <li class="mb-3" :class="link.isChild ? 'pl-2' : ''" v-for="link in links">
-        <a :href="link.href" v-on:click.prevent="scrollTo" class="quickie text-grey-dark" :class="'hover:text-'+theme">{{ link.text }}</a>
+        <a :href="link.href" @click="scrollTo" class="quickie text-grey-dark" :class="['hover:text-'+theme, link.href == selected ? 'text-'+theme : '']">{{ link.text }}</a>
       </li>
     </ul>
     <hr class="h-px bg-grey-lighter my-4" v-if="links.length > 0">
@@ -30,12 +30,16 @@ export default {
   props: ['theme'],
   data() {
     return {
-      links: []
+      links: [],
+      selected: ''
     }
   },
   methods: {
     scrollTo: function(event) {
-      scrollToElement(event.target.hash, {
+      let target = 'undefined' !== typeof event.target ? event.target.hash : event
+      this.selected = target;
+
+      scrollToElement(target, {
         offset: -100,
         ease: 'in-out-expo',
         duration: 400
@@ -53,6 +57,10 @@ export default {
         el: el,
       }
     })
+
+    if (window.location.hash) {
+      this.scrollTo(window.location.hash)
+    }
   }
 }
 </script>
