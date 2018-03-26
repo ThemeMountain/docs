@@ -27,8 +27,6 @@
     </div>
 
 @push('scripts')
-
-    <script src="@mix('/js/vendor.js')"></script>
     <script src="@mix('/js/app.js')"></script>
     @include('_layouts.default.partials.search', ['env' => getenv('NODE_ENV')])
 @endpush

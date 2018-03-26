@@ -1,13 +1,2 @@
-@tailwind preflight;
-
-@import "components/resets";
-@import "components/spacing";
-@import "components/gradients";
-@import "components/animation";
-@import "components/typography";
-@import "components/navigation";
-@import "components/forms";
-
-@tailwind components;
-@tailwind utilities;
+@import "../../_layouts/default/assets/sass/default";
 

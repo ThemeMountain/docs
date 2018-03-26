@@ -1,12 +1,3 @@
-window.Vue = require('vue')
+let app = require('../../_layouts/default/assets/js/app')
 
-Vue.component('table-of-contents', require('./components/TableOfContents.vue').default)
-
-const app = new Vue({
-  el: '#app'
-})
-
-let toggle = new Toggle({
-    buttonClassExpanded: 'active',
-    buttonSelector: '.toggle-trigger'
-})
+app.boot()

@@ -3,7 +3,7 @@
     <h4 class="font-normal text-grey-darkest mb-4 mt-2" v-if="links.length > 0">Quickies</h4>
     <ul class="list-reset text-xs text-grey-dark" v-if="links.length > 0">
       <li class="mb-3" :class="link.isChild ? 'pl-2' : ''" v-for="link in links">
-        <a :href="link.href" @click="scrollTo" class="quickie text-grey-dark" :class="['hover:text-'+theme, link.href == selected ? 'text-'+theme : '']">{{ link.text }}</a>
+        <a :href="link.href" @click="scrollTo" class="quickie" :class="['hover:text-grey-darkest', link.href == selected ? 'text-grey-darkest' : 'text-grey-dark']">{{ link.text }}</a>
       </li>
     </ul>
     <hr class="h-px bg-grey-lighter my-4" v-if="links.length > 0">
@@ -13,8 +13,8 @@
 <script>
 import includes from 'lodash/includes'
 const anchorJS = require('anchor-js')
-const scrollToElement = require('scroll-to-element')
 const anchors = new anchorJS()
+const scrollToElement = require('scroll-to-element')
 
 function getHeadingText(element) {
   let text = ''
