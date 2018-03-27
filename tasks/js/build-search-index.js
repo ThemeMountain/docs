@@ -1,13 +1,8 @@
 const fs = require('fs-extra')
 const fm = require('front-matter')
 const path = require('path')
-// const glob = require('glob-all')
 const removeMd = require('remove-markdown')
-// const cheerio = require('cheerio')
 const argv = require('yargs').argv
-// const command = require('node-cmd')
-// const plaintext = require('html2plaintext')
-// const _ = require('lodash')
 
 const AlgoliaSync = require('./algolia/index')
 

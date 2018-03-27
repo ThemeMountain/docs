@@ -2,8 +2,6 @@ const _ = require('lodash')
 const path = require('path')
 const fs = require('fs-extra')
 const argv = require('yargs').argv
-// const glob = require('glob-all')
-// const command = require('node-cmd')
 const algoliasearch = require('algoliasearch')
 
 const env = argv.e || argv.env || 'local'
