@@ -41,7 +41,7 @@ export default {
 
       scrollToElement(target, {
         offset: -100,
-        ease: 'in-out-expo',
+        ease: 'out-expo',
         duration: 400
       })
     }
