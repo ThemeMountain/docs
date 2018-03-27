@@ -13,7 +13,7 @@ navigation:
 
 The product has the following folder structure:
 
-@component('_layouts.default.components.filetree')
+```sh
 ├── Documentation
 ├── Files
 │   ├── campaign-monitor
@@ -30,7 +30,7 @@ The product has the following folder structure:
 │   └── stampready <sup>[1]</sup>
 │   └── mailster <sup>[1]</sup>
 ├── PSD
-@endcomponent
+```
 
 1. Same structure as the `campaign-monitor` folder.
 2. HTML version doesn't have an all-in-one. Pre-built layouts are provided instead.
@@ -40,7 +40,7 @@ The product has the following folder structure:
 
 If you're into coding, the product offers a boilerplate layout file inside the `layout` folder, which you can use as a base for your custom email templates, by copying sections from the `sections` folder, one on top of each other.
 
-This file contains meta tags and CSS in the `<head>`. Much of it is needed, but some parts (like menu styles) are optional. If you want to remove certain styles because you're not using the sections they're meant for, or if you want to customise them further, we recommend using [EmailComb](https://emailcomb.com/) to clean up unused CSS. If you're unsure of what a specific CSS rule does, please refer to the [framework documentation](https://thememountain.github.io/email/).
+This file contains meta tags and CSS in the `<head>`. Much of it is needed, but some parts (like menu styles) are optional. If you want to remove certain styles because you're not using the sections they're meant for, or if you want to customise them further, we recommend using [EmailComb](https://emailcomb.com/) to clean up unused CSS. If you're unsure of what a specific CSS rule does, please refer to the [framework documentation](https://thememountain.github.io/acorn/).
 
 ## Pre-built HTML Templates
 

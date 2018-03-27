@@ -21,7 +21,7 @@ return [
 
         'sartre' => [
             'version' => '1.0.0',
-            'title' => 'Sartre',
+            'name' => 'Sartre Email Documentation',
             'theme' => 'purple',
             'group' => 'email',
             'sort' => 'order',
@@ -37,7 +37,7 @@ return [
 
         'wordpress' => [
             'version' => '1.0.0',
-            'title' => 'WordPress Documentation',
+            'name' => 'WordPress Documentation',
             'theme' => 'red',
             'search' => [
                 'algolia' => [

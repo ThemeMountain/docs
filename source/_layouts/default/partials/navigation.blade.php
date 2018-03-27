@@ -6,12 +6,12 @@
                 @if($category == 'categories')
                     @foreach($sections as $heading => $items)
                     <li class="py-2">
-                        <h5 class="toggle-trigger cursor-pointer text-black hover:text-{{ $page->theme }} text-sm font-normal mb-3 -mt-2">{{ $heading }}</h5>
+                        <h5 class="toggle-trigger cursor-pointer text-black hover:text-{{ $page->theme }} text-sm font-normal mb-3 -mt-2 p-0">{{ $heading }}</h5>
                         <div class="toggle overflow-hidden transition-all" aria-expanded="{{ $page->hasChildrenActive($items) ? 'true' : 'false'}}">
                             <ul class="px-2 text-xs leading-loose text-grey-dark list-reset">
                                 @foreach($items as $item)
                                     <li class="pb-1">
-                                        <a href="{{ $item['path'] }}" class="hover:text-{{ $page->theme }} {{ $page->active($item) ? 'text-'.$page->theme.' pointer-events-none' : '' }}">
+                                        <a href="{{ $item['path'] }}" class="hover:text-{{ $page->theme }} {{ $page->active($item) ? 'text-'.$page->theme : '' }}">
                                             {{ $item['title'] }}
                                         </a>
                                     </li>
@@ -25,7 +25,7 @@
                     <ul class="text-xs leading-loose text-grey-dark list-reset">
                     @foreach($sections as $item)
                         <li class="pb-1">
-                            <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item['path']) ? 'text-'.$page->theme.' pointer-events-none' : '' }}">
+                            <a href="{{ $item['path'] }}" class="hover:text-grey-darkest {{ $page->active($item['path']) ? 'text-'.$page->theme : '' }}">
                                 {{ $item['title'] }}
                             </a>
                         </li>

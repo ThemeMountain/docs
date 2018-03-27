@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $page->title ? $page->title . ' - ThemeMountain Documentation' : 'ThemeMountain Documentation' }}</title>
-    <meta name="description" content="{{ $page->description ? $page->description : '' }}">
+    <title>{{ $page->title ? $page->title . ' - ' . $page->name : $page->name . ' - ThemeMountain Documentation' }}</title>
+    <meta name="description" content="{{ $page->description ?? '' }}">
     @yield('meta')
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Hind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
