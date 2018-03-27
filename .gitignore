@@ -1,6 +1,8 @@
 .env
 /_tmp/
 /source/assets/
+/source/_collections.json
+/source/_config.json
 /build_local/
 /node_modules/
 /vendor/

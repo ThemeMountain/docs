@@ -2,6 +2,7 @@
 
 use Dotenv\Dotenv;
 use App\Listeners\GenerateNavigation;
+use App\Listeners\DumpJigsawSettings;
 
 /** @var $container \Illuminate\Container\Container */
 /** @var $events \TightenCo\Jigsaw\Events\EventBus */
@@ -10,6 +11,6 @@ use App\Listeners\GenerateNavigation;
 $dotenv = new Dotenv(__DIR__);
 $dotenv->load();
 
-$events->afterCollections(GenerateNavigation::class);
+$events->afterCollections([GenerateNavigation::class, DumpJigsawSettings::class]);
 
 

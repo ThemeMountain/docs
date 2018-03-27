@@ -1,17 +1,16 @@
 const _ = require('lodash')
 const path = require('path')
 const fs = require('fs-extra')
-const yargs = require('yargs')
-const argv = yargs.argv
-const glob = require('glob-all')
-const command = require('node-cmd')
+const argv = require('yargs').argv
+// const glob = require('glob-all')
+// const command = require('node-cmd')
 const algoliasearch = require('algoliasearch')
 
 const env = argv.e || argv.env || 'local'
 const build_path = 'build_' + env
 
 getSearchIndexJSON = (key, buildPath) => {
-   return path.normalize( glob.sync([buildPath + '/**/'+key+'/**/search-index.json']).toString() )
+   return path.normalize(buildPath + '/data/'+key+'/search-data.json')
 }
 
 exports.sync = (sites, config) => {

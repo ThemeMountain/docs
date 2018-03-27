@@ -2,6 +2,7 @@
 title: Sartre Email Template
 description: Documentation for the Sartre Email Template
 tags: main, home, index
+search: false
 ---
 
 @extends('_layouts.default.master')

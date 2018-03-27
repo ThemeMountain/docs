@@ -8,7 +8,7 @@ let AfterWebpack = require('on-build-webpack');
 let BrowserSync = require('browser-sync');
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let Watch = require('webpack-watch');
-let SearchIndexer = require('./client-search-index');
+let SearchIndexer = require('./build-search-index');
 
 let config;
 let browserSyncInstance;
