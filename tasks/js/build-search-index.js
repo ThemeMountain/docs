@@ -43,7 +43,7 @@ module.exports.run = () => {
                     title: page.title,
                     description: page.description,
                     keywords: page.tags,
-                    body: bodyPlaintext,
+                    body: bodyPlaintext.substring(0, 1000),
                     path: page._meta.url[0]
                 })
             }
