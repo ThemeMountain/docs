@@ -7,29 +7,36 @@
         }
     }
 
-    ol,
-    ul {
-      @apply .mb-4;
+    ol, ul {
+        @apply .mb-4;
+
+        ol, ul {
+            @apply .mb-0;
+        }
     }
 
-    li a {
-        @apply .border-none;
 
-        &:hover {
-            @apply .text-black;
+    li {
+        @apply .my-1;
+
+        a {
+            @apply .border-none;
+
+            &:hover {
+                @apply .text-black;
+            }
         }
     }
 
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     @apply .font-light .leading-tight .pb-6;
 }
 
 h2, h3, h4, h5, h6 {
-    @apply .font-light .leading-tight .pb-6 .pt-2;
+    @apply .pt-2;
 }
-
 
 p, li {
     @apply .font-hind-madurai .text-sm .text-grey-darker;
@@ -39,6 +46,10 @@ p {
     @apply .mb-4;
     line-height: 1.8;
 }
+
+// .content p {
+//     font-size: .925rem;
+// }
 
 code {
     @apply .inline-block .bg-grey-lighter .text-xs .py-1 .px-2 .leading-none .whitespace-pre-wrap .font-mono .align-baseline;
@@ -50,4 +61,14 @@ pre {
     code {
         @apply .leading-normal;
     }
+}
+
+kbd {
+    @apply .inline-block .font-mono .bg-grey-lighter .border .border-grey .text-grey-dark .text-xxs;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(135,149,161,0.4), 0 0 0 2px #fff inset;
+    line-height: 1.4;
+    margin: 0 .1em;
+    padding: .15em .6em;
+    text-shadow: 0 1px 0 #fff;
 }

@@ -49,7 +49,7 @@ export default {
   mounted() {
     anchors.options = { placement: 'left', class: 'text-grey-dark' }
     anchors.add('.content h2, .content h3, .content h4')
-    this.links = anchors.elements.filter((el) => includes(['H2', 'H3'], el.tagName)).map((el) => {
+    this.links = anchors.elements.filter(el => includes(['H2'], el.tagName)).map(el => {
       return {
         isChild: includes(['H3'], el.tagName),
         text: getHeadingText(el),

@@ -34,8 +34,6 @@ Use CTA sections to encourage your users to click through your emails. The templ
 
 ## Customisation
 
-You can easily change the looks of a preheader by changing its background, text, links, and icons.
-
 ### Button
 
 Text and buttons can be customised with inline CSS.

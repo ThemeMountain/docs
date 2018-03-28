@@ -6,6 +6,7 @@ tags: sections, reference, screenshots, modules
 order: 3
 navigation:
   group: Getting Started
+  order: 3
 ---
 
 # A reference guide to template sections

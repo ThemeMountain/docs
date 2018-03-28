@@ -57,8 +57,6 @@ Most of them include variations with navigation components:
 
 ## Customisation
 
-You can easily change the looks of a header by changing its background, menu items, spacing, and logo image.
-
 ### Menu Items
 
 Menu items are simple links that can be styled with inline CSS. Learn more about the [email navigation component in Acorn](https://thememountain.github.io/acorn/components/navigation.html).

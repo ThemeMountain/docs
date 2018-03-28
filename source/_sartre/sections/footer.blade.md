@@ -36,8 +36,6 @@ Footers also use a [Divider component from Acorn](https://thememountain.github.i
 
 ## Customisation
 
-You can easily change the looks by changing text, spacing, background colour, and images.
-
 ### Links & Text
 
 Links and text styles can be changed via inline CSS.

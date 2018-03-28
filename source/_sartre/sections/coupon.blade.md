@@ -1,7 +1,7 @@
 ---
 extends: _layouts.default.page
 title: Coupon
-description: "Add discounts to your emails: Coupon Sections in Sartre Email"
+description: Add discounts to your emails
 tags: coupon, discount
 order: 7
 navigation:
@@ -25,8 +25,6 @@ Run promos or offer discounts for your products or services, with the coupon sec
 ---
 
 ## Customisation
-
-You can easily change the looks of a preheader by changing its background, text, links, and icons.
 
 ### Links
 

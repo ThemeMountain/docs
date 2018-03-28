@@ -32,8 +32,6 @@ Two columns, one with a header, text and a link, the other with an image that st
 
 ## Customisation
 
-You can easily change the looks by changing text, spacing, and images.
-
 ### Links
 
 Links can be styled with inline CSS.

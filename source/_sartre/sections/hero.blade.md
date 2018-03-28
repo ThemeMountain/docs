@@ -35,7 +35,7 @@ In supporting email clients, the video will show a play button.
 
 When you play the video, most of these clients will automatically start playing the video in fullscreen. Although there is a `playsinline` attribute that you can add to the `<video>` tag, iPhone for example ignores it and still goes fullscreen.
 
-<div class="bg-blue-lightest border-l-4 border-blue p-4" role="alert">
+<div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
   <p class="m-0 text-md text-blue-dark">Currently none of the online builders provide a visual way of editing HTML5 video sections. You will need to edit HTML in order to customise it, so please read on.</p>
 </div>
@@ -59,9 +59,9 @@ Editing in one of the integrated versions:
 - in **[Mailster](../mailster/#video-hero)**
 - in **[StampReady's builder](../stampready/#video-hero)**
 
-<div class="bg-red-lightest border-l-4 border-red p-4" role="alert" id="mailchimp-video-support">
-  <p class="font-sans font-bold m-0 text-md text-red-dark">MailChimp and Video Emails</p>
-  <p class="m-0 text-md text-red-dark">MailChimp currently does not support HTML5 video, it completely strips out the necessary tags when you import the template. Because of this, our MailChimp integration does not include the HERO With Video (note: StampReady → MailChimp will not work either). Therefore, if you want to send an email with HTML5 video, don't use MailChimp, as it is not currently possible.</p>
+<div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert" id="mailchimp-video-support">
+  <p class="font-sans font-bold m-0 text-md text-orange-dark">MailChimp and Video Emails</p>
+  <p class="m-0 text-md text-orange-dark">MailChimp currently does not support HTML5 video, it completely strips out the necessary tags when you import the template. Because of this, our MailChimp integration does not include the HERO With Video (note: StampReady → MailChimp will not work either). Therefore, if you want to send an email with HTML5 video, don't use MailChimp, as it is not currently possible.</p>
 </div>
 
 For Campaign Monitor, you will need to edit the all-in-one HTML file before uploading it, as their editor provides no way of editing the template's HTML code.
@@ -108,12 +108,6 @@ While you're free to experiment with them, we would generally advise against usi
 
 Once you're done setting up the video, you can [customise the fallback](#customisation) just as you would customise a regular HERO With Background Image.
 
-## With Background Image
-
-The 'regular' HERO section has a full width background image, overlayed with centered content.
-
-It has background image support for most email clients (including Outlook and Windows Mail), and includes a background colour fallback for cases when the image might not be loaded. See more in [Customisation](#customisation).
-
 ## With Split Content
 
 The Split HERO separates text and images into two columns.
@@ -128,15 +122,47 @@ It comes in several types:
 
 It also has Outlook & Windows Mail background image support, but just for the main image: these email clients only support a colour fallback for the semi-transparent overlay, which you can control with the `bgcolor=""` attribute.
 
+## With Background Image
+
+The 'regular' HERO section has a full width background image, overlayed with centered content.
+
+It has background image support for most email clients (including Outlook and Windows Mail), and includes a background colour fallback for cases when the image might not be loaded. See more in [Customisation](#customisation).
+
+---
+
+## Outlook Background Image Notes
+
+### Image Sizes
+
+For sections that support background images, it is *recommended* that you use a background image that has the dimensions of the dummy image the template provides, or double (for retina).
+
+For retina images, make sure that they are exactly double the size in comparison to those that the template provides. For example, if a HERO uses a 700x500 image, you should use a 1400x1000 one for retina, since it's exactly two times larger.
+
+**Important**: if you don't stick to the recommended aspect ratio, Outlook will crop your background image and may leave you with important parts of your visual message not showing up. If precision is important, we recommend sticking to the sizes of the placeholder images.
+
+### Content Height
+
+If you add content that increases the height of a section, note that Outlook will not increase the sections's height for you automatically. You will need to do this manually, by changing the CSS height on both the `<v:image />` and the `<v:rect>` VML tags. Outlook treats this height as fixed, so no matter the amount of content inside, this will be your HERO's height:
+
+(image showing content height)
+
+<div class="bg-orange-lightest border-l-4 border-orange p-4" role="alert" id="mailchimp-video-support">
+  <p class="font-sans font-bold m-0 text-md text-orange-dark">Heads Up!</p>
+  <ul class="mt-4 text-md pl-4">
+      <li class="text-orange-dark">Do not change the width - it will break the template in Outlook.</li>
+      <li class="text-orange-dark">Do not remove the height - it will collapse and squash the section in Outlook.</li>
+      <li class="text-orange-dark">Do not remove other styles/attributes/tags - it will very likely lead to the image not showing in Outlook</li>
+      <li class="text-orange-dark">Except for StampReady, the online builders for which we provide an integrated version do not set this Outlook background image when using their visual editors. In such cases, you will need to manually adjust the HTML code and add the URL to your image inside the `<v:image src="..." />`. Alternatively, simply use StampReady to build your layout, export it, and then import it to your provider.</li>
+  </ul>
+</div>
+
 ---
 
 ## Customisation
 
-You can easily change the looks of a HERO by changing its background, text, spacing, and buttons/images.
+### Inline Images
 
-### Logo & Images
-
-Simply change the `src=""` and `width=""` of the logo. If you use a retina logo image, make sure your `width=""` is half of what the original image size is in pixels.
+Simply change the `src=""` and `width=""` of each image. If you want use retina images, make sure your own image is twice the pixel size of the placeholder.
 
 ### Background Colour
 
@@ -169,33 +195,5 @@ Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer 
 <div class="bg-blue-lightest border-l-4 border-blue p-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
   <p class="m-0 text-md text-blue-dark">Split HEROs with Overlayed content have an `overlay-sm-bg` class on the column with the background image. This allows for adding a semi-transparent background image on it, for mobile. If using such a HERO section, make sure this image's path is correctly updated in the CSS.</p>
-</div>
-
----
-
-## Outlook Background Image Notes
-
-### Image Sizes
-
-For sections that support background images, it is *recommended* that you use a background image that has the dimensions of the dummy image the template provides, or double (for retina).
-
-For retina images, make sure that they are exactly double the size in comparison to those that the template provides. For example, if a HERO uses a 700x500 image, you should use a 1400x1000 one for retina, since it's exactly two times larger.
-
-**Important**: if you don't stick to the recommended aspect ratio, Outlook will crop your background image and may leave you with important parts of your visual message not showing up. If precision is important, we recommend sticking to the sizes of the placeholder images.
-
-### Content Height
-
-If you add content that increases the height of a section, note that Outlook will not increase the sections's height for you automatically. You will need to do this manually, by changing the CSS height on both the `<v:image />` and the `<v:rect>` VML tags. Outlook treats this height as fixed, so no matter the amount of content inside, this will be your HERO's height:
-
-(image showing content height)
-
-<div class="bg-red-lightest border-l-4 border-red p-4" role="alert" id="mailchimp-video-support">
-  <p class="font-sans font-bold m-0 text-md text-red-dark">Heads Up!</p>
-  <ul class="m-0 text-md">
-      <li class="text-red-dark">Do not change the width - it will break the template in Outlook.</li>
-      <li class="text-red-dark">Do not remove the height - it will collapse and squash the section in Outlook.</li>
-      <li class="text-red-dark">Do not remove other styles/attributes/tags - it will very likely lead to the image not showing in Outlook</li>
-      <li class="text-red-dark">Except for StampReady, the online builders for which we provide an integrated version do not set this Outlook background image when using their visual editors. In such cases, you will need to manually adjust the HTML code and add the URL to your image inside the `<v:image src="..." />`. Alternatively, simply use StampReady to build your layout, export it, and then import it to your provider.</li>
-  </ul>
 </div>
 

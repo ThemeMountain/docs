@@ -14,21 +14,19 @@ Blog sections are grid layouts that focus on imagery and content. They are perfe
 
 ---
 
-## Blog Columns Boxed
-
-## Blog Columns Cards
-
-## Blog Image Left/Right
-
 ## Blog List
 
 ## Blog Podcast
 
+## Blog Columns Cards
+
+## Blog Columns Boxed
+
+## Blog Image Left/Right
+
 ---
 
 ## Customisation
-
-You can easily change the looks of a preheader by changing its background, text, links, and icons.
 
 ### Links
 
