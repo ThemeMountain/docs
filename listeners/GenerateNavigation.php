@@ -24,11 +24,13 @@ class GenerateNavigation
 
                     $path = $env == 'offline' ? '../' . $data->_meta->collection . '/' . $data->_meta->filename . '.html' : $data->_meta->path->first();
 
+                    $order = isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : $data->title;
+
                     if (isset($data->navigation['group'])) {
                         $menu['categories'][$data->navigation['group']][] = [
                             'title' => $data->title,
                             'path' => $path,
-                            'order' => isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : 2e10,
+                            'order' => $order,
                         ];
                         usort($menu['categories'][$data->navigation['group']], create_function('$a, $b', '
                                 $a = $a["order"];
@@ -40,7 +42,7 @@ class GenerateNavigation
                         $menu['uncategorized'][] = [
                             'title' => $data->title,
                             'path' => $path,
-                            'order' => isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : 2e10,
+                            'order' => $order,
                         ];
                         usort($menu['uncategorized'], create_function('$a, $b', '
                                 $a = $a["order"];
