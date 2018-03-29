@@ -1,15 +1,14 @@
 ---
 extends: _layouts.default.page
-title: Marketing Templates
+title: Marketing
 description: Marketing Templates in Sartre Email
 tags: templates, marketing, promotional, sale, offer
-path: email/sartre/templates/
 order: 25
 navigation:
   group: Templates
 ---
 
-# A.K.A. Promotional email templates
+# A.K.A. Promotional Email Templates
 
 Each of our products includes pre-built marketing templates. These are designed according to industry needs and can help you quickly create an email campaign for your business.
 

@@ -1,9 +1,8 @@
 ---
 extends: _layouts.default.page
-title: Transactional Templates
+title: Transactional
 description: Transactional Templates in Sartre Email
 tags: templates, transactional, notification
-path: email/sartre/templates/
 order: 26
 navigation:
   group: Templates
