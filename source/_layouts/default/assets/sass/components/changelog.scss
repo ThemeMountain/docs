@@ -1,0 +1,19 @@
+
+.changelog {
+
+  h2 {
+    position: relative;
+
+    .dot {
+      content: "";
+      width: .875rem;
+      height: .875rem;
+      top: .875rem;
+      right: -3.45rem;
+    }
+  }
+
+  .anchorjs-link {
+    display: none;
+  }
+}
