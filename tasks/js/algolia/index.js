@@ -11,7 +11,9 @@ getSearchIndexJSON = (key, buildPath) => {
    return path.normalize(buildPath + '/data/'+key+'/search-data.json')
 }
 
-exports.sync = (sites, config) => {
+exports.sync = (sites) => {
+
+    const config = JSON.parse( fs.readFileSync( path.resolve(process.cwd(), 'source/_config.json') ) )
 
     if (!sites) {
         console.error('Sites object was malformed or not provided. Algolia sync aborted.')
@@ -20,7 +22,7 @@ exports.sync = (sites, config) => {
 
     for (let s in sites) {
         const site = sites[s]
-        const title = site.title
+        const title = site.name
         const algoliaConfig = site.search.algolia
 
         if (!algoliaConfig.indexName) {
@@ -53,7 +55,7 @@ exports.sync = (sites, config) => {
             const index = client.initIndex(algoliaConfig.indexName)
             const chunks = _.chunk(records, 1000)
 
-            chunks.map(batch => {
+            chunks.map((batch) => {
               return index.addObjects(batch);
             })
 

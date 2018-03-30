@@ -13,7 +13,7 @@ module.exports.run = () => {
     const config = JSON.parse( fs.readFileSync('./source/_config.json') )
     const collections = JSON.parse( fs.readFileSync('./source/_collections.json') )
     const build_path = 'build_' + env
-    let algoliaSyncOnBuildSites = []
+    let algoliaSites = []
 
     for (let key in collections) {
 
@@ -53,7 +53,7 @@ module.exports.run = () => {
         fs.ensureFileSync(JSONSearchFile)
         fs.writeFileSync(JSONSearchFile, JSON.stringify(data))
 
-        // Create .js search index
+        // Create .js search index - default search option is 'offline'
         if(!site.hasOwnProperty('search') || site.search == 'offline') {
             let JSSearchFile = JSONSearchFile.replace('.json', '.js')
             fs.ensureFileSync(JSSearchFile)
@@ -62,14 +62,14 @@ module.exports.run = () => {
 
         // Add site to Algolia sync list
         if(site.hasOwnProperty('search') && site.search.hasOwnProperty('algolia')) {
-            algoliaSyncOnBuildSites.push(site)
+            algoliaSites.push(site)
         }
 
         data = []
     }
 
-    // Sync indices to Algolia on build
-    if (algoliaSyncOnBuildSites.length > 0 && env == 'production') {
-        AlgoliaSync.sync(algoliaSyncOnBuildSites, config)
+    // Sync to Algolia in production build
+    if (algoliaSites.length > 0 && env == 'production') {
+        AlgoliaSync.sync(algoliaSites)
     }
 }
