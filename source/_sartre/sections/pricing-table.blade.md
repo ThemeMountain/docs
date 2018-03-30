@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Pricing Table
 description: Pricing Table Sections in Sartre Email
 tags: pricing, plans
-order: 18
+page_order: 18
 navigation:
   group: Sections
 ---
@@ -25,9 +24,13 @@ Each type includes 3 variations.
 
 These are well suited for simple pricing options.
 
+![Pricing Table 2 Columns](/img/email/sartre/sections/pricing-table-2-col.jpg)
+
 ## 3 Columns
 
 A bit more complex and tight, these pricing tables are better suited for more complex pricing options.
+
+![Pricing Table 3 Columns](/img/email/sartre/sections/pricing-table-3-col.jpg)
 
 ---
 

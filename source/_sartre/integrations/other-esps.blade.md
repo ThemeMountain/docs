@@ -1,10 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Other ESPs
 description: Using other Email Service Providers with Sartre Email
 tags: campaign monitor, esp, integration
-path: email/sartre/integrations/
-order: 31
+page_order: 31
 navigation:
   group: Integrations
 ---
@@ -24,10 +22,23 @@ The following is a compatibility table that lists any issues we've encountered w
 
 We have encountered the following issues in several email service providers that don't provide template integration capabilities, or a template editor.
 
-(ADD TABLE)
-
-## ESP-Specific
-
-The following issues apply only to some email service providers. This is subject to change, depending on how ESPs change the way they handle HTML.
-
-(ADD TABLE)
+<table class="rounded text-left border text-grey-dark mt-8 mb-4 w-full" cellpadding="16" cellspacing="0">
+    <thead class="bg-grey-lighter text-black text-base">
+        <tr>
+            <th class="py-2 px-4">Issue</th>
+            <th class="py-2 px-4">Solution</th>
+        </tr>
+    </thead>
+    <tbody class="align-top">
+        <tr>
+            <td class="text-sm font-bold w-1/4">Images not showing</td>
+            <td class="text-sm">Many ESPs allow you to import your custom HTML, without offering a visual template builder or at least an option to upload images along with the HTML. To have images show up, always make sure you have used absolute URLs for your images - i.e. images need to be hosted somewhere and linked to from your HTML.
+            <br><br>
+            If your ESP allows editing the template after import (either in code or visual editor), you can simply upload the standard HTML version as it is, and change the image paths afterwards.</td>
+        </tr>
+        <tr>
+            <td class="text-sm font-bold w-1/4">Background images are not editable</td>
+            <td class="text-sm">Just as with Campaign Monitor, you need to manually edit the URL of the background image (before uploading, or in their code editor, if the service provides one). <a href="../campaign-monitor/#background-images" class="text-sm underline">See how →</a></td>
+        </tr>
+    </tbody>
+</table>

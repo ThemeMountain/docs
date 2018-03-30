@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Preheader
 description: Preheader Sections in Sartre Email
 tags: preheader, basic, social
-order: 17
+page_order: 17
 navigation:
   group: Sections
 ---
@@ -23,9 +22,13 @@ They can be used to add aside information above the fold. The text inside will a
 
 The Basic Preheader is made up of two columns with text links inside. If you want, you can replace the two columns with just one (1-column.html from the grid folder), and use only text.
 
+![Preheader Basic](/img/email/sartre/sections/preheader-basic.jpg)
+
 ## Social
 
 The Social Preheader is similar to the Basic one, only that it is more suited for social interaction. It uses contact information links and social media icons, and you can use it to push your social links and contact info above the fold.
+
+![Preheader Social](/img/email/sartre/sections/preheader-social.jpg)
 
 ---
 

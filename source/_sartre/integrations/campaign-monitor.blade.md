@@ -1,10 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Campaign Monitor
 description: Campaign Monitor Integration in Sartre Email
 tags: campaign monitor, esp, integration
-path: email/sartre/integrations/
-order: 30
+page_order: 30
 navigation:
   group: Integrations
 ---
@@ -70,7 +68,7 @@ See the Campaign Monitor personalization tags [reference](https://www.campaignmo
 
 Visual template customisation in Campaign Monitor is very limited, you can only click to edit a section and have some basic formatting options, for multiline elements *only*!
 
-(IMAGE)
+![Campaign Monitor Text Editing Options](/img/email/sartre/integrations/campaign-monitor/cm-editing-options.jpg)
 
 For any customisation to the template, you will need to manually add it before uploading to Campaign Monitor.
 
@@ -93,15 +91,28 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 Just like in the MailChimp version, the hamburger menu icon is visible only on the mobile breakpoint, so it can't be edited with Campaign Monitor's visual editor. Instead, you need to edit it manually in the code, before uploading to Campaign Monitor:
 
-(TODO: add image)
+```html
+<!--[if !mso 9]><!-->
+    <img src="http://example.com/your-image.jpg" class="toggle-trigger show-sm p-sm-8" aria-hidden="true" width="20" style="display: none; max-height: 0;>
+<!--<![endif]-->
+<div class="toggle-content">
+```
 
 ### Background Images
 
 Campaign Monitor currently offers no support when it comes to editing background images.
 
-Just like with the menu icon, manually edit the template code before uploading to Campaign Monitor:
+Just like with the menu icon, manually edit the template code before uploading to Campaign Monitor. Make sure to set the image URL in both the inline CSS and in the `src=""` attribute for the `<v:image />` tag:
 
-(IMAGE)
+```html
+<table class="container" cellpadding="0" cellspacing="0" role="presentation" width="600">
+    <tr>
+      <td style="background-image: url('http://example.com/your-image.jpg'); background-color: #0CBACF; background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <!--[if gte mso 9]>
+        <v:image src="http://example.com/your-image.jpg" xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:500px;" />
+        <v:rect fill="false" stroke="false" style="position:absolute;width:600px;height:500px;">
+        <div><![endif]-->
+```
 
 ### Font Size Differences
 
@@ -111,6 +122,6 @@ The problem is that you might be editing something like a large heading or subhe
 
 To fix it, simply click to edit that text, and switch to "Source" view in Campaign Monitor's editor. There, remove the `<p>` tags surrounding your text:
 
-(IMAGE)
+![Campaign Monitor Paragraph Tags Fix](/img/email/sartre/integrations/campaign-monitor/cm-paragraph-tags-fix.jpg)
 
 Always test before you send!

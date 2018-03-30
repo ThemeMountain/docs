@@ -1,10 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Mailster
 description: Mailster Integration in Sartre Email
 tags: mailster, esp, integration, wordpress
-path: email/sartre/integrations/
-order: 29
+page_order: 29
 navigation:
   group: Integrations
 ---
@@ -83,7 +81,7 @@ There is currently no way to visually edit the HERO With Video in Mailster, so y
 
 The following screenshot highlights all things that you need to edit or can customise:
 
-(TODO: add screenshot)
+![Edit HERO With Video in Mailster](/img/email/sartre/integrations/mailster/edit-video-hero.jpg)
 
 When finished, hit Save to apply your changes.
 
@@ -110,9 +108,9 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 ### Hamburger Menu Icon
 
-To edit the hamburger menu icon, you need to click the <kbd></></kbd> button next to the module in the builder, then edit the icon in the HTML:
+To edit the hamburger menu icon, you need to click the <kbd></></kbd> button next to the module in the builder, to bring up the HTML code editor:
 
-(TODO: add image)
+![Mailster Code Editor](/img/email/sartre/integrations/mailster/code-editor-button.jpg)
 
 In the code editor that shows up, you then simply replace the image URL with the new one that you want to use. This is because the hamburger menu icon is only visible on screens smaller than 600px.
 

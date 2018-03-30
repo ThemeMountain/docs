@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: HERO
 description: HERO Sections in Sartre Email
 tags: hero, background, play, video
-order: 11
+page_order: 11
 navigation:
   group: Sections
 ---
@@ -12,13 +11,14 @@ navigation:
 
 A HERO section is a great way to draw attention to key information, an image or a product, by using bold imagery that works in almost any email client. Sartre comes with several variations:
 
-- With Video New
+- With Video
 - With Background Image
 - Split Content
 
 ---
 
 ## With Video
+<img src="/img/email/sartre/sections/kant-video-hero-iphone.jpg" alt="HERO With Video on iPhone" width="300" class="float-right ml-4 p-4">
 
 The HERO With Video allows you to use HTML5 video in your email campaigns, all while providing a very solid fallback for clients that do not support video in email.
 
@@ -40,8 +40,6 @@ When you play the video, most of these clients will automatically start playing 
   <p class="m-0 text-md text-blue-dark">Currently none of the online builders provide a visual way of editing HTML5 video sections. You will need to edit HTML in order to customise it, so please read on.</p>
 </div>
 
-(Caption) HERO With Video Fallback in Gmail Web, from Kant Halloween template
-
 ### How it works
 
 The HERO With Video contains a `<video>` tag, inside which we add a `<source>` tag for defining the source of the video. The `<video>` tag also has a `poster=""` attribute that defines what image is shown before playing the video.
@@ -49,6 +47,8 @@ The HERO With Video contains a `<video>` tag, inside which we add a `<source>` t
 Then, whatever HTML we use after the `<source>` tag, will be our fallback content that will show up in email clients that do not support HTML5 video. In our products, we use a regular HERO With Background Image as the fallback, so you still get to see rich, editable content that users can interact with (for example, editable text and a "Play" button that can be linked to a YouTube video).
 
 Since all our HERO sections have support for background images in Outlook and Windows Mail, you can use this fallback to show the same poster image, or a different image in email clients that can't play the video. In fact, you could even take it a step further, and use an animated GIF as the fallback background image (maybe a few frames from the beginning of your video?).
+
+![HERO With Video Fallback](/img/email/sartre/sections/kant-video-hero-fallback.jpg)
 
 ### Video HERO Editing
 
@@ -122,11 +122,15 @@ It comes in several types:
 
 It also has Outlook & Windows Mail background image support, but just for the main image: these email clients only support a colour fallback for the semi-transparent overlay, which you can control with the `bgcolor=""` attribute.
 
+![HERO Split](/img/email/sartre/sections/hero-split.jpg)
+
 ## With Background Image
 
 The 'regular' HERO section has a full width background image, overlayed with centered content.
 
 It has background image support for most email clients (including Outlook and Windows Mail), and includes a background colour fallback for cases when the image might not be loaded. See more in [Customisation](#customisation).
+
+![HERO With Background Image](/img/email/sartre/sections/hero-regular.jpg)
 
 ---
 
@@ -144,7 +148,7 @@ For retina images, make sure that they are exactly double the size in comparison
 
 If you add content that increases the height of a section, note that Outlook will not increase the sections's height for you automatically. You will need to do this manually, by changing the CSS height on both the `<v:image />` and the `<v:rect>` VML tags. Outlook treats this height as fixed, so no matter the amount of content inside, this will be your HERO's height:
 
-(image showing content height)
+![HERO image content height for Outlook](/img/email/sartre/vml-height.jpg)
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4" role="alert" id="mailchimp-video-support">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Heads Up!</p>
@@ -194,6 +198,6 @@ Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer 
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
-  <p class="m-0 text-md text-blue-dark">Split HEROs with Overlayed content have an `overlay-sm-bg` class on the column with the background image. This allows for adding a semi-transparent background image on it, for mobile. If using such a HERO section, make sure this image's path is correctly updated in the CSS.</p>
+  <p class="m-0 text-md text-blue-dark">Split HEROs with Overlayed content have an <code>overlay-sm-bg</code> class on the column with the background image. This allows for adding a semi-transparent background image on it, for mobile. If using such a HERO section, make sure this image's path is correctly updated in the CSS.</p>
 </div>
 

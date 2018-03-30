@@ -8,7 +8,7 @@ class GenerateNavigation
 {
     public function handle(Jigsaw $jigsaw)
     {
-        $env = getenv('NODE_ENV');
+        $env = $jigsaw->getEnvironment();
         $collections = $jigsaw->getCollections();
 
         $collections->each(function ($item, $key) use ($jigsaw, $env) {

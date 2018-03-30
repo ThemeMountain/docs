@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Call To Action
 description: CTA Sections in Sartre Email
 tags: button, action, gradient
-order: 6
+page_order: 6
 navigation:
   group: Sections
 ---
@@ -26,9 +25,17 @@ Use CTA sections to encourage your users to click through your emails. The templ
 
 ## Basic
 
+The Basic call to action section only includes a left/right/center aligned button and content, inside a full width column. You can adjust the background color with the `bgcolor=""` attribute on the parent row table.
+
+![CTA Basic](/img/email/sartre/sections/cta-basic.jpg)
+
 ## With AppStore Buttons
 
 ## With Background Image
+
+Similar to the Basic one, but with an image background. Coded with background image support for Outlook and Windows 10 Mail, too.
+
+![](/img/email/sartre/sections/cta-background.jpg)
 
 ---
 

@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Spacing
 description: Spacing Sections in Sartre Email
 tags: spacer, divider, padding
-order: 20
+page_order: 20
 navigation:
   group: Sections
 ---

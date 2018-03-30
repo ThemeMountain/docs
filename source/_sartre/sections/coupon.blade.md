@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Coupon
 description: Add discounts to your emails
 tags: coupon, discount
-order: 7
+page_order: 7
 navigation:
   group: Sections
 ---
@@ -16,11 +15,27 @@ Run promos or offer discounts for your products or services, with the coupon sec
 
 ## Coupon 1
 
+Coupon 1 has centered text and CTA button, framed with a border and filled with a solid colour. You can adjust the background color in the `bgcolor=""` attribute on the first table cell inside the `container` table, as well as the border colour and style, on its inner column cell.
+
+![Coupon 1](/img/email/sartre/sections/coupon-1.jpg)
+
 ## Coupon 2
+
+Similar to Coupon 1, but with content layed out differently. On very small mobile devices, the coupon value (numbers) stack vertically.
+
+![Coupon 2](/img/email/sartre/sections/coupon-2.jpg)
 
 ## Coupon 3
 
+Two column coupon that provides a compact layout for when you need to add an image to your offers, but don't want to use a background image. On mobile, the columns will stack.
+
+![Coupon 3](/img/email/sartre/sections/coupon-3.jpg)
+
 ## Coupon 4
+
+Similar to Coupon 2, but with an image below and an immersive background image. The background image works in almost all email clients, including all Outlook versions and Windows 10 Mail.
+
+![Coupon 4](/img/email/sartre/sections/coupon-4.jpg)
 
 ---
 

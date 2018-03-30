@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Navigation
 description: Navigation Sections in Sartre Email
 tags: menu, breadcrumbs
-order: 15
+page_order: 15
 navigation:
   group: Sections
 ---

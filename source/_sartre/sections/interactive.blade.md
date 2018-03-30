@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Interactive
 description: "Interactive Sections in Sartre Email: Purchase Rating or Review, and Accordion"
 tags: interactive, accordion, star, rating
-order: 13
+page_order: 13
 navigation:
   group: Sections
 ---
@@ -17,6 +16,8 @@ Sartre Email includes interactive sections that will help you create unique, imm
 ## Accordion
 
 Accordions can be useful to reduce the height of your email on mobile. In supporting email clients, the content area is collapsed and can be expanded by clicking on the title.
+
+![Accordion](/img/email/sartre/sections/accordion.jpg)
 
 On mobile, it works just like you're used to: clicking an accordion title reveals the content inside it.
 The interaction is handled with `:hover`, just like with the hamburger menu. Therefore, it doesn't close when you click the title again - it doesn't work like a toggle.
@@ -32,7 +33,7 @@ In most mobile email clients (except iOS Mail) you can touch outside to close it
 
 Need to ask your subscribers for a rating? The Star Rating section offers a 5-star rating scale, that highlights the selected number of stars when the user hovers them. Just like you're used to on a website:
 
-(TODO: add image)
+![Star Rating](/img/email/sartre/sections/thumbs/star-rating.gif)
 
 Because of the poor support in email clients, this section does not use forms. Instead, each star is wrapped in an anchor tag that must be linked to an endpoint (URL) that will record the user's rating.
 

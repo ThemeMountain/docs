@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: File Structure
 description: How the template is organised
 tags: files, structure, organization
-order: 2
+page_order: 2
 navigation:
   group: Getting Started
   order: 2
@@ -35,6 +34,8 @@ The product has the following folder structure:
 1. Same structure as the `campaign-monitor` folder.
 2. HTML version doesn't have an all-in-one. Pre-built layouts are provided instead.
 3. The `shopify` folder contains only the pre-built, Shopify-integrated templates.
+
+---
 
 ## Boilerplate
 

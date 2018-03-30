@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Image Grid
 description: Image Grid Sections in Sartre Email
 tags: image, grid
-order: 12
+page_order: 12
 navigation:
   group: Sections
 ---
@@ -14,13 +13,37 @@ Image Grid sections are grid layouts that focus on imagery to create a strong vi
 
 ---
 
+## Columns With Captions
+
+Great for displaying products or offers in an organized fashion. Choose from 2, 3, and 4-column variations.
+
 ## Logo Grid
+
+The Logo Grid is a four-column grid layout, ideal for showing off partner or sponsor logos. On mobile, the logo columns go full width and stack.
+
+![Logo Grid](/img/email/sartre/sections/logo-grid.jpg)
 
 ## Masonry Grid
 
-## With Captions
+An image grid with different sizes and layout variations, great for showing off a portfolio, shop products, albums - you name it. On mobile, the columns go full width and stack.
+
+![Masonry Grid](/img/email/sartre/sections/project-masonry.jpg)
+
+### Masonry Grid With Captions
+
+The Masonry Grid, but with captions for each image.
+
+### Masonry Grid No Gutters
+
+This variation removes the gutters between grid columns, so that your images stick to one another. The container gutters are preserved, to 'box' it in and align it with your text.
+
+### Masonry Grid No Gutters - Full Width
+
+Same as the one above, but with container gutters removed, so that you can use larger images and create more immersive visuals.
 
 ## Full Width Image
+
+A simple, full width image. This is an inline image, not a background image. So unlike those, it will always be visible in full, because it's not dependent on its container height.
 
 ---
 

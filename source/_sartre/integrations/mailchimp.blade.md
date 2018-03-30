@@ -1,10 +1,8 @@
 ---
-extends: _layouts.default.page
 title: MailChimp
 description: MailChimp Integration in Sartre Email
 tags: mailchimp, esp, integration
-path: email/sartre/integrations/
-order: 27
+page_order: 27
 navigation:
   group: Integrations
 ---
@@ -130,13 +128,20 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 The hamburger menu icon is visible only on the mobile breakpoint, so it can't be edited with MailChimp's visual editor. Instead, you need to edit it manually in the HTML:
 
+```html
+<!--[if !mso 9]><!-->
+    <img src="https://gallery.mailchimp.com/[...].jpg" class="toggle-trigger show-sm p-sm-8" aria-hidden="true" width="20" style="display: none; max-height: 0;>
+<!--<![endif]-->
+<div class="toggle-content">
+```
+
 ### Background Images
 
 MailChimp's editor is unfortunately *very* limited when it comes to background images, at the moment.
 
 You can set a module's background image in the "Design" tab, by replacing the default dummy image. Other settings such as background size, position, tiling (repeat), and colour are available:
 
-(TODO: ADD IMAGE)
+![MailChimp Set Background Image](/img/email/sartre/integrations/mailchimp/set-background-image.jpg)
 
 The downside of this is that it only works by us having to pre-define embedded CSS in the template's `<style>` tag. This means that email clients that don't support embedded CSS *and* CSS background images, will not show the image.
 

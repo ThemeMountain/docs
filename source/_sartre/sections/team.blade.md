@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Team
 description: Team Sections in Sartre Email
 tags: stats, counter
-order: 21
+page_order: 21
 navigation:
   group: Sections
 ---
@@ -24,15 +23,21 @@ Sartre Email includes the following:
 
 This section focuses on the whole team, by providing a large full width image and a call to action button that you can use to link to your About Us page, for example.
 
+![Team 1](/img/email/sartre/sections/team-1.jpg)
+
 ## Team 2 (Boxed)
 
 Team 2 provides a two column layout that you can use to highlight a couple of your team members. It includes a short text, as well as social media icons, to link to their profiles.
 
 On mobile, the two columns will stack on top of each other.
 
+![Team 2](/img/email/sartre/sections/team-2.jpg)
+
 ## Team 2 (Full Width)
 
 Similar to its sibling, but with more space for your content.
+
+![Team 2](/img/email/sartre/sections/team-2.jpg)
 
 ---
 

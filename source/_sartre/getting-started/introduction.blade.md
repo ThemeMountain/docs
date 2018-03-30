@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Introduction
 description: A few words before diving in
 tags: email, introduction, start
-order: 1
+page_order: 1
 navigation:
   group: Getting Started
   order: 1
@@ -13,7 +12,7 @@ navigation:
 
 ## Framework
 
-The product is built using our own [Acorn Email Framework](https://thememountain.github.io/acorn/).
+The product is built using our very own [Acorn Email Framework](https://thememountain.github.io/acorn/).
 
 If you want to customise layouts, change columns, or do anything that affects structure, besides HTML knowledge we strongly suggest you first read the framework documentation.
 
@@ -41,6 +40,6 @@ With the exception of Shopify, each of these services offers an online email bui
 
 ### Email Testing
 
-After you customize the template to suit your needs, always test before sending out an email. Our email templates and framework have been tested with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
+After you customize the template to suit your needs, always test before sending out an email. Our email templates and framework have been [tested](https://thememountain.github.io/email-rendering/) with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
 
 If you don't have access to a testing tool, at the very least send yourself a test email before launching a campaign, and check it on as many devices and email clients as you can. And whatever you do, never send out a mass email from your personal Gmail or Outlook.

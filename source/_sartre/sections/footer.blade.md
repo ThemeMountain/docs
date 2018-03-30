@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Footer
 description: Footer Sections in Sartre Email
 tags: feature, showcase
-order: 9
+page_order: 9
 navigation:
   group: Sections
 ---

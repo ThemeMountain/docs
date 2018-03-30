@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Social
 description: Social Sections in Sartre Email
 tags: social, facebook, twitter, instagram, youtube
-order: 19
+page_order: 19
 navigation:
   group: Sections
 ---
@@ -23,11 +22,15 @@ Sartre Email currently ships with two types of social sections:
 
 Simple and clean, with centered icons and a title above.
 
+![Social 1](/img/email/sartre/sections/social-1.jpg)
+
 ## Social 2
 
 Four-column layout with edge-to-edge background. Includes icon and text, as well as a background colour to match the social network branding. Don't know the HEX code for a specific brand colour? Checkout [BrandColors](https://brandcolors.net/).
 
 On mobile, the columns go full-width and stack.
+
+![Social 2](/img/email/sartre/sections/social-2.jpg)
 
 ---
 

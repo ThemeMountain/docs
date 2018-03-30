@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Stats
 description: Stats Sections in Sartre Email
 tags: stats, counter
-order: 21
+page_order: 21
 navigation:
   group: Sections
 ---
@@ -24,19 +23,29 @@ In Sartre Email, they come in 3 shapes:
 
 Basic Stats are made up of three columns separated by a subtle border. You can customise the text and background styles. On mobile, the columns stack vertically, and the `borderless-sm` class hides the separators.
 
+![Stats 1](/img/email/sartre/sections/stats-basic.jpg)
+
 Because having centered text in a Stats section requires more work than just centering text (paddings, widths), we also provide a stand-alone variation for that (stats-2.html). It might not look very different at a first glance, but if you want centered stats, this variation will save you some headaches.
+
+![Stats 2 - Centered](/img/email/sartre/sections/stats-basic-centered.jpg)
 
 ## Boxed
 
 Two column Stats section, with a background colour on each column.
 
+![Stats 4](/img/email/sartre/sections/stats-boxed.jpg)
+
 We've also included a variation (stats-5.html) that uses a background image and a semi-transparent background colour for the actual boxes.
 
 **Note**: Although the background image is supported in Outlook and Windows 10 Mail, the semi-transparent box background colour is coded with `rgba` in CSS, and will fallback to a solid colour [where it is not supported](https://www.campaignmonitor.com/css/color-background/rgba-colors/).
 
+![Stats 5](/img/email/sartre/sections/stats-boxed-with-bkg-image.jpg)
+
 ## With Background Image
 
 Same 3-column layout with separators, but with a background image instead of a solid colour. Of course, the background image works in all versions of Outlook, as well as in Windows 10 Mail.
+
+![Stats 3](/img/email/sartre/sections/stats-with-bkg-image.jpg)
 
 ---
 

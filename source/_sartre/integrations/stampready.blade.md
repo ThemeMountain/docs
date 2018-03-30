@@ -1,10 +1,8 @@
 ---
-extends: _layouts.default.page
 title: StampReady
 description: StampReady Integration in Sartre Email
 tags: stampready, esp, integration
-path: email/sartre/integrations/
-order: 28
+page_order: 28
 navigation:
   group: Integrations
 ---
@@ -91,7 +89,7 @@ Currently, StampReady's editor doesn't support editing HTML5 video in emails. It
 
 Hover the HERO With Video section in the builder, and click on the <kbd></></kbd> button on the right. In StampReady's current editor, you will see the code editing window slide down under the section:
 
-(TODO: add image)
+![Edit Video HERO in StampReady](/img/email/sartre/integrations/stampready/edit-video-hero-code.jpg)
 
 As you can see, the `<video>` and `<source>` tags are missing the `<poster="">` and `<src="">` attributes, respectively. The former is also missing the controls attribute, needed so users can actually play the video. We need to add those back in!
 
@@ -138,7 +136,7 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 The hamburger menu icon is visible only on the mobile breakpoint, so it can't be edited with MailChimp's visual editor. Instead, you need to edit it manually in the HTML:
 
-(TODO: add image)
+![Edit Hamburger Menu icon in StampReady](/img/email/sartre/integrations/stampready/edit-hamburger-icon.jpg)
 
 ### Elements changed/removed
 

@@ -20,11 +20,12 @@ return [
     'collections' => [
 
         'sartre' => [
-            'version' => '1.0.0',
-            'name' => 'Sartre Email Documentation',
-            'theme' => 'purple',
             'group' => 'email',
-            'sort' => 'order',
+            'color' => 'purple',
+            'name' => 'Sartre Email',
+            'version' => '1.0.0',
+            'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
+            'sort' => 'page_order',
             'search' => [
                 'algolia' => [
                     'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),
@@ -38,7 +39,7 @@ return [
         'wordpress' => [
             'version' => '1.0.0',
             'name' => 'WordPress Documentation',
-            'theme' => 'red',
+            'color' => 'red',
             'search' => [
                 'algolia' => [
                     'appID' => getenv('WORDPRESS_ALGOLIA_APP_ID'),
@@ -98,7 +99,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Theme
+    | Layout
+    |--------------------------------------------------------------------------
+    |
+    | Choose the default template that your documentation pages will use.
+    | This will be applied globally to all pages you create, but you
+    | can override it with the 'extends' FrontMatter variable.
+    |
+    */
+
+    'extends' => '_layouts.default.page',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Main Color
     |--------------------------------------------------------------------------
     |
     | Set the default theme color.
@@ -108,7 +122,7 @@ return [
     |
     */
 
-    'theme' => 'blue',
+    'color' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,10 +136,10 @@ return [
     */
 
     'social' => [
-        'envato' => 'https://themeforest.net/user/thememountain/portfolio?ref=thememountain',
+        'support' => 'https://thememountain.ticksy.com',
         'twitter' => 'https://twitter.com/thememountainco',
         'github' => 'https://github.com/ThemeMountain',
-        'support' => 'https://thememountain.ticksy.com',
+        'envato' => 'https://themeforest.net/user/thememountain/portfolio?ref=thememountain',
     ],
 
     /*

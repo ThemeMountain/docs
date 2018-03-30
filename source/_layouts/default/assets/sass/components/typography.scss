@@ -47,19 +47,14 @@ p {
     line-height: 1.8;
 }
 
-// .content p {
-//     font-size: .925rem;
-// }
-
 code {
-    @apply .inline-block .bg-grey-lighter .text-xs .py-1 .px-2 .leading-none .whitespace-pre-wrap .font-mono .align-baseline;
+    @apply .inline-block .bg-grey-lighter .text-xs .py-1 .px-2 .leading-none .font-mono;
 }
-
 pre {
-    @apply .bg-grey-lighter .font-mono .border .border-grey-light .rounded .p-4 .mb-4;
+    @apply .overflow-auto .break-normal .bg-white .border .border-grey-light .rounded .p-4 .mb-4;
 
     code {
-        @apply .leading-normal;
+        @apply .leading-normal .bg-white .text-grey-darker;
     }
 }
 

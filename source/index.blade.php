@@ -1,15 +1,15 @@
 ---
 extends: _layouts.default.master
-title: Home
+name: Documentation
 description: Listing of all ThemeMountain documentation sites
 ---
 
-<div class="bg-gradient-{{ $page->theme }} h-screen">
-    @include('_layouts.default.partials.headers.master', ['theme' => $page->theme])
+<div class="bg-gradient-{{ $page->color }} h-screen">
+    @include('_layouts.default.partials.headers.master', ['color' => $page->color])
 
     <div class="flex h-screen items-center">
         <div class="mx-auto text-center content">
-            <h1 class="text-white text-3xl md:text-5xl font-sans font-light">ThemeMountain Docs</h1>
+            <h1 class="text-white text-3xl md:text-5xl font-sans font-light">{{ $page->company }} Docs</h1>
             <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">Create something beautiful for your users with Faulkner's APIs and web tools.</p>
             <a href="#intro" class="bg-transparent hover:shadow-lg hover:bg-white hover:text-blue text-white text-xs py-3 px-6 border border-white rounded inline-flex items-center">
                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>

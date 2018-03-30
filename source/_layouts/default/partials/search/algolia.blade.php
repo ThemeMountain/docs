@@ -17,16 +17,16 @@
                         + '</div>';
             },
             suggestion: function(suggestion) {
-                var path = 'offline' == '{{ $env }}' ? suggestion.path.split('/').pop() + '.html' : '/' + suggestion.path ;
+                var path = 'offline' == '{{ getenv('NODE_ENV') }}' ? suggestion.path.split('/').pop() + '.html' : suggestion.path ;
 
-                return '<a href="'+path+'" class="block p-4 hover:text-{{ $page->theme }}">'
+                return '<a href="'+path+'" class="block p-4 hover:text-{{ $page->color }}">'
                         + '<span class="block text-sm">'+suggestion._highlightResult.title.value+'</span>'
                         + '<span class="block text-xs text-grey">'+suggestion._highlightResult.description.value+'</span>'
                         + '</a>';
             }
         }
     }).on('autocomplete:selected', function (e, suggestion, dataset) {
-        var path = 'offline' == '{{ $env }}' ? suggestion.path.split('/').pop() + '.html' : '/' + suggestion.path ;
+        var path = 'offline' == '{{ getenv('NODE_ENV') }}' ? suggestion.path.split('/').pop() + '.html' : '/' + suggestion.path ;
         location.assign(path);
     });
 </script>

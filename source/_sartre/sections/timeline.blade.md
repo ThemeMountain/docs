@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Timeline
 description: Timeline Section in Sartre Email
 tags: events, schedule, timetable, program
-order: 24
+page_order: 24
 navigation:
   group: Sections
 ---
@@ -13,6 +12,8 @@ navigation:
 Timeline is a 3-column layout that shows dates, a visual separator that connects the rows, and the actual content on the right. Useful for displaying a series of events, such as a conference schedule.
 
 On mobile, the connecting "pipe" image is hidden, and the columns stack.
+
+![Timeline](/img/email/sartre/sections/timeline.jpg)
 
 ---
 

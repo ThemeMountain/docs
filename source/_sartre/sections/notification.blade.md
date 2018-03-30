@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Notification
 description: Notification Sections in Sartre Email
 tags: transactional, reset, confirm, cart
-order: 16
+page_order: 16
 navigation:
   group: Sections
 ---

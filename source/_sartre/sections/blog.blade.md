@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Blog
 description: Blog Sections in Sartre Email
 tags: blog, grid, newsletter, content
-order: 5
+page_order: 5
 navigation:
   group: Sections
 ---

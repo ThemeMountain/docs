@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Header
 description: Header Sections in Sartre Email
 tags: header, logo, menu, top
-order: 10
+page_order: 10
 navigation:
   group: Sections
 ---
@@ -31,27 +30,33 @@ Most of them include variations with navigation components:
 
 ## Header Centered
 
+The Centered Header shows a center-aligned logo, on both desktop and mobile.
+
+The one with the Hamburger menu component contains an image that is visible only on mobile, and works like a dropdown menu - find out more in the [framework Navigation docs](https://thememountain.github.io/acorn/components/navigation.html#hamburger).
+
 ### With Basic Menu
 
-### With Hamburger Menu
+![Header Centered With Basic Menu](/img/email/sartre/sections/header-centered.jpg)
 
 ### With Split Menu
 
-## Header Left
+This type of Header allows adding menu links on both sides of a centered logo.
+
+![Header Centered With Split Menu](/img/email/sartre/sections/header-centered-split-menu.jpg)
+
+## Header Left/Right
+
+The Left or Right Aligned Headers show the logo on the left or right, and a navigation component or simple headings on the opposite side. Like the Centered one, it comes with both a Basic and a Hamburger menu.
+
+On mobile, the logo image and menu will stack and align to center.
 
 ### With Basic Menu
 
-### With Hamburger Menu
+![Header Left With Basic Menu](/img/email/sartre/sections/header-left.jpg)
 
 ### With Title
 
-## Header Right
-
-### With Basic Menu
-
-### With Hamburger Menu
-
-### With Title
+![Header Left With Title](/img/email/sartre/sections/header-with-title.jpg)
 
 ---
 

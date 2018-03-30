@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Marketing
 description: Marketing Templates in Sartre Email
 tags: templates, marketing, promotional, sale, offer
-order: 25
+page_order: 25
 navigation:
   group: Templates
 ---

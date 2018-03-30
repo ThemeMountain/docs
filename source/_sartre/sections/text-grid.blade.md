@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Text Grid
 description: Text Grid Sections in Sartre Email
 tags: grid, text, simple
-order: 23
+page_order: 23
 navigation:
   group: Sections
 ---

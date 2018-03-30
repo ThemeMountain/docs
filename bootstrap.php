@@ -3,6 +3,7 @@
 use Dotenv\Dotenv;
 // use App\ParsedownParser;
 use App\Listeners\GenerateNavigation;
+use App\Listeners\CreateChangelogCollections;
 use App\Listeners\DumpJigsawSettings;
 // use Mni\FrontYAML\Markdown\MarkdownParser;
 
@@ -14,6 +15,8 @@ $dotenv = new Dotenv(__DIR__);
 $dotenv->load();
 
 // $container->bind(MarkdownParser::class, ParsedownParser::class);
+
+$events->beforeBuild(CreateChangelogCollections::class);
 
 $events->afterCollections([GenerateNavigation::class, DumpJigsawSettings::class]);
 

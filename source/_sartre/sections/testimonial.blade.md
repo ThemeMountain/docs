@@ -1,9 +1,8 @@
 ---
-extends: _layouts.default.page
 title: Testimonial
 description: Testimonial Sections in Sartre Email
 tags: reference, recommendation, endorsement
-order: 22
+page_order: 22
 navigation:
   group: Sections
 ---
@@ -24,14 +23,29 @@ We've included the following variations:
 
 ## Twitter-style
 
+Quote a user from Twitter with this testimonial section that closely resembles the tweet card design.
+
 ## Left With Quote
+
+Simple, left-aligned single column testimonial, with a quote icon and author name.
 
 ## Split With Border
 
+A simple, typography focused and left aligned testimonial, with user name, a separating border, and a quote image that you can customise to suit your needs. The border is removed on mobile through the `borderless-sm` class.
+
+![Testimonial Split With Border](/img/email/sartre/sections/testimonial-split-with-border.jpg)
+
 ## 2 Columns Boxed
+
+Add a couple of user reviews, with a two column layout. Each box has its own user avatar image and background colour, which you can of course customise. On mobile, the columns will stack.
+
+![Testimonial 2 Columns Boxed](/img/email/sartre/sections/testimonial-2-col-boxed.jpg)
 
 ## Centered With Avatar
 
+Single column, centered quote with user avatar and user name at the bottom.
+
+![Testimonial Centered With Avatar](/img/email/sartre/sections/testimonial-centered-with-avatar.jpg)
 
 ---
 
