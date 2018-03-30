@@ -47,9 +47,9 @@ export default {
   mounted() {
     anchors.options = { placement: 'left', class: 'text-grey-dark' }
     anchors.add('.content h2, .content h3, .content h4')
-    this.links = anchors.elements.filter((el) => ['H2'].includes(el.tagName)).map((el) => {
+    this.links = anchors.elements.filter((el) => ['H2'].indexOf(el.tagName) > -1).map((el) => {
       return {
-        isChild: ['H3'].includes(el.tagName),
+        isChild: ['H3'].indexOf(el.tagName) > -1,
         text: getHeadingText(el),
         href: el.querySelector('.anchorjs-link').getAttribute('href'),
         el: el,
