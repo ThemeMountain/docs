@@ -15,7 +15,7 @@
         </main>
 
         <aside class="w-1/3 sidebar-navigation mt-20">
-            <div class="pl-16 sticky top-20">
+            <div class="pl-16 sticky top-20 w-full">
                 <div class="overflow-y-auto wrapper py-12">
                     <table-of-contents title="Quickies"></table-of-contents>
                 </div>

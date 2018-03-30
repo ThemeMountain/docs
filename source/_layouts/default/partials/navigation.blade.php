@@ -1,5 +1,5 @@
 <nav class="sidebar-navigation w-2/5 mt-20">
-    <div class="sticky top-20 pr-16">
+    <div class="sticky top-20 pr-16 w-full">
         <div class="overflow-y-auto wrapper">
             <ul class="py-8 mt-6 list-reset">
             @foreach($page->getNavigation() as $category => $sections)
