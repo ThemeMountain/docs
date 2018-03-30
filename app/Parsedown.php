@@ -50,4 +50,21 @@ class Parsedown extends BaseParsedown
 
         return $block;
     }*/
+
+    /**
+     * Generate correct image path based on environment
+     * Keeping as an example, for now
+     * @param  [type] $Excerpt [description]
+     * @return [type]          [description]
+     */
+    /*protected function inlineImage($Excerpt)
+    {
+        $Inline = parent::inlineImage($Excerpt);
+        if ( ! isset($Inline))
+        {
+            return null;
+        }
+        $Inline['element']['attributes']['class'] = 'test';
+        return $Inline;
+    }*/
 }

@@ -12,13 +12,13 @@
                     <a href="{{ $page->social->envato }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block">Our Products</a>
                     <ul class="list-reset invisible opacity-0 transition-all absolute bg-white shadow-md rounded -ml-4 py-3 w-48">
                         <li>
-                            <a href="#" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">WordPress</a>
+                            <a href="https://themeforest.net/collections/5986290-our-html-templates" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">Site Templates</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">HTML</a>
+                            <a href="https://themeforest.net/collections/6812184-our-email-templates" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">Email Templates</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">Email</a>
+                            <a href="https://themeforest.net/collections/5986291-our-wordpress-themes" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white hover:border-{{ $color }} px-4 py-2">WordPress Themes</a>
                         </li>
                     </ul>
                 </li>
