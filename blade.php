@@ -35,5 +35,5 @@ $bladeCompiler->directive('youtube', function($expression) {
     return '<?php
         $id = str_replace("\'", "", ' . $expression . ');
 
-        echo "<div class=\"relative aspect-ratio-16/9\"><iframe class=\"absolute w-full h-full pin-t\" src=\"https://www.youtube.com/embed/$id?rel=0\" frameborder=\"0\" allowfullscreen></iframe></div>"; ?>';
+        echo "<div class=\"relative aspect-ratio-16/9 mb-4\"><iframe class=\"absolute w-full h-full pin-t\" src=\"https://www.youtube.com/embed/$id?rel=0\" frameborder=\"0\" allowfullscreen></iframe></div>"; ?>';
 });
