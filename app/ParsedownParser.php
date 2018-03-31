@@ -22,6 +22,6 @@ class ParsedownParser implements MarkdownParser
      */
     public function parse($markdown)
     {
-        return $this->parser->parse($markdown);
+        return $this->parser->text($markdown);
     }
 }
