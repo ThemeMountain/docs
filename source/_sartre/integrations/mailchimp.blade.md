@@ -35,6 +35,8 @@ We've made a video tutorial on working with our email templates in MailChimp. Al
 
 Please watch this first, as it covers the most common questions and issues:
 
+@youtube('S0OpEtxs34s')
+
 ## Uploading
 
 Inside the `Files/mailchimp/all-in-one/` folder, you'll find the .zip file that you need to upload to MailChimp.
