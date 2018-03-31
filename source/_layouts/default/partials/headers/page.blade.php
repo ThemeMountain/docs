@@ -24,7 +24,7 @@
                 <div class="pl-16 flex">
                     @foreach($page->social as $name => $url)
                         <a href="{{ $url }}" class="text-grey-dark hover:text-{{ $page->color }} mr-5" title="{{ title_case($name) }}" target="_blank" rel="noopener nofollow">
-                            @svg($name)
+                            @fileContents('source/img/icons/'.$name.'.svg')
                         </a>
                     @endforeach
                 </div>
