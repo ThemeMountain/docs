@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use Mni\FrontYAML\Parser;
+use App\ParsedownParser;
 use TightenCo\Jigsaw\Jigsaw;
 
 class CreateChangelogCollections
@@ -10,7 +11,7 @@ class CreateChangelogCollections
     public function handle(Jigsaw $jigsaw)
     {
         $collections = $jigsaw->getCollections();
-        $parser = new Parser();
+        $parser = new Parser(null, new ParsedownParser());
 
         $collections->each(function ($key) use ($jigsaw, $parser) {
 

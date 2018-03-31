@@ -3,7 +3,7 @@
 namespace App;
 
 use Highlight\Highlighter;
-use Parsedown as BaseParsedown;
+use ParsedownExtra as BaseParsedown;
 
 class Parsedown extends BaseParsedown
 {
@@ -24,6 +24,7 @@ class Parsedown extends BaseParsedown
 
     /**
      * Add syntax highlighting to a fenced code block.
+     * Enable once Parsedown fixes raw HTML output in extensions issue.
      *
      * @param  array $block
      * @return  array
@@ -52,10 +53,10 @@ class Parsedown extends BaseParsedown
     }*/
 
     /**
-     * Generate correct image path based on environment
-     * Keeping as an example, for now
-     * @param  [type] $Excerpt [description]
-     * @return [type]          [description]
+     * Example of changing <img> markup.
+     * Could be used to wrap images in HTML required by stuff like lightboxes.
+     * @param  array $Excerpt
+     * @return array
      */
     /*protected function inlineImage($Excerpt)
     {

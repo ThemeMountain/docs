@@ -1,11 +1,11 @@
 <?php
 
 use Dotenv\Dotenv;
-// use App\ParsedownParser;
+use App\ParsedownParser;
 use App\Listeners\GenerateNavigation;
-use App\Listeners\CreateChangelogCollections;
 use App\Listeners\DumpJigsawSettings;
-// use Mni\FrontYAML\Markdown\MarkdownParser;
+use Mni\FrontYAML\Markdown\MarkdownParser;
+use App\Listeners\CreateChangelogCollections;
 
 /** @var $container \Illuminate\Container\Container */
 /** @var $events \TightenCo\Jigsaw\Events\EventBus */
@@ -14,7 +14,7 @@ use App\Listeners\DumpJigsawSettings;
 $dotenv = new Dotenv(__DIR__);
 $dotenv->load();
 
-// $container->bind(MarkdownParser::class, ParsedownParser::class);
+$container->bind(MarkdownParser::class, ParsedownParser::class);
 
 $events->beforeBuild(CreateChangelogCollections::class);
 
