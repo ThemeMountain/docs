@@ -4,5 +4,6 @@
 /source/_collections.json
 /source/_config.json
 /build_local/
+/build_offline/
 /node_modules/
 /vendor/
