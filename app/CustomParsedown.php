@@ -5,7 +5,7 @@ namespace App;
 use Highlight\Highlighter;
 use ParsedownExtra as BaseParsedown;
 
-class Parsedown extends BaseParsedown
+class CustomParsedown extends BaseParsedown
 {
     /**
      * @var  \Highlight\Highlighter
@@ -29,7 +29,7 @@ class Parsedown extends BaseParsedown
      * @param  array $block
      * @return  array
      */
-    /*protected function blockFencedCodeComplete($block)
+    protected function blockFencedCodeComplete($block)
     {
         try {
             if ($class = array_get($block, 'element.text.attributes.class', false)) {
@@ -50,7 +50,7 @@ class Parsedown extends BaseParsedown
         }
 
         return $block;
-    }*/
+    }
 
     /**
      * Example of changing <img> markup.

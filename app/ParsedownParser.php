@@ -3,7 +3,7 @@
 namespace App;
 
 use Mni\FrontYAML\Markdown\MarkdownParser;
-use ParsedownExtra;
+use App\CustomParsedown;
 
 class ParsedownParser implements MarkdownParser
 {
@@ -11,9 +11,9 @@ class ParsedownParser implements MarkdownParser
     /**
      * ParsedownParser constructor.
      */
-    public function __construct(Parsedown $parsedown = null)
+    public function __construct()
     {
-        $this->parser = $parsedown ?: new ParsedownExtra();
+        $this->parser = new CustomParsedown();
     }
 
     /**
