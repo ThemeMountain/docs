@@ -275,9 +275,9 @@ return [
 
         return $pages->contains(function ($page) use ($path, $env) {
             if ($env == 'offline') {
-                return str_contains($path['path'], $page->getFilename());
+                return str_is($path['path'], $page->getFilename());
             }
-            return str_contains($page->getPath(), $path['path']);
+            return str_is($page->getPath(), $path['path']);
         });
     },
     'hasChildrenActive' => function ($page, $children) {
