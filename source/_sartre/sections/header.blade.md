@@ -34,11 +34,11 @@ The Centered Header shows a center-aligned logo, on both desktop and mobile.
 
 The one with the Hamburger menu component contains an image that is visible only on mobile, and works like a dropdown menu - find out more in the [framework Navigation docs](https://thememountain.github.io/acorn/components/navigation.html#hamburger).
 
-### With Basic Menu
+### With Basic Menu {#header-centered-basic-menu}
 
 ![Header Centered With Basic Menu](/img/email/sartre/sections/header-centered.jpg)
 
-### With Split Menu
+### With Split Menu {#header-centered-split-menu}
 
 This type of Header allows adding menu links on both sides of a centered logo.
 
@@ -50,11 +50,11 @@ The Left or Right Aligned Headers show the logo on the left or right, and a navi
 
 On mobile, the logo image and menu will stack and align to center.
 
-### With Basic Menu
+### With Basic Menu {#header-left-right-basic-menu}
 
 ![Header Left With Basic Menu](/img/email/sartre/sections/header-left.jpg)
 
-### With Title
+### With Title {#header-left-right-title}
 
 ![Header Left With Title](/img/email/sartre/sections/header-with-title.jpg)
 

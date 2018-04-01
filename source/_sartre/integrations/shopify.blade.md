@@ -20,7 +20,7 @@ Because Shopify only allows editing notification templates by pasting in your em
 ---
 ## Uploading to Shopify
 
-Inside the `Files/shopify/` folder, you'll find HTML files for all Shopify notification emails. Read more about them [below &darr;](#file-structure)
+Inside the `Files/shopify/` folder, you'll find HTML files for all Shopify notification emails. Read more about them [below &darr;](#structure) {.scroll-to}
 
 1. In your Shopify admin, click Settings on the bottom left.
 2. On the next page, select "Notifications" :
@@ -78,7 +78,7 @@ At the very top of the code for almost all emails, you will see some Liquid tags
 
 We have tried providing some defaults in this location, so that you can see them immediately and change them there without scrolling down and hunting for text in the HTML. However, this isn't possible with all components, so you will need to edit wording inside the HTML, too. Which brings us to:
 
-### HTML/Liquid editing
+### HTML / Liquid editing
 
 Since Shopify doesn't provide a visual editor for editing your notification templates, you will need to edit the source code of our templates, in order to do advanced customisations.
 
@@ -137,7 +137,7 @@ Change the first font name in `font-family: ''`, by using the same name that is 
 
 Do not change the `webfont` class name, as this is used throughout the template.
 
-That's it! All that's needed now is to replace the template in you Shopify Notifications settings as explained [above &uarr;](#uploading-to-shopify).
+That's it! All that's needed now is to replace the template in you Shopify Notifications settings as explained [above &uarr;](#uploading-to-shopify) {.scroll-to}.
 
 Make sure to test the email in the Shopify admin, in order to make sure your changes have been correctly applied.
 

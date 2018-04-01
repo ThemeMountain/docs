@@ -26,31 +26,58 @@ class CustomParsedown extends BaseParsedown
      * Add syntax highlighting to a fenced code block.
      * Enable once Parsedown fixes raw HTML output in extensions issue.
      *
-     * @param  array $block
+     * @param  array $Block
      * @return  array
      */
-    protected function blockFencedCodeComplete($block)
+    protected function blockFencedCodeComplete($Block)
     {
         try {
-            if ($class = array_get($block, 'element.text.attributes.class', false)) {
+            if ($class = array_get($Block, 'element.text.attributes.class', false)) {
                 if (starts_with($class, 'language-')) {
 
-                    $code = array_get($block, 'element.text.text', '');
+                    $code = array_get($Block, 'element.text.text', '');
                     $code = $this->highlighter->highlight(str_after($class, 'language-'), $code)->value;
-                    array_set($block, 'element.text.text', $code);
-                    $block['element']['text']['attributes']['class'] = "hljs {$class}";
+                    array_set($Block, 'element.text.text', $code);
+                    $Block['element']['text']['attributes']['class'] = "hljs {$class}";
 
                 } else {
-                    $block = parent::blockFencedCodeComplete($block);
+                    $Block = parent::blockFencedCodeComplete($Block);
                 }
             }
 
         } catch (\Exception $e) {
-           $block = parent::blockFencedCodeComplete($block);
+           $Block = parent::blockFencedCodeComplete($Block);
         }
 
-        return $block;
+        return $Block;
     }
+
+    /**
+     * Add ID and anchor links to headings
+     * @param  array $Line
+     * @return array
+     */
+    /*protected function blockHeader($Line)
+    {
+        $Block = parent::blockHeader($Line);
+
+        $h = $Block['element']['name'];
+
+        $text = $Block['element']['text'];
+        $slug = str_slug($text);
+
+        if (! isset($Block['element']['attributes']['id'])) {
+            $Block['element']['attributes'] = [
+                'id' => $slug,
+            ];
+        }
+
+        $anchor = '<a href="#'.$Block['element']['attributes']['id'].'" class="anchor-link"></a>';
+
+        $Block['element']['text'] = $anchor . $Block['element']['text'];
+
+        return $Block;
+    }*/
 
     /**
      * Example of changing <img> markup.
