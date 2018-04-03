@@ -76,7 +76,7 @@ class CustomParsedown extends BaseParsedown
         // 1. Add target and rel to external links
         if ($this->isExternalUrl($href)) {
             $Link['element']['attributes']['target'] = '_blank';
-            $Link['element']['attributes']['rel'] = 'noopener nofollow';
+            $Link['element']['attributes']['rel'] = 'noopener';
 
             return $Link;
         }
