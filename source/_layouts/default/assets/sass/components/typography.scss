@@ -1,4 +1,5 @@
 .content {
+    
     p a {
         @apply .border-b;
 
@@ -15,7 +16,6 @@
         }
     }
 
-
     li {
         @apply .my-1;
 
@@ -30,19 +30,21 @@
 
 }
 
+
 h1, h2, h3, h4, h5, h6 {
-    @apply .font-light .leading-tight .pb-6;
+    @apply .text-black .font-light .leading-tight .pb-6;
 }
 
 h2, h3, h4, h5, h6 {
     @apply .pt-2;
 }
 
-p, li {
-    @apply .font-hind-madurai .text-sm .text-grey-darker;
-}
-
 p {
     @apply .mb-4;
     line-height: 1.8;
+}
+
+p, li {
+    @apply .font-hind-madurai .text-sm;
+    color: inherit;
 }

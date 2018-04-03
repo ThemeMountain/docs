@@ -33,8 +33,8 @@ The product includes dedicated integrations for the following email service prov
 - [Shopify](https://www.shopify.com/)
 - [MailChimp](https://mailchimp.com/)
 - [StampReady](https://www.stampready.net/)
-- [Mailster for WordPress](https://mailster.co/)
 - [Campaign Monitor](https://www.campaignmonitor.com/)
+- [Mailster for WordPress](https://mailster.co/)
 
 With the exception of Shopify, each of these services offers an online email builder that you can use to visually build your layouts. We recommend StampReady, simply because it's the best in class and you can export your layouts to use with other services. If you're using WordPress, the recommendation is obvious.
 

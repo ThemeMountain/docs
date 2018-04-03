@@ -186,7 +186,8 @@ return [
     |
     */
 
-   // KEEPING THIS FOR REF ONLY, WILL DOCUMENT AND REMOVE IT
+    // KEEPING THIS FOR REF ONLY, WILL DOCUMENT AND REMOVE IT
+    'search' => 'offline',
 
     // 'search' => [
     //     'offline',

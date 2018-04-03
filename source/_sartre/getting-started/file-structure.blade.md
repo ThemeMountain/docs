@@ -12,24 +12,22 @@ navigation:
 
 The product has the following folder structure:
 
-```sh
-├── Documentation
-├── Files
-│   ├── campaign-monitor
-│       ├── all-in-one
-│       ├── components
-│       ├── grid
-│       ├── layout
-│       ├── sections
-│   └── html
-│       ├── templates <sup>[2]</sup>
-│   └── images
-│   └── mailchimp <sup>[1]</sup>
-│   └── shopify <sup>[3]</sup>
-│   └── stampready <sup>[1]</sup>
-│   └── mailster <sup>[1]</sup>
-├── PSD
-```
+- Documentation
+- Files
+  - campaign-monitor
+      - all-in-one
+      - components
+      - grid
+      - layout
+      - sections
+  - html
+    - templates <sup>[2]</sup>
+  - images
+  - mailchimp <sup>[1]</sup>
+  - shopify <sup>[3]</sup>
+  - stampready <sup>[1]</sup>
+  - mailster <sup>[1]</sup>
+- PSD
 
 1. Same structure as the `campaign-monitor` folder.
 2. HTML version doesn't have an all-in-one. Pre-built layouts are provided instead.

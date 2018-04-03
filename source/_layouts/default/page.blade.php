@@ -9,7 +9,7 @@
 
         @include('_layouts.default.partials.navigation')
 
-        <main class="content min-w-0 w-full pt-32">
+        <main class="content min-w-0 w-full pt-32 text-grey-darker">
             @yield('content')
             @include('_layouts.default.components.pagenav', ['page' => $page])
         </main>

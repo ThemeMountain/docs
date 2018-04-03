@@ -13,7 +13,7 @@ getSearchIndexJSON = (key, buildPath) => {
 
 exports.sync = (sites) => {
 
-    const config = JSON.parse( fs.readFileSync( path.resolve(process.cwd(), 'source/_config.json') ) )
+    const config = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'source/_assets/data/config.json') ) )
 
     if (!sites) {
         console.error('Sites object was malformed or not provided. Algolia sync aborted.')

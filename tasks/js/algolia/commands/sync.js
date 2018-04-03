@@ -16,7 +16,7 @@ exports.describe = `Sync your search indices to Algolia.
 
 exports.handler = (argv) => {
 
-  const config = JSON.parse( fs.readFileSync( path.resolve(process.cwd(), 'source/_config.json') ) )
+    const config = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'source/_assets/data/config.json') ) )
 
   if (argv.sites.length > 0) {
       let sites = []

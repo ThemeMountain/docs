@@ -66,36 +66,46 @@ class CustomParsedown extends BaseParsedown
     protected function inlineLink($Excerpt)
     {
         $Link = parent::inlineLink($Excerpt);
-        if ( ! isset($Link))
-        {
+        if (! isset($Link)) {
             return null;
         }
 
         $href = $Link['element']['attributes']['href'];
+        $isAnchorLink = false;
 
         // 1. Add target and rel to external links
         if ($this->isExternalUrl($href)) {
             $Link['element']['attributes']['target'] = '_blank';
             $Link['element']['attributes']['rel'] = 'noopener';
 
-            return $Link;
         }
 
         else {
 
             // 2. Add scroll-to class to anchor links
-            if (preg_match('/#([A-Za-z0-9\-\_]+)/', $href, $matches)) {
+            if (preg_match('/#(.+)/', $href, $matches)) {
+                // var_dump($href);
                 $Link['element']['attributes']['class'] = 'scroll-to';
+                $isAnchorLink = true;
             }
 
             // 3. Correct relative paths based on build environment
-            if (! $this->config->pretty) {
-                $Link['element']['attributes']['href'] = basename($href) . '.html';
-                
-                return $Link;
+            $ext = strtolower(pathinfo($href, PATHINFO_EXTENSION));
+
+            if (! in_array($ext, ['gif', 'jpg', 'jpeg', 'png', 'svg'])) {
+                if ($this->config) {
+                    if (! $this->config->pretty) {
+                        $Link['element']['attributes']['href'] = str_replace('/', '.html', ltrim($href, '/'));
+                    } else {
+                        // Set href depending on whether it's a link to some-other-page/#anchor or just an in-page #anchor
+                        if (preg_match('/^(.+)?(?=#)/', $href, $hits)) {
+                            $href = $hits[0] ? '../' . $href : $href;
+                        }
+                        $Link['element']['attributes']['href'] =  $href;
+                    }
+                }
             }
     
-            $Link['element']['attributes']['href'] = '../' . basename($href);
         }
 
         return $Link;

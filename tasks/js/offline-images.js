@@ -7,8 +7,8 @@ const env = argv.e || argv.env || 'local'
 
 module.exports.fixPaths = () => {
 
-  const config = JSON.parse( fs.readFileSync('./source/_config.json') )
-  const collections = JSON.parse( fs.readFileSync('./source/_collections.json') )
+  const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
+  const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )
   const imgFolder = 'img'
 
   for (let key in collections) {

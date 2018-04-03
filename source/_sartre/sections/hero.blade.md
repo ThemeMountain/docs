@@ -150,14 +150,14 @@ If you add content that increases the height of a section, note that Outlook wil
 
 ![HERO image content height for Outlook](/img/email/sartre/vml-height.jpg)
 
-<div class="bg-orange-lightest border-l-4 border-orange p-4" role="alert" id="mailchimp-video-support">
+<div class="bg-orange-lightest text-orange-dark border-l-4 border-orange p-4" role="alert" id="mailchimp-video-support">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Heads Up!</p>
-  <ul class="mt-4 text-md pl-4">
-      <li class="text-orange-dark">Do not change the width - it will break the template in Outlook.</li>
-      <li class="text-orange-dark">Do not remove the height - it will collapse and squash the section in Outlook.</li>
-      <li class="text-orange-dark">Do not remove other styles/attributes/tags - it will very likely lead to the image not showing in Outlook</li>
-      <li class="text-orange-dark">Except for StampReady, the online builders for which we provide an integrated version do not set this Outlook background image when using their visual editors. In such cases, you will need to manually adjust the HTML code and add the URL to your image inside the `<v:image src="..." />`. Alternatively, simply use StampReady to build your layout, export it, and then import it to your provider.</li>
-  </ul>
+  <div class="mt-4 text-md pl-4" markdown="1">
+  - Do not change the width - it will break the template in Outlook.
+  - Do not remove the height - it will collapse and squash the section in Outlook.
+  - Do not remove other styles/attributes/tags - it will very likely lead to the image not showing in Outlook
+  - Except for StampReady, the online builders for which we provide an integrated version do not set this Outlook background image when using their visual editors. In such cases, you will need to manually adjust the HTML code and add the URL to your image inside the <code>&lt;v:image src="..." /&gt;</code>. Alternatively, simply use StampReady to build your layout, export it, and then import it to your provider.
+  </div>
 </div>
 
 ---

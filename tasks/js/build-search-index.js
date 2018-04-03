@@ -10,8 +10,8 @@ const env = argv.e || argv.env || 'local'
 
 module.exports.run = () => {
 
-  const config = JSON.parse( fs.readFileSync('./source/_config.json') )
-  const collections = JSON.parse( fs.readFileSync('./source/_collections.json') )
+    const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
+    const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )
   const build_path = 'build_' + env
   let algoliaSites = []
 
@@ -53,7 +53,7 @@ module.exports.run = () => {
       fs.ensureFileSync(JSONSearchFile)
       fs.writeFileSync(JSONSearchFile, JSON.stringify(data))
 
-      // Create .js search index - default search option is 'offline'
+      // Create .js search index where needed
       if(!site.hasOwnProperty('search') || site.search == 'offline') {
           let JSSearchFile = JSONSearchFile.replace('.json', '.js')
           fs.ensureFileSync(JSSearchFile)

@@ -2,8 +2,9 @@
 
 use Dotenv\Dotenv;
 use App\ParsedownParser;
+use App\Listeners\JigsawConfig;
+use App\Listeners\JigsawCollections;
 use App\Listeners\GenerateNavigation;
-use App\Listeners\DumpJigsawSettings;
 use Mni\FrontYAML\Markdown\MarkdownParser;
 use App\Listeners\CreateChangelogCollections;
 
@@ -16,8 +17,8 @@ $dotenv->load();
 
 $container->bind(MarkdownParser::class, ParsedownParser::class);
 
-$events->beforeBuild(CreateChangelogCollections::class);
+$events->beforeBuild([JigsawConfig::class, CreateChangelogCollections::class]);
 
-$events->afterCollections([GenerateNavigation::class, DumpJigsawSettings::class]);
+$events->afterCollections([JigsawCollections::class, GenerateNavigation::class]);
 
 
