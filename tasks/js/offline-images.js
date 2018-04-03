@@ -7,38 +7,42 @@ const env = argv.e || argv.env || 'local'
 
 module.exports.fixPaths = () => {
 
-  const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
-  const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )
-  const imgFolder = 'img'
+  if (env == 'offline') {
 
-  for (let key in collections) {
-    const pages = collections[key]
-    const site = config.collections[key]
+    const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
+    const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )
+    const imgFolder = 'img'
 
-    for (let p in pages) {
+    for (let key in collections) {
+      const pages = collections[key]
+      const site = config.collections[key]
 
-      let page = pages[p]
-      let filePath = path.resolve('build_' + env + page._meta.path[0])
+      for (let p in pages) {
 
-      let cleanPath = path.dirname(page._meta.path[0]).split('/').filter(item => {return item.length > 0})
-      let toReplace = '/' + imgFolder + '/' + cleanPath.join('/')
+        let page = pages[p]
+        let filePath = path.resolve('build_' + env + page._meta.path[0])
 
-      let levels = cleanPath.map(item => { return '..' }).join('/') + '/' + imgFolder + path.dirname(page._meta.path[0])
+        let cleanPath = path.dirname(page._meta.path[0]).split('/').filter(item => {return item.length > 0})
+        let toReplace = '/' + imgFolder + '/' + cleanPath.join('/')
 
-      let $ = cheerio.load(fs.readFileSync(filePath))
+        let levels = cleanPath.map(item => { return '..' }).join('/') + '/' + imgFolder + path.dirname(page._meta.path[0])
 
-      $('img').map(function(i, el) {
-        // this === el
-        let src = $(this).attr('src')
-        src = src.replace(toReplace, levels)
+        let $ = cheerio.load(fs.readFileSync(filePath))
 
-        return $(this).attr('src', src);
-      })
+        $('img').map(function(i, el) {
+          // this === el
+          let src = $(this).attr('src')
+          src = src.replace(toReplace, levels)
 
-      fs.outputFile(filePath, $.html(), (err) => {
-          if (err) throw err;
-      });
+          return $(this).attr('src', src);
+        })
+
+        fs.outputFile(filePath, $.html(), (err) => {
+            if (err) throw err;
+        });
+      }
     }
+
   }
 
 }

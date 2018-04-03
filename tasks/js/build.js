@@ -10,7 +10,7 @@ let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let Watch = require('webpack-watch');
 let SearchIndexer = require('./build-search-index');
 let OfflineImages = require('./offline-images');
-let Minifier = require('./minify-html')
+let HTMLMinifier = require('./minify-html')
 
 let config;
 let browserSyncInstance;
@@ -37,12 +37,8 @@ module.exports = {
                 console.log(stdout)
 
                 SearchIndexer.run()
-
-                if (env == 'offline') {
-                  OfflineImages.fixPaths()
-                }
-
-                Minifier.minify();
+                OfflineImages.fixPaths()
+                HTMLMinifier.minify();
 
                 if (browserSyncInstance) {
                     browserSyncInstance.reload()
