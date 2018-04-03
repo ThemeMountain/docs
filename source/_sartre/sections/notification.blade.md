@@ -9,7 +9,7 @@ navigation:
 
 # For beautiful transactional emails
 
-We have extracted each section from the [Notification Templates](../notification-templates), so that you can easily create your own transactional email templates.
+We have extracted each section from the [Notification Templates](/transactional), so that you can easily create your own transactional email templates.
 
 ---
 

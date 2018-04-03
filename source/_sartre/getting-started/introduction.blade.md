@@ -24,7 +24,7 @@ The documentation you're looking at now provides template-related guidance only.
 
 ### Code Editing
 
-If you plan on customizing the HTML code of this product, you will need a text editor. There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) to build the framework and template, so we definitely recommend it.
+If you plan on customizing the HTML code of this product, you will need a text editor. There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) and [VSCode](https://code.visualstudio.com/) to build the framework and template, so we definitely recommend them.
 
 ### Email Service Provider Integrations
 

@@ -47,7 +47,7 @@ module.exports = {
         });
     }),
 
-    watch: paths => {
+    watch: (paths) => {
         return new Watch({
             options: { ignoreInitial: true },
             paths: paths,

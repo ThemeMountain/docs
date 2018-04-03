@@ -72,15 +72,15 @@ If you're going to edit HTML files directly, here's a simple step-by-step guide:
 
 Most videos nowadays are widescreen: 1280x720, 1920x1080, etc. - but what we need to know is the video's height when resized.
 
-> If your video were to be *proportionally* resized to be 700px wide, what would its height be?
+> If your video were to be *proportionally* resized to be 600px wide, what would its height be?
 
-Short answer: use this [calculator](http://scriptygoddess.com/resources/proportioncalc.htm), add your video's dimensions, type 700 in the New Width field and don't fill in the New Height field. What you get in the New Height field is what we're after (we recommend usually rounding it up).
+Short answer: use this [calculator](http://scriptygoddess.com/resources/proportioncalc.htm), add your video's dimensions, type 600 in the New Width field and don't fill in the New Height field. What you get in the New Height field is what we're after (we recommend usually rounding it up).
 
 Formula:
 
-`posterImageHeight = (videoHeight / videoWidth) x 700`
+`posterImageHeight = (videoHeight / videoWidth) x 600`
 
-The idea is to get the ratio of your video, and then multiply it by 700, which is the width of our template. With videos in common widescreen resolutions like those mentioned above, you'll usually get 393.75. Our own HERO With Video example rounds that up to 394px - we use 700x394px images for both the poster and the fallback background image.
+The idea is to get the ratio of your video, and then multiply it by 600, which is the width of our template. With videos in common widescreen resolutions like those mentioned above, you'll usually get 337.5. Our own HERO With Video example rounds that up to 338px - we use `600x338px` images for both the poster and the fallback background image.
 
 #### 2. Video Source
 
@@ -140,7 +140,7 @@ It has background image support for most email clients (including Outlook and Wi
 
 For sections that support background images, it is *recommended* that you use a background image that has the dimensions of the dummy image the template provides, or double (for retina).
 
-For retina images, make sure that they are exactly double the size in comparison to those that the template provides. For example, if a HERO uses a 700x500 image, you should use a 1400x1000 one for retina, since it's exactly two times larger.
+For retina images, make sure that they are exactly double the size in comparison to those that the template provides. For example, if a HERO uses a 600x500 image, you should use a 1400x1000 one for retina, since it's exactly two times larger.
 
 **Important**: if you don't stick to the recommended aspect ratio, Outlook will crop your background image and may leave you with important parts of your visual message not showing up. If precision is important, we recommend sticking to the sizes of the placeholder images.
 
