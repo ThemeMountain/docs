@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted() {
-    anchors.options = { placement: 'left', class: 'text-grey-dark' }
+    anchors.options = { placement: 'left', class: 'text-grey-dark scroll-to' }
     anchors.add('.content h2, .content h3, .content h4')
     this.links = anchors.elements.filter((el) => ['H2'].indexOf(el.tagName) > -1).map((el) => {
       return {
