@@ -1,5 +1,5 @@
 ---
-title: Sections Quick Reference
+title: Sections Reference
 description: A reference guide to template sections
 tags: sections, reference, screenshots, modules
 page_order: 3

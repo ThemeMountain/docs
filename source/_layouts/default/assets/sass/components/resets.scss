@@ -6,8 +6,10 @@ html {
   }
 }
 
-[v-cloak] {
-  display: none !important;
+@responsive {
+  [v-cloak] {
+    display: none;
+  }
 }
 
 a {
@@ -26,11 +28,6 @@ hr {
 ::selection {
     background: #333;
     color: #fff;
-}
-
-.sticky {
-    position: fixed;
-    position: sticky;
 }
 
 .aspect-ratio-square { padding-top: 100%; }

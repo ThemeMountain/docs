@@ -3,7 +3,7 @@
     opacity: 1;
 }
 
-[aria-expanded="false"] {
+.toggle[aria-expanded="false"] {
   display: none;
 }
 
@@ -26,11 +26,6 @@
             position: relative;
         }
     }
-}
-
-
-.page-nav {
-    transform: translateX(0);
 }
 
 @media screen and (max-width: 767px) {

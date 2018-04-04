@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="font-normal text-grey-darkest mb-4 mt-2 p-0" v-if="links.length > 0" v-text="title">Quickies</h4>
-    <ul class="list-reset text-xs text-grey-dark" v-if="links.length > 0">
+    <ul class="list-reset text-sm text-grey-dark" v-if="links.length > 0">
       <li class="mb-3" :class="link.isChild ? 'pl-2' : ''" v-for="link in links">
         <a :href="link.href" class="quickie scroll-to" :class="['hover:text-grey-darkest', link.href == selected ? 'text-grey-darkest' : 'text-grey-dark']">{{ link.text }}</a>
       </li>
