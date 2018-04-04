@@ -9,7 +9,8 @@
 
         @include('_layouts.default.partials.navigation')
 
-        <main class="content min-w-0 md:w-4/5 lg:w-full md:pl-8 lg:pl-0 pt-32 text-grey-darker transition-all" :class="{'mobile-menu-opened -ml-8': showMobileMenu}">
+        <main class="content min-w-0 md:w-4/5 lg:w-full md:pl-8 lg:pl-0 pt-24 md:pt-32 text-grey-darker transition-transform" :class="{'mobile-menu-opened': showMobileMenu}">
+            <div class="fixed pin-r pin-t h-full w-full bg-white opacity-25" :class="{'hidden': !showMobileMenu}" @click="showMobileMenu = !showMobileMenu"></div>
             @yield('content')
             @include('_layouts.default.components.pagenav', ['page' => $page])
         </main>

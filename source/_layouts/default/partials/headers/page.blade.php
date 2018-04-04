@@ -1,4 +1,4 @@
-<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-40 transition-all" :class="{'mobile-menu-opened pr-4': showMobileMenu}">
+<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-50 transition-transform" :class="{'mobile-menu-opened pr-4': showMobileMenu}">
     <div class="container flex py-1">
         <div class="flex flex-grow items-center justify-between">
             <div class="w-auto xl:w-2/5">
@@ -10,7 +10,7 @@
                     </h2>
                 </a>
             </div>
-            <div class="w-3/4 md:w-3/5 xl:w-full py-4 md:pl-6 xl:pl-0 xl:-mr-1">
+            <div class="w-3/4 md:w-3/5 xl:w-full py-2 md:py-4 md:pl-6 xl:pl-0 xl:-mr-1">
                 <div class="relative">
                     <input type="search" id="search" class="block w-full h-10 pl-10 pr-2 bg-white text-xs text tracking-wide placeholder-grey-darkest rounded appearance-none border outline-0 focus:border-{{ $page->color }} focus:text-{{ $page->color }} transition-all" placeholder="Search documentation..." name="search" autocomplete="off" />
                     <div class="absolute flex items-center pin-y pl-3 text-grey-dark">
@@ -29,10 +29,10 @@
                     @endforeach
                 </div>
                 <div class="flex md:hidden text-grey-dark" @click="showMobileMenu = !showMobileMenu">
-                    <div :class="[showMobileMenu ? 'hidden' : 'block']">
+                    <div v-show="! showMobileMenu">
                         @fileContents('source/img/icons/menu.svg')
                     </div>
-                    <div :class="[showMobileMenu ? 'block' : 'hidden']">
+                    <div v-show="showMobileMenu" v-cloak>
                         @fileContents('source/img/icons/close.svg')
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<nav :aria-expanded="[showMobileMenu ? 'true' : 'false']" class="sidebar-navigation page-nav fixed md:relative h-full md:h-auto pin-r bg-white md:bg-transparent block w-3/4 md:w-1/5 lg:w-2/5 pl-8 md:pl-0 pt-8 md:pt-0 md:mt-20 z-50 shadow-lg md:shadow-none transition-all">
+<nav v-cloak :aria-expanded="[showMobileMenu ? 'true' : 'false']" class="sidebar-navigation page-nav fixed md:relative h-full md:h-auto pin-r bg-white md:bg-transparent block w-3/4 md:w-1/5 lg:w-2/5 pl-8 md:pl-0 pt-8 md:pt-0 md:mt-20 z-40 shadow-lg md:shadow-none transition-all">
     <div class="sticky md:top-20 pr-0 lg:pr-16">
         <div class="overflow-y-auto wrapper scrolling-touch">
             <ul class="pb-10 md:py-8 md:mt-6 list-reset">

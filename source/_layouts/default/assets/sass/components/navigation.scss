@@ -33,7 +33,7 @@
     transform: translateX(0);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .page-nav[aria-expanded="false"] {
         transform: translateX( calc(100% + 1rem) );
     }
