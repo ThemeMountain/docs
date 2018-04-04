@@ -2,7 +2,7 @@ code {
     @apply .inline-block .bg-grey-lighter .text-xs .py-1 .px-2 .leading-none .font-mono;
 }
 pre {
-    @apply .overflow-auto .break-normal .bg-white .border .border-grey-light .rounded .p-4 .mb-4;
+    @apply .overflow-auto .scrolling-touch .break-normal .bg-white .border .border-grey-light .rounded .p-4 .mb-4;
 
     code {
         @apply .leading-normal .bg-white .text-grey-darker;

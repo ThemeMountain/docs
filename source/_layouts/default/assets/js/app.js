@@ -10,6 +10,9 @@ module.exports.boot = () => {
   
   const app = new Vue({
     el: '#app',
+    data: {
+      showMobileMenu: false
+    },
     mounted: () => {
       if (window.location.hash) {
         scrollToElement(window.location.hash, {

@@ -27,3 +27,18 @@
         }
     }
 }
+
+
+.page-nav {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+    .page-nav[aria-expanded="false"] {
+        transform: translateX( calc(100% + 1rem) );
+    }
+    
+    .mobile-menu-opened {
+        transform: translateX(-75%);
+    }
+}

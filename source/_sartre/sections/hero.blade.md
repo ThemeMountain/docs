@@ -18,7 +18,7 @@ A HERO section is a great way to draw attention to key information, an image or 
 ---
 
 ## With Video
-<img src="/img/email/sartre/sections/kant-video-hero-iphone.jpg" alt="HERO With Video on iPhone" width="300" class="float-right ml-4 p-4">
+<img src="/img/email/sartre/sections/kant-video-hero-iphone.jpg" alt="HERO With Video on iPhone" width="300" class="table mx-auto md:float-right mb-4 md:ml-4 md:p-4">
 
 The HERO With Video allows you to use HTML5 video in your email campaigns, all while providing a very solid fallback for clients that do not support video in email.
 

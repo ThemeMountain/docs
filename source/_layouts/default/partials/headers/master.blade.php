@@ -1,14 +1,14 @@
 <nav class="{{ isset($type) && $type == 'fixed' ? 'fixed' : 'absolute' }} w-full">
-    <div class="flex container mx-auto py-4">
-        <div class="w-1/4">
+    <div class="container flex flex-col md:flex-row py-4">
+        <div class="w-full md:w-1/4 text-center md:text-left">
             <h2 class="text-white text-sm tracking-wide">ThemeMountain</h2>
         </div>
-        <div class="w-3/4">
-            <ul class="list-reset flex justify-end">
-                <li class="mx-6">
+        <div class="w-full md:w-3/4">
+            <ul class="list-reset flex justify-center md:justify-end">
+                <li class="mx-4 md:mx-6">
                 <a href="{{ $page->support_url }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
                 </li>
-                <li class="dropdown mx-6 relative">
+                <li class="dropdown mx-4 md:mx-6 relative">
                     <a href="{{ $page->social->envato }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block">Our Products</a>
                     <ul class="list-reset invisible opacity-0 transition-all absolute bg-white shadow-md rounded -ml-4 py-3 w-48">
                         <li>
@@ -22,10 +22,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="mx-6">
+                <li class="mx-4 md:mx-6">
                     <a href="{{ $page->social->github }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block">GitHub</a>
                 </li>
-                <li class="mx-6">
+                <li class="mx-4 md:mx-6">
                     <a href="{{ $page->social->twitter }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block">Twitter</a>
                 </li>
             </ul>

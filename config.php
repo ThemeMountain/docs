@@ -102,7 +102,7 @@ return [
     | Layout
     |--------------------------------------------------------------------------
     |
-    | Choose the default template that your documentation pages will use.
+    | Here you can choose the theme that your documentation pages will use.
     | This will be applied globally to all pages you create, but you
     | can override it with the 'extends' FrontMatter variable.
     |
@@ -112,10 +112,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Main Color
+    | Accent Color
     |--------------------------------------------------------------------------
     |
-    | Set the default theme color.
+    | Set the default accent color.
     |
     | DocsFlow will use this together with the literal color class names from
     | your Tailwind CSS config. You can override it for each site.
