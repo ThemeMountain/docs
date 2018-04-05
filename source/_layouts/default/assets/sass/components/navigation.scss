@@ -13,33 +13,33 @@
 
 .sidebar-navigation {
 
-    .wrapper {
-        height: calc(100vh - 5rem);
+  .wrapper {
+    height: calc(100vh - 5rem);
+  }
+
+  .toggle-trigger {
+
+    &.active::after {
+      content: "\2014";
     }
 
-    .toggle-trigger {
-
-        &.active::after {
-            content: "\2014";
-        }
-
-        &::after {
-            @apply .ml-3 .font-bold;
-            content: "+";
-            font-family: initial;
-            position: relative;
-        }
+    &::after {
+      @apply .ml-3 .font-bold;
+      content: "+";
+      font-family: initial;
+      position: relative;
     }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .page-nav[aria-expanded="false"] {
-        transform: translateX( calc(100% + 1rem) );
-    }
+  .page-nav[aria-expanded="false"] {
+    transform: translateX( calc(100% + 1rem) );
+  }
 
-    .mobile-menu-opened {
-        transform: translateX(-75%);
-    }
+  .mobile-menu-opened {
+    transform: translateX(-75%);
+  }
 }
 
 // TABS
@@ -84,7 +84,6 @@ ul.tabs {
     &.toggle-parent-active::before {
       content: "";
       background-image: url('/img/icons/folder-open.svg');
-      // @apply .absolute .-ml-8 .-mt-2 .w-6 .h-6 .bg-no-repeat .bg-contain;
     }
 
     li {

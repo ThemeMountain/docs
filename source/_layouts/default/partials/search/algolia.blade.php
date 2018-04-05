@@ -21,7 +21,7 @@
 
                 return '<a href="'+path+'" class="block p-4 hover:text-{{ $page->color }}">'
                         + '<span class="block text-sm">'+suggestion._highlightResult.title.value+'</span>'
-                        + '<span class="block text-xs text-grey">'+suggestion._highlightResult.description.value+'</span>'
+                        + '<span class="block text-xs text-grey">'+suggestion._snippetResult.body.value+'</span>'
                         + '</a>';
             }
         }

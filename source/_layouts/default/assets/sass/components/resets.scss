@@ -6,10 +6,8 @@ html {
   }
 }
 
-@responsive {
-  [v-cloak] {
-    display: none;
-  }
+[v-cloak] {
+  display: none;
 }
 
 a {

@@ -1,51 +1,49 @@
 .content {
+  p a {
+    @apply .border-b;
 
-    p a {
-        @apply .border-b;
-
-        &:hover {
-            @apply .border-purple;
-        }
+    &:hover {
+      @apply .border-purple;
     }
+  }
+
+  ol, ul {
+    @apply .mb-4;
 
     ol, ul {
-        @apply .mb-4;
-
-        ol, ul {
-            @apply .mb-0;
-        }
+      @apply .mb-0;
     }
+  }
 
-    li {
-        @apply .my-1;
+  li {
+    @apply .my-1;
 
-        a {
-            @apply .border-none;
+    a {
+      @apply .border-none;
 
-            &:hover {
-                @apply .text-black;
-            }
-        }
+      &:hover {
+        @apply .text-black;
+      }
     }
-
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply .text-black .font-light .leading-tight .pb-6;
+  @apply .text-black .font-light .leading-tight .pb-6;
 }
 
 h2, h3, h4, h5, h6 {
-    @apply .pt-2;
+  @apply .pt-2;
 }
 
 p {
-    @apply .mb-4;
-    line-height: 1.8;
+  @apply .mb-4;
+  line-height: 1.8;
 }
 
 p, li {
-    @apply .font-hind-madurai;
-    color: inherit;
+  @apply .font-hind-madurai;
+  color: inherit;
 }
 
 sup {
