@@ -37,3 +37,18 @@ $bladeCompiler->directive('youtube', function($expression) {
 
         echo "<div class=\"relative aspect-ratio-16/9 mb-4\"><iframe class=\"absolute w-full h-full pin-t\" src=\"https://www.youtube.com/embed/$id?rel=0\" frameborder=\"0\" allowfullscreen></iframe></div>"; ?>';
 });
+
+/**
+ * File Tree component
+ *
+ * Use markdown lists to create an expandable file tree.
+ *
+ * Example:
+ * @filetree
+ * - Static folder
+ * - [Expandable folder](#)
+ *     - [Another expandable folder](#)
+ *          - Another static folder
+ * @endfiletree
+ */
+$bladeCompiler->component('_layouts.default.components.filetree');

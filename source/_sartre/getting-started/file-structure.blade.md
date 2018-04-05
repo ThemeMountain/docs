@@ -12,7 +12,7 @@ navigation:
 
 The product has the following folder structure:
 
-<nav class="filetree" markdown="1">
+@filetree
 - Documentation
 - [Files](#)
     - [campaign-monitor](#)
@@ -29,7 +29,7 @@ The product has the following folder structure:
     - stampready <sup>1</sup>
     - mailster <sup>1</sup>
 - PSD
-</nav>
+@endfiletree
 
 <div class="-ml-6" markdown="1">
 1. Same structure as the `campaign-monitor` folder.
