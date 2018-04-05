@@ -47,11 +47,13 @@ module.exports.boot = () => {
 
   function addScrollTo(e) {
 
+    let offset = null !== e.target.getAttribute('data-offset') ? parseInt(e.target.getAttribute('data-offset'), 10) : -100
+
     if (!e.target.classList.contains('scroll-to'))
       return;
 
     scrollToElement(e.target.getAttribute('href'), {
-      offset: -100,
+      offset: offset,
       ease: 'out-expo',
       duration: 400
     })
@@ -75,7 +77,6 @@ module.exports.boot = () => {
 
     helpers.wrap(block, wrapper)
     wrapper.appendChild(btn)
-
 
   })
 
