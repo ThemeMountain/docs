@@ -7,7 +7,7 @@ const scrollToElement = require('scroll-to-element')
 Vue.component('table-of-contents', require('./components/TableOfContents.vue').default)
 
 module.exports.boot = () => {
-  
+
   const app = new Vue({
     el: '#app',
     data: {
@@ -22,9 +22,17 @@ module.exports.boot = () => {
         })
       }
 
-      new Toggle({
+      let collapsables = new Toggle({
           buttonClassExpanded: 'active',
           buttonSelector: '.toggle-trigger'
+      })
+
+      let tabs = new Toggle({
+        buttonClassExpanded: 'tab-active',
+        buttonSelector: '#{id}',
+        expandOnly: true,
+        single: true,
+        targetSelector: '.tab-panel'
       })
     }
   })
@@ -52,7 +60,7 @@ module.exports.boot = () => {
 
     let btn = document.createElement('button')
     let wrapper = document.createElement('div')
-    
+
     wrapper.classList.add('code-block', 'relative')
     btn.classList.add('copy-to-clipboard')
     btn.innerText = 'Copy'
@@ -60,7 +68,7 @@ module.exports.boot = () => {
     helpers.wrap(block, wrapper)
     wrapper.appendChild(btn)
 
-    
+
   })
 
   /**

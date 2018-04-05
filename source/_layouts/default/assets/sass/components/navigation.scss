@@ -3,7 +3,8 @@
     opacity: 1;
 }
 
-.toggle[aria-expanded="false"] {
+.toggle[aria-expanded="false"],
+.tab-panel[aria-expanded="false"] {
   display: none;
 }
 
@@ -32,8 +33,34 @@
     .page-nav[aria-expanded="false"] {
         transform: translateX( calc(100% + 1rem) );
     }
-    
+
     .mobile-menu-opened {
         transform: translateX(-75%);
     }
+}
+
+// TABS
+
+ul.tabs {
+  @apply .list-reset .flex .border-b .border-grey-lighter .mb-0;
+
+  li {
+    @apply .my-0;
+
+    a {
+      @apply .bg-grey-lighter .inline-block .border-solid .rounded-t-sm .py-2 .px-8 .text-grey-dark;
+
+      &:hover {
+        @apply .text-grey-darker;
+      }
+
+      &.tab-active {
+        @apply .ml-0 .bg-white .border-l .border-t .border-r .border-grey-lighter .-mb-px .cursor-default .text-grey-darker;
+      }
+    }
+  }
+}
+
+.tab-panel {
+  @apply .border .border-t-0 .border-grey-lighter .rounded-sm .rounded-tl-none .rounded-tr-none .p-4;
 }
