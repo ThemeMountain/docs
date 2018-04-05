@@ -1,8 +1,7 @@
 .env
 /_tmp/
 /source/assets/
-/source/_collections.json
-/source/_config.json
+/source/_assets/data/
 /build_local/
 /build_offline/
 /node_modules/
