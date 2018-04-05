@@ -34,6 +34,14 @@ module.exports.boot = () => {
         single: true,
         targetSelector: '.tab-panel'
       })
+
+      let filetree = new Toggle({
+        buttonClassExpanded: 'toggle-btn-active',
+        buttonSelector: 'a',
+        parentClass: 'toggle-parent',
+        parentClassExpanded: 'toggle-parent-active',
+        targetSelector: '.filetree ul ul'
+      })
     }
   })
 
