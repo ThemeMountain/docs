@@ -1,4 +1,5 @@
 .env
+/.vscode/
 /_tmp/
 /source/assets/
 /source/_assets/data/
