@@ -1,4 +1,4 @@
-<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-50 transition-transform" :class="{'mobile-menu-opened pr-4': showMobileMenu}">
+<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-50 transition-transform">
     <div class="container flex py-1">
         <div class="flex flex-grow items-center justify-between">
             <div class="w-auto xl:w-2/5">
