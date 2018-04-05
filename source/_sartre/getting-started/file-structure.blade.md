@@ -68,4 +68,4 @@ We've also included a small set of useful components from our [Acorn Email Frame
 
 ## The Grid
 
-Also as a convenience, the product includes standard and collapsed grid examples from our framework. If you want to learn more about using the grid, please refer to the [framework documentation](https://thememountain.github.io/acorn/layout/grid.html).
+Also as a convenience, the product includes grid examples from our framework. If you want to learn more about using the grid, please refer to the [framework documentation](https://thememountain.github.io/acorn/layout/grid.html).
