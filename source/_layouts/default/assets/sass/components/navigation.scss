@@ -42,8 +42,7 @@
   }
 }
 
-// TABS
-
+// Tabs
 ul.tabs {
   @apply .list-reset .flex .border-b .border-grey-lighter .mb-0;
 
@@ -74,6 +73,10 @@ ul.tabs {
 
   li {
     @apply .flex .flex-wrap .items-center .py-2 .px-4 .my-0 .cursor-default;
+
+    &:not(.toggle-parent) {
+      @apply .text-grey;
+    }
 
     &::before {
       content: "";
