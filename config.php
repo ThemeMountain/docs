@@ -20,10 +20,10 @@ return [
     'collections' => [
 
         'sartre' => [
-            'group' => 'email',
             'color' => 'purple',
             'name' => 'Sartre Email',
             'version' => '1.0.0',
+            'path' => 'email/sartre/{-filename}',
             'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
             'sort' => 'page_order',
             'search' => [
@@ -37,9 +37,10 @@ return [
         ],
 
         'wordpress' => [
+            'color' => 'blue',
+            'name' => 'WordPress',
             'version' => '1.0.0',
-            'name' => 'WordPress Documentation',
-            'color' => 'red',
+            'path' => 'wordpress/{-filename}',
             'search' => [
                 'algolia' => [
                     'appID' => getenv('WORDPRESS_ALGOLIA_APP_ID'),
@@ -81,7 +82,7 @@ return [
     |
     */
 
-    'path' => '{group}/{collection}/{-filename}',
+    // 'path' => '{group}/{collection}/{-filename}',
 
     /*
     |--------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 ---
 extends: _layouts.default.master
-description: Documentation for the Sartre Email Template
-tags: main, home, index
+description: Documentation for ThemeMountain WordPress themes
+tags: main, home, index, wordpress
 search: false
 ---
 
@@ -31,8 +31,8 @@ search: false
                 <a href="{{ $page->getEnv() == 'offline' ? 'changelog.html' : 'changelog' }}" class="bg-transparent hover:bg-white text-sm text-white font-semibold hover:text-{{ $page->color }} py-1 px-2 border border-white rounded no-underline">
                   v{{ $page->version }}
                 </a>
-                <h1 class="text-white text-3xl md:text-5xl font-sans font-light leading-tight py-4">Sartre Email <br class="hidden sm:block">Template Documentation</h1>
-                <p class="w-2/3 mx-auto text-white text-base md:text-2xl font-hind-madurai mb-8">Learn how to use Sartre and build a unique email that looks good on both desktop and mobile.</p>
+                <h1 class="text-white text-3xl md:text-5xl font-sans font-light leading-tight py-4">WordPress <br class="hidden sm:block">Theme Documentation</h1>
+                <p class="w-2/3 mx-auto text-white text-base md:text-2xl font-hind-madurai mb-8">A detailed guide on using our WordPress themes.</p>
                 <a href="{{ $page->getEnv() == 'offline' ? $page->getNext()->getFilename() . '.html' : $page->getNext()->getUrl() }}" class="text-white hover:text-{{ $page->color }} bg-transparent hover:bg-white hover:shadow-lg text-xs py-3 px-6 border border-white rounded inline-flex items-center">Get Started &rarr;</a>
             </div>
         </div>

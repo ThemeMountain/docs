@@ -1,6 +1,20 @@
 @extends('_layouts.default.master')
 @section('body-classes', 'single')
 
+@section('meta')
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thememountainco">
+<meta name="twitter:title" content="{{ $page->title ? $page->title . ' - ' : '' }} {{ $page->name ?? '' }} | {{ $page->company }} Documentation">
+<meta name="twitter:description" content="{{ $page->description ? $page->description : 'Documentation for '.$page->company.' products.' }}">
+<meta property="twitter:image" content="{{ $page->baseUrl . '/img' . dirname($page->getPath()) . '/twitter-card.png' }}" />
+<meta name="twitter:creator" content="@thememountainco">
+<meta property="og:url" content="{{ $page->baseUrl }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->name ?? '' }} | {{ $page->company }} Documentation" />
+<meta property="og:description" content="{{ $page->description ? $page->description : 'Documentation for '.$page->company.' products.' }}" />
+<meta property="og:image" content="{{ $page->baseUrl . '/img' . dirname($page->getPath()) . '/twitter-card.png' }}" />
+@endsection
+
 @section('body')
 
     @include('_layouts.default.partials.headers.page')

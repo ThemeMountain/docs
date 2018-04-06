@@ -1,8 +1,22 @@
 ---
 extends: _layouts.default.master
-name: Documentation
+name: Home
 description: Listing of all ThemeMountain documentation sites
 ---
+
+@section('meta')
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thememountainco">
+<meta name="twitter:title" content="{{ $page->title ? $page->title . ' - ' : '' }} {{ $page->name ?? '' }} | {{ $page->company }} Documentation">
+<meta name="twitter:description" content="{{ $page->description ? $page->description : 'Documentation for '.$page->company.' products.' }}">
+<meta property="twitter:image" content="{{ $page->baseUrl . '/img/twitter-card.png' }}" />
+<meta name="twitter:creator" content="@thememountainco">
+<meta property="og:url" content="{{ $page->baseUrl }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->name ?? '' }} | {{ $page->company }} Documentation" />
+<meta property="og:description" content="{{ $page->description ? $page->description : 'Documentation for '.$page->company.' products.' }}" />
+<meta property="og:image" content="{{ $page->baseUrl . '/img/twitter-card.png' }}" />
+@endsection
 
 @section('body')
 
@@ -12,7 +26,7 @@ description: Listing of all ThemeMountain documentation sites
     <div class="flex h-screen items-center">
         <div class="mx-auto text-center content">
             <h1 class="text-white text-3xl md:text-5xl font-sans font-light">{{ $page->company }} Docs</h1>
-            <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">Create something beautiful for your users with Faulkner's APIs and web tools.</p>
+            <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">An overview of all ThemeMountain documentation sites.</p>
             <a href="#open-source" data-offset="0" class="scroll-to bg-transparent hover:shadow-lg hover:bg-white hover:text-blue text-white text-sm py-3 px-6 border border-white rounded">
                 Get started
             </a>
