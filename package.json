@@ -8,7 +8,7 @@
     "prod": "npm run production",
     "watch": "npm run local -- --watch",
     "algolia": "node ./tasks/js/algolia/commands/index",
-    "deploy": "npm run production && git add build_production && git commit -m \"Build for production\" && git subtree push --prefix build_production origin gh-pages"
+    "deploy": "npm run offline && npm run production && git add build_production && git commit -m \"Build for production\" && git subtree push --prefix build_production origin gh-pages"
   },
   "devDependencies": {
     "algoliasearch": "^3.25.1",
