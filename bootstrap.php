@@ -2,6 +2,7 @@
 
 use Dotenv\Dotenv;
 use App\ParsedownParser;
+use App\Listeners\AfterBuild;
 use App\Listeners\JigsawConfig;
 use App\Listeners\JigsawCollections;
 use App\Listeners\GenerateNavigation;
@@ -21,4 +22,5 @@ $events->beforeBuild([JigsawConfig::class, CreateChangelogCollections::class]);
 
 $events->afterCollections([JigsawCollections::class, GenerateNavigation::class]);
 
+$events->afterBuild(AfterBuild::class);
 

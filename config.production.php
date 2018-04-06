@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => '',
+    'baseUrl' => 'http://docs.thememountain.com',
     'production' => true,
 ];
