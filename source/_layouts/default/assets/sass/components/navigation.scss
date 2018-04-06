@@ -80,13 +80,13 @@ ul.tabs {
 
     &::before {
       content: "";
-      background-image: url('/img/icons/folder.svg');
+      background-image: url('../../img/icons/folder.svg');
       @apply .mr-2 .w-6 .h-6 .bg-no-repeat .bg-contain;
     }
 
     &.toggle-parent-active::before {
       content: "";
-      background-image: url('/img/icons/folder-open.svg');
+      background-image: url('../../img/icons/folder-open.svg');
     }
 
     li {
