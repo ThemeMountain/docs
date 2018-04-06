@@ -4,14 +4,29 @@ namespace App\Listeners;
 
 use TightenCo\Jigsaw\Jigsaw;
 
-class GenerateNavigation
+class AfterCollections
 {
+    protected $jigsaw;
+
     public function handle(Jigsaw $jigsaw)
     {
-        $env = $jigsaw->getEnvironment();
-        $collections = $jigsaw->getCollections();
+        $this->jigsaw = $jigsaw;
 
-        $collections->each(function ($item, $key) use ($jigsaw, $env) {
+        $this->writeCollectionsFile();
+        $this->setNavigationConfig();
+    }
+
+    private function writeCollectionsFile()
+    {
+        $this->jigsaw->writeSourceFile('_assets/data/collections.json', $this->jigsaw->getCollections());
+    }
+
+    private function setNavigationConfig()
+    {
+        $env = $this->jigsaw->getEnvironment();
+        $collections = $this->jigsaw->getCollections();
+
+        $collections->each(function ($item, $key) use ($env) {
 
             $menu = [
                 'categories' => [],
@@ -55,7 +70,7 @@ class GenerateNavigation
                 }
             }
 
-            $jigsaw->setConfig('collections.'.$key.'.nav', $menu);
+            $this->jigsaw->setConfig('collections.'.$key.'.nav', $menu);
         });
     }
 }

@@ -8,7 +8,6 @@ class AfterBuild
 {
     public function handle(Jigsaw $jigsaw)
     {
-
         if($jigsaw->getEnvironment() == 'production') {
 
             $config = $jigsaw->getConfig();

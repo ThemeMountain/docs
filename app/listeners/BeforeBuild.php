@@ -2,18 +2,33 @@
 
 namespace App\Listeners;
 
-use Mni\FrontYAML\Parser;
 use App\ParsedownParser;
+use Mni\FrontYAML\Parser;
 use TightenCo\Jigsaw\Jigsaw;
 
-class CreateChangelogCollections
+class BeforeBuild
 {
+    protected $jigsaw;
+
     public function handle(Jigsaw $jigsaw)
     {
-        $collections = $jigsaw->getCollections();
+        $this->jigsaw = $jigsaw;
+
+        $this->writeConfigFile();
+        $this->setChangelogConfig();
+    }
+
+    public function writeConfigFile()
+    {
+        $this->jigsaw->writeSourceFile('_assets/data/config.json', $this->jigsaw->getConfig());
+    }
+
+    public function setChangelogConfig()
+    {
+        $collections = $this->jigsaw->getCollections();
         $parser = new Parser(null, new ParsedownParser());
 
-        $collections->each(function ($key) use ($jigsaw, $parser) {
+        $collections->each(function ($key) use ($parser) {
 
             $items = [];
 
@@ -36,8 +51,7 @@ class CreateChangelogCollections
 
             }
 
-            $jigsaw->setConfig('collections.'.$key.'.changelog', $items);
+            $this->jigsaw->setConfig('collections.'.$key.'.changelog', $items);
         });
-
     }
 }
