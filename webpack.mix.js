@@ -1,7 +1,6 @@
 let mix = require('laravel-mix');
 let build = require('./tasks/js/build.js');
 let tailwind = require('tailwindcss');
-require('laravel-mix-purgecss');
 
 mix.disableNotifications()
 mix.setPublicPath('source/assets/')
@@ -20,11 +19,6 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
           tailwind('tailwind.js'),
         ]
       })
-    .purgeCss({
-        globs: [
-            path.join(__dirname, "source/**/*.blade.php"),
-        ],
-    })
     .js('source/_assets/js/app.js', 'js/')
     .version()
 
