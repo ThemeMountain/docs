@@ -20,5 +20,5 @@ $events->beforeBuild(BeforeBuild::class);
 
 $events->afterCollections(AfterCollections::class);
 
-$events->afterBuild(AfterBuild::class);
+// $events->afterBuild(AfterBuild::class);
 
