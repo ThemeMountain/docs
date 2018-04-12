@@ -42,7 +42,7 @@ The product has the following folder structure:
 
 If you're into coding, the product offers a boilerplate layout file inside the `layout` folder, which you can use as a base for your custom email templates, by copying sections from the `sections` folder, one on top of each other.
 
-This file contains meta tags and CSS in the `<head>`. Much of it is needed, but some parts (like menu styles) are optional. If you want to remove certain styles because you're not using the sections they're meant for, or if you want to customise them further, we recommend using [EmailComb](https://emailcomb.com/) to clean up unused CSS. If you're unsure of what a specific CSS rule does, please refer to the [framework documentation](https://thememountain.github.io/acorn/).
+This file contains meta tags and CSS in the `<head>`. Much of it is needed, but some parts (like menu styles) are optional. If you want to remove certain styles because you're not using the sections they're meant for, or if you want to customise them further, we recommend using [EmailComb](https://emailcomb.com/) to clean up unused CSS. If you're unsure of what a specific CSS rule does, please refer to the [framework documentation](https://thememountain.github.io/documentation/acorn/).
 
 ## Pre-built HTML Templates
 
@@ -64,8 +64,8 @@ You can customize the text, buttons, images, and colours in all sections.
 
 ## Components
 
-We've also included a small set of useful components from our [Acorn Email Framework](https://thememountain.github.io/acorn/). These are provided as a convenience, for you to quickly copy/paste a button or a spacer in an email that you're custom coding based off of the product.
+We've also included a small set of useful components from our [Acorn Email Framework](https://thememountain.github.io/documentation/acorn/). These are provided as a convenience, for you to quickly copy/paste a button or a spacer in an email that you're custom coding based off of the product.
 
 ## The Grid
 
-Also as a convenience, the product includes grid examples from our framework. If you want to learn more about using the grid, please refer to the [framework documentation](https://thememountain.github.io/acorn/layout/grid.html).
+Also as a convenience, the product includes grid examples from our framework. If you want to learn more about using the grid, please refer to the [framework documentation](https://thememountain.github.io/documentation/acorn/layout/grid.html).

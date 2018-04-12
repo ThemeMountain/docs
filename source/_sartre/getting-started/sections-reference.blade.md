@@ -75,7 +75,6 @@ Sections are listed in alphabetical order.
             <td>Blog Podcast</td>
             <td><img src="/img/email/sartre/sections/thumbs/blog-podcast.jpg" alt="Blog Podcast"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Call To Action</h2>
@@ -113,7 +112,6 @@ Sections are listed in alphabetical order.
             <td>CTA With Background Button Right</td>
             <td><img src="/img/email/sartre/sections/thumbs/cta-with-bkg-button-right.jpg" alt="CTA With Background Button Right"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Coupons</h2>
@@ -135,7 +133,6 @@ Sections are listed in alphabetical order.
             <td>Coupon 4</td>
             <td><img src="/img/email/sartre/sections/thumbs/coupon-4.jpg" alt="Coupon 4"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Feature</h2>
@@ -157,7 +154,6 @@ Sections are listed in alphabetical order.
             <td>Feature Product</td>
             <td><img src="/img/email/sartre/sections/thumbs/feature-product.jpg" alt="Feature Product"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Footers</h2>
@@ -195,7 +191,6 @@ Sections are listed in alphabetical order.
             <td>Footer 6 With Logo Right</td>
             <td><img src="/img/email/sartre/sections/thumbs/footer-6-logo-right.jpg" alt="Footer 6 With Logo Right"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Headers</h2>
@@ -248,7 +243,6 @@ Sections are listed in alphabetical order.
             <td>Header Right With Title</td>
             <td><img src="/img/email/sartre/sections/thumbs/header-right-with-title.jpg" alt="Header Right With Title"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">HERO</h2>
@@ -282,7 +276,6 @@ Sections are listed in alphabetical order.
             <td>HERO With Video</td>
             <td><img src="/img/email/sartre/sections/thumbs/hero-with-video.jpg" alt="HERO With Video"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">HERO Split</h2>
@@ -320,7 +313,6 @@ Sections are listed in alphabetical order.
             <td>HERO Split With Content Top Right</td>
             <td><img src="/img/email/sartre/sections/thumbs/hero-split-content-top-right.jpg" alt="HERO Split With Content Top Right"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Image Grid</h2>
@@ -358,7 +350,6 @@ Sections are listed in alphabetical order.
             <td>Masonry Grid</td>
             <td><img src="/img/email/sartre/sections/thumbs/masonry-grid.jpg" alt="Masonry Grid"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Interactive</h2>
@@ -380,7 +371,6 @@ Sections are listed in alphabetical order.
             <td>Star Rating</td>
             <td><img src="/img/email/sartre/sections/thumbs/star-rating.gif" alt="Star Rating"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Intro</h2>
@@ -402,7 +392,6 @@ Sections are listed in alphabetical order.
             <td>Intro With Stats</td>
             <td><img src="/img/email/sartre/sections/thumbs/intro-with-stats.jpg" alt="Intro With Stats"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Navigation</h2>
@@ -432,7 +421,6 @@ Sections are listed in alphabetical order.
             <td>Nav Hamburger Right</td>
             <td><img src="/img/email/sartre/sections/thumbs/nav-hamburger-right.jpg" alt="Nav Hamburger Right"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Notification</h2>
@@ -482,7 +470,6 @@ Sections are listed in alphabetical order.
             <td>Password Reset</td>
             <td><img src="/img/email/sartre/sections/thumbs/password-reset.jpg" alt="Password Reset"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Preheaders</h2>
@@ -496,7 +483,6 @@ Sections are listed in alphabetical order.
             <td>Preheader Social</td>
             <td><img src="/img/email/sartre/sections/thumbs/preheader-social-dark.jpg" alt="Preheader Social"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Pricing Tables</h2>
@@ -526,7 +512,6 @@ Sections are listed in alphabetical order.
             <td>Pricing Table 6</td>
             <td><img src="/img/email/sartre/sections/thumbs/pricing-table-6.jpg" alt="Pricing Table 6"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Social</h2>
@@ -540,7 +525,6 @@ Sections are listed in alphabetical order.
             <td>Social 2</td>
             <td><img src="/img/email/sartre/sections/thumbs/social-2.jpg" alt="Social 2"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Spacing</h2>
@@ -562,7 +546,6 @@ Sections are listed in alphabetical order.
             <td>Spacer Full Width</td>
             <td><img src="/img/email/sartre/sections/thumbs/spacer-full-width.jpg" alt="Spacer Full Width"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Stats</h2>
@@ -588,7 +571,6 @@ Sections are listed in alphabetical order.
             <td>Stats 5</td>
             <td><img src="/img/email/sartre/sections/thumbs/stats-5.jpg" alt="Stats 5"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Team</h2>
@@ -606,7 +588,6 @@ Sections are listed in alphabetical order.
             <td>Team 2 Full Width</td>
             <td><img src="/img/email/sartre/sections/thumbs/team-2-full-width.jpg" alt="Team 2 Full Width"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Testimonial</h2>
@@ -632,7 +613,6 @@ Sections are listed in alphabetical order.
             <td>Testimonial Twitter</td>
             <td><img src="/img/email/sartre/sections/thumbs/testimonial-twitter.jpg" alt="Testimonial Twitter"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Text Grid</h2>
@@ -666,7 +646,6 @@ Sections are listed in alphabetical order.
             <td>Headline Centered</td>
             <td><img src="/img/email/sartre/sections/thumbs/text-grid-headline-centered.jpg" alt="Text Grid Headline Centered"></td>
         </tr>
-
         <tr>
             <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
                 <h2 class="p-0 text-base font-normal">Timeline</h2>
@@ -676,8 +655,5 @@ Sections are listed in alphabetical order.
             <td>Timeline</td>
             <td><img src="/img/email/sartre/sections/thumbs/timeline.jpg" alt="Timeline"></td>
         </tr>
-
-
-
     </tbody>
 </table>

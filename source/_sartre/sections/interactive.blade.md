@@ -77,11 +77,11 @@ Text can be styled with inline CSS.
 
 Background of the title can be changed in the `bgcolor=""` attribute on the `<button class="toggle-trigger">` button, and on the `<td>` wrapping the title text.
 
-Top and bottom spacing: change the `line-height:` value on the `<div class="spacer"` tags, found near the top and bottom of the HTML. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html).
+Top and bottom spacing: change the `line-height:` value on the `<div class="spacer"` tags, found near the top and bottom of the HTML. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
 
 ### Star Rating
 
-Top and bottom spacing is done with [Acorn Spacers](https://thememountain.github.io/acorn/utilities/spacing.html).
+Top and bottom spacing is done with [Acorn Spacers](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
 
 Change the star color on hover in the embedded CSS from the template's `<head>` tag:
 

@@ -11,7 +11,7 @@ navigation:
 
 The template comes with several footers, designed for a wide varitey of use cases. They all include common things like a logo, address, social icons, and, of course, legal text/unsubscribe links.
 
-Footers also use a [Divider component from Acorn](https://thememountain.github.io/acorn/components/divider.html), which you can customise just like a spacer.
+Footers also use a [Divider component from Acorn](https://thememountain.github.io/documentation/acorn/components/divider.html), which you can customise just like a spacer.
 
 ---
 
@@ -57,5 +57,5 @@ Change the HEX colour inside `bgcolor=""` on the `<td>` wrapping the container t
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
 

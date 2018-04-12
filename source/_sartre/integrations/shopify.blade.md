@@ -181,7 +181,6 @@ These notifications are automatically sent out to the customer.
         <td>abandoned_checkout.html</td>  
         <td>Sent to the customer if they leave checkout before they buy the items in their cart. Configure options in checkout settings.</td>
     </tr>
-
     <tr>
         <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
             <h3 class="p-0 text-base font-normal">Shipping</h3>
@@ -207,7 +206,6 @@ These notifications are automatically sent out to the customer.
         <td>shipment_delivered.html</td>
         <td>Sent automatically to the customer after the status of their fulfillment changes to delivered.</td>
     </tr>
-
     <tr>
         <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
             <h3 class="p-0 text-base font-normal">Customer</h3>

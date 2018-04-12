@@ -68,6 +68,6 @@ For Social 2, change the `bgcolor=""` on each `<td class="col"`:
 
 ### Spacing
 
-Social 1: change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html).
+Social 1: change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
 
 Social 2 doesn't have top/bottom spacing. Instead, each column has its own vertical padding, as you can see in the code above.

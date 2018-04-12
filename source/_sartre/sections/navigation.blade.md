@@ -34,7 +34,7 @@ The Hamburger Navigation looks similar to the Basic one on desktop, but on mobil
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
-  <p class="m-0 text-md text-blue-dark">Gmail mobile apps doesn't support the hamburger navigation in some cases. You can force the menu items to display, with some extra CSS - <a href="https://thememountain.github.io/acorn/components/navigation.html#hamburger-nav-gmail-apps">see the Acorn documentation</a>.</p>
+  <p class="m-0 text-md text-blue-dark">Gmail mobile apps doesn't support the hamburger navigation in some cases. You can force the menu items to display, with some extra CSS - <a href="https://thememountain.github.io/documentation/acorn/components/navigation.html#hamburger-nav-gmail-apps">see the Acorn documentation</a>.</p>
 </div>
 
 
@@ -52,7 +52,7 @@ Text and link can be customised with inline CSS:
 
 ### Spacing
 
-Each `nav-item` uses horizontal padding. For mobile, the [mobile spacing helpers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html) are being used:
+Each `nav-item` uses horizontal padding. For mobile, the [mobile spacing helpers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html) are being used:
 
 ```html
 <td class="nav-item webfont px-sm-8" style="padding-right: 24px; display: inline-block;">

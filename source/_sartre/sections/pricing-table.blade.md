@@ -50,10 +50,10 @@ Borders are defined with inline CSS, simply change the pixel width, style, and c
 
 ### Buttons
 
-Buttons can be customised with inline CSS. Read more in our [Button component](https://thememountain.github.io/acorn/components/buttons.html) framework docs.
+Buttons can be customised with inline CSS. Read more in our [Button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) framework docs.
 
 ### Top/bottom spacing
 
 For table headings (i.e. the pricing plan name), spacing is achieved with CSS `padding`.
 
-Top and bottom spacing is done with Acorn's [Universal Spacer component](https://thememountain.github.io/acorn/components/spacer.html#universal), which is added near the top and bottom of the section's HTML code. You can change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html).
+Top and bottom spacing is done with Acorn's [Universal Spacer component](https://thememountain.github.io/documentation/acorn/components/spacer.html#universal), which is added near the top and bottom of the section's HTML code. You can change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

@@ -17,7 +17,7 @@ Sartre Email includes a MailChimp-integrated all-in-one template, which you can 
 
 The MailChimp-integrated files can be found in the `Files/mailchimp` folder from your download.
 
-This folder has the same structure as the `Files/html` folder, only that all files inside it are editable or ready to use with MailChimp:
+This folder has the same structure as the `Files/html` folder, only that all files inside it are ready to use with MailChimp:
 
 - `/all-in-one` - all-in-one template .zip file
 - `/components` - buttons, navigation, dividers, and spacers
@@ -183,7 +183,9 @@ MailChimp will transform that into:
 }
 ```
 
-This increases the message size considerably, and can potentially lead to message clipping in Gmail. Increased CSS size can also lead to Gmail not taking the CSS into consideration at all. While we did test and found that Gmail's limit is not reached with our templates, always send yourself a test email to check.
+This increases the message size considerably, and can potentially lead to message clipping in Gmail. Increased CSS size can also lead to Gmail not taking the CSS into consideration at all. While we did test and found that Gmail's limit is usually not reached with our templates, always send yourself a test email to check.
+
+Note: the more modules you add to your template, the higher the risk of Gmail clipping your email becomes.
 
 ### Slow/buggy interface
 

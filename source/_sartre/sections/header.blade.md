@@ -32,7 +32,7 @@ Most of them include variations with navigation components:
 
 The Centered Header shows a center-aligned logo, on both desktop and mobile.
 
-The one with the Hamburger menu component contains an image that is visible only on mobile, and works like a dropdown menu - find out more in the [framework Navigation docs](https://thememountain.github.io/acorn/components/navigation.html#hamburger).
+The one with the Hamburger menu component contains an image that is visible only on mobile, and works like a dropdown menu - find out more in the [framework Navigation docs](https://thememountain.github.io/documentation/acorn/components/navigation.html#hamburger).
 
 ### With Basic Menu {#header-centered-basic-menu}
 
@@ -64,7 +64,7 @@ On mobile, the logo image and menu will stack and align to center.
 
 ### Menu Items
 
-Menu items are simple links that can be styled with inline CSS. Learn more about the [email navigation component in Acorn](https://thememountain.github.io/acorn/components/navigation.html).
+Menu items are simple links that can be styled with inline CSS. Learn more about the [email navigation component in Acorn](https://thememountain.github.io/documentation/acorn/components/navigation.html).
 
 ### Logo & Images
 
@@ -84,5 +84,5 @@ Change the HEX colour inside `bgcolor=""` on the `<td>` wrapping the container t
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
 
