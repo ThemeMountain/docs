@@ -12,7 +12,7 @@ navigation:
 
 Since the product includes over 120 sections, searching for one when building your layout can become confusing. Use this list when you need to identify sections visually or by name, in your development process.
 
-Sections are listed in alphabetical order.
+Note: sections are listed in alphabetical order.
 
 <table class="rounded text-left border text-grey-dark mt-8 w-full" cellpadding="16" cellspacing="0">
     <thead class="bg-grey-lighter text-black text-base">
