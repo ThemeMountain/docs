@@ -35,7 +35,7 @@ class CustomParsedown extends BaseParsedown
      * @param  array $Block
      * @return  array
      */
-    protected function blockFencedCodeComplete($Block)
+    /*protected function blockFencedCodeComplete($Block)
     {
         try {
             if ($class = array_get($Block, 'element.text.attributes.class', false)) {
@@ -56,7 +56,7 @@ class CustomParsedown extends BaseParsedown
         }
 
         return $Block;
-    }
+    }*/
 
     /**
      * Extra link handling
@@ -101,7 +101,7 @@ class CustomParsedown extends BaseParsedown
                     $Link['element']['attributes']['href'] =  $href;
                 }
             }
-    
+
         }
 
         return $Link;
