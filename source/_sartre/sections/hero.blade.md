@@ -1,10 +1,11 @@
 ---
-title: HERO
+title: Hero
 description: HERO Sections in Sartre Email
 tags: hero, background, play, video
 page_order: 11
 navigation:
   group: Sections
+  title: HERO
 ---
 
 # Large & bold. Bulletproof background images.

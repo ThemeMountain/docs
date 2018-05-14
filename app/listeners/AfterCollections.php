@@ -43,7 +43,7 @@ class AfterCollections
 
                     if (isset($data->navigation['group'])) {
                         $menu['categories'][$data->navigation['group']][] = [
-                            'title' => $data->title,
+                            'title' => $data->navigation['title'] ?? $data->title,
                             'path' => $path,
                             'order' => $order,
                         ];
@@ -55,7 +55,7 @@ class AfterCollections
                             '));
                     } else {
                         $menu['uncategorized'][] = [
-                            'title' => $data->title,
+                            'title' => $data->navigation['title'] ?? $data->title,
                             'path' => $path,
                             'order' => $order,
                         ];

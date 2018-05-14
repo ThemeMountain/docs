@@ -17,13 +17,13 @@ Run promos or offer discounts for your products or services, with the coupon sec
 
 Coupon 1 has centered text and CTA button, framed with a border and filled with a solid colour. You can adjust the background color in the `bgcolor=""` attribute on the first table cell inside the `container` table, as well as the border colour and style, on its inner column cell.
 
-![Coupon 1](/img/email/sartre/sections/coupon-1.jpg)
+![Coupon 1](/img/email/sartre/sections/coupon-1.png)
 
 ## Coupon 2
 
 Similar to Coupon 1, but with content layed out differently. On very small mobile devices, the coupon value (numbers) stack vertically.
 
-![Coupon 2](/img/email/sartre/sections/coupon-2.jpg)
+![Coupon 2](/img/email/sartre/sections/coupon-2.png)
 
 ## Coupon 3
 
@@ -41,27 +41,41 @@ Similar to Coupon 2, but with an image below and an immersive background image. 
 
 ## Customisation
 
-### Links
+### Button
 
-Change the HEX colour from the link's inline CSS.
+Text and buttons can be customised with inline CSS. Checkout the [button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) in our email framework.
 
-### Icons
+### Images
 
-Use icons that contrast with your preheader's background colour. Retina icons supported.
+Replace the dummy images with your own. Make sure to use retina images like we did, so that they look sharp on mobile.
 
-### Background colour
+### Background Colour
 
-Change the HEX colour inside `bgcolor=""` on the `<td>` wrapping the container table:
+Change the HEX colour inside `bgcolor=""` on the `<td>`'s:
 
 ```html
 <td class="px-sm-16" align="center" bgcolor="#EEEEEE">
     <table class="container" cellpadding="0" cellspacing="0" role="presentation" width="600">
-        ...
+        <tr>
+            <td class="p-sm-16" bgcolor="#232323" style="padding: 32px;">
+                ...
+            </td>
+        </tr>
     </table>
 </td>
 ```
 
-### Top/bottom spacing
+Throughout the template, we use #EEEEEE for the 'outside' colour (basically, the email body), and #FFFFFF or #232323 for the inside of a section. When using the integrated versions, such as MailChimp or StampReady, you need not worry about this: controls for changing them are provided through their UI.
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+### Top & Bottom Spacing
+
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+The `py-sm-8` class sets the spacer height on mobile. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+
+Coupons have more complex markup, so they rely mostly on layout padding for spacing. But they also use Acorn spacers. Basic HTML and CSS knowledge is required to customise the layout.
 
