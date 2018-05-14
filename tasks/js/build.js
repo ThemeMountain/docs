@@ -1,21 +1,22 @@
-let fs = require('fs-extra');
-let argv = require('yargs').argv;
-let ngrok = require('ngrok');
-let bin = require('./bin');
-let command = require('node-cmd');
+let fs = require('fs-extra')
+let argv = require('yargs').argv
+let ngrok = require('ngrok')
+let bin = require('./bin')
+let command = require('node-cmd')
 
-let AfterWebpack = require('on-build-webpack');
-let BrowserSync = require('browser-sync');
-let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-let Watch = require('webpack-watch');
-let SearchIndexer = require('./build-search-index');
-let OfflineImages = require('./offline-images');
+let AfterWebpack = require('on-build-webpack')
+let BrowserSync = require('browser-sync')
+let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+let Watch = require('webpack-watch')
+let SearchIndexer = require('./build-search-index')
+let OfflineImages = require('./offline-images')
 let HTMLMinifier = require('./minify-html')
 
-let config;
-let browserSyncInstance;
-let env = argv.e || argv.env || 'local';
-let port = argv.p || argv.port || 3000;
+let config
+let build_path
+let browserSyncInstance
+let env = argv.e || argv.env || 'local'
+let port = argv.p || argv.port || 3000
 
 module.exports = {
     jigsaw: new AfterWebpack(() => {
@@ -27,6 +28,7 @@ module.exports = {
             }
 
             config = JSON.parse(stdout)
+            build_path = config.build.destination
             let pretty = (config && config.pretty == false) ? '--pretty=false ' : ''
 
             command.get(bin.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
@@ -37,8 +39,8 @@ module.exports = {
                 console.log(stdout)
 
                 SearchIndexer.run()
-                OfflineImages.fixPaths()
-                HTMLMinifier.minify();
+                OfflineImages.fixPaths(build_path)
+                HTMLMinifier.minify(build_path);
 
                 if (browserSyncInstance) {
                     browserSyncInstance.reload()

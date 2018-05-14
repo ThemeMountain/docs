@@ -305,4 +305,8 @@ return [
 
     'baseUrl' => '',
     'production' => false,
+    'build' => [
+        'source' => 'source',
+        'destination' => 'build_local',
+    ],
 ];

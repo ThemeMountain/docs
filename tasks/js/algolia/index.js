@@ -5,7 +5,6 @@ const argv = require('yargs').argv
 const algoliasearch = require('algoliasearch')
 
 const env = argv.e || argv.env || 'local'
-const build_path = 'build_' + env
 
 getSearchIndexJSON = (key, buildPath) => {
    return path.normalize(buildPath + '/data/'+key+'/search-data.json')
@@ -14,6 +13,7 @@ getSearchIndexJSON = (key, buildPath) => {
 exports.sync = (sites) => {
 
     const config = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'source/_assets/data/config.json') ) )
+    const build_path = config.build.destination
 
     if (!sites) {
         console.error('Sites object was malformed or not provided. Algolia sync aborted.')

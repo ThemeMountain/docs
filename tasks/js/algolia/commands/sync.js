@@ -6,8 +6,6 @@ const command = require('node-cmd')
 
 const AlgoliaService = require('../index')
 
-const env = argv.e || argv.env || 'local'
-
 exports.command = 'sync [sites..]'
 
 exports.describe = `Sync your search indices to Algolia.

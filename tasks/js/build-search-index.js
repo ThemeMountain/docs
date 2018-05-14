@@ -12,7 +12,7 @@ module.exports.run = () => {
 
   const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
   const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )
-  const build_path = 'build_' + env
+  const build_path = config.build.destination
   let algoliaSites = []
 
   for (let key in collections) {

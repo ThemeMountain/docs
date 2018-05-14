@@ -5,7 +5,7 @@ const argv = require('yargs').argv
 
 const env = argv.e || argv.env || 'local'
 
-module.exports.fixPaths = () => {
+module.exports.fixPaths = (build_path) => {
 
   if (env == 'offline') {
 
@@ -20,7 +20,7 @@ module.exports.fixPaths = () => {
       for (let p in pages) {
 
         let page = pages[p]
-        let filePath = path.resolve('build_' + env + page._meta.path[0])
+        let filePath = path.resolve(build_path + page._meta.path[0])
 
         let cleanPath = path.dirname(page._meta.path[0]).split('/').filter(item => {return item.length > 0})
         let toReplace = '/' + imgFolder + '/' + cleanPath.join('/')
