@@ -1,7 +1,7 @@
 ---
 title: Team
 description: Team Sections in Sartre Email
-tags: stats, counter
+tags: team, members
 page_order: 21
 navigation:
   group: Sections
@@ -31,13 +31,13 @@ Team 2 provides a two column layout that you can use to highlight a couple of yo
 
 On mobile, the two columns will stack on top of each other.
 
-![Team 2](/img/email/sartre/sections/team-2.jpg)
+![Team 2](/img/email/sartre/sections/team-2-boxed.jpg)
 
 ## Team 2 (Full Width)
 
 Similar to its sibling, but with more space for your content.
 
-![Team 2](/img/email/sartre/sections/team-2.jpg)
+![Team 2](/img/email/sartre/sections/team-2-full.jpg)
 
 ---
 
@@ -53,4 +53,10 @@ Simply change the `src=""` and `width=""` of each image. If you want use retina 
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

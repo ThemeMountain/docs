@@ -21,7 +21,7 @@ The Boxed Spacer is basically a section with just a spacer inside the container.
 
 ## Spacer - Full Width
 
-Same as the Boxed one, only that the wrapper doesn't have a container inside - it just houses the Spacer directly.
+Same as the Boxed one, only that the wrapper doesn't have a container inside - it just houses the Spacer directly, so you can use it to create vertical space in the same colour as the email body.
 
 ## Divider - Boxed
 

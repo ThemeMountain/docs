@@ -9,11 +9,11 @@ navigation:
 
 # Display a series of events over a period of time
 
-Timeline is a 3-column layout that shows dates, a visual separator that connects the rows, and the actual content on the right. Useful for displaying a series of events, such as a conference schedule.
+Timeline is a 3-column layout that shows dates, a visual separator that connects the rows, and the actual content on the right. Useful for displaying a series of events, such as a conference schedule. Or maybe even a shipping status update in a notification email?
 
 On mobile, the connecting "pipe" image is hidden, and the columns stack.
 
-![Timeline](/img/email/sartre/sections/timeline.jpg)
+![Timeline](/img/email/sartre/sections/timeline.png)
 
 ---
 

@@ -23,29 +23,29 @@ In Sartre Email, they come in 3 shapes:
 
 Basic Stats are made up of three columns separated by a subtle border. You can customise the text and background styles. On mobile, the columns stack vertically, and the `borderless-sm` class hides the separators.
 
-![Stats 1](/img/email/sartre/sections/stats-basic.jpg)
+![Stats 1](/img/email/sartre/sections/stats-basic.png)
 
 Because having centered text in a Stats section requires more work than just centering text (paddings, widths), we also provide a stand-alone variation for that (stats-2.html). It might not look very different at a first glance, but if you want centered stats, this variation will save you some headaches.
 
-![Stats 2 - Centered](/img/email/sartre/sections/stats-basic-centered.jpg)
+![Stats 2 - Centered](/img/email/sartre/sections/stats-basic-centered.png)
 
 ## Boxed
 
 Two column Stats section, with a background colour on each column.
 
-![Stats 4](/img/email/sartre/sections/stats-boxed.jpg)
+![Stats 4 - Boxed](/img/email/sartre/sections/stats-boxed.png)
 
 We've also included a variation (stats-5.html) that uses a background image and a semi-transparent background colour for the actual boxes.
 
 **Note**: Although the background image is supported in Outlook and Windows 10 Mail, the semi-transparent box background colour is coded with `rgba` in CSS, and will fallback to a solid colour [where it is not supported](https://www.campaignmonitor.com/css/color-background/rgba-colors/).
 
-![Stats 5](/img/email/sartre/sections/stats-boxed-with-bkg-image.jpg)
+![Stats 5](/img/email/sartre/sections/stats-boxed-bg-image.jpg)
 
 ## With Background Image
 
 Same 3-column layout with separators, but with a background image instead of a solid colour. Of course, the background image works in all versions of Outlook, as well as in Windows 10 Mail.
 
-![Stats 3](/img/email/sartre/sections/stats-with-bkg-image.jpg)
+![Stats 3](/img/email/sartre/sections/stats-bg-image.jpg)
 
 ---
 
@@ -85,4 +85,10 @@ Change the image path in the inline `background-image` CSS property, and in the 
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

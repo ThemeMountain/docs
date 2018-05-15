@@ -15,7 +15,18 @@ As simple as they are, as useful they can be. We've extracted Acorn's [email gri
 
 ## Column Combinations
 
+Included are all Acorn grid column combinations:
+
+- 1 column
+- 2 columns
+- 3 columns
+- 4 columns
+- 3:1 columns
+- 1:3 columns
+
 ## Headline Centered
+
+Basically a 1-column, but with pre-styled text and spacing.
 
 ---
 
@@ -27,4 +38,10 @@ Font size, colour, weight, spacing, all can be changed through inline CSS.
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

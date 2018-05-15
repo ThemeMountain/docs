@@ -25,15 +25,19 @@ We've included the following variations:
 
 Quote a user from Twitter with this testimonial section that closely resembles the tweet card design.
 
+![Testimonial Twitter](/img/email/sartre/sections/testimonial-twitter.png)
+
 ## Left With Quote
 
 Simple, left-aligned single column testimonial, with a quote icon and author name.
+
+![Testimonial Left With Quote](/img/email/sartre/sections/testimonial-left-quote.png)
 
 ## Split With Border
 
 A simple, typography focused and left aligned testimonial, with user name, a separating border, and a quote image that you can customise to suit your needs. The border is removed on mobile through the `borderless-sm` class.
 
-![Testimonial Split With Border](/img/email/sartre/sections/testimonial-split-with-border.jpg)
+![Testimonial Split With Border](/img/email/sartre/sections/testimonial-split-border.png)
 
 ## 2 Columns Boxed
 
@@ -45,7 +49,7 @@ Add a couple of user reviews, with a two column layout. Each box has its own use
 
 Single column, centered quote with user avatar and user name at the bottom.
 
-![Testimonial Centered With Avatar](/img/email/sartre/sections/testimonial-centered-with-avatar.jpg)
+![Testimonial Centered With Avatar](/img/email/sartre/sections/testimonial-centered-avatar.png)
 
 ---
 
@@ -61,4 +65,10 @@ Simply change the `src=""` and `width=""` of each image. If you want use retina 
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

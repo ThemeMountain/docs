@@ -17,33 +17,43 @@ Image Grid sections are grid layouts that focus on imagery to create a strong vi
 
 Great for displaying products or offers in an organized fashion. Choose from 2, 3, and 4-column variations.
 
-## Logo Grid
+![Image Grid With Captions](/img/email/sartre/sections/image-grid-cols-captions.jpg)
 
-The Logo Grid is a four-column grid layout, ideal for showing off partner or sponsor logos. On mobile, the logo columns go full width and stack.
+## Full Width Image
 
-![Logo Grid](/img/email/sartre/sections/logo-grid.jpg)
+A simple, full width image. This is an inline image, not a background image. So unlike those, it will always be visible because it's supported everywhere. It'll also show in full, since it doesn't rely on its container height.
+
+![Full Width Image](/img/email/sartre/sections/image-full-width.jpg)
 
 ## Masonry Grid
 
 An image grid with different sizes and layout variations, great for showing off a portfolio, shop products, albums - you name it. On mobile, the columns go full width and stack.
 
-![Masonry Grid](/img/email/sartre/sections/project-masonry.jpg)
+![Masonry Grid](/img/email/sartre/sections/masonry-grid.jpg)
 
 ### Masonry Grid With Captions
 
 The Masonry Grid, but with captions for each image.
 
+![Masonry Grid With Captions](/img/email/sartre/sections/masonry-grid-captions.jpg)
+
 ### Masonry Grid No Gutters
 
-This variation removes the gutters between grid columns, so that your images stick to one another. The container gutters are preserved, to 'box' it in and align it with your text.
+This variation removes the gutters between grid columns, so that your images stick to one another. The _container_ gutters are preserved, to 'box' it in and align it with your text.
+
+![Masonry Grid No Gutters](/img/email/sartre/sections/masonry-grid-no-gutters.jpg)
 
 ### Masonry Grid No Gutters - Full Width
 
-Same as the one above, but with container gutters removed, so that you can use larger images and create more immersive visuals.
+Same as above, but with container gutters also removed, so that you can stick images together in creative ways.
 
-## Full Width Image
+![Masonry Grid No Gutters Full Width](/img/email/sartre/sections/masonry-grid-no-gutters-full-width.jpg)
 
-A simple, full width image. This is an inline image, not a background image. So unlike those, it will always be visible in full, because it's not dependent on its container height.
+## Logo Grid
+
+The Logo Grid is a four-column grid layout, ideal for showing off partner or sponsor logos. On mobile, the logo columns go full width and stack.
+
+![Logo Grid](/img/email/sartre/sections/logo-grid.jpg)
 
 ---
 
@@ -59,4 +69,10 @@ Image Grids With Captions have linked text below the image, which you can custom
 
 ### Top & Bottom Spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`: 
+
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+```
+
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

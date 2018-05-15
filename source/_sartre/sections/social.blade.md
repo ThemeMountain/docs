@@ -22,7 +22,7 @@ Sartre Email currently ships with two types of social sections:
 
 Simple and clean, with centered icons and a title above.
 
-![Social 1](/img/email/sartre/sections/social-1.jpg)
+![Social 1](/img/email/sartre/sections/social-1.png)
 
 ## Social 2
 
@@ -30,7 +30,7 @@ Four-column layout with edge-to-edge background. Includes icon and text, as well
 
 On mobile, the columns go full-width and stack.
 
-![Social 2](/img/email/sartre/sections/social-2.jpg)
+![Social 2](/img/email/sartre/sections/social-2.png)
 
 ---
 
@@ -48,12 +48,16 @@ Change the HEX colour from the inline CSS.
 
 ### Background colour
 
-Change the HEX colour inside `bgcolor=""` on the `<td>` wrapping the container table:
+Change the HEX colour inside `bgcolor=""` on the `<td>`'s:
 
 ```html
 <td class="px-sm-16" align="center" bgcolor="#EEEEEE">
     <table class="container" cellpadding="0" cellspacing="0" role="presentation" width="600">
-        ...
+        <tr>
+            <td class="px-sm-8" align="left" bgcolor="#FFFFFF" style="padding: 0 24px;">
+                ...
+            </td>
+        </tr>
     </table>
 </td>
 ```
@@ -68,6 +72,11 @@ For Social 2, change the `bgcolor=""` on each `<td class="col"`:
 
 ### Spacing
 
-Social 1: change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Social 1: change the `line-height:` value on the `<div class="spacer"`: 
 
-Social 2 doesn't have top/bottom spacing. Instead, each column has its own vertical padding, as you can see in the code above.
+```html
+<div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
+``` 
+Social 2 doesn't have top/bottom spacing. Instead, each column has its own vertical padding.
+
+For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).

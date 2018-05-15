@@ -24,13 +24,13 @@ Each type includes 3 variations.
 
 These are well suited for simple pricing options.
 
-![Pricing Table 2 Columns](/img/email/sartre/sections/pricing-table-2-col.jpg)
+![Pricing Table 2 Columns](/img/email/sartre/sections/pricing-2-cols.png)
 
 ## 3 Columns
 
-A bit more complex and tight, these pricing tables are better suited for more complex pricing options.
+A bit more complex and tight, these pricing tables are better suited for advanced pricing options.
 
-![Pricing Table 3 Columns](/img/email/sartre/sections/pricing-table-3-col.jpg)
+![Pricing Table 3 Columns](/img/email/sartre/sections/pricing-3-cols.png)
 
 ---
 
