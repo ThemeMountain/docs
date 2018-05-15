@@ -66,7 +66,7 @@ Shopify has a few settings for your notification emails. You can:
 
 Our templates support all of these settings:
 
-![Shopify Notification Email Customization Options](/img/email/sartre/integrations/shopify/shopify-global-notification-styling.png)
+![Shopify Notification Email Customization Options](/img/email/sartre/integrations/shopify/shopify-global-notification-styling.jpg)
 
 ### Text Editing
 
