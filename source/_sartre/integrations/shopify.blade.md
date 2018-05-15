@@ -153,8 +153,8 @@ These notifications are automatically sent out to the customer.
 
 <table class="rounded text-left border text-grey-dark mt-8 mb-4 w-full text-sm" cellpadding="16" cellspacing="0">
     <tr>
-        <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
-            <h3 class="p-0 text-base font-normal">Orders</h3>
+        <td colspan="2" class="bg-grey-dark py-2 px-4">
+            <h3 class="p-0 text-base font-normal text-white">Orders</h3>
         </td>
     </tr>
     <tr>
@@ -182,8 +182,8 @@ These notifications are automatically sent out to the customer.
         <td>Sent to the customer if they leave checkout before they buy the items in their cart. Configure options in checkout settings.</td>
     </tr>
     <tr>
-        <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
-            <h3 class="p-0 text-base font-normal">Shipping</h3>
+        <td colspan="2" class="bg-grey-dark py-2 px-4">
+            <h3 class="p-0 text-base font-normal text-white">Shipping</h3>
         </td>
     </tr>
     <tr>
@@ -207,8 +207,8 @@ These notifications are automatically sent out to the customer.
         <td>Sent automatically to the customer after the status of their fulfillment changes to delivered.</td>
     </tr>
     <tr>
-        <td colspan="2" class="bg-grey-dark text-white py-2 px-4">
-            <h3 class="p-0 text-base font-normal">Customer</h3>
+        <td colspan="2" class="bg-grey-dark py-2 px-4">
+            <h3 class="p-0 text-base font-normal text-white">Customer</h3>
         </td>
     </tr>
     <tr>
@@ -235,11 +235,11 @@ These notifications are sent to order notification subscribers (i.e. shop owner)
 
 <table class="rounded text-left border text-grey-dark mt-8 mb-4 w-full text-sm" cellpadding="16" cellspacing="0">
     <tr>
-        <td class="bg-grey-dark text-white py-2 px-4">
-            <h3 class="p-0 text-base font-normal">Template</h3>
+        <td class="bg-grey-dark py-2 px-4">
+            <h3 class="p-0 text-base font-normal text-white">Template</h3>
         </td>
-        <td class="bg-grey-dark text-white py-2 px-4">
-            <h3 class="p-0 text-base font-normal">Description</h3>
+        <td class="bg-grey-dark py-2 px-4">
+            <h3 class="p-0 text-base font-normal text-white">Description</h3>
         </td>
     </tr>
     <tr>

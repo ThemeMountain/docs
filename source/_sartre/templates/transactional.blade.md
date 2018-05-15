@@ -22,9 +22,10 @@ These are meant to be used with transactional email providers, such as [Mailgun]
 
 ### File structure
 
-- HTML version: `Files/html/templates/transactional`
+- HTML version: `Files/html/templates/notifications`
+- MailChimp version: `Files/mailchimp/templates/notifications`
 - Mailster: choose the "Notification" layout from the template selection dropdown.
-- MailChimp, Campaign Monitor, StampReady: these versions each come with an all-in-one template .zip file, that can be found in `Files/name/all-in-one/`, which also includes the notification sections. You can use this template in these services' builders to create your own notification templates.
+- Campaign Monitor and StampReady: these versions each come with an all-in-one template .zip file, that can be found in `Files/name/all-in-one/`, which also includes the notification sections. You can use this template in these services' builders to create your own notification templates.
 - Shopify: the `Files/shopify` folder contains pre-built notification templates for all Shopify notifications
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">

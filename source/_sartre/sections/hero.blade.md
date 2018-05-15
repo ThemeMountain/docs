@@ -83,11 +83,6 @@ Since all our HERO sections have support for background images in Outlook and Wi
 
 Since no email builder can do it for you, you will need to edit the HTML yourself.
 
-Editing in one of the integrated versions:
-
-- in **[Mailster](../sartre/mailster/#video-hero)**
-- in **[StampReady's builder](../sartre/stampready/#video-hero)**
-
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert" id="mailchimp-video-support">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">MailChimp and Video Emails</p>
   <p class="m-0 text-md text-orange-dark">MailChimp currently does not support HTML5 video, it completely strips out the necessary tags when you import the template. Because of this, our MailChimp integration does not include the HERO With Video that uses HTML5 video (note: StampReady → MailChimp will not work either). Instead, the Video Agency template provides a regular HERO. 

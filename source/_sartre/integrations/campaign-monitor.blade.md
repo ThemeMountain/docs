@@ -31,12 +31,11 @@ If you're planning on creating a Campaign Monitor template yourself, please firs
 
 ## Uploading
 
-Inside the `Files/campaign-monitor/all-in-one/` folder, you'll find the .zip file.
+Inside the `Files/campaign-monitor/all-in-one/` folder, you'll find the all-in-one HTML and a .zip file with supporting images.
 
 1. In Campaign Monitor, click your user name on the top right, then select "My Templates".
-2. On the following page, click "Create New Template", then click the "Upload your own HTML" box.
-
-You will be asked to name your template, and then upload the HTML file and the images .zip file.
+2. On the following page, click "Create New Template", then click the "Upload your own HTML" box. 
+    You will be asked to name your template, and then upload the HTML file and the images .zip file.
 
 3. Browse for them on your computer, then click Add template.
 

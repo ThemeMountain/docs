@@ -13,7 +13,7 @@ Sartre Email is integrated with StampReady, so you can use it in their modern em
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert" id="prerequisite">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Prerequisite</p>
-  <p class="m-0 text-md text-blue-dark">In order to use StampReady's builder, you need to first <a href="https://www.stampready.net/" target="_blank" rel="noopener">sign up for a free account &nearr;</a> on their site. Once you have an account, you can proceed to <a href="#uploading">upload &darr;</a> and start using our product with their platform.</p>
+  <p class="m-0 text-md text-blue-dark">In order to use StampReady's builder, you need to first <a href="https://www.stampready.net/" target="_blank" rel="noopener">sign up for a free account ↗</a> on their site. Once you have an account, you can proceed to <a href="#uploading">upload &darr;</a> and start using our product with their platform.</p>
 </div>
 
 ---
@@ -178,12 +178,6 @@ This is the code you need to add just before `<style type="text/css">`, in the `
       <o:PixelsPerInch>96</o:PixelsPerInch>
     </o:OfficeDocumentSettings>
   </xml>
-  <style>
-    table {border-collapse: collapse;}
-    .spacer,.divider {mso-line-height-rule:exactly;}
-    td,th,div,p,a {font-size: 13px; line-height: 22px;}
-    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family:"Segoe UI",Helvetica,Arial,sans-serif;}
-  </style>
 <![endif]-->
 ```
 

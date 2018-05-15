@@ -9,7 +9,9 @@ navigation:
 
 # MailChimp Integration
 
-Sartre Email includes a MailChimp-integrated all-in-one template, which you can import and use yo build email layouts with their visual editor.
+Sartre Email includes pre-built MailChimp templates, which you can import and customise in their email editor.
+
+Because it offers over 120 modules to choose from, Sartre Email does not contain an all-in-one template for MailChimp, as this would be impossible to use due to the technical limitations of their email editor.
 
 ---
 
@@ -17,52 +19,60 @@ Sartre Email includes a MailChimp-integrated all-in-one template, which you can 
 
 The MailChimp-integrated files can be found in the `Files/mailchimp` folder from your download.
 
-This folder has the same structure as the `Files/html` folder, only that all files inside it are ready to use with MailChimp:
+It has the same structure as the `Files/html` folder, only that all files inside it are ready to use with MailChimp. Use the file explorer below to see the folder contents:
 
-- `/all-in-one` - all-in-one template .zip file
-- `/components` - buttons, navigation, dividers, and spacers
-- `/grid` - the grid system
-- `/layout` - the boilerplate layout file
-- `/sections` - all the template sections
+@filetree
+- Documentation
+- [Files](#)
+    - campaign-monitor
+    - html
+    - images
+    - [mailchimp](#)
+        - components
+        - grid
+        - layout
+        - [templates](#)
+            - marketing
+            - notifications
+    - shopify
+    - stampready
+    - mailster
+- PSD
+@endfiletree
 
-Only the all-in-one template .zip file from the `Files/mailchimp/all-in-one` folder can be uploaded directly to MailChimp in order to be used in a campaign. All others are just for creating a MailChimp-compatible template yourself, which you then upload to their service.
+Only the pre-built template .zip files from the `Files/mailchimp/templates` folder can be uploaded directly to MailChimp in order to be used in a campaign. All others are just for creating a MailChimp-compatible template yourself, which you then upload to their service.
 
 If you're planning on creating a MailChimp template yourself, please first take a look at [their documentation on importing a custom template](http://kb.mailchimp.com/templates/code/how-to-import-a-custom-html-template), and then at our own templates to understand how to do it.
 
-## Video Tutorial
-
-We've made a video tutorial on working with our email templates in MailChimp. Although it uses our Kant email template, the workflow is identical.
-
-Please watch this first, as it covers the most common questions and issues:
-
-@youtube('S0OpEtxs34s')
-
 ## Uploading
 
-Inside the `Files/mailchimp/all-in-one/` folder, you'll find the .zip file that you need to upload to MailChimp.
+Inside the `Files/mailchimp/templates/` folder, you'll find .zip files for pre-built templates that you can upload to MailChimp.
 
 1. In MailChimp, go to *Templates &rarr; Create Template &rarr; Code your own*.
 2. Choose the *"Import zip"* option, name your template, and browse for the .zip file mentioned above.
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Important</p>
-  <p class="m-0 text-md text-orange-dark">Once the import is finished, you will be redirected to the Template edit screen, which shows a preview of your imported template. Do not try to use the "Design" view here, as this is not the place where you build your email layout for your campaign. Instead, as instructed in the video tutorial, just click "Save & Exit" on the bottom right of the screen.</p>
+  <p class="m-0 text-md text-orange-dark">Once the import is finished, you will be redirected to the Template edit screen, which shows a preview of your imported template. Do not try to use the "Design" view here, as this is not the place where you customise your email layout for your campaign. Instead, just click "Save & Exit" on the bottom right of the screen.</p>
 </div>
 
 ## MERGE Tags
 
-The following MailChimp tags are supported in Sartre Email:
+Sartre Email uses many of MailChimp's MERGE tags. Let's go through each type.
 
 ### Template MERGE Tags
 
+Added to supported HTML tags, the following attributes enable section reordering, cloning and hiding, as well as text and image editing in MailChimp:
+
 - `mc:edit`
 - `mc:repeatable`
-- `mc:variant`
 - `mc:hideable`
 
 See the MailChimp template tags [reference](http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language).
 
 ### Campaign MERGE Tags
+
+These pull in data from your campaign and/or generate text and links dynamically.
 
 - `*|LIST:ADDRESS|*` - inserts company or organization postal mailing address or P.O. Box as plain text
 - `*|REWARDS|*` - outputs the MonkeyRewards badge, only if you're on a free MailChimp plan
@@ -72,10 +82,11 @@ See the MailChimp template tags [reference](http://kb.mailchimp.com/templates/co
 - `*|MC_PREVIEW_TEXT|*` - outputs the email [preview](https://kb.mailchimp.com/campaigns/design/edit-your-emails-subject-preview-text-from-name-or-from-email-address#Regular-Campaigns) text
 - `*|UNSUB|*` - generates the unsubscribe URL
 - `*|DATE:Y|*` - inserts the current year
+- `*|BRAND:LOGO|*` - inserts your [default logo](https://kb.mailchimp.com/campaigns/images-videos-files/set-a-default-logo)
 
 ### Automation MERGE Tags
 
-These MERGE tags are available in the notification sections.
+These MERGE tags are available for the notification sections.
 
 - `*|ABANDONED_CART|*` - loops over items in cart for e-commerce automations
 - `*|HTML:ORDER_SHIPPING_ADDRESS|*` - outputs formatted shipping address
@@ -96,22 +107,38 @@ If you need to customise the product to use other MERGE tags, see [MailChimp's M
 
 ## Customisation
 
-The template has many customisation options through MailChimp's interface, organised by section (for an example, see video @ 7:50).
+The templates have many customisation options available through MailChimp's interface, organised by section.
 
 These settings include:
 
 - page background colour
 - responsive font settings
-- setting the background images and colours of sections
 - customising buttons background and text colour
+- setting the background images and colours of sections
 
-### MailChimp's "Layouts" feature
+### Image Editing
 
-Our all-in-one template works with MailChimp's "Layouts" feature (explained in the video).
+When you replace an image through MailChimp's email editor, it does some nasty things to the underlying HTML. These can make images look bad on mobile, and even blow up retina images in Outlook.
 
-Although needed for an all-in-one template, this feature isn't recommended for cases where you need only a few modules in a template in MailChimp, with no other modules to choose from. This is a common case for freelancers that provide pre-built templates to their clients by building templates manually from the individual sections we provide.
+To avoid this, make sure that no matter the dimensions of the image you use (retina or not), you always: 
 
-If you're a freelancer using the base layout file and individual sections to build layouts that your clients will only add content/images to, we strongly advise removing the `mc:variant="..."` attribute from all sections that you use. This way, your client will only see the intended layout.
+- uncheck "Keep proportions". Otherwise MailChimp adds inline height CSS that affects image rendering;
+- clear out the value from the "Height" field;
+- finally, have the "Width" set to the original dummy image width. Sartre Email for MailChimp uses non-retina dummy images exactly for the purpose of guiding you through this process.
+
+![Edit image in MailChimp](/img/email/sartre/integrations/mailchimp/edit-image.jpg)
+
+_Above: replacing a 260x170 dummy image with a retina image, in MailChimp._
+
+### Header & Footer Logo
+
+Sartre Email uses the `*|BRAND:LOGO|*` MailChimp MERGE tag to output your company's logo in the Header and Footer sections, so don't worry if you don't see a defaut logo when editing a template. 
+
+You'll need to set your default logo, so please see [MailChimp's tutorial](https://kb.mailchimp.com/campaigns/images-videos-files/set-a-default-logo).
+
+This only changes the image's `src=""` attribute, but the image itself is still editable. So in case you don't want to use this feature, simply click to edit the image and replace it with your own.
+
+---
 
 ## Limitations & Other Notes
 
@@ -189,7 +216,7 @@ Note: the more modules you add to your template, the higher the risk of Gmail cl
 
 ### Slow/buggy interface
 
-Please note that the MailChimp editor is very slow when working with the all-in-one template file. This is a limitation of their template builder, and unfortunately there's currently no way to overcome it for templates with dozens of modules.
+Please note that the MailChimp editor can be slow at times. This is a limitation of their template builder, and unfortunately there's currently no way to overcome it.
 
 ### Scrolling issues
 
@@ -206,3 +233,7 @@ What usually works is removing and then re-adding the section that got corrupted
 MailChimp's application styling sometimes overrides our template's styles. This is clearly visible in the visual editor, but can sometimes be seen even when using their preview tool.
 
 Always send yourself an actual test email from MailChimp's preview tool, and check it in a real email client.
+
+### Automations Product Recommendations
+
+As much as we wanted to, unfortunately MailChimp doesn't allow selecting a custom template for Order Notifications. Therefore, Sartre does not use the `*|PRODUCT_RECOMMENDATION:[$total=X]|*` MERGE tag.

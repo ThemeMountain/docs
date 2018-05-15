@@ -50,12 +50,12 @@ The following Mailster tags and variables are supported in Sartre Email:
 - Support for the "Auto" feature (magic wand)
 - Background image support - just click a background image to change it
 
-### Template Tags
+### Template Tags & Classes
 
-- `module`
-- `single`
-- `multi`
-- `textbutton`
+- `<module>`
+- `<single>`
+- `<multi>`
+- `textbutton` (class for table-based HTML buttons)
 
 ### Personalization Variables
 
@@ -77,11 +77,11 @@ For advanced users, it also offers the possibility to edit the HTML source code 
 
 ### HERO With Video
 
-There is currently no way to visually edit the HERO With Video in Mailster, so you will need to edit it entirely through code. To bring up the code editing window, click the <kbd></></kbd> button on the right, when hovering the section.
+There is currently no way to visually edit the HERO With Video in Mailster, so you will need to edit it entirely through code. To bring up the code editing window, click the <kbd></></kbd> button on the right, when hovering the section:
 
-The following screenshot highlights all things that you need to edit or can customise:
+![Edit HERO With Video in Mailster](/img/email/sartre/integrations/mailster/hero-video-codeview-btn.jpg)
 
-![Edit HERO With Video in Mailster](/img/email/sartre/integrations/mailster/edit-video-hero.jpg)
+You'll need to edit both the HTML5 video settings and the fallback HTML as well. Please see the [HERO With Video editing section](../sartre/hero/#video-hero-editing).
 
 When finished, hit Save to apply your changes.
 
@@ -108,11 +108,9 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 ### Hamburger Menu Icon
 
-To edit the hamburger menu icon, you need to click the <kbd></></kbd> button next to the module in the builder, to bring up the HTML code editor:
+To edit the hamburger menu icon, you need to click the <kbd></></kbd> button next to the module in the builder, to bring up the HTML code editor, as mentioned above for the HERO With Video.
 
-![Mailster Code Editor](/img/email/sartre/integrations/mailster/code-editor-button.jpg)
-
-In the code editor that shows up, you then simply replace the image URL with the new one that you want to use. This is because the hamburger menu icon is only visible on screens smaller than 600px.
+In the code editor that shows up, you then simply replace the image `src=""` URL with the new one that you want to use. This is because the hamburger menu icon is only visible on screens smaller than 600px.
 
 ### Auto content feature
 
