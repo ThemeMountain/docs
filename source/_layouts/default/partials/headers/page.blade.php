@@ -1,12 +1,12 @@
-<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-50 transition-transform">
+<div class="w-full fixed pin-t border-b border-grey-lighter bg-white z-60 transition-transform">
     <div class="container flex py-1">
         <div class="flex flex-grow items-center justify-between">
             <div class="w-auto xl:w-2/5">
                 <a href="{{ $page->getFirst()->getUrl() }}" class="flex float-left items-center hover:text-{{ $page->color }}">
                     <img src="{{ $page->thumbnail }}" alt="{{ $page->name }}" class="w-8">
                     <h2 class="hidden md:block p-0 pl-3 text-base font-bold">
-                            {{ $page->name }}
-                            <span class="block text-xs uppercase leading-tight font-normal m-0">Documentation</span>
+                        {{ $page->name }}
+                        <span class="block text-xs uppercase leading-tight font-normal m-0">Documentation</span>
                     </h2>
                 </a>
             </div>
@@ -28,11 +28,11 @@
                         </a>
                     @endforeach
                 </div>
-                <div class="flex md:hidden text-grey-dark" @click="showMobileMenu = !showMobileMenu">
-                    <div v-show="! showMobileMenu">
+                <div id="menu-toggle" class="flex md:hidden text-grey-dark">
+                    <div>
                         @fileContents('source/img/icons/menu.svg')
                     </div>
-                    <div v-show="showMobileMenu" v-cloak>
+                    <div class="hidden">
                         @fileContents('source/img/icons/close.svg')
                     </div>
                 </div>

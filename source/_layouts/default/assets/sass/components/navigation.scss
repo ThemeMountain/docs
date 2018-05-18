@@ -5,7 +5,7 @@
 
 .toggle,
 .tab-panel,
-.filetree ul ul {
+.filetree ul {
   &[aria-expanded="false"] {
     display: none;
   }
@@ -47,17 +47,25 @@ ul.tabs {
   @apply .list-reset .flex .border-b .border-grey-lighter .mb-0;
 
   li {
-    @apply .my-0;
+    @apply .my-0 .bg-grey-lighter .border-solid .rounded-t-sm;
 
     a {
-      @apply .bg-grey-lighter .inline-block .border-solid .rounded-t-sm .py-2 .px-8 .text-grey-dark;
+      @apply .inline-block .py-2 .px-8 .text-grey-dark;
 
       &:hover {
         @apply .text-grey-darker;
       }
+    }
 
-      &.tab-active {
-        @apply .ml-0 .bg-white .border-l .border-t .border-r .border-grey-lighter .-mb-px .cursor-default .text-grey-darker;
+    &.active {
+      @apply .ml-0 .bg-white .border-l .border-t .border-r .border-grey-lighter .-mb-px .text-grey-darker;
+
+      a {
+        @apply .cursor-default;
+
+        &:hover {
+          @apply .text-grey-dark;
+        }
       }
     }
   }
@@ -72,10 +80,14 @@ ul.tabs {
   @apply .py-2;
 
   li {
-    @apply .flex .flex-wrap .items-center .py-2 .px-4 .my-0 .cursor-default;
+    @apply .flex .flex-wrap .items-center .py-2 .pr-4 .my-0 .cursor-default .text-grey;
 
-    &:not(.toggle-parent) {
-      @apply .text-grey;
+    li {
+      @apply .py-1;
+    }
+
+    a {
+      @apply .text-grey-darker;
     }
 
     &::before {
@@ -84,13 +96,11 @@ ul.tabs {
       @apply .mr-2 .w-6 .h-6 .bg-no-repeat .bg-contain;
     }
 
-    &.toggle-parent-active::before {
+    a.active::before {
       content: "";
       background-image: url('../../img/icons/folder-open.svg');
-    }
-
-    li {
-      @apply .py-1;
+      top: -0.1rem;
+      @apply .w-6 .h-6 .absolute .-ml-8;
     }
   }
 
@@ -102,7 +112,7 @@ ul.tabs {
     @apply .list-reset .w-full;
 
     ul {
-      @apply .pl-4;
+      @apply .pl-4 .py-1;
     }
   }
 }

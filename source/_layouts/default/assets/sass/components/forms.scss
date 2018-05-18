@@ -6,6 +6,10 @@
   @apply .text-grey-darkest .opacity-100;
 }
 
+button:focus {
+  @apply .outline-0;
+}
+
 // Algolia
 
 .algolia-autocomplete {

@@ -36,6 +36,28 @@ return [
             ],
         ],
 
+        'acorn' => [
+            'color' => 'green',
+            'name' => 'Acorn Email Framework',
+            'version' => '1.0.0',
+            'path' => 'acorn/{-filename}',
+            'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
+            'sort' => 'page_order',
+            'search' => [
+                'algolia' => [
+                    'appID' => getenv('ACORN_ALGOLIA_APP_ID'),
+                    'appSecret' => getenv('ACORN_ALGOLIA_SECRET'),
+                    'searchKey' => getenv('ACORN_ALGOLIA_SEARCH'),
+                    'indexName' => 'acorn_docs',
+                ],
+            ],
+            'social' => [
+                'github' => 'https://github.com/ThemeMountain/acorn',
+                'twitter' => 'https://twitter.com/thememountainco',
+                'envato' => 'https://themeforest.net/user/thememountain/portfolio?ref=thememountain',
+            ],
+        ],
+
         'wordpress' => [
             'color' => 'blue',
             'name' => 'WordPress',
@@ -63,6 +85,17 @@ return [
     */
 
     'company' => 'ThemeMountain',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Company Website
+    |--------------------------------------------------------------------------
+    |
+    | The company website URL.
+    |
+    */
+
+    'company_url' => 'https://thememountain.com',
 
     /*
     |--------------------------------------------------------------------------
