@@ -40,7 +40,7 @@ return [
         'acorn' => [
             'color' => 'green',
             'name' => 'Acorn Email Framework',
-            'version' => '1.0.0',
+            'version' => '1.0.1',
             'root' => 'acorn',
             'path' => 'acorn/{-filename}',
             'thumbnail' => '/img/acorn/acorn-logo.png',
