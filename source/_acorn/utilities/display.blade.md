@@ -3,6 +3,7 @@ title: Display Utilities
 description: Utilities for showing and hiding elements in responsive emails
 tags: utility, display, hide, show
 page_order: 13
+path: acorn/utilities
 navigation:
   group: Utilities
   order: 3

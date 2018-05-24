@@ -1,7 +1,9 @@
 <nav class="{{ isset($type) && $type == 'fixed' ? 'fixed' : 'absolute' }} w-full">
     <div class="container flex flex-col md:flex-row py-4">
         <div class="w-full md:w-1/4 text-center md:text-left">
-            <h2 class="text-white text-sm tracking-wide">ThemeMountain</h2>
+            <a href="{{ $page->company_url }}">
+                <img src="{{ $page->getAssetPath('/') }}/img/logo-light.png" alt="ThemeMountain" class="mb-4 md:mb-0 w-1/2">
+            </a>
         </div>
         <div class="w-full md:w-3/4">
             <ul class="list-reset flex justify-center md:justify-end">

@@ -23,6 +23,7 @@ return [
             'color' => 'purple',
             'name' => 'Sartre Email',
             'version' => '1.0.0',
+            'root' => 'email/sartre',
             'path' => 'email/sartre/{-filename}',
             'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
             'sort' => 'page_order',
@@ -40,8 +41,9 @@ return [
             'color' => 'green',
             'name' => 'Acorn Email Framework',
             'version' => '1.0.0',
+            'root' => 'acorn',
             'path' => 'acorn/{-filename}',
-            'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
+            'thumbnail' => '/img/acorn/acorn-logo.png',
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [

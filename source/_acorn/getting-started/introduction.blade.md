@@ -71,7 +71,7 @@ This file includes all the necessary CSS, tags, and attributes that are required
 </html>
 ```
 
-In addition to the minimum viable CSS, the starter template also includes all mobile helper classes by default. They're included to help you quickly get started, but you will most likely not need all of them in every email. We strongly suggest keeping only the necessary CSS in your production emails, in order to keep the file size as small as possible. A quick way of removing unused CSS from your HTML emails is [EmailComb](https://emailcomb.com).
+In addition to the minimum viable CSS, the starter template also includes all mobile helper classes by default. They're included to help you quickly get started, but you will most likely not need all of them in every email. We strongly suggest keeping only the necessary CSS in your production emails, in order to keep the file size as small as possible. A quick way of removing unused CSS from your HTML emails is [EmailComb ↗](https://emailcomb.com).
 
 ---
 

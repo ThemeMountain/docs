@@ -3,6 +3,7 @@ title: Reverse Stack
 description: Show email content in a different order on mobile
 tags: reverse, stack, switch
 page_order: 15
+path: acorn/utilities
 navigation:
   group: Utilities
   order: 5
@@ -41,7 +42,7 @@ Step by step:
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="../includes/utilities/reverse-2-col.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 520px;"></iframe>
+            <iframe src="/acorn/includes/utilities/reverse-2-col.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 520px;"></iframe>
         </div>
     </div>    
     <div id="reverse-2-col-code" class="tab-panel" markdown="1" aria-expanded="false">
@@ -95,7 +96,7 @@ Step by step:
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="../includes/utilities/custom-order-3-col.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 220px;"></iframe>
+            <iframe src="/acorn/includes/utilities/custom-order-3-col.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 220px;"></iframe>
         </div>
     </div>    
     <div id="custom-order-3-col-code" class="tab-panel" markdown="1" aria-expanded="false">

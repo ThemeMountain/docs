@@ -3,6 +3,7 @@ extends: _layouts.default.master
 description: Documentation for the Sartre Email Template
 tags: main, home, index
 search: false
+exclude_pagenav: true
 ---
 
 @section('body-classes', 'bg-gradient-' . $page->color)

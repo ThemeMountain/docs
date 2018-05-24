@@ -2,7 +2,7 @@
 title: StampReady
 description: StampReady Integration in Sartre Email
 tags: stampready, esp, integration
-page_order: 28
+page_order: 32
 navigation:
   group: Integrations
 ---

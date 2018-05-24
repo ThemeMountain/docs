@@ -3,6 +3,7 @@ title: Text Utilities
 description: Utilities for custom text alignment in responsive emails
 tags: utility, text, align
 page_order: 14
+path: acorn/utilities
 navigation:
   group: Utilities
   order: 4

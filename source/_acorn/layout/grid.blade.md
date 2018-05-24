@@ -99,9 +99,11 @@ However, we now have the freedom to choose whether we use this whitespace or not
     </div>
 </div>
 
-Inside the row table, Acorn nests another table that contains the grid columns. As you can see in the example above, this nesting allows us to set container padding and column gutters independently, so that we don't always need to remember to set different paddings on the outer edges of the first and last columns in the grid.
+### Apparent Container Padding {#apparent-padding}
 
-Together, this row padding combined with column gutters create an _apparent container padding_ of 32px, resulting in a nice 'boxed' layout on both mobile and desktop.
+Inside the Row table, Acorn nests another table that contains the grid Columns. As you can see in the example above, this nesting allows us to set container padding and column gutters independently, so that we don't always need to remember to set different paddings on the outer edges of the first and last columns in the grid.
+
+Together, this Row padding combined with Column gutters create an _apparent container padding_ of 32px, resulting in a nice 'boxed' layout on both mobile and desktop.
 
 Of course, you can use any of the mobile spacing helpers on the row table cell, or on each grid column, to fine tune mobile spacing to your requirements.
 

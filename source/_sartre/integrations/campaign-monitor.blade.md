@@ -2,7 +2,7 @@
 title: Campaign Monitor
 description: Campaign Monitor Integration in Sartre Email
 tags: campaign monitor, esp, integration
-page_order: 30
+page_order: 27
 navigation:
   group: Integrations
 ---

@@ -2,7 +2,7 @@
 title: MailChimp
 description: MailChimp Integration in Sartre Email
 tags: mailchimp, esp, integration
-page_order: 27
+page_order: 28
 navigation:
   group: Integrations
 ---
@@ -49,7 +49,7 @@ If you're planning on creating a MailChimp template yourself, please first take 
 Inside the `Files/mailchimp/templates/` folder, you'll find .zip files for pre-built templates that you can upload to MailChimp.
 
 1. In MailChimp, go to *Templates &rarr; Create Template &rarr; Code your own*.
-2. Choose the *"Import zip"* option, name your template, and browse for the .zip file mentioned above.
+2. Choose the *"Import zip"* option, name your template, and select one of the templates from the location mentioned above.
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Important</p>

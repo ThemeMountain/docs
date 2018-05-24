@@ -36,7 +36,7 @@ For desktops and tablets, body font size is set to 16px, with a line height of 2
 
 Your images should always include an informative `alt=""` attribute, to help screen readers describe them. This is also useful in email clients that block images by default, as your alternative text will be shown instead.
 
-In order to hide images from assistive software, add the `aria-hidden="true"` attribute, like we did for the icon in the [hamburger navigation component](../acorn/navigation/#hamburger).
+In order to hide images from assistive software, add the `aria-hidden="true"` attribute, like we did for the icon in the [hamburger navigation component](components/navigation/#hamburger).
 
 ## Tables
 

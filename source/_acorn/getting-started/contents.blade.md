@@ -42,7 +42,7 @@ Components are pre-built structures that you can drop into your projects right a
 
 ## Examples
 
-Acorn comes with examples that show how easy it is to use the framework in order to build structures for common scenarios, like [centering a single column](https://github.com/ThemeMountain/acorn/blob/master/examples/1-col-centered-on-desktop.html) with very little code or defining a [custom stacking order for mobile-only](../reverse-stack).
+Acorn comes with examples that show how easy it is to use the framework in order to build structures for common scenarios, like [centering a single column](https://github.com/ThemeMountain/acorn/blob/master/examples/1-col-centered-on-desktop.html) with very little code or defining a [custom stacking order for mobile-only](../utilities/reverse-stack).
 
 ## Grid
 

@@ -3,6 +3,7 @@ title: Alignment Utilities
 description: Utility classes for custom element alignment on mobile
 tags: utility, align, float
 page_order: 11
+path: acorn/utilities
 navigation:
   group: Utilities
   order: 1
@@ -27,4 +28,4 @@ The following classes are available inside Acorn's `@media` query:
 ```
 You can add them to any element you need aligned differently on mobile. Keep in mind that, depending on your layout, the left/right alignment classes might cause issues, as they are using float, which takes the element out of the normal flow.
 
-Check out the [Navigation component](../acorn/components/navigation): the logo image and the menu table are using the `align-sm-center` utility class.
+Check out the [Navigation component](/acorn/components/navigation): the logo image and the menu table are using the `align-sm-center` utility class.

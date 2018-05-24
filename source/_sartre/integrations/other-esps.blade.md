@@ -2,7 +2,7 @@
 title: Other ESPs
 description: Using other Email Service Providers with Sartre Email
 tags: campaign monitor, esp, integration
-page_order: 31
+page_order: 30
 navigation:
   group: Integrations
 ---

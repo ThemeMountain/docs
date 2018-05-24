@@ -11,10 +11,12 @@ module.exports.boot = () => {
   const menuToggle = document.getElementById('menu-toggle')
   const contentOverlay = document.querySelector('.content-overlay')
   const nav = document.querySelector('.sidebar-navigation')
-  const content = document.querySelector('.content')
+  const content = document.querySelectorAll('.content')
   function toggleMenu() {
     nav.getAttribute('aria-expanded') == 'true' ? nav.setAttribute('aria-expanded', 'false') : nav.setAttribute('aria-expanded', 'true')
-    content.classList.toggle('mobile-menu-opened')
+    Array.from(content).map((el) => {
+      el.classList.toggle('mobile-menu-opened')
+    })
     contentOverlay.classList.toggle('hidden')
     Array.from(menuToggle.children).map((el) => {
       el.classList.toggle('hidden')

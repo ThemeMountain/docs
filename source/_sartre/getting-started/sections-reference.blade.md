@@ -431,7 +431,7 @@ Sections are listed in alphabetical order.
         </tr>
         <tr class="text-sm">
             <td>Cart Items Headline</td>
-            <td><img src="/img/email/sartre/sections/thumbs/intro-headline.jpg" alt="Cart Items Headline"></td>
+            <td><img src="/img/email/sartre/sections/thumbs/cart-items-headline.jpg" alt="Cart Items Headline"></td>
         </tr>
         <tr class="text-sm">
             <td>Confirm Email</td>

@@ -89,7 +89,7 @@ Since Acorn prevents this by default (through `max-width: 100%;`), you can use t
 
 ## Hiding Images on Desktop {#hiding-on-desktop}
 
-While our `hide-sm` utility class is enough to hide an image in mobile email clients, things get a bit more complicated on desktop. You can hide images on desktop and only show them on mobile just like we do with the [hamburger navigation](../acorn/navigation/#hamburger) icon:
+While our `hide-sm` utility class is enough to hide an image in mobile email clients, things get a bit more complicated on desktop. You can hide images on desktop and only show them on mobile just like we do with the [hamburger navigation](components/navigation/#hamburger) icon:
 
 <div class="my-6">
     <ul class="tabs">

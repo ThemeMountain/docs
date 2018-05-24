@@ -2,7 +2,7 @@
 title: Shopify
 description: Shopify Integration in Sartre Email
 tags: shopify, esp, ecommerce, notifications, transactional, cart
-page_order: 30
+page_order: 31
 navigation:
   group: Integrations
 ---
