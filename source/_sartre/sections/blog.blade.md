@@ -55,7 +55,7 @@ Change the HEX colour from the link's inline CSS.
 
 ### Icons
 
-Retina icons supported, just [specify half the natural image width](https://thememountain.github.io/documentation/acorn/content/images.html), as shown in Acorn.
+Retina icons supported, just [specify half the natural image width](https://docs.thememountain.com/acorn/images), as shown in Acorn.
 
 Note: by default, some icons use emoji for alt text, like the 💭 or the 🔒. Some email clients don't support emojis, so remember to consider your audience when using them.
 
@@ -85,5 +85,5 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
 ```
 
-For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 

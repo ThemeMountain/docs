@@ -18,7 +18,7 @@ Sartre Email comes with several pre-built transactional email templates, also kn
 - Order Rating
 - \+ all notification emails for Shopify
 
-These are meant to be used with transactional email providers, such as [Mailgun](https://www.mailgun.com/), [SendGrid](https://sendgrid.com/), or [SparkPost](https://www.sparkpost.com/). For Shopify, please refer to our [Shopify documentation](../../integrations/shopify).
+These are meant to be used with transactional email providers, such as [Mailgun](https://www.mailgun.com/), [SendGrid](https://sendgrid.com/), or [SparkPost](https://www.sparkpost.com/). For Shopify, please refer to our [Shopify documentation](../shopify).
 
 ### File structure
 

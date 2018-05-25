@@ -65,7 +65,7 @@ The following Mailster tags and variables are supported in Sartre Email:
 - `{copyright}`
 - `{can-spam}`
 
-Mailster supports many more variables, which are too specific to each WordPress installation for us to include in our email template. Please have a look at [their documentation](https://kb.mailster.co/tags-in-mailster/), to learn more about using variables in Mailster campaigns.
+Mailster supports many more variables, which are too specific to each WordPress installation for us to include in our email template. [Learn more about using variables in Mailster campaigns &rarr;](https://kb.mailster.co/tags-in-mailster/)
 
 ---
 

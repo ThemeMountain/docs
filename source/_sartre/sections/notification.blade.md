@@ -75,7 +75,7 @@ Simply change the `src=""` and `width=""` of each image. If you want use retina 
 
 ### Buttons
 
-Buttons can be customised with inline CSS. Read more in our [Button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) framework docs.
+Buttons can be customised with inline CSS. Read more in our [Button component](https://docs.thememountain.com/acorn/components/button) framework docs.
 
 ### Background Gradient
 
@@ -83,7 +83,7 @@ This uses a [CSS gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_
 
 ### Top & bottom spacing
 
-Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Change the `line-height:` value on the `<div class="spacer"`. For mobile spacer customisation, learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 
 ## Limitations & Other Notes
 

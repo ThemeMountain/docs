@@ -70,4 +70,4 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer" style="line-height: 8px;">&zwnj;</div>
 ```
 
-You'll notice that, unlike other sections, the Preheaders don't use a mobile spacing utility, since their spacing is quite short. But if you want, you can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+You'll notice that, unlike other sections, the Preheaders don't use a mobile spacing utility, since their spacing is quite short. But if you want, you can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).

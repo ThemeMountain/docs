@@ -43,7 +43,7 @@ Similar to Coupon 2, but with an image below and an immersive background image. 
 
 ### Button
 
-Text and buttons can be customised with inline CSS. Checkout the [button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) in our email framework.
+Text and buttons can be customised with inline CSS. Checkout the [button component](https://docs.thememountain.com/acorn/components/button) in our email framework.
 
 ### Images
 
@@ -75,7 +75,7 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
 ```
 
-The `py-sm-8` class sets the spacer height on mobile. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+The `py-sm-8` class sets the spacer height on mobile. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 
 Coupons have more complex markup, so they rely mostly on layout padding for spacing. But they also use Acorn spacers. Basic HTML and CSS knowledge is required to customise the layout.
 

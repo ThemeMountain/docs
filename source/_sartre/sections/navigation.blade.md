@@ -55,7 +55,7 @@ Text and link can be customised with inline CSS:
 
 ### Spacing
 
-Each `nav-item` uses horizontal padding. For mobile, the [mobile spacing helpers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html) are being used:
+Each `nav-item` uses horizontal padding. For mobile, the [mobile spacing helpers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing) are being used:
 
 ```html
 <td class="nav-item webfont px-sm-8" style="padding-right: 24px; display: inline-block;">

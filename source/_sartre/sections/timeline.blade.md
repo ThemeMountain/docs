@@ -31,4 +31,4 @@ Simply change the `src=""` and `width=""` of each image. If you want use retina 
 
 On desktop, Timeline doesn't use vertical spacing - it's meant to "stick" to other sections. There's also no spacing between rows, since the "pipe" images need to be connected.
 
-On mobile though, it uses Acorn's mobile spacing helpers to create consistent vertical spacing between timeline events. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+On mobile though, it uses Acorn's mobile spacing helpers to create consistent vertical spacing between timeline events. For mobile spacer customisation, learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).

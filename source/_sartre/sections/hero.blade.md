@@ -186,7 +186,7 @@ The top and bottom spacers for HEROs are very important, as they control the hei
 
 For spacing on mobile, we generally use the `py-sm-24` class, that sets the spacer to be 48px high, so that your HERO image isn't cut off too much due to the layout adapting to the screen size. 
 
-`24` is the [largest padding utility in Acorn](https://github.com/ThemeMountain/acorn/blob/master/layouts/boilerplate.html#L129), but you can change it to one of the other, smaller mobile spacing classes in Acorn. And, if 48px isn't enough, you can create your own mobile spacing utilities - learn more about [spacing utilities](https://thememountain.github.io/documentation/acorn/utilities/spacing.html) and [spacer components](https://thememountain.github.io/documentation/acorn/components/spacer.html) in Acorn.
+`24` is the [largest padding utility in Acorn](https://github.com/ThemeMountain/acorn/blob/master/layouts/boilerplate.html#L129), but you can change it to one of the other, smaller mobile spacing classes in Acorn. And, if 48px isn't enough, you can create your own mobile spacing utilities - learn more about [spacing utilities](https://docs.thememountain.com/acorn/utilities/spacing) and [spacer components](https://docs.thememountain.com/acorn/components/spacer) in Acorn.
 
 ---
 

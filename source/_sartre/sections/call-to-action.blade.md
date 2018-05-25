@@ -47,7 +47,7 @@ Similar to the Basic one, but with an image background. Coded with background im
 
 ### Button
 
-Text and buttons can be customised with inline CSS. Checkout the [button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) in our email framework.
+Text and buttons can be customised with inline CSS. Checkout the [button component](https://docs.thememountain.com/acorn/components/button) in our email framework.
 
 For the image buttons, simply replace the images with your own. Make sure to use retina images like we did, so that they look sharp on mobile.
 
@@ -67,7 +67,7 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer line-height-sm-0 py-sm-24" style="line-height: 32px;">&zwnj;</div>
 ```
 
-The `py-sm-24` class sets the spacer to be 48px high on mobile. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+The `py-sm-24` class sets the spacer to be 48px high on mobile. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 
 ## Limitations & Other Notes
 

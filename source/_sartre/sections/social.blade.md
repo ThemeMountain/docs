@@ -79,4 +79,4 @@ Social 1: change the `line-height:` value on the `<div class="spacer"`:
 ``` 
 Social 2 doesn't have top/bottom spacing. Instead, each column has its own vertical padding.
 
-For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+For mobile spacer customisation, learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).

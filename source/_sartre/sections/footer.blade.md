@@ -11,7 +11,7 @@ navigation:
 
 The template comes with several footers, designed for a wide varitey of use cases. They all include common things like a logo, address, social icons, and, of course, legal text/unsubscribe links.
 
-Footers also use a [Divider component from Acorn](https://thememountain.github.io/documentation/acorn/components/divider.html), which you can customise just like a spacer.
+Footers also use a [Divider component from Acorn](https://docs.thememountain.com/acorn/components/divider), which you can customise just like a spacer.
 
 ---
 
@@ -97,5 +97,5 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
 ```
 
-For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 

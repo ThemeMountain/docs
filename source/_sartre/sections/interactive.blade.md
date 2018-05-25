@@ -55,15 +55,13 @@ You need to set the proper rating URL inside `href=""`, for each star in particu
 Currently, the Star Rating hover effect works in the following email clients:
 
 - iOS Mail
-- ~~Gmail Web~~ <sup>1</sup>
+- Gmail Web
 - Apple Mail
 - Outlook iOS
 - Outlook Mac
 - Outlook Android
-- ~~Gmail Android 6, 7~~ <sup>1</sup>
+- Gmail Android 6, 7
 - Some Android 6 and 7 Native Clients
-
-[1] Support for `:hover` has been dropped across Gmail clients in April 2018. Read more about it, [here](https://litmus.com/blog/the-big-gmail-update-heres-everything-email-marketers-must-know).
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert" id="mailchimp-star-rating">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">MailChimp...</p>
@@ -80,11 +78,11 @@ Text can be styled with inline CSS.
 
 Background of the title can be changed in the `bgcolor=""` attribute on the `<button class="toggle-trigger">` button, and on the `<td>` wrapping the title text.
 
-Top and bottom spacing: change the `line-height:` value on the `<div class="spacer"` tags, found near the top and bottom of the HTML. For mobile spacer customisation, learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Top and bottom spacing: change the `line-height:` value on the `<div class="spacer"` tags, found near the top and bottom of the HTML. For mobile spacer customisation, learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 
 ### Star Rating
 
-Top and bottom spacing is done with [Acorn Spacers](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+Top and bottom spacing is done with [Acorn Spacers](https://docs.thememountain.com/acorn/utilities/spacing).
 
 Change the star color on hover in the embedded CSS from the template's `<head>` tag:
 

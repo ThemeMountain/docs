@@ -35,6 +35,6 @@ A full width divider that will stretch from edge to edge in your email client's 
 
 ## Customisation
 
-These sections use [Spacer](https://thememountain.github.io/documentation/acorn/components/spacer.html) and [Divider](https://thememountain.github.io/documentation/acorn/components/divider.html) components from our Acorn Email Framework.
+These sections use [Spacer](https://docs.thememountain.com/acorn/components/spacer) and [Divider](https://docs.thememountain.com/acorn/components/divider) components from our Acorn Email Framework.
 
-In addition to those, you might find it useful to learn about [Wrappers](https://thememountain.github.io/documentation/acorn/layout/overview.html#wrapper) and [Containers](https://thememountain.github.io/documentation/acorn/layout/overview.html#container) in Acorn.
+In addition to those, you might find it useful to learn about [Wrappers](https://docs.thememountain.com/acorn/layout/#wrapper) and [Containers](https://docs.thememountain.com/acorn/layout/#container) in Acorn.

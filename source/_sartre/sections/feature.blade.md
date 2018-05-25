@@ -41,7 +41,7 @@ Two half columns, with centered text and big headlines. Great for displaying a s
 
 ## Content Left/Right
 
-Two columns, one with a header, text and a link, the other with an image that sticks to the edge of the email container. They stack on mobile, and the one with the image on the right uses the awesome [reverse stack techinque](https://thememountain.github.io/documentation/acorn/utilities/reverse-stack.html) from our framework, for consistent hierarchy.
+Two columns, one with a header, text and a link, the other with an image that sticks to the edge of the email container. They stack on mobile, and the one with the image on the right uses the awesome [reverse stack techinque](https://docs.thememountain.com/acorn/utilities/reverse-stack) from our framework, for consistent hierarchy.
 
 ![Feature Content Left](/img/email/sartre/sections/feature-left.jpg)
 
@@ -63,7 +63,7 @@ One column, full width text, followed by a call to action button. Works well wit
 
 ### Buttons & Links
 
-Links and buttons can be customised with inline CSS. Checkout the [button component](https://thememountain.github.io/documentation/acorn/components/buttons.html) in our email framework.
+Links and buttons can be customised with inline CSS. Checkout the [button component](https://docs.thememountain.com/acorn/components/button) in our email framework.
 
 ### Images
 
@@ -77,5 +77,5 @@ Change the `line-height:` value on the `<div class="spacer"`:
 <div class="spacer line-height-sm-0 py-sm-8" style="line-height: 24px;">&zwnj;</div>
 ```
 
-For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://thememountain.github.io/documentation/acorn/utilities/spacing.html).
+For spacing on mobile, we generally use the `py-sm-8` class, that sets the spacer to be 16px high. You can change it to one of the other mobile spacing classes in Acorn. Learn more about [spacers in Acorn](https://docs.thememountain.com/acorn/utilities/spacing).
 

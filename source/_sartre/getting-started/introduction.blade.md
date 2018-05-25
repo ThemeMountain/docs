@@ -12,7 +12,7 @@ navigation:
 
 ## Framework
 
-The product is built using our very own [Acorn Email Framework](https://thememountain.github.io/documentation/acorn/).
+The product is built using our very own [Acorn Email Framework](https://docs.thememountain.com/acorn/).
 
 If you want to customise layouts, change columns, or do anything that affects structure, besides HTML knowledge we strongly suggest you first read the framework documentation.
 

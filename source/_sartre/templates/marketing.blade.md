@@ -32,8 +32,6 @@ Sartre has 120+ modules, which is way too much for MailChimp's third-party email
 
 Therefore, we have provided pre-built templates for MailChimp instead. 
 
-As a bonus, not having to deal with lots of modules in each template, this also means we are able to provide more fine-tuned styling controls.
+As a bonus, not having to deal with lots of modules in each template also means we are able to provide more fine-tuned styling controls. On the downside, if one of the Sartre Email modules you'd like to use isn't present in the pre-built templates, you'll need to edit the template and copy/paste it in from the `Files/mailchimp/sections` folder.
 
-On the downside, if one of the Sartre Email modules you'd like to use isn't present in the pre-built templates, you'll need to edit the template and copy/paste it in from the `Files/mailchimp/sections` folder.
-
-Another alternative would be to use the [StampReady integration](../stampready) that Sartre comes with: having hit MailChimp's module count limitations, we've now made it so that Sartre for StampReady also includes some basic MailChimp editing integrations. So you'll be able to edit your text in MailChimp, even if using a layout exported from StampReady.
+An alternative would be to use the [StampReady integration](../stampready) that Sartre comes with: having hit MailChimp's module count limitations, we've now made it so that Sartre for StampReady also includes some basic MailChimp editing integrations. So you'll be able to edit your text in MailChimp, even if using a layout exported from StampReady.
