@@ -22,8 +22,8 @@ module.exports.boot = () => {
       el.classList.toggle('hidden')
     })
   }
-  menuToggle.addEventListener('click', toggleMenu, false)
-  contentOverlay.addEventListener('click', toggleMenu, false)
+  if (menuToggle) menuToggle.addEventListener('click', toggleMenu, false)
+  if (contentOverlay) contentOverlay.addEventListener('click', toggleMenu, false)
 
 
   function scrollToOnLoad() {
@@ -52,7 +52,7 @@ module.exports.boot = () => {
     }
   })
   let tocWrapper = document.querySelector('.quickies')
-  if (tocLinks.length < 1) {
+  if (tocWrapper && tocLinks.length < 1) {
     tocWrapper.previousElementSibling.remove()
   }
   let tocLinksHTML = tocLinks.map((el) => {

@@ -28,7 +28,7 @@ description: Listing of all ThemeMountain documentation sites
             <h1 class="text-white text-3xl md:text-5xl font-sans font-light">{{ $page->company }} Docs</h1>
             <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">An overview of all ThemeMountain documentation sites.</p>
             <a href="#open-source" data-offset="0" class="scroll-to bg-transparent hover:shadow-lg hover:bg-white hover:text-blue text-white text-sm py-3 px-6 border border-white rounded">
-                Get started
+                Get started &darr;
             </a>
         </div>
     </div>
