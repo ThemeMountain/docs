@@ -25,7 +25,7 @@ return [
             'version' => '1.0.0',
             'root' => 'email/sartre',
             'path' => 'email/sartre/{-filename}',
-            'thumbnail' => 'https://s3.envato.com/files/244074316/thumb.png',
+            'thumbnail' => 'https://s3.envato.com/files/247447963/thumb.png',
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [
