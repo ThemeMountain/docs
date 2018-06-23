@@ -32,7 +32,7 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
   .purgeCss({
     folders: ['source'],
     extensions: ['html', 'md', 'php', 'vue', 'svg'],
-    whitelistPatterns: [purgeCssWhitelist, /pre/, /code/, /copy/, /a(lgoli)?a/]
+    whitelistPatterns: [purgeCssWhitelist, /pre/, /code/, /copy/, /a(lgoli)?a/, /w-3\/5/]
   })
   .js('source/_assets/js/app.js', 'js/')
   .version()
