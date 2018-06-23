@@ -1,11 +1,8 @@
 const fs = require('fs-extra')
 const glob = require('glob-all')
 const minify = require('html-minifier').minify
-const argv = require('yargs').argv
 
-const env = argv.e || argv.env || 'local'
-
-module.exports.minify = (build_path) => {
+module.exports.minify = (build_path, env) => {
 
   if (env == 'production') {
     let files = glob.sync([build_path+'/**'])

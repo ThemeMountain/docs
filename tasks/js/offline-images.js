@@ -1,11 +1,8 @@
 const fs = require('fs-extra')
 const path = require('path')
 const cheerio = require('cheerio')
-const argv = require('yargs').argv
 
-const env = argv.e || argv.env || 'local'
-
-module.exports.fixPaths = (build_path) => {
+module.exports.fixPaths = (build_path, env) => {
 
   if (env == 'offline') {
 

@@ -2,13 +2,9 @@ const fs = require('fs-extra')
 const fm = require('front-matter')
 const path = require('path')
 const removeMd = require('remove-markdown')
-const argv = require('yargs').argv
-
 const AlgoliaSync = require('./algolia/index')
 
-const env = argv.e || argv.env || 'local'
-
-module.exports.run = () => {
+module.exports.run = (env) => {
 
   const config = JSON.parse(fs.readFileSync('./source/_assets/data/config.json') )
   const collections = JSON.parse(fs.readFileSync('./source/_assets/data/collections.json') )

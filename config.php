@@ -258,18 +258,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Broadcast
+    | Tunnel                 https://browsersync.io/docs/options#option-tunnel
     |--------------------------------------------------------------------------
     |
     | DocsFlow allows you to expose your localhost to the web when developing,
-    | by creating a http-https-tcp tunnel with ngrok.io.
+    | by creating a localhost tunnel with BrowserSync and localtunnel.me.
     |
     | This means you can share a live preview URL of what you're working on
     | with anyone in the world. Works only when using 'npm run watch'.
     |
+    | Set to `true` to get a random subdomain, or a valid subdomain string,
+    | to have BrowserSync try and use a custom subdomain name.
+    |
     */
 
-    'broadcast' => false,
+    'tunnel' => false,
 
     /*
     |--------------------------------------------------------------------------

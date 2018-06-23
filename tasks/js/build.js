@@ -1,79 +1,65 @@
+let bin = require('./bin')
 let fs = require('fs-extra')
 let argv = require('yargs').argv
-let ngrok = require('ngrok')
-let bin = require('./bin')
 let command = require('node-cmd')
+let execSync = require('child_process').execSync
 
 let AfterWebpack = require('on-build-webpack')
 let BrowserSync = require('browser-sync')
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 let Watch = require('webpack-watch')
+
 let SearchIndexer = require('./build-search-index')
 let OfflineImages = require('./offline-images')
 let HTMLMinifier = require('./minify-html')
 
-let config
-let build_path
 let browserSyncInstance
 let env = argv.e || argv.env || 'local'
 let port = argv.p || argv.port || 3000
 
+let config = JSON.parse(execSync('php ./tasks/php/config -e' + env))
+let pretty = (config.pretty == false) ? '--pretty=false ' : ''
+let build_path = config.build.destination || 'build_' + env
+
 module.exports = {
-    jigsaw: new AfterWebpack(() => {
+  jigsaw: new AfterWebpack(() => {
+    command.get(bin.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
+      if(error) {
+        console.log('\nJigsaw build failed.\n', stderr)
+        process.exit(1)
+      }
+      console.log(stdout)
 
-        command.get('php ./tasks/php/config -e' + env, (error, stdout, stderr) => {
-            if (error) {
-                console.log('\nCould not get config, please check the tasks/php/config script.\n', stderr)
-                process.exit(1)
-            }
+      SearchIndexer.run(env)
+      OfflineImages.fixPaths(build_path, env)
+      HTMLMinifier.minify(build_path, env)
 
-            config = JSON.parse(stdout)
-            build_path = config.build.destination
-            let pretty = (config && config.pretty == false) ? '--pretty=false ' : ''
+      if (browserSyncInstance) {
+        browserSyncInstance.reload()
+      }
+    });
+  }),
 
-            command.get(bin.path() + ' build ' + pretty + env, (error, stdout, stderr) => {
-                if(error) {
-                    console.log('\nJigsaw build failed.\n', stderr)
-                    process.exit(1)
-                }
-                console.log(stdout)
+  watch: (paths) => {
+    return new Watch({
+      options: { ignoreInitial: true },
+      paths: paths,
+    })
+  },
 
-                SearchIndexer.run()
-                OfflineImages.fixPaths(build_path)
-                HTMLMinifier.minify(build_path);
-
-                if (browserSyncInstance) {
-                    browserSyncInstance.reload()
-                }
-            });
-        });
-    }),
-
-    watch: (paths) => {
-        return new Watch({
-            options: { ignoreInitial: true },
-            paths: paths,
-        })
+  browserSync: (proxy) => {
+    return new BrowserSyncPlugin({
+      notify: false,
+      port: port,
+      proxy: proxy,
+      tunnel: config.tunnel || false,
+      server: proxy ? null : { baseDir: build_path },
     },
-
-    browserSync: (proxy) => {
-        return new BrowserSyncPlugin({
-            notify: false,
-            port: port,
-            proxy: proxy,
-            server: proxy ? null : { baseDir: 'build_' + env + '/' },
-        },
-        {
-            reload: false,
-            callback: () => {
-                browserSyncInstance = BrowserSync.get('bs-webpack-plugin');
-
-                if (config.broadcast) {
-                    ngrok.connect(port).then(url => {
-                        console.log('[Browsersync] Public URL: ' + url)
-                    })
-                }
-            },
-        })
-    },
+    {
+      reload: false,
+      callback: () => {
+        browserSyncInstance = BrowserSync.get('bs-webpack-plugin');
+      },
+    })
+  },
 };
