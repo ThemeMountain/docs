@@ -20,7 +20,7 @@ mix.webpackConfig({
 let env = argv.e || argv.env || 'local';
 let config = JSON.parse(execSync('php ./tasks/php/config -e' + env));
 let colors = keyfinder(config, 'color').filter((v, i, a) => a.indexOf(v) === i).join('|');
-let purgeCssWhitelist = new RegExp("(" + colors + ")");
+let purgeCssWhitelist = new RegExp(colors);
 
 mix.sass('source/_assets/sass/main.scss', 'css/')
   .options({
@@ -30,10 +30,9 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
     ]
   })
   .purgeCss({
-    enabled: true,
     folders: ['source'],
     extensions: ['html', 'md', 'php', 'vue', 'svg'],
-    whitelistPatterns: [purgeCssWhitelist]
+    whitelistPatterns: [purgeCssWhitelist, /pre/, /a(lgoli)?a/]
   })
   .js('source/_assets/js/app.js', 'js/')
   .version()
