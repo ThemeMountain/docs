@@ -6,8 +6,6 @@ search: false
 exclude_pagenav: true
 ---
 
-@section('body-classes', 'bg-gradient-' . $page->color)
-
 @section('meta')
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@thememountainco">
@@ -24,7 +22,7 @@ exclude_pagenav: true
 
 @section('body')
 
-    <div class="h-screen">
+    <div class="bg-gradient-green h-screen">
         @include('_layouts.default.partials.headers.master', ['color' => $page->color])
 
         <div class="container flex h-screen items-center">

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="@mix('/css/main.css')">
 </head>
 
-<body class="font-sans font-normal text-black leading-normal @yield('body-classes')">
+<body class="font-sans font-normal text-black leading-normal">
 
 <div id="app">
     @yield('body')

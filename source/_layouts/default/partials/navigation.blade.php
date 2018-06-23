@@ -6,12 +6,12 @@
                 @if($category == 'categories')
                     @foreach($sections as $heading => $items)
                     <li class="py-2">
-                        <h5 class="toggle-trigger cursor-pointer text-black hover:text-{{ $page->color }} text-base md:text-sm font-normal mb-3 -mt-2 p-0 {{ $page->hasChildrenActive($items) ? 'active' : ''}}">{{ $heading }}</h5>
+                        <h5 class="toggle-trigger cursor-pointer text-black hover:text-{{ $page->color ?? 'grey-dark' }} text-base md:text-sm font-normal mb-3 -mt-2 p-0 {{ $page->hasChildrenActive($items) ? 'active' : ''}}">{{ $heading }}</h5>
                         <div class="toggle overflow-hidden" aria-expanded="{{ $page->hasChildrenActive($items) ? 'true' : 'false'}}">
                             <ul class="px-2 leading-loose text-grey-dark list-reset">
                                 @foreach($items as $item)
                                     <li class="pb-1">
-                                        <a href="{{ $item['path'] }}" class="text-base md:text-sm hover:text-{{ $page->color }} {{ $page->active($item) ? 'text-'.$page->color : '' }}">
+                                        <a href="{{ $item['path'] }}" class="text-base md:text-sm text-{{ $page->active($item) ? $page->color : 'grey-dark' }} hover:text-{{ $page->color ?? 'grey-dark' }}">
                                             {{ $item['title'] }}
                                         </a>
                                     </li>
@@ -25,7 +25,7 @@
                     <ul class="leading-loose text-grey-dark list-reset">
                     @foreach($sections as $item)
                         <li class="pb-1">
-                            <a href="{{ $item['path'] }}" class="text-base md:text-sm hover:text-grey-darkest {{ $page->active($item['path']) ? 'text-'.$page->color : '' }}">
+                            <a href="{{ $item['path'] }}" class="text-base md:text-sm text-{{ $page->active($item['path']) ? $page->color : 'grey-dark' }} hover:text-grey-darkest">
                                 {{ $item['title'] }}
                             </a>
                         </li>

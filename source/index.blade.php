@@ -20,13 +20,13 @@ description: Listing of all ThemeMountain documentation sites
 
 @section('body')
 
-<div class="bg-gradient-{{ $page->color }} h-screen">
+<div class="bg-gradient-light-ocean h-screen">
     @include('_layouts.default.partials.headers.master', ['color' => $page->color])
 
     <div class="flex h-screen items-center">
         <div class="mx-auto text-center content">
-            <h1 class="text-white text-3xl md:text-5xl font-sans font-light">{{ $page->company }} Docs</h1>
-            <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-normal font-hind-madurai mb-8">An overview of all ThemeMountain documentation sites.</p>
+            <h1 class="text-white text-3xl md:text-5xl font-hind-madurai font-light">{{ $page->company }} Docs</h1>
+            <p class="w-2/3 mx-auto text-white text-md md:text-2xl font-hind-madurai leading-normal mb-10">An overview of all ThemeMountain documentation sites.</p>
             <a href="#open-source" data-offset="0" class="scroll-to bg-transparent hover:shadow-lg hover:bg-white hover:text-blue text-white text-sm py-3 px-6 border border-white rounded">
                 Get started &darr;
             </a>
@@ -42,11 +42,11 @@ description: Listing of all ThemeMountain documentation sites
         </div>
 
         <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
+            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
-                    <h3 class="font-light">Timber</h3>
-                    <p class="w-full text-grey-dark">Our HTML and CSS framework.</p>
-                    <a href="" class="text-sm text-blue hover:underline">Timber documentation &rarr;</a>
+                    <h3 class="font-light">Acorn</h3>
+                    <p class="w-full text-grey-dark">Golden typography grid email framework.</p>
+                    <a href="/acorn" class="text-sm text-blue hover:underline">Acorn documentation &rarr;</a>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
@@ -56,11 +56,11 @@ description: Listing of all ThemeMountain documentation sites
                     <a href="" class="text-sm text-blue hover:underline">Pine documentation &rarr;</a>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0">
+            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
-                    <h3 class="font-light">Acorn</h3>
-                    <p class="w-full text-grey-dark">Golden typography grid email framework.</p>
-                    <a href="/acorn" class="text-sm text-blue hover:underline">Acorn documentation &rarr;</a>
+                    <h3 class="font-light">Timber</h3>
+                    <p class="w-full text-grey-dark">Our HTML and CSS framework.</p>
+                    <a href="" class="text-sm text-blue hover:underline">Timber documentation &rarr;</a>
                 </div>
             </div>
         </div>
@@ -96,14 +96,14 @@ description: Listing of all ThemeMountain documentation sites
     <div class="container">
         <div class="flex flex-wrap items-center mb-8">
             <h2 class="w-full lg:w-2/5 text-3xl font-sans font-light leading-none text-grey-darkest pb-4 lg:p-0">Email Templates</h2>
-            <p class="w-full lg:w-3/5 font-hind-madurai text-grey-dark text-lg text-left lg:text-right mb-0">Detailed documentation for our email template products. Whether you're just starting out or are already familiar with HTML emails, this would be a good place to start.</p>
+            <p class="w-full lg:w-3/5 font-hind-madurai text-grey-dark text-lg text-left lg:text-right mb-0">Detailed documentation for our email template products.</p>
         </div>
 
         <div class="flex flex-wrap -mx-3">
             <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Sartre</h3>
-                    <p class="w-full text-grey-dark">Documentation for our latest email template.</p>
+                    <p class="w-full text-grey-dark">Sartre, the responsive email toolkit.</p>
                     <a href="/email/sartre/" class="text-sm text-blue hover:underline">Sartre documentation &rarr;</a>
                 </div>
             </div>

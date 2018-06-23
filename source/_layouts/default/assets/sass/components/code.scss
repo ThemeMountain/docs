@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 code {
   @apply .inline-block .bg-grey-lighter .text-xs .py-1 .px-2 .leading-none .font-mono;
 }
@@ -29,9 +30,8 @@ kbd {
 }
 
 .code-block {
-  @apply .relative;
-
   &:hover .copy-to-clipboard {
     display: block;
   }
 }
+/* purgecss end ignore */

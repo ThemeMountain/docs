@@ -23,6 +23,7 @@
     "glob-all": "^3.1.0",
     "hasbin": "^1.2.3",
     "html-minifier": "^3.5.16",
+    "keyfinder": "^1.0.0",
     "laravel-mix": "^2.1.11",
     "laravel-mix-purgecss": "^2.2.0",
     "lodash": "^4.17.5",

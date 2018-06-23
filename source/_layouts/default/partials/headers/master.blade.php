@@ -1,14 +1,14 @@
 <nav class="{{ isset($type) && $type == 'fixed' ? 'fixed' : 'absolute' }} w-full">
     <div class="container flex flex-col md:flex-row py-4">
         <div class="w-full md:w-1/4 text-center md:text-left">
-            <a href="{{ $page->company_url }}">
+            <a href="{{ $page->baseUrl }}">
                 <img src="{{ $page->getAssetPath('/') }}/img/logo-light.png" alt="ThemeMountain" class="mb-4 md:mb-0 w-1/2">
             </a>
         </div>
         <div class="w-full md:w-3/4">
             <ul class="list-reset flex justify-center md:justify-end">
                 <li class="mx-4 md:mx-6">
-                <a href="{{ $page->support_url }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
+                    <a href="{{ $page->support_url }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
                 </li>
                 <li class="dropdown mx-4 md:mx-6 relative">
                     <a href="{{ $page->social->envato }}" class="font-bold text-sm text-{{ $color }}-lighter hover:text-{{ $color }}-lightest pb-4 inline-block">Our Products</a>

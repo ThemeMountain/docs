@@ -2,7 +2,7 @@
     <div class="container">
         <div class="flex flex-wrap -mx-3">
             <div class="w-full sm:w-1/2 px-3 mb-8 sm:mb-0">
-                <a href="{{ $page->company_url }}">
+                <a href="{{ $page->baseUrl }}">
                     <img src="/img/logo-dark.png" alt="{{ $page->company }} logo" width="150" class="mb-2">
                 </a>
                 <p class="text-sm text-grey">&copy; {{ date('Y') }} {{ $page->company }}. All rights reserved.</p>
