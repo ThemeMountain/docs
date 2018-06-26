@@ -42,14 +42,21 @@ description: Listing of all ThemeMountain documentation sites
         </div>
 
         <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0">
+            <div class="w-full md:w-1/3 px-3 mb-6 opacity-25 pointer-events-none">
+                <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
+                    <h3 class="font-light">Maizzle</h3>
+                    <p class="w-full text-grey-dark">The email framework that puts you in control.</p>
+                    <a href="" class="text-sm text-blue hover:underline">Maizzle documentation &rarr;</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-3 mb-6">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Acorn</h3>
                     <p class="w-full text-grey-dark">Golden typography grid email framework.</p>
                     <a href="/acorn" class="text-sm text-blue hover:underline">Acorn documentation &rarr;</a>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
+            <div class="w-full md:w-1/3 px-3 mb-6 opacity-25 pointer-events-none">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Pine</h3>
                     <p class="w-full text-grey-dark">12-column grid, responsive email framework.</p>
