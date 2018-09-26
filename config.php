@@ -60,6 +60,29 @@ return [
             ],
         ],
 
+        'pine' => [
+            'color' => 'teal',
+            'name' => 'Pine Email Framework',
+            'version' => '2.1.0',
+            'root' => 'pine',
+            'path' => 'pine/{-filename}',
+            'thumbnail' => '/img/acorn/acorn-logo.png',
+            'sort' => 'page_order',
+            'search' => [
+                'algolia' => [
+                    'appID' => '',
+                    'appSecret' => '',
+                    'searchKey' => '',
+                    'indexName' => 'pine_docs',
+                ],
+            ],
+            'social' => [
+                'github' => 'https://github.com/ThemeMountain/pine',
+                'twitter' => 'https://twitter.com/thememountainco',
+                'envato' => 'https://themeforest.net/user/thememountain/portfolio?ref=thememountain',
+            ],
+        ],
+
         'wordpress' => [
             'color' => 'blue',
             'name' => 'WordPress',

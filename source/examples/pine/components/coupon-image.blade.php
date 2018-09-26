@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/coupon-image.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,9 +149,9 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
-                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
                     <td class="spacer py-sm-16" height="32"></td>
                   </tr>
@@ -159,15 +159,28 @@ exclude_pagenav: true
                     <td style="padding: 0 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
+                          <td class="col pb-sm-16" width="260" style="padding: 0 8px;">
+                            <img src="https://picsum.photos/520/520?image=1062" class="align-sm-center" width="260" alt="Coupon Image">
                           </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col pt-sm-16" width="260" style="padding: 0 8px;">
+                            <table class="full-width-sm align-sm-center" cellpadding="0" cellspacing="0" role="presentation" width="260">
+                              <tr>
+                                <td align="center" width="100%" style="padding: 16px 8px; border: 3px dashed #CCCCCC; color: #000000;">
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                  <div style="color: #999999; font-size: 13px; margin-bottom: 10px; line-height: 13px; text-transform: uppercase;">Mondays suck, so</div>
+                                  <div style="font-size: 32px; font-weight: 700; line-height: 40px;">Get $25 OFF</div>
+                                  <div style="color: #999999; font-size: 13px; margin-bottom: 30px; text-transform: uppercase;">Your next order</div>
+                                  <table cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <th bgcolor="#4C4054" style="mso-padding-alt: 4px 24px 8px;">
+                                        <a href="http://thememountain.com" target="_blank" style="color: #FFFFFF; display: block; font-size: 13px; padding: 8px 24px; text-decoration: none;">REDEEM COUPON &rarr;</a>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
@@ -187,3 +200,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

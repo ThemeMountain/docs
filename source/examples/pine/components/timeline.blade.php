@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/timeline.html
 search: false
 exclude_pagenav: true
 ---
@@ -31,7 +31,7 @@ exclude_pagenav: true
 
       /*DEMO ONLY*/
       html, body {height: 100%;}
-      body {display: flex; align-items: center; background-color: #F1F5F8; overflow: hidden;}
+      body {background-color: #F1F5F8;}
 
       @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
       @media only screen {
@@ -149,32 +149,84 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td style="padding: 32px 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
+                          <td class="col" width="96" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td class="pt-sm-0" style="font-size: 14px; padding-top: 32px;" contenteditable="true">2007 - 2008</td>
+                              </tr>
+                            </table>
                           </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="hide-sm" align="center" width="48">
+                            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+                          </td>
+                          <td class="col" width="376" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td class="py-sm-8" style="padding-top: 32px;" contenteditable="true">
+                                  <h4 style="margin: 0 0 15px;">Massachusetts Institute of Technology</h4>
+                                  <p style="margin: 0;">Co-wrote a book on the Semantic Web and Best Practices for Developers.</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                          <td class="col" width="96" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td style="font-size: 14px; padding-top: 32px;" contenteditable="true">2004 - 2006</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hide-sm" align="center" width="48">
+                            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+                          </td>
+                          <td class="col" width="376" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td class="py-sm-8" style="padding-top: 32px;" contenteditable="true">
+                                  <h4 style="margin: 0 0 15px;">Parsons School of Design</h4>
+                                  <p style="margin: 0;">Awarded Best Designer of the Year voted by student and teacher body.</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                          <td class="col" width="96" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td style="font-size: 14px; padding-top: 32px;" contenteditable="true">2002 - 2004</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hide-sm" align="center" width="48">
+                            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+                          </td>
+                          <td class="col" width="376" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td class="py-sm-8" style="padding-top: 32px;" contenteditable="true">
+                                  <h4 style="margin: 0 0 15px;">Berkley College</h4>
+                                  <p style="margin: 0;">Two year program with a focus on design principles and Javascript development.</p>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +239,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

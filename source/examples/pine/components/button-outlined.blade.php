@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/button-outlined.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,13 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="left" style="padding: 24px;">
 
-                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                <table class="full-width-sm" cellpadding="0" cellspacing="0" role="presentation">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
-                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
+                    <th style="border: 2px solid #34BF49; border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
+                      <a href="http://thememountain.com" class="col" style="color: #34BF49; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+                    </th>
                   </tr>
                 </table>
 
@@ -187,3 +168,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

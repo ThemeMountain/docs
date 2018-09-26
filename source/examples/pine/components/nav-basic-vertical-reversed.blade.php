@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/nav-basic-vertical-reversed.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,37 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td style="padding: 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
-                          </td>
+                            <td class="col text-sm-center pb-sm-16" width="122" style="padding: 0 8px;">
+                                <img src="https://picsum.photos/160/160/?image=538" alt="Logo" width="80" style="border-radius: 50%;">
+                            </td>
+                            <td class="col" align="right" width="398" style="padding: 0 8px; vertical-align: middle;">
+                                <table class="nav nav-sm-vertical align-sm-center text-sm-center full-width-sm" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr class="full-width-sm">
+                                    <td class="nav-item px-sm-8 stack-sm-last" style="padding-right: 24px; display: inline-block;">
+                                      <a href="http://example.com" style="color: #7E95A7; font-size: 16px; text-decoration: none;">News</a>
+                                    </td>
+                                    <td class="nav-item px-sm-8 stack-sm-last" style="padding-right: 24px; display: inline-block;">
+                                      <a href="http://example.com" style="color: #7E95A7; font-size: 16px; text-decoration: none;">Services</a>
+                                    </td>
+                                    <td class="nav-item px-sm-8 stack-sm-first" style="padding-right: 24px; display: inline-block;">
+                                      <a href="http://example.com" style="color: #7E95A7; font-size: 16px; text-decoration: none;">Work</a>
+                                    </td>
+                                    <td class="nav-item px-sm-8 stack-sm-top" style="display: inline-block;">
+                                      <a href="http://example.com" style="color: #7E95A7; font-size: 16px; text-decoration: none;">Store</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +192,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/alert-filled.html
 search: false
 exclude_pagenav: true
 ---
@@ -153,28 +153,9 @@ exclude_pagenav: true
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
-                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
-                          </td>
-                        </tr>
-                      </table>
+                    <td bgcolor="#0099E5" style="color: #FFFFFF; padding: 16px 32px;">
+                      This is an alert with background colour
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +168,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

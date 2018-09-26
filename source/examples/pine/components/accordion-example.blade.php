@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/accordion.html
 search: false
 exclude_pagenav: true
 ---
@@ -153,28 +153,68 @@ exclude_pagenav: true
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
                     <td style="padding: 0 24px;">
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col" width="100%" style="padding: 0 8px;">
+                            <div style="margin-bottom: 24px;">
+                              <a class="toggle-trigger" style="text-decoration: none;">
+                                <button class="toggle-trigger" style="background-color: #EEEEEE; margin: 0; padding: 0; display: block; width: 100%; text-align: left; border: none; outline: none; font-size: 13px;">
+                                  <table bgcolor="#EEEEEE" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tr>
+                                      <td style="padding: 16px;">Panel title</td>
+                                    </tr>
+                                  </table>
+                                </button>
+                              </a>
+                              <div class="toggle-content">
+                                <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border: 1px solid #EEEEEE;">
+                                  <tr>
+                                    <td style="padding: 16px;">
+                                      <h2 style="font-size: 26px;">Lorem ipsum dolor</h2>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <div>
+                              <a class="toggle-trigger" style="text-decoration: none;">
+                                <button class="toggle-trigger" style="background-color: #EEEEEE; margin: 0; padding: 0; display: block; width: 100%; text-align: left; border: none; outline: none; font-size: 13px;">
+                                  <table bgcolor="#EEEEEE" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tr>
+                                      <td style="padding: 16px;">Panel title</td>
+                                    </tr>
+                                  </table>
+                                </button>
+                              </a>
+                              <div class="toggle-content">
+                                <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border: 1px solid #EEEEEE;">
+                                  <tr>
+                                    <td style="padding: 16px;">
+                                      <h2 style="font-size: 26px;">Lorem ipsum dolor</h2>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                       </table>
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +227,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

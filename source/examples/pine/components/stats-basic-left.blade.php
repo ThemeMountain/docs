@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/stats-basic-left.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,30 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
-                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <td style="padding: 0 8px;">
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                      <table class="text-sm-center" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
+                          <td class="col pb-sm-16" width="146" style="padding: 0 24px;">
+                            <h4 style="margin: 0 0 8px;">New Clients '14</h4>
+                            <div style="font-size: 42px; line-height: 100%;">2,200+</div>
                           </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col pb-sm-16 pt-sm-16 borderless-sm" width="146" style="border-left: 1px solid #EEEEEE; padding: 0 24px;">
+                            <h4 style="margin: 0 0 8px;">Accounts Since '10</h4>
+                            <div style="font-size: 42px; line-height: 100%;">4,000+</div>
+                          </td>
+                          <td class="col pt-sm-16 borderless-sm" width="146" style="border-left: 1px solid #EEEEEE; padding: 0 24px;">
+                            <h4 style="margin: 0 0 8px;">Awards Earned</h4>
+                            <div style="font-size: 42px; line-height: 100%;">860+</div>
                           </td>
                         </tr>
                       </table>
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +185,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

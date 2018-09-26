@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/pricing-3-col-full-width.html
 search: false
 exclude_pagenav: true
 ---
@@ -31,7 +31,7 @@ exclude_pagenav: true
 
       /*DEMO ONLY*/
       html, body {height: 100%;}
-      body {display: flex; align-items: center; background-color: #F1F5F8; overflow: hidden;}
+      body {background-color: #F1F5F8;}
 
       @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
       @media only screen {
@@ -149,32 +149,90 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td>
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
+                          <td class="col" width="200">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td align="center" style="padding: 32px; color: #666666; font-size: 13px;">
+                                  <div style="color: #000000; font-size: 16px; font-weight: 700; margin-bottom: 16px;">Starter Edition</div>
+                                  <div style="color: #000000; font-size: 42px; line-height: 100%;"><span style="font-size: 16px; mso-text-raise: 75%; vertical-align: text-top;">$</span>2.99</div>
+                                  <div style="color: #CCCCCC; font-size: 16px; line-height: 100%; margin-bottom: 16px;">/MO</div>
+                                  <div style="line-height: 42px;">LowFi Sound Quality</div>
+                                  <div style="line-height: 42px;">Online Listening</div>
+                                  <div style="line-height: 42px;">Advertising</div>
+                                  <div style="line-height: 42px;">-</div>
+                                  <div style="line-height: 42px;">-</div>
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                  <table cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <th style="border: 1px solid #933DED; mso-padding-alt: 4px 32px 8px;">
+                                        <a href="http://thememountain.com" style="color: #933DED; display: block; font-size: 13px; padding: 8px 32px; text-decoration: none;">Sign Up</a>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col" width="200">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td align="center" bgcolor="#933DED" style="padding: 32px; color: #FFFFFF; font-size: 13px;">
+                                  <div style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Premium Edition</div>
+                                  <div style="font-size: 42px; line-height: 100%;"><span style="font-size: 16px; mso-text-raise: 75%; vertical-align: text-top;">$</span>9.99</div>
+                                  <div style="color: #CCCCCC; font-size: 16px; line-height: 100%; margin-bottom: 16px;">/MO</div>
+                                  <div style="line-height: 42px;">HiFi Sound Quality</div>
+                                  <div style="line-height: 42px;">Online/Offline Listening</div>
+                                  <div style="line-height: 42px;">No Advertising</div>
+                                  <div style="line-height: 42px;">-</div>
+                                  <div style="line-height: 42px;">-</div>
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                  <table cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <th style="border: 1px solid #FFFFFF; mso-padding-alt: 4px 32px 8px;">
+                                        <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 8px 32px; text-decoration: none;">Sign Up</a>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="col" width="200">
+                            <table cellpadding="0" cellspacing="0" role="presentation" style="width: 100%;">
+                              <tr>
+                                <td align="center" style="padding: 32px; color: #666666; font-size: 13px;">
+                                  <div style="color: #000000; font-size: 16px; font-weight: 700; margin-bottom: 16px;">Pro Edition</div>
+                                  <div style="color: #000000; font-size: 42px; line-height: 100%;"><span style="font-size: 16px; mso-text-raise: 75%; vertical-align: text-top;">$</span>19.99</div>
+                                  <div style="color: #CCCCCC; font-size: 16px; line-height: 100%; margin-bottom: 16px;">/MO</div>
+                                  <div style="line-height: 42px;">HiFi Sound Quality</div>
+                                  <div style="line-height: 42px;">On/Offline Listening</div>
+                                  <div style="line-height: 42px;">No Advertising</div>
+                                  <div style="line-height: 42px;">Infinite Song Plays</div>
+                                  <div style="line-height: 42px;">300K Video Plays</div>
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                  <table cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <th style="border: 1px solid #933DED; mso-padding-alt: 4px 32px 8px;">
+                                        <a href="http://thememountain.com" style="color: #933DED; display: block; font-size: 13px; padding: 8px 32px; text-decoration: none;">Sign Up</a>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
+                      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +245,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

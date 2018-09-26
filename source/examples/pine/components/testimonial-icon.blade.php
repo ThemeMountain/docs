@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/testimonial-icon.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,23 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
                     <td style="padding: 0 24px;">
+                      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col" width="100%" style="padding: 0 8px;">
+                            <img src="https://i.imgur.com/U1j9njD.png" alt="Quote" width="33">
+                            <h3 style="font-weight: 500; font-style: italic;">Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.</h3>
+                            <small style="color: #969AA1; text-transform: uppercase;">Steve Jobs</small>
                           </td>
                         </tr>
                       </table>
+                      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +178,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/spacer-universal.html
 search: false
 exclude_pagenav: true
 ---
@@ -31,7 +31,7 @@ exclude_pagenav: true
 
       /*DEMO ONLY*/
       html, body {height: 100%;}
-      body {display: flex; align-items: center; background-color: #F1F5F8; overflow: hidden;}
+      body {background-color: #F1F5F8;}
 
       @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
       @media only screen {
@@ -147,34 +147,31 @@ exclude_pagenav: true
     <table class="wrapper" bgcolor="#F1F5F8" cellpadding="16" cellspacing="0" role="presentation" width="100%">
       <tr>
         <td align="center">
+          <div class="spacer py-sm-16" style="background: #CCDAE5; line-height: 32px;">&zwnj;</div>
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td style="padding: 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col" width="100%" style="padding: 0 8px;">
+                            <p style="margin: 0;">The grey area above is an Universal Spacer added just before the Container table. Though barely visible in our example, this will stretch from edge to edge, as it's not restricted by the Container's width.</p>
+                            <br>
+                            <p style="margin: 0;">The following Spacers are added inside a Column, right after paragraphs:</p>
+                            <div class="spacer py-sm-16" style="background: #CCDAE5; line-height: 32px;">&zwnj;</div>
+                            <br>
+                            <p style="margin: 0;">Universal Spacers will be reset to 0 height on mobile, to allow for full customisation. We can keep the desktop height by adding inline CSS height. This 48px Universal Spacer looks the same in all email clients:</p>
+                            <div class="spacer" style="background: #CCDAE5; line-height: 48px; height: 48px;">&zwnj;</div>
+                            <br>
+                            <p style="margin: 0;">We can also reduce or increase the desktop height on mobile. Here, a Spacer that is 64px high on desktop is reduced to 16px on mobile:</p>
+                            <div class="spacer py-sm-8" style="background: #CCDAE5; line-height: 64px;">&zwnj;</div>
                           </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +184,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

@@ -160,7 +160,8 @@ We use both [Email on Acid](https://www.emailonacid.com/) and [Litmus](https://l
     </tbody>
 </table>
 
-<sup>1</sup> Gmail app used with a non-Google account (a.k.a. GANGA) does not currently support media queries, so it will render the desktop version. It also doesn't support background images.
+<sup>1</sup> Gmail app used with a non-Google account (a.k.a. GANGA) does not currently support media queries, so it will render the desktop version. 
+It also doesn't support background images.
 
 #### Other notes:
 
@@ -171,9 +172,11 @@ We use both [Email on Acid](https://www.emailonacid.com/) and [Litmus](https://l
 
 ## Responsive, not hybrid
 
-Acorn is a _responsive_ email framework, meaning it relies on CSS `@media` queries for proper rendering on mobile devices. This means that email clients which do not support embedded CSS or media queries will show the desktop layout.
+Pine is a _responsive_ email framework, meaning it relies on CSS `@media` queries for proper rendering on mobile devices. 
+This means that email clients which do not support embedded CSS or media queries will show the desktop layout.
 
 While hybrid coding does currently hold an advantage in this case, we have decided not to use it for the following reasons:
 
-1. Hybrid requires the use of 'ghost tables' - HTML table structures wrapped inside Outlook-specific HTML comments. They are needed with hybrid, because Outlook does not support the max-width CSS property. However, this adds extra weight to the HTML size and, being basically a comment, it's very hard to manipulate automatically (i.e. drag'n'drop builders, CSS inlining).
+1. Hybrid requires the use of 'ghost tables' - HTML table structures wrapped inside Outlook-specific HTML comments. They are needed with hybrid, because Outlook does not support the max-width CSS property. 
+However, this adds extra weight to the HTML size and, being basically a comment, it's very hard to manipulate automatically (i.e. drag'n'drop builders, CSS inlining).
 2. Starting with Gmail's support for media queries in email back in 2016, we can clearly see the trend is to go _towards_ supporting responsive, not away from it. It'll probably take a bit of time, but once Gmail will support media queries in the Gmail app for non-Google accounts too, there will be no reasonable justification to use hybrid coding.

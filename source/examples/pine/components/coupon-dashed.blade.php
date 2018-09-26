@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/coupon-dashed.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,49 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center" style="padding: 24px;">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
                   <tr>
                     <td style="padding: 0 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col" align="center" width="100%" style="padding: 0 8px;">
+                            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tr>
+                                <td class="spacer py-sm-16" height="32"></td>
+                              </tr>
+                              <tr>
+                                <td class="px-sm-8" align="center" width="100%" style="padding: 32px; border: 4px dashed #CCCCCC; color: #000000;">
+                                  <table align="center" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
+                                    <tr>
+                                      <th style="font-size: 96px; line-height: 100%; word-break: break-all;">25</th>
+                                      <th style="vertical-align: middle;">
+                                        <div style="font-size: 48px; line-height: 48px;">%</div>
+                                        <div style="font-size: 32px; line-height: 32px; mso-line-height-rule: exactly; mso-text-raise: 2px;">OFF</div>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                  <div style="color: #999999;">With coupon <span style="border: 1px solid #EA4B35; border-radius: 3px; color: #EA4B35; display: inline-block; font-size: 90%; padding: 1px 5px;">25OFFTODAY</span></div>
+                                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                                  <table cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <th bgcolor="#000000" style="mso-padding-alt: 6px 32px 12px;">
+                                        <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 32px; text-decoration: none;">REDEEM COUPON &rarr;</a>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                  <div class="spacer py-sm-8" style="line-height: 16px;">&zwnj;</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="spacer py-sm-16" height="32"></td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +204,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

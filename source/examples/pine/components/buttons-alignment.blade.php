@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/buttons-alignment.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,63 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center" style="padding: 24px;">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
                   <tr>
                     <td style="padding: 0 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
-                          </td>
+                            <td class="col" align="center" width="100%" style="padding: 0 8px;">
+                                <h2 style="font-weight: 300;">Right-aligned</h2>
+                                <table align="right" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr>
+                                    <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
+                                      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+                                    </th>
+                                  </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tr>
+                                    <td class="divider" style="padding: 24px 0;">
+                                      <div style="background: #EEEEEE; height: 1px; line-height: 1px;">&zwnj;</div>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <h2 style="font-weight: 300;">Right-aligned on desktop, left-aligned on mobile</h2>
+                                <table class="align-sm-left" align="right" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr>
+                                    <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
+                                      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+                                    </th>
+                                  </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tr>
+                                    <td class="divider" style="padding: 24px 0;">
+                                      <div style="background: #EEEEEE; height: 1px; line-height: 1px;">&zwnj;</div>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <h2 style="font-weight: 300;">Centered on desktop, right-aligned on mobile</h2>
+                                <table class="align-sm-right" align="center" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr>
+                                    <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
+                                      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+                                    </th>
+                                  </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tr>
+                                    <td class="divider" style="padding: 24px 0;">
+                                      <div style="background: #EEEEEE; height: 1px; line-height: 1px;">&zwnj;</div>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +218,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

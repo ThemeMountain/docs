@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/coupon-filled.html
 search: false
 exclude_pagenav: true
 ---
@@ -149,32 +149,30 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td class="p-sm-16" bgcolor="#008DF6" width="100%" style="padding: 32px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
+                          <td class="col p-sm-16" align="center" width="100%" style="padding: 32px; border: 1px solid #FFFFFF; color: #FFFFFF;">
+                            <div style="font-size: 13px; text-transform: uppercase;">Thanks for signing up!<br>Enjoy</div>
+                            <div style="font-size: 72px; font-weight: 700; line-height: 100%;">$10 OFF</div>
+                            <div class="spacer py-sm-8" style="line-height: 16px;">&zwnj;</div>
+                            <div style="font-size: 20px; letter-spacing: 2px; line-height: 100%; text-transform: uppercase;">Your first order</div>
+                            <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                            <table cellpadding="0" cellspacing="0" role="presentation">
+                              <tr>
+                                <th bgcolor="#FFFFFF" style="mso-padding-alt: 6px 32px 12px;">
+                                  <a href="http://thememountain.com" style="color: #008DF6; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 32px; text-decoration: none;">SHOP NOW</a>
+                                </th>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +185,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+

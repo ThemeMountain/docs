@@ -1,5 +1,5 @@
 ---
-permalink: acorn/includes/grid/col-stacking-mobile.html
+permalink: acorn/includes/components/feature-columns.html
 search: false
 exclude_pagenav: true
 ---
@@ -31,7 +31,7 @@ exclude_pagenav: true
 
       /*DEMO ONLY*/
       html, body {height: 100%;}
-      body {display: flex; align-items: center; background-color: #F1F5F8; overflow: hidden;}
+      body {background-color: #F1F5F8;}
 
       @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
       @media only screen {
@@ -149,32 +149,38 @@ exclude_pagenav: true
         <td align="center">
           <table class="container" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="600">
             <tr>
-              <td align="left">
+              <td align="center">
 
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0 24px;">
+                    <td style="padding: 24px;">
                       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tr>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Full width on mobile</p>
-                            <p>These columns use the required <code>.col</code> class.</p>
-                          </td>
-                          <td class="col" width="260" style="padding: 0 8px;">
-                            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                            <p style="color: #999999; font-size: 12px; font-weight: 400; margin: 0;">Also full width on mobile</p>
-                            <p>On mobile, this makes them 100% wide, so they stack.</p>
-                          </td>
+                            <td class="col" width="100%" style="padding: 0 8px;">
+                                <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tr>
+                                    <td>
+                                      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                        <tr>
+                                          <td class="col" align="center" width="236" style="padding: 32px;">
+                                            <img src="https://i.imgur.com/XqzhK67.png" width="36" alt="Download">
+                                            <h3>Download our app</h3>
+                                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                          </td>
+                                          <td class="col" align="center" bgcolor="#7E57C2" width="236" style="padding: 32px;">
+                                            <img src="https://i.imgur.com/BuBHL3w.png" width="36" alt="Download">
+                                            <h3 style="color: #FFFFFF;">Take control</h3>
+                                            <div style="color: #FFFFFF;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
                         </tr>
                       </table>
                     </td>
-                  </tr>
-                  <tr>
-                    <td class="spacer py-sm-16" height="32"></td>
                   </tr>
                 </table>
 
@@ -187,3 +193,4 @@ exclude_pagenav: true
 
   </body>
 </html>
+
