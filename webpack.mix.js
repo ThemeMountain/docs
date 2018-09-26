@@ -13,7 +13,7 @@ mix.webpackConfig({
   plugins: [
     build.jigsaw,
     build.browserSync(),
-    build.watch(['source/**/*.md', '*.php', '*.js']),
+    build.watch(['source/**/*.md', '*.php', '*.js', 'source/**/*.scss', '!source/**/_tmp/*', '!vendor/**/*', '!node_modules/**/*']),
   ]
 });
 
