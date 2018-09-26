@@ -42,11 +42,11 @@ description: Listing of all ThemeMountain documentation sites
         </div>
 
         <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/3 px-3 mb-6 opacity-25 pointer-events-none">
+            <div class="w-full md:w-1/3 px-3 mb-6">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Maizzle</h3>
                     <p class="w-full text-grey-dark">The email framework that puts you in control.</p>
-                    <a href="" class="text-sm text-blue hover:underline">Maizzle documentation &rarr;</a>
+                    <a href="https://maizzle.com" target="_blank" class="text-sm text-blue hover:underline">Maizzle documentation &rarr;</a>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6">
