@@ -29,9 +29,9 @@ return [
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [
-                    'appID' => getenv('SARTRE_EMAIL_ALGOLIA_APP_ID'),
-                    'appSecret' => getenv('SARTRE_EMAIL_ALGOLIA_SECRET'),
-                    'searchKey' => getenv('SARTRE_EMAIL_ALGOLIA_SEARCH'),
+                    'appID' => 'CT7QSO9C70',
+                    'appSecret' => '4bd1ce3d67eae6d7467ba6c2ed908e28',
+                    'searchKey' => '0595b891776917fca3d49302cfe7c3e1',
                     'indexName' => 'sartre_email_docs',
                 ],
             ],
@@ -47,9 +47,9 @@ return [
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [
-                    'appID' => getenv('ACORN_ALGOLIA_APP_ID'),
-                    'appSecret' => getenv('ACORN_ALGOLIA_SECRET'),
-                    'searchKey' => getenv('ACORN_ALGOLIA_SEARCH'),
+                    'appID' => '3LWQAP7M66',
+                    'appSecret' => 'b49dfae3e51221a18a787bf08cd5c9ac',
+                    'searchKey' => '31f8a4aaf91c407a5b341ebf24d9a6ec',
                     'indexName' => 'acorn_docs',
                 ],
             ],
@@ -67,9 +67,9 @@ return [
             'path' => 'wordpress/{-filename}',
             'search' => [
                 'algolia' => [
-                    'appID' => getenv('WORDPRESS_ALGOLIA_APP_ID'),
-                    'appSecret' => getenv('WORDPRESS_ALGOLIA_SECRET'),
-                    'searchKey' => getenv('WORDPRESS_ALGOLIA_SEARCH'),
+                    'appID' => 'GTXXW9109G',
+                    'appSecret' => '7120ac0458467cda5b77ae142c1a847f',
+                    'searchKey' => '9a2cb68a1f7b96bef2975c7369b19f55',
                     'indexName' => 'wordpress_docs',
                 ],
             ],
