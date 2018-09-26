@@ -1,0 +1,9 @@
+[build]
+
+command = "npm run production"
+publish = "docs"
+
+
+[build.environment]
+
+PHP_VERSION="7.2"
