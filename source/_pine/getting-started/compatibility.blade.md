@@ -1,6 +1,6 @@
 ---
 title: Compatibility
-description: See which email clients the Acorn Email Framework is compatible with
+description: See which email clients the Pine Email Framework is compatible with
 tags: compatibility, rendering, clients
 page_order: 3
 navigation:
@@ -8,11 +8,12 @@ navigation:
   order: 3
 ---
 
-# List of email clients that Acorn is compatible with
+# List of email clients that Pine is compatible with
 
-Acorn has been (and is regularly) tested to render well in all major email clients.
+Pine has been (and is regularly) tested to render well in all major email clients.
 
-We use both [Email on Acid](https://www.emailonacid.com/) and [Litmus](https://litmus.com/) to test. The following table shows all major email clients that Acorn supports and is compatible with:
+We use both [Email on Acid](https://www.emailonacid.com/) and [Litmus](https://litmus.com/) to test. 
+The following table shows all major email clients that Pine supports and is compatible with:
 
 <table class="rounded text-left border text-grey-dark mt-8 mb-6 w-full text-sm" cellpadding="16" cellspacing="0">
     <thead class="bg-grey-lighter text-black">

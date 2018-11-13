@@ -13,7 +13,7 @@ navigation:
 # Custom stacking order for columns on mobile
 
 With email on mobile, you sometimes need to reverse the order in which stacked columns appear. You may even need to set a custom 
-stacking order for layouts with 3+ columns. Acorn comes with pre-built layout examples that will help you achieve this.
+stacking order for layouts with 3+ columns. Pine comes with pre-built layout examples that will help you achieve this.
 
 We have included two examples:
 

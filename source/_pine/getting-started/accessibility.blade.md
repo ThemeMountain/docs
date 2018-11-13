@@ -32,7 +32,7 @@ This prevents breaking reading patterns by ensuring proper character rendering, 
 
 ## Typography
 
-Acorn uses the golden ratio for typography, in order to help you create emails that are easy to read.
+Pine uses the golden ratio for typography, in order to help you create emails that are easy to read.
 
 For desktops and tablets, body font size is set to 16px, with a line height of 26px. On mobile, the line height is reduced to 23px. 
 In both cases, the ideal ratio for the maximum available content width is used.
