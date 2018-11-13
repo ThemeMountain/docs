@@ -23,7 +23,7 @@ exclude_pagenav: true
 @section('body')
 
     <div class="bg-gradient-pine h-screen">
-        @include('_layouts.default.partials.headers.master', ['color' => 'pine'])
+        @include('_layouts.default.partials.headers.master', ['color' => 'pine-teal'])
 
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
