@@ -2,7 +2,7 @@
 title: Timeline
 description: Timeline module for HTML emails
 tags: quote, review, cite
-path: acorn/components
+path: pine/components
 page_order: 28
 navigation:
   group: Components
@@ -10,7 +10,9 @@ navigation:
 
 # Display a series of events over a period of time
 
-Timeline is a nice way of showing a list of events over time in your emails. The pipe image in the middle column is hidden on mobile, and the columns stack. Timeline also makes use of responsive [display](/acorn/utilities/display) and [spacing](/acorn/utilities/spacing) utilities.
+Timeline is a nice way of showing a list of events over time in your emails. 
+The pipe image in the middle column is hidden on mobile, and the columns stack. 
+Timeline also makes use of responsive [display](/pine/utilities/display) and [spacing](/pine/utilities/spacing) utilities.
 
 <div class="my-6">
     <ul class="tabs">
@@ -23,86 +25,58 @@ Timeline is a nice way of showing a list of events over time in your emails. The
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/timeline.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 520px;"></iframe>
+            <iframe src="/pine/includes/components/timeline.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 520px;"></iframe>
         </div>
     </div>
     <div id="timeline-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td style="padding: 32px 24px;">
+    <td style="padding: 0 20px;">
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" width="96" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td class="pt-sm-0" style="font-size: 14px; padding-top: 32px;">2007 - 2008</td>
-              </tr>
-            </table>
+          <td class="col pt-sm-0" width="100" style="padding: 30px 10px 0;">
+            <span style="font-size: 14px;">2007 - 2008</span>
           </td>
-          <td class="hide-sm" align="center" width="48">
-            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+          <td class="col hide-sm" align="center" width="50" style="padding: 0 10px;">
+            <img src="https://i.imgur.com/evrIM2o.png" alt="|" width="35">
           </td>
-          <td class="col" width="376" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td class="py-sm-8" style="padding-top: 32px;">
-                  <h4 style="margin: 0 0 15px;">Massachusetts Institute of Technology</h4>
-                  <p style="margin: 0;">Co-wrote a book on the Semantic Web and Best Practices for Developers.</p>
-                </td>
-              </tr>
-            </table>
+          <td class="col py-sm-10" width="450" style="padding: 30px 10px 0;">
+            <h4 style="margin: 0 0 10px;">Massachusetts Institute of Technology</h4>
+            <p style="margin: 0;">Co-wrote a book on the Semantic Web and Best Practices for Developers. Awarded the MIT entreprenur of the year.</p>
           </td>
         </tr>
       </table>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" width="96" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td style="font-size: 14px; padding-top: 32px;">2004 - 2006</td>
-              </tr>
-            </table>
+          <td class="col pt-sm-20" width="100" style="padding: 30px 10px 0;">
+            <span style="font-size: 14px;">2004 - 2006</span>
           </td>
-          <td class="hide-sm" align="center" width="48">
-            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+          <td class="col hide-sm" align="center" width="50" style="padding: 0 10px;">
+            <img src="https://i.imgur.com/evrIM2o.png" alt="|" width="35">
           </td>
-          <td class="col" width="376" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td class="py-sm-8" style="padding-top: 32px;">
-                  <h4 style="margin: 0 0 15px;">Parsons School of Design</h4>
-                  <p style="margin: 0;">Awarded Best Designer of the Year voted by student and teacher body.</p>
-                </td>
-              </tr>
-            </table>
+          <td class="col py-sm-10" width="450" style="padding: 30px 10px 0;">
+            <h4 style="margin: 0 0 10px;">Parsons School of Design</h4>
+            <p style="margin: 0;">Awarded Best Designer of the Year voted by student and teacher body.</p>
           </td>
         </tr>
       </table>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" width="96" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td style="font-size: 14px; padding-top: 32px;">2002 - 2004</td>
-              </tr>
-            </table>
+          <td class="col pt-sm-20" width="100" style="padding: 30px 10px 0;">
+            <span style="font-size: 14px;">2002 - 2004</span>
           </td>
-          <td class="hide-sm" align="center" width="48">
-            <img src="https://i.imgur.com/evrIM2o.png" alt="" width="35">
+          <td class="col hide-sm" align="center" width="50" style="padding: 0 10px;">
+            <img src="https://i.imgur.com/evrIM2o.png" alt="|" width="35">
           </td>
-          <td class="col" width="376" style="padding: 0 8px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-              <tr>
-                <td class="py-sm-8" style="padding-top: 32px;">
-                  <h4 style="margin: 0 0 15px;">Berkley College</h4>
-                  <p style="margin: 0;">Two year program with a focus on design principles and Javascript development. Won National Student Design Competition for Application Design.</p>
-                </td>
-              </tr>
-            </table>
+          <td class="col py-sm-10" width="450" style="padding: 30px 10px 0;">
+            <h4 style="margin: 0 0 10px;">Berkley College</h4>
+            <p style="margin: 0;">Two year program with a focus on design principles and Javascript development. Won National Student Design Competition for Application Design.</p>
           </td>
         </tr>
       </table>
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
     </td>
   </tr>
 </table>

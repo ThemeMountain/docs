@@ -76,30 +76,33 @@ For example, in case we need an image to stick to the side, we can remove row pa
     <div id="custom-container-padding-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-    <tr>
-        <td style="padding: 0 20px 0 0;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                <tr>
-                <td class="col col-sm-8 pt-sm-20" width="340" style="padding: 0 10px 0 0; vertical-align: middle;">
-                    <img src="https://picsum.photos/340/480?image=1011" alt="My image" width="292">
-                </td>
-                <td class="col col-sm-9 col-sm-push-3 py-sm-20" width="310" style="padding: 0 10px; vertical-align: middle;">
-                    <h2 style="font-weight: 400; margin: 0;">Article title</h2>
-                    <p style="color: #999999; font-size: 12px; margin: 0;">NOV 12<sup>th</sup>, 2017</p>
-                    <p style="color: #666666;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pharetra neque, at interdum dolor.</p>
-                    <p class="hide-sm" style="color: #999999; font-size: 13px; margin-bottom: 24px;">Nulla quis nunc lacus. Integer fringilla blandit mi, id pharetra nisl. Etiam molestie orci mi, non commodo mauris dapibus sed.</p>
-                    <table cellpadding="0" cellspacing="0" role="presentation">
-                    <tr>
-                        <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
-                        <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Read more &rarr;</a>
-                        </th>
-                    </tr>
-                    </table>
-                </td>
-                </tr>
+  <tr>
+    <td style="padding: 0 20px 0 0;">
+      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tr>
+          <td class="col col-sm-8 pt-sm-20" width="340" style="padding: 0 10px 0 0; vertical-align: middle;">
+            <img src="https://picsum.photos/340/480?image=1011" alt="My image" width="292">
+          </td>
+          <td class="col col-sm-9 col-sm-push-3 py-sm-20" width="310" style="padding: 0 10px; vertical-align: middle;">
+            <h2 style="font-weight: 400; margin: 0;">Article title</h2>
+            <p style="color: #999999; font-size: 12px; margin: 0;">NOV 12<sup>th</sup>, 2017</p>
+            <p style="color: #666666;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pharetra
+              neque, at interdum dolor.</p>
+            <p class="hide-sm" style="color: #999999; font-size: 13px; margin-bottom: 24px;">Nulla quis nunc lacus.
+              Integer fringilla blandit mi, id pharetra nisl. Etiam molestie orci mi, non commodo mauris dapibus sed.</p>
+            <table cellpadding="0" cellspacing="0" role="presentation">
+              <tr>
+                <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
+                  <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Read
+                    more &rarr;</a>
+                </th>
+              </tr>
             </table>
-        </td>
-    </tr>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 ```
     </div>
@@ -161,24 +164,24 @@ This class will set the column width to 100%, and will also adjust content line-
     <div id="col-stacking-mobile-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-    <tr>
-        <td style="padding: 30px 20px;">
-            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                <tr>
-                <td class="col" width="310" style="padding: 0 10px;">
-                    <h2 style="font-weight: 500; margin: 0;">First column</h2>
-                    <p style="color: #999999; font-size: 12px; margin: 0;">Full width on mobile</p>
-                    <p>These columns use the required <code>.col</code> class.</p>
-                </td>
-                <td class="col" width="310" style="padding: 0 10px;">
-                    <h2 style="font-weight: 500; margin: 0;">Second column</h2>
-                <p style="color: #999999; font-size: 12px; margin: 0;">Also full width on mobile</p>
-                <p>On mobile, this makes them 100% wide, so they stack.</p>
-                </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+  <tr>
+    <td style="padding: 30px 20px;">
+      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tr>
+          <td class="col" width="310" style="padding: 0 10px;">
+            <h2 style="font-weight: 500; margin: 0;">First column</h2>
+            <p style="color: #999999; font-size: 12px; margin: 0;">Full width on mobile</p>
+            <p>These columns use the required <code>.col</code> class.</p>
+          </td>
+          <td class="col" width="310" style="padding: 0 10px;">
+            <h2 style="font-weight: 500; margin: 0;">Second column</h2>
+            <p style="color: #999999; font-size: 12px; margin: 0;">Also full width on mobile</p>
+            <p>On mobile, this makes them 100% wide, so they stack.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 ```
     </div>

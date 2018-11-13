@@ -2,7 +2,7 @@
 title: Button
 description: HTML email buttons with graceful fallback for Outlook
 tags: button, link, call to action
-path: acorn/components
+path: pine/components
 page_order: 18
 navigation:
   group: Components
@@ -10,17 +10,22 @@ navigation:
 
 # People need things to click on
 
-Buttons in Acorn are simple table structures with an anchor inside. 
+Buttons in Pine are simple table structures with an anchor inside. 
 
-For modern email clients, CSS padding is used to make the entire button clickable. In Outlook, since CSS padding isn't supported on anchor tags, `mso-padding-alt` is used on the table cell in order to preserve the aspect - however, this means that only the text itself will be clickable.
+For modern email clients, CSS padding is used to make the entire button clickable. 
+In Outlook, since CSS padding isn't supported on anchor tags, `mso-padding-alt` is used on the table cell in order to 
+preserve the aspect - however, this means that only the text itself will be clickable.
 
-This makes customisation easy while still looking great across email clients. But if you want fully-clickable buttons in Outlook for Windows, we highly recommend Campaign Monitor's [bulletproof email buttons ↗](https://buttons.cm/)
+This makes customisation easy while still looking great across email clients. 
+But if you want fully-clickable buttons in Outlook for Windows, we highly recommend Campaign Monitor's 
+[bulletproof email buttons ↗](https://buttons.cm/)
 
 ---
 
 ## Filled
 
-Your regular table-based button for email. Background colour is defined through the `bgcolor=""` attribute, and a `border-radius` is set inline on the table cell, for rounded button corners in email clients that support it.
+Your regular table-based button for email. Background colour is defined through the `bgcolor=""` attribute, 
+and a `border-radius` is set inline on the table cell, for rounded button corners in email clients that support it.
 
 <div class="my-6">
     <ul class="tabs">
@@ -33,7 +38,7 @@ Your regular table-based button for email. Background colour is defined through 
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/button-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
+            <iframe src="/pine/includes/components/button-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
         </div>
     </div>    
     <div id="button-filled-code" class="tab-panel" markdown="1" aria-expanded="false">
@@ -41,8 +46,8 @@ Your regular table-based button for email. Background colour is defined through 
 <!-- Default -->
 <table cellpadding="0" cellspacing="0" role="presentation">
   <tr>
-    <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+    <th bgcolor="#34BF49" style="border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+      <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
     </th>
   </tr>
 </table>
@@ -50,8 +55,8 @@ Your regular table-based button for email. Background colour is defined through 
 <!-- Custom: center-aligned on mobile only -->
 <table class="align-sm-center" cellpadding="0" cellspacing="0" role="presentation">
   <tr>
-    <th bgcolor="#34BF49" style="border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+    <th bgcolor="#34BF49" style="border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+      <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
     </th>
   </tr>
 </table>
@@ -61,7 +66,8 @@ Your regular table-based button for email. Background colour is defined through 
 
 ## Outlined
 
-Outlined buttons don't have background colour, so they'll inherit their container's background. A 2px solid border is used to highlight the element instead.
+Outlined buttons don't have background colour, so they'll inherit their container's background. 
+A 2px solid border is used to highlight the element instead.
 
 <div class="my-6">
     <ul class="tabs">
@@ -74,7 +80,7 @@ Outlined buttons don't have background colour, so they'll inherit their containe
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/button-outlined.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
+            <iframe src="/pine/includes/components/button-outlined.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
         </div>
     </div>    
     <div id="button-outlined-code" class="tab-panel" markdown="1" aria-expanded="false">
@@ -82,8 +88,8 @@ Outlined buttons don't have background colour, so they'll inherit their containe
 <!-- Default -->
 <table cellpadding="0" cellspacing="0" role="presentation">
   <tr>
-    <th style="border: 2px solid #34BF49; border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" style="color: #34BF49; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+    <th style="border: 2px solid #34BF49; border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+      <a href="http://thememountain.com" style="color: #34BF49; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
     </th>
   </tr>
 </table>
@@ -91,8 +97,8 @@ Outlined buttons don't have background colour, so they'll inherit their containe
 <!-- Custom: Full width on mobile -->
 <table class="full-width-sm" cellpadding="0" cellspacing="0" role="presentation">
   <tr>
-    <th style="border: 2px solid #34BF49; border-radius: 3px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" class="col" style="color: #34BF49; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+    <th style="border: 2px solid #34BF49; border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+      <a href="http://thememountain.com" style="color: #34BF49; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
     </th>
   </tr>
 </table>
@@ -115,15 +121,15 @@ Simply increase the `border-radius` on a Filled Button, to get a Pill Button.
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/button-pill.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
+            <iframe src="/pine/includes/components/button-pill.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
         </div>
     </div>    
     <div id="button-pill-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
-<table align="center" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
+<table cellpadding="0" cellspacing="0" role="presentation">
   <tr>
-    <th bgcolor="#34BF49" style="border-radius: 50px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
+    <th bgcolor="#34BF49" style="border-radius: 50px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+      <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
     </th>
   </tr>
 </table>
@@ -140,11 +146,13 @@ Simply increase the `border-radius` on a Filled Button, to get a Pill Button.
 
 ### Mobile
 
-In order to custom align a button for mobile-only, simply add one of the `align-sm-` classes on the button `<table>` tag. Check the [Filled Button example ↑](#filled), it center-aligns the button only on mobile.
+In order to custom align a button for mobile-only, simply add one of the `align-sm-` classes on the button `<table>` tag. 
+Check the [Filled Button example ↑](#filled), it center-aligns the button only on mobile.
 
 ### Desktop
 
-You can custom-align a button for desktops and tablets through the use of the `align=""` attribute on the `<table>` tag. For centering, you will also need the `margin: 0 auto;` inline CSS. Of course, you can combine these with one of the mobile alignment classes:
+You can custom-align a button for desktops and tablets through the use of the `align=""` attribute on the `<table>` tag. 
+For centering, you will also need the `margin: 0 auto;` inline CSS. Of course, you can combine these with one of the mobile alignment classes:
 
 <div class="my-6">
     <ul class="tabs">
@@ -157,16 +165,53 @@ You can custom-align a button for desktops and tablets through the use of the `a
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/buttons-alignment.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 600px;"></iframe>
+            <iframe src="/pine/includes/components/buttons-alignment.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 600px;"></iframe>
         </div>
     </div>    
     <div id="buttons-alignment-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
-<table align="center" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
+<!-- Align: Right for Desktops and Tablets, Center for Mobile -->
+<table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <th bgcolor="#34BF49" style="border-radius: 50px; mso-padding-alt: 6px 42px 12px;">
-      <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 42px; text-decoration: none;">Button label</a>
-    </th>
+    <td class="col" width="640" style="padding: 0 10px;">
+      <table align="left" class="align-sm-center" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <th bgcolor="#34BF49" style="border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+            <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
+          </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- Align: Right for Desktops and Tablets, Left for Mobile -->
+<table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr>
+    <td class="col" width="640" style="padding: 0 10px;">
+      <table align="right" class="align-sm-left" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <th bgcolor="#34BF49" style="border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+            <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
+          </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- Align: Center for Desktops and Tablets, Right for Mobile -->
+<table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr>
+    <td class="col" width="640" style="padding: 0 10px;">
+      <table align="center" class="align-sm-right cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
+        <tr>
+          <th bgcolor="#34BF49" style="border-radius: 3px; line-height: 100%; mso-padding-alt: 5px 50px 10px;">
+            <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 50px; text-decoration: none;">Button text</a>
+          </th>
+        </tr>
+      </table>
+    </td>
   </tr>
 </table>
 ```
@@ -175,12 +220,16 @@ You can custom-align a button for desktops and tablets through the use of the `a
 
 ## Full Width On Mobile
 
-Need a button to go full width on mobile? Simply add the `full-width-sm` class on the button `<table>`, and the `col` class on the anchor tag. Check the [Outlined Button example ↑](#outlined)
+Need a button to go full width on mobile? Simply add the `full-width-sm` class on the button `<table>`, and the `col` class on the anchor tag. 
+Check the [Outlined Button example ↑](#outlined)
 
 ## Other Notes
 
 We're using `mso-padding-alt` on the table cell - this keeps the button looking the same in Outlook. 
 
-You might have noticed that it's not using the same pixel values as the padding on the anchor. If it were, Outlook would add too much space above the anchor text. So, with shorthand CSS, we just use half the original top padding value: in our example, 12px becomes 6px top padding for Outlook-only.
+You might have noticed that it's not using the same pixel values as the padding on the anchor. 
+If it were, Outlook would add too much space above the anchor text. So, with shorthand CSS, we just use 
+half the original top padding value: in our example, 12px becomes 6px top padding for Outlook-only.
 
-Another thing is that `<th>` is used instead of `<td>`. This is for the _sole purpose_ of writing less markup for bold text. If you don't need bold text, no need to add inline `font-weight` CSS: simply use `<td>` instead.
+Another thing is that `<th>` is used instead of `<td>`. This is for the _sole purpose_ of writing less markup for bold text. 
+If you don't need bold text, simply use `<td>` instead - no need to add inline `font-weight` CSS.

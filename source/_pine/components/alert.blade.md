@@ -2,7 +2,7 @@
 title: Alert
 description: Highlight sections of your email with an alert
 tags: alert, banner, call to action
-path: acorn/components
+path: pine/components
 page_order: 17
 navigation:
   group: Components
@@ -10,13 +10,14 @@ navigation:
 
 # Effective attention grabbers
 
-Alerts in Acorn are useful for drawing attention, and they go great together with [buttons](/acorn/components/button).
+Alerts in Pine are useful for drawing attention, and they go great together with [buttons](/pine/components/button).
 
 ---
 
-## Filled
+## Background Colour
 
-A simple Row table with background colour and some padding on the cell inside. Since we're not using the Grid, we don't even need to add a `col` class on the cell.
+A simple Row table with background colour and some padding on the cell inside. 
+Since we're not using the Grid, we don't even need to add a `col` class on the cell.
 
 To align text inside, simply use the `align=""` attribute on the cell that has the background colour defined.
 
@@ -31,14 +32,14 @@ To align text inside, simply use the `align=""` attribute on the cell that has t
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/alert-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
+            <iframe src="/pine/includes/components/alert-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
         </div>
     </div>    
     <div id="alert-filled-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td bgcolor="#0099E5" style="color: #FFFFFF; padding: 16px 32px;">
+    <td class="col" bgcolor="#0099E5" style="color: #FFFFFF; padding: 15px 30px;">
       This is an alert with background colour
     </td>
   </tr>
@@ -49,7 +50,8 @@ To align text inside, simply use the `align=""` attribute on the cell that has t
 
 ## Outlined
 
-We've also included an outlined alert, that has a 2px border added on the Row table. There's no background colour set (it's inherited from the Container), but you can add one for further customisation.
+We've also included an outlined alert, that has a 2px border added on the Row table. 
+There's no background colour set (it's inherited from the Container), but you can add one for further customisation.
 
 <div class="my-6">
     <ul class="tabs">
@@ -62,14 +64,14 @@ We've also included an outlined alert, that has a 2px border added on the Row ta
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/alert-outlined.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
+            <iframe src="/pine/includes/components/alert-outlined.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 150px;"></iframe>
         </div>
     </div>    
     <div id="alert-outlined-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
-<table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border: 2px solid #0099E5;">
+<table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td style="color: #0099E5; padding: 16px 32px;">
+    <td class="col" style="border: 2px solid #0099E5; color: #0099E5; padding: 15px 30px;">
       This is an alert with an outline border
     </td>
   </tr>

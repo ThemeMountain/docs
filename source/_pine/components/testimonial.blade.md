@@ -2,7 +2,7 @@
 title: Testimonial
 description: User reviews and quotes for HTML emails
 tags: quote, review, cite
-path: acorn/components
+path: pine/components
 page_order: 27
 navigation:
   group: Components
@@ -10,7 +10,7 @@ navigation:
 
 # Add reviews or client testimonials to your emails
 
-The Testimonial in Acorn comes in very handy when you need to add a quote or user message to your emails.
+The Testimonial in Pine comes in very handy when you need to add a quote or user message to your emails.
 
 ---
 
@@ -29,25 +29,25 @@ Centered, with a user avatar image and some text.
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/testimonial-avatar.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 350px;"></iframe>
+            <iframe src="/pine/includes/components/testimonial-avatar.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 350px;"></iframe>
         </div>
     </div>
     <div id="testimonial-avatar-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td class="px-sm-16" style="padding: 0 100px;">
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
-      <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+    <td class="px-sm-30" align="center">
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
+      <table cellpadding="0" cellspacing="0" role="presentation">
         <tr>
-          <td class="col px-sm-16" align="center" width="100%">
-            <img src="https://i.imgur.com/pX1z2AY.png" width="50" alt="Avatar">
+          <td class="col" align="center" width="500">
+            <img src="https://i.imgur.com/pX1z2AY.png" alt="Avatar" width="50">
             <h3 style="font-weight: 300; font-style: italic;">Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.</h3>
             <small style="color: #969AA1; text-transform: uppercase;">Steve Jobs</small>
           </td>
         </tr>
       </table>
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
     </td>
   </tr>
 </table>
@@ -70,24 +70,24 @@ Simple, with left-aligned text, and a thin border on the left.
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/testimonial-border.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 300px;"></iframe>
+            <iframe src="/pine/includes/components/testimonial-border.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 300px;"></iframe>
         </div>
     </div>
     <div id="testimonial-border-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td class="px-sm-16" style="padding: 0 60px;">
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
+    <td class="px-sm-30" style="padding: 0 60px;">
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col pl-sm-16" width="100%" style="border-left: 1px solid #EEEEEE; padding-left: 30px;">
+          <td class="col pl-sm-30" width="550" style="border-left: 1px solid #EEEEEE; padding-left: 30px;">
             <h3 style="font-weight: 500; font-style: italic; margin-top: 0;">Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.</h3>
             <small style="color: #969AA1; text-transform: uppercase;">Steve Jobs</small>
           </td>
         </tr>
       </table>
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
     </td>
   </tr>
 </table>
@@ -110,25 +110,25 @@ Similar to the previous one, this Testimonial removes the left border in favour 
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/testimonial-icon.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 320px;"></iframe>
+            <iframe src="/pine/includes/components/testimonial-icon.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 320px;"></iframe>
         </div>
     </div>
     <div id="testimonial-icon-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td style="padding: 0 24px;">
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
+    <td style="padding: 0 20px;">
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" width="100%" style="padding: 0 8px;">
+          <td class="col" width="550" style="padding: 0 10px;">
             <img src="https://i.imgur.com/U1j9njD.png" alt="Quote" width="33">
             <h3 style="font-weight: 500; font-style: italic;">Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.</h3>
             <small style="color: #969AA1; text-transform: uppercase;">Steve Jobs</small>
           </td>
         </tr>
       </table>
-      <div class="spacer" style="line-height: 40px; height: 40px!important;">&zwnj;</div>
+      <div class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</div>
     </td>
   </tr>
 </table>

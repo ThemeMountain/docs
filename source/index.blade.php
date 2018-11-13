@@ -121,11 +121,11 @@ description: Listing of all ThemeMountain documentation sites
                     <a href="" class="text-sm text-blue hover:underline">Marquez documentation &rarr;</a>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
+            <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Kant</h3>
                     <p class="w-full text-grey-dark">Kant, the email toolkit for startups.</p>
-                    <a href="" class="text-sm text-blue hover:underline">Kant documentation &rarr;</a>
+                    <a href="/kant" class="text-sm text-blue hover:underline">Kant documentation &rarr;</a>
                 </div>
             </div>
         </div>

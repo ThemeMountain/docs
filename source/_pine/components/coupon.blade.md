@@ -2,7 +2,7 @@
 title: Coupon
 description: Coupon layouts for HTML email discounts
 tags: promo, discount, offer
-path: acorn/components
+path: pine/components
 page_order: 19
 navigation:
   group: Components
@@ -10,13 +10,14 @@ navigation:
 
 # Add discounts to your emails
 
-Coupons are handy, ready-made components that you can use to add discounts to your Acorn-powered emails.
+Coupons are handy, ready-made components that you can use to add discounts to your Pine-powered emails.
 
 ---
 
 ## Dashed
 
-Use the Dashed Coupon to show off a discount in big, bold, centered text, with a call to action. The content is surrounded by a dashed border that you can style to suit your needs, and the coupon code is made with the [Label](/acorn/components/label) component.
+Use the Dashed Coupon to show off a discount in big, bold, centered text, with a call to action. 
+The content is surrounded by a dashed border that you can style to suit your needs, and the coupon code is made with the [Label](/pine/components/label) component.
 
 The discount value is coded so that it breaks vertically on very small screens.
 
@@ -31,46 +32,46 @@ The discount value is coded so that it breaks vertically on very small screens.
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/coupon-dashed.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 450px;"></iframe>
+            <iframe src="/pine/includes/components/coupon-dashed.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 450px;"></iframe>
         </div>
     </div>    
     <div id="coupon-dashed-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td style="padding: 0 24px;">
+    <td style="padding: 0 20px;">
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" align="center" width="100%" style="padding: 0 8px;">
+          <td class="col" align="center" width="640" style="padding: 0 10px;">
             <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tr>
-                <td class="spacer py-sm-16" height="32"></td>
+                <td class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</td>
               </tr>
               <tr>
-                <td class="px-sm-8" align="center" width="100%" style="padding: 32px; border: 4px dashed #CCCCCC; color: #000000;">
-                  <table align="center" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
-                    <tr>
-                      <th style="font-size: 96px; line-height: 100%; word-break: break-all;">25</th>
-                      <th style="vertical-align: middle;">
-                        <div style="font-size: 48px; line-height: 48px;">%</div>
-                        <div style="font-size: 32px; line-height: 32px; mso-line-height-rule: exactly; mso-text-raise: 2px;">OFF</div>
-                      </th>
-                    </tr>
-                  </table>
-                  <div style="color: #999999;">With coupon <span style="border: 1px solid #EA4B35; border-radius: 3px; color: #EA4B35; display: inline-block; font-size: 90%; padding: 1px 5px;">25OFFTODAY</span></div>
-                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                <td class="px-sm-10" align="center" width="100%" style="border: 4px dashed #CCCCCC; color: #000000; padding: 30px;">
                   <table cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
-                      <th bgcolor="#000000" style="mso-padding-alt: 6px 32px 12px;">
-                        <a href="http://thememountain.com" style="color: #FFFFFF; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 32px; text-decoration: none;">REDEEM COUPON &rarr;</a>
+                      <th style="font-size: 110px; line-height: 100%; word-break: break-all;">25</th>
+                      <th style="vertical-align: middle;">
+                        <div style="font-size: 60px; line-height: 60px;">%</div>
+                        <div style="font-size: 30px; line-height: 30px; mso-line-height-rule: exactly; mso-text-raise: 3px;">OFF</div>
                       </th>
                     </tr>
                   </table>
-                  <div class="spacer py-sm-8" style="line-height: 16px;">&zwnj;</div>
+                  <p style="color: #999999; margin: 0;">With coupon <span style="border: 1px solid #EA4B35; border-radius: 3px; color: #EA4B35; display: inline-block; font-size: 90%; padding: 1px 5px;">25OFFTODAY</span></p>
+                  <div class="spacer py-sm-10" style="line-height: 30px;">&zwnj;</div>
+                  <table cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <th bgcolor="#000000" style="line-height: 100%; mso-padding-alt: 5px 30px 10px;">
+                        <a href="http://thememountain.com" style="color: #FFFFFF; display: block; font-size: 13px; padding: 10px 30px; text-decoration: none;">REDEEM COUPON &rarr;</a>
+                      </th>
+                    </tr>
+                  </table>
+                  <div class="spacer py-sm-10" style="line-height: 20px;">&zwnj;</div>
                 </td>
               </tr>
               <tr>
-                <td class="spacer py-sm-16" height="32"></td>
+                <td class="spacer py-sm-20" style="line-height: 40px;">&zwnj;</td>
               </tr>
             </table>
           </td>
@@ -85,7 +86,8 @@ The discount value is coded so that it breaks vertically on very small screens.
 
 ## Filled
 
-Filled Coupons have a solid background colour, and a 1px border outline. You can customise the background, text, and call to action so that they stand out, like in our example:
+Filled Coupons have a solid background colour, and a 1px border outline. 
+You can customise the background, text, and call to action so that they stand out, like in our example:
 
 <div class="my-6">
     <ul class="tabs">
@@ -98,26 +100,26 @@ Filled Coupons have a solid background colour, and a 1px border outline. You can
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/coupon-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 400px;"></iframe>
+            <iframe src="/pine/includes/components/coupon-filled.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 400px;"></iframe>
         </div>
     </div>    
     <div id="coupon-filled-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td class="p-sm-16" bgcolor="#008DF6" width="100%" style="padding: 32px;">
+    <td class="col px-sm-20" bgcolor="#008DF6" width="640" style="padding: 30px;">
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col p-sm-16" align="center" width="100%" style="padding: 32px; border: 1px solid #FFFFFF; color: #FFFFFF;">
+          <td class="col px-sm-10" align="center" style="border: 1px solid #FFFFFF; color: #FFFFFF; padding: 30px;" width="100%">
             <div style="font-size: 13px; text-transform: uppercase;">Thanks for signing up!<br>Enjoy</div>
             <div style="font-size: 72px; font-weight: 700; line-height: 100%;">$10 OFF</div>
-            <div class="spacer py-sm-8" style="line-height: 16px;">&zwnj;</div>
+            <div class="spacer pb-sm-20" style="line-height: 15px;">&zwnj;</div>
             <div style="font-size: 20px; letter-spacing: 2px; line-height: 100%; text-transform: uppercase;">Your first order</div>
-            <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+            <div class="spacer pb-sm-20" style="line-height: 30px;">&zwnj;</div>
             <table cellpadding="0" cellspacing="0" role="presentation">
               <tr>
-                <th bgcolor="#FFFFFF" style="mso-padding-alt: 6px 32px 12px;">
-                  <a href="http://thememountain.com" style="color: #008DF6; display: inline-block; font-size: 13px; line-height: 100%; padding: 12px 32px; text-decoration: none;">SHOP NOW</a>
+                <th bgcolor="#FFFFFF" style="mso-padding-alt: 5px 30px 10px;">
+                  <a href="http://thememountain.com" style="color: #008DF6; display: block; font-size: 13px; padding: 10px 30px; text-decoration: none;">SHOP NOW</a>
                 </th>
               </tr>
             </table>
@@ -133,7 +135,8 @@ Filled Coupons have a solid background colour, and a 1px border outline. You can
 
 ## With Image
 
-This variation allows you to include an image next to the coupon itself - maybe this coupon is for a specific product? The image in our example is a [Fluid Retina Image](../../acorn/images/#fluid-retina) that will not expand beyond its natural width.
+This variation allows you to include an image next to the coupon itself - maybe this coupon is for a specific product? 
+The image in our example is a [Fluid Retina Image](../../pine/images/#fluid-retina) that will not expand beyond its natural width.
 
 <div class="my-6">
     <ul class="tabs">
@@ -146,38 +149,38 @@ This variation allows you to include an image next to the coupon itself - maybe 
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/coupon-image.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 640px;"></iframe>
+            <iframe src="/pine/includes/components/coupon-image.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 640px;"></iframe>
         </div>
     </div>    
     <div id="coupon-image-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td class="spacer py-sm-16" height="32"></td>
+    <td class="spacer py-sm-10" style="line-height: 40px;">&zwnj;</td>
   </tr>
   <tr>
-    <td style="padding: 0 24px;">
+    <td style="padding: 0 20px;">
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col pb-sm-16" width="260" style="padding: 0 8px;">
-            <img src="https://picsum.photos/520/520?image=1062" class="align-sm-center" width="260" alt="Coupon Image">
+          <td class="col pb-sm-30" align="center" width="310" style="padding: 0 10px;">
+            <img src="https://picsum.photos/620/620?image=1062" alt="Coupon Image" width="310">
           </td>
-          <td class="col pt-sm-16" width="260" style="padding: 0 8px;">
-            <table class="full-width-sm align-sm-center" cellpadding="0" cellspacing="0" role="presentation" width="260">
+          <td class="col" width="310" style="padding: 0 10px; vertical-align: middle;">
+            <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tr>
-                <td align="center" width="100%" style="padding: 16px 8px; border: 3px dashed #CCCCCC; color: #000000;">
-                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
-                  <div style="color: #999999; font-size: 13px; margin-bottom: 10px; line-height: 13px; text-transform: uppercase;">Mondays suck, so</div>
-                  <div style="font-size: 32px; font-weight: 700; line-height: 40px;">Get $25 OFF</div>
+                <td align="center" style="border: 3px dashed #CCCCCC; color: #000000; padding: 30px;">
+                  <div class="spacer py-sm-10" style="line-height: 35px;">&zwnj;</div>
+                  <div style="color: #999999; font-size: 13px; margin-bottom: 10px; line-height: 16px; text-transform: uppercase;">Mondays suck, so</div>
+                  <div style="font-size: 36px; font-weight: 700; line-height: 100%;">Get $25 OFF</div>
                   <div style="color: #999999; font-size: 13px; margin-bottom: 30px; text-transform: uppercase;">Your next order</div>
                   <table cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
-                      <th bgcolor="#4C4054" style="mso-padding-alt: 4px 24px 8px;">
-                        <a href="http://thememountain.com" target="_blank" style="color: #FFFFFF; display: block; font-size: 13px; padding: 8px 24px; text-decoration: none;">REDEEM COUPON &rarr;</a>
+                      <th bgcolor="#4C4054" style="line-height: 100%; mso-padding-alt: 5px 30px 10px;">
+                        <a href="http://thememountain.com" target="_blank" style="color: #FFFFFF; display: block; font-size: 15px; padding: 10px 30px; text-decoration: none;">REDEEM COUPON &rarr;</a>
                       </th>
                     </tr>
                   </table>
-                  <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+                  <div class="spacer py-sm-10" style="line-height: 35px;">&zwnj;</div>
                 </td>
               </tr>
             </table>
@@ -187,7 +190,7 @@ This variation allows you to include an image next to the coupon itself - maybe 
     </td>
   </tr>
   <tr>
-    <td class="spacer py-sm-16" height="32"></td>
+    <td class="spacer py-sm-10" style="line-height: 40px;">&zwnj;</td>
   </tr>
 </table>
 ```

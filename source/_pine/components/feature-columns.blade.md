@@ -2,7 +2,7 @@
 title: Feature Columns
 description: 50-50 stackable email module layout
 tags: feature, highlight, box
-path: acorn/components
+path: pine/components
 page_order: 21
 navigation:
   group: Components
@@ -12,7 +12,8 @@ navigation:
 
 You can use Feature Columns to create content blocks that describe product features or services in your email.
 
-A simple 2-2 column layout with centered text and images. On mobile, columns will stack, but you can use [mobile column width classes](../grid#column-widths-on-mobile) to play around with the layout. Background colours can be added to the columns, for an extra touch.
+A simple 2-2 column layout with centered text and images. 
+On mobile, columns will stack, but you can use [mobile column width classes](../grid#column-widths-on-mobile) to play around with the layout. Background colours can be added to the columns, for an extra touch.
 
 <div class="my-6">
     <ul class="tabs">
@@ -25,7 +26,7 @@ A simple 2-2 column layout with centered text and images. On mobile, columns wil
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/feature-columns.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 470px;"></iframe>
+            <iframe src="/pine/includes/components/feature-columns.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 770px;"></iframe>
         </div>
     </div>    
     <div id="feature-columns-code" class="tab-panel" markdown="1" aria-expanded="false">
@@ -35,15 +36,15 @@ A simple 2-2 column layout with centered text and images. On mobile, columns wil
     <td>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" align="center" width="236" style="padding: 32px;">
+          <td class="col" align="center" width="290" style="padding: 30px;">
             <img src="https://i.imgur.com/XqzhK67.png" width="36" alt="Download">
             <h3>Download our app</h3>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </td>
-          <td class="col" align="center" bgcolor="#7E57C2" width="236" style="padding: 32px;">
+          <td class="col" align="center" bgcolor="#7E57C2" width="290" style="padding: 30px;">
             <img src="https://i.imgur.com/BuBHL3w.png" width="36" alt="Download">
             <h3 style="color: #FFFFFF;">Take control</h3>
-            <div style="color: #FFFFFF;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <p style="color: #FFFFFF; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </td>
         </tr>
       </table>

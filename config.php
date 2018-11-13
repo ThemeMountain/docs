@@ -70,9 +70,9 @@ return [
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [
-                    'appID' => '',
-                    'appSecret' => '',
-                    'searchKey' => '',
+                    'appID' => '0LCC489H0Z',
+                    'appSecret' => '6e18f554f9a98c10e5813431713cc8bb',
+                    'searchKey' => 'f042911696635e063df3ebf9fb69a459',
                     'indexName' => 'pine_docs',
                 ],
             ],

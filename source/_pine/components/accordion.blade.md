@@ -2,7 +2,7 @@
 title: Accordion
 description: Interactive accordion for email
 tags: accordion, toggle, interactive
-path: acorn/components
+path: pine/components
 page_order: 16
 navigation:
   group: Components
@@ -10,7 +10,8 @@ navigation:
 
 # Make room in your emails with a familiar component
 
-Accordions in Acorn are meant for mobile devices, and they work similar to their website counterparts. For desktop and web email clients, the accordion content will be visible.
+Accordions in Pine are meant for mobile devices, and they work similar to their website counterparts. 
+For desktop and web email clients, the accordion content will be visible.
 
 <div class="my-6">
     <ul class="tabs">
@@ -23,24 +24,24 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
                 <button data-preview="mobile" class="text-grey">@fileContents('source/img/icons/mobile.svg')</button>
                 <button data-preview="desktop" class="text-grey-darkest">@fileContents('source/img/icons/desktop.svg')</button>
             </div>
-            <iframe src="/acorn/includes/components/accordion.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 800px;"></iframe>
+            <iframe src="/pine/includes/components/accordion.html" frameborder="0" width="100%" class="block mx-auto transition-all" style="min-height: 800px;"></iframe>
         </div>
     </div>    
     <div id="accordion-code" class="tab-panel" markdown="1" aria-expanded="false">
 ```html
 <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
   <tr>
-    <td style="padding: 0 24px;">
-      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+    <td style="padding: 0 20px;">
+      <div class="spacer py-sm-10" style="line-height: 40px;">&zwnj;</div>
       <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
         <tr>
-          <td class="col" width="100%" style="padding: 0 8px;">
-            <div style="margin-bottom: 24px;">
+          <td class="col" width="640" style="padding: 0 10px;">
+            <div style="margin-bottom: 30px;">
               <a class="toggle-trigger" style="text-decoration: none;">
                 <button class="toggle-trigger" style="background-color: #EEEEEE; margin: 0; padding: 0; display: block; width: 100%; text-align: left; border: none; outline: none; font-size: 13px;">
                   <table bgcolor="#EEEEEE" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                     <tr>
-                      <td style="padding: 16px;">Panel title</td>
+                      <td style="padding: 20px;">Panel title</td>
                     </tr>
                   </table>
                 </button>
@@ -48,14 +49,14 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
               <div class="toggle-content">
                 <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border: 1px solid #EEEEEE;">
                   <tr>
-                    <td style="padding: 16px;">
-                      <h2 style="font-size: 26px;">Lorem ipsum dolor</h2>
+                    <td style="padding: 20px;">
+                      <h2 style="font-size: 28px;">Lorem ipsum dolor</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </td>
                   </tr>
                 </table>
@@ -66,7 +67,7 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
                 <button class="toggle-trigger" style="background-color: #EEEEEE; margin: 0; padding: 0; display: block; width: 100%; text-align: left; border: none; outline: none; font-size: 13px;">
                   <table bgcolor="#EEEEEE" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                     <tr>
-                      <td style="padding: 16px;">Panel title</td>
+                      <td style="padding: 20px;">Panel title</td>
                     </tr>
                   </table>
                 </button>
@@ -74,14 +75,14 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
               <div class="toggle-content">
                 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border: 1px solid #EEEEEE;">
                   <tr>
-                    <td style="padding: 16px;">
-                      <h2 style="font-size: 26px;">Lorem ipsum dolor</h2>
+                    <td style="padding: 20px;">
+                      <h2 style="font-size: 28px;">Lorem ipsum dolor</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </td>
                   </tr>
                 </table>
@@ -90,7 +91,7 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
           </td>
         </tr>
       </table>
-      <div class="spacer py-sm-16" style="line-height: 32px;">&zwnj;</div>
+      <div class="spacer py-sm-10" style="line-height: 40px;">&zwnj;</div>
     </td>
   </tr>
 </table>
@@ -100,7 +101,9 @@ Accordions in Acorn are meant for mobile devices, and they work similar to their
 
 ## Shared Styles
 
-Accordions need some CSS for mobile, which is included in Acorn's boilerplate. This CSS is shared with [hamburger menus](../components/navigation/#hamburger), so if you don't use accordions and hamburger menus at all in your email you can safely delete the following associated styles:
+Accordions need some CSS for mobile, which is included in Pine's boilerplate. 
+This CSS is shared with [hamburger menus](../components/navigation/#hamburger), so if you don't use 
+accordions and hamburger menus at all in your email you can safely delete the following associated styles:
 
 ```css
 .toggle-content {
@@ -115,6 +118,7 @@ Accordions need some CSS for mobile, which is included in Acorn's boilerplate. T
 
 ## Compatibility
 
-Accordions in Acorn use a `<button>` tags and CSS `:hover` combination, to provide decent client support while not having you worry about unique checkbox IDs and repeated styles.
+Accordions in Pine use a `<button>` tags and CSS `:hover` combination, to provide decent client support while not having you worry about unique checkbox IDs and repeated styles.
 
-However, do note that [only a few email clients support `:hover`](https://www.campaignmonitor.com/css/selectors/hover/). In addition to that, some email service providers, like MailChimp, do not allow form elements (which is what buttons are), so remember to always test.
+However, do note that [only a few email clients support `:hover`](https://www.campaignmonitor.com/css/selectors/hover/). 
+In addition to that, some email service providers, like MailChimp, do not allow form elements such as `<button>`, so remember to always test.
