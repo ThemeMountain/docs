@@ -37,6 +37,24 @@ return [
             ],
         ],
 
+        'kant' => [
+            'color' => 'green',
+            'name' => 'Kant Email',
+            'version' => '2.4.0',
+            'root' => 'email/kant',
+            'path' => 'email/kant/{-filename}',
+            'thumbnail' => 'https://s3.envato.com/files/241937906/thumb.png',
+            'sort' => 'page_order',
+            'search' => [
+                'algolia' => [
+                    'appID' => 'ZDMGGWH9CB',
+                    'appSecret' => '1bbb9c5e2e72ba9043ac52afb6e9a9bf',
+                    'searchKey' => '6988aea44371ce595f3db8f505c1c913',
+                    'indexName' => 'kant_email_docs',
+                ],
+            ],
+        ],
+
         'acorn' => [
             'color' => 'green',
             'name' => 'Acorn Email Framework',

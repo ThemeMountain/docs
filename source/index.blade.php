@@ -111,7 +111,7 @@ description: Listing of all ThemeMountain documentation sites
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Sartre</h3>
                     <p class="w-full text-grey-dark">Sartre, the responsive email toolkit.</p>
-                    <a href="/email/sartre/" class="text-sm text-blue hover:underline">Sartre documentation &rarr;</a>
+                    <a href="{{ $page->collections->sartre->root }}/" class="text-sm text-blue hover:underline">Sartre documentation &rarr;</a>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
@@ -125,7 +125,7 @@ description: Listing of all ThemeMountain documentation sites
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Kant</h3>
                     <p class="w-full text-grey-dark">Kant, the email toolkit for startups.</p>
-                    <a href="/kant" class="text-sm text-blue hover:underline">Kant documentation &rarr;</a>
+                    <a href="{{ $page->collections->kant->root }}/" class="text-sm text-blue hover:underline">Kant documentation &rarr;</a>
                 </div>
             </div>
         </div>

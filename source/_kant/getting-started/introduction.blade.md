@@ -12,11 +12,14 @@ navigation:
 
 ## Framework
 
-The product is built using our very own [Acorn Email Framework](https://docs.thememountain.com/acorn/).
+The product is built using our very own [Pine Email Framework](https://docs.thememountain.com/pine/).
 
-If you want to customise layouts, change columns, or do anything that affects structure, besides HTML knowledge we strongly suggest you first read the framework documentation.
+If you want to customise layouts, change columns, or do anything that affects structure, 
+besides HTML knowledge we strongly suggest you first read the framework documentation.
 
-The documentation you're looking at now provides template-related guidance only. For anything else, you will find links to the framework documentation, which goes in-depth on code and framework-related topics, and provides practical examples.
+The documentation you're looking at now provides template-related guidance only. 
+For anything else, you will find links to the framework documentation, which goes 
+in-depth on code and framework-related topics, and provides practical examples.
 
 ---
 
@@ -24,7 +27,9 @@ The documentation you're looking at now provides template-related guidance only.
 
 ### Code Editing
 
-If you plan on customizing the HTML code of this product, you will need a text editor. There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) and [VSCode](https://code.visualstudio.com/) to build the framework and template, so we definitely recommend them.
+If you plan on customizing the HTML code of this product, you will need a text editor. 
+There are a wide range of text editors out there that will do the trick. We used [Sublime Text](http://www.sublimetext.com/) 
+and [VSCode](https://code.visualstudio.com/) to build the framework and template, so we definitely recommend them.
 
 ### Email Service Provider Integrations
 
@@ -36,21 +41,28 @@ The product includes dedicated integrations for the following email service prov
 - [Campaign Monitor](https://www.campaignmonitor.com/)
 - [Mailster for WordPress](https://mailster.co/)
 
-With the exception of Shopify, each of these services offers an online email builder that you can use to visually build your layouts. We recommend StampReady, simply because it's the best in class and you can export your layouts to use with other services. If you're using WordPress, the recommendation is obvious.
+With the exception of Shopify, each of these services offers an online email builder that you can use to visually build your layouts. 
+We recommend StampReady, simply because it's the best in class and you can export your layouts to use with other services. 
+If you're using WordPress, the recommendation is obvious 🙂
 
 ### Email Testing
 
-After you customize the template to suit your needs, always test before sending out an email. Our email templates and framework have been [tested](https://thememountain.github.io/email-rendering/) with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
+After you customize the template to suit your needs, always test before sending out an email. 
+Our email templates and framework have been [tested](https://thememountain.github.io/email-rendering/) 
+with [Email on Acid](https://www.emailonacid.com/), but you can also use the very popular [Litmus](https://litmus.com/).
 
-If you don't have access to a testing tool, at the very least send yourself a test email before launching a campaign, and check it on as many devices and email clients as you can. And whatever you do, never send out a mass email from your personal Gmail or Outlook.
+If you don't have access to a testing tool, at the very least send yourself a test email before launching a campaign, 
+and check it on as many devices and email clients as you can. And whatever you do, never send out a mass email from your personal Gmail or Outlook.
 
 ## Refund Policy
 
-ThemeMountain uses Envato Market's standard [Customer Refund Policy](https://themeforest.net/page/customer_refund_policy). With regards to this, please keep in mind that there are situations where we are unable to issue a refund.
+ThemeMountain uses Envato Market's standard [Customer Refund Policy](https://themeforest.net/page/customer_refund_policy). 
+With regards to this, please keep in mind that there are situations where we are unable to issue a refund.
 
 ### Why a refund may not be given
 
-If the item is materially similar to the description and preview and works the way it should, there is generally no obligation to provide a refund in situations like the following:
+If the item is materially similar to the description and preview and works the way it should, 
+there is generally no obligation to provide a refund in situations like the following:
 
 - you don't want it after you've downloaded it;
 - the item did not meet your expectations;

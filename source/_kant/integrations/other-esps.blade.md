@@ -1,6 +1,6 @@
 ---
 title: Other ESPs
-description: Using other Email Service Providers with Sartre Email
+description: Using other Email Service Providers with Kant Email
 tags: campaign monitor, esp, integration
 page_order: 30
 navigation:
@@ -10,15 +10,17 @@ navigation:
 # Other ESPs Compatibility Notes
 
 Our templates work with most email service providers, even though a dedicated integration isn't included.
-The reason we don't provide an integration for them is mainly because these services don't provide a templating language that we can use to integrate our templates with their editors.
+The reason we don't provide an integration for them is mainly because these services don't provide a 
+templating language that we can use to integrate our templates with their editors.
 
-You can, however, *upload the standard HTML version to these ESPs*, altough in some cases you will not be able to edit the content in a WYSIWYG editor, as it the case with the dedicated integrations we provide.
+You can, however, *upload the standard HTML version to these ESPs*, altough in some cases you will not be able 
+to edit the content in a WYSIWYG editor, as it the case with the dedicated integrations we provide.
 
 The following is a compatibility table that lists any issues we've encountered while testing, with advice on how to handle them.
 
 ---
 
-## Generic
+## Generic Issues
 
 We have encountered the following issues in several email service providers that don't provide template integration capabilities, or a template editor.
 
@@ -39,6 +41,28 @@ We have encountered the following issues in several email service providers that
         <tr>
             <td class="text-sm font-bold w-1/4">Background images are not editable</td>
             <td class="text-sm">Just as with Campaign Monitor, you need to manually edit the URL of the background image (before uploading, or in their code editor, if the service provides one). <a href="../campaign-monitor/#background-images" class="text-sm underline">See how →</a></td>
+        </tr>
+    </tbody>
+</table>
+
+## ESP-specific Issues
+
+The following issues apply only to some email service providers.
+This is subject to change, depending on how ESPs change the way they handle HTML.
+
+<table class="rounded text-left border text-grey-dark mt-8 mb-4 w-full" cellpadding="16" cellspacing="0">
+    <thead class="bg-grey-lighter text-black text-base">
+        <tr>
+            <th class="py-2 px-4">ESP Name</th>
+            <th class="py-2 px-4">Issue</th>
+            <th class="py-2 px-4">Solution</th>
+        </tr>
+    </thead>
+    <tbody class="align-top">
+        <tr>
+            <td class="text-sm font-bold w-1/4">iContact</td>
+            <td class="text-sm" markdown="1">`background=""` attribute not supported (removed at import), background images not showing up</td>
+            <td class="text-sm" markdown="1">Edit the code and add inline CSS on the same element, instead - `background-image: url(http://...)`</td>
         </tr>
     </tbody>
 </table>

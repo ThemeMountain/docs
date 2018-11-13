@@ -1,0 +1,18 @@
+.bg-kant {
+  background-image: url(../../img/email/kant/kant-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.bg-kant::before {
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+}

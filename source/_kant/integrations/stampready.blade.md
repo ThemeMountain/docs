@@ -1,6 +1,6 @@
 ---
 title: StampReady
-description: StampReady Integration in Sartre Email
+description: StampReady Integration in Kant Email
 tags: stampready, esp, integration
 page_order: 32
 navigation:
@@ -9,7 +9,7 @@ navigation:
 
 # StampReady Integration
 
-Sartre Email is integrated with StampReady, so you can use it in their modern email builder.
+Kant Email is integrated with StampReady, so you can use it in their modern email builder.
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert" id="prerequisite">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Prerequisite</p>
@@ -22,7 +22,8 @@ Sartre Email is integrated with StampReady, so you can use it in their modern em
 
 The StampReady-integrated files can be found in the `Files/stampready` folder from your download.
 
-This folder has the same structure as the `Files/html` folder, only that all files inside it are editable or ready to use with StampReady:
+This folder has the same structure as the `Files/html` folder, only that all files inside it are 
+editable or ready to use with StampReady:
 
 - `/all-in-one` - all-in-one template .zip file
 - `/components` - buttons, navigation, dividers, and spacers
@@ -30,9 +31,13 @@ This folder has the same structure as the `Files/html` folder, only that all fil
 - `/layout` - the boilerplate layout file
 - `/sections` - all the template sections
 
-Only the all-in-one template .zip file from the `Files/stampready/all-in-one` folder can be uploaded directly to StampReady in order to be used in a campaign. All others are just for creating a StampReady-compatible template yourself, which you then upload to their service.
+Only the all-in-one template .zip file from the `Files/stampready/all-in-one` folder can be uploaded directly to StampReady 
+in order to be used in a campaign. All others are just for creating a StampReady-compatible template yourself, 
+which you then upload to their service.
 
-If you're planning on creating a StampReady template yourself, please first take a look at [their developer documentation ](https://www.stampready.net/developer/index.php), and then at our own templates to understand how to do it.
+If you're planning on creating a StampReady template yourself, please first take a look at 
+[their developer documentation ](https://www.stampready.net/developer/index.php), 
+and then at our own templates to understand how to do it.
 
 ## Uploading
 
@@ -49,7 +54,7 @@ Inside the `Files/stampready/all-in-one/` folder, you'll find the .zip file that
 
 ## Supported Attributes
 
-The following StampReady attributes are supported in Sartre Email:
+The following StampReady attributes are supported in Kant Email:
 
 ### Template Attributes
 
@@ -76,28 +81,35 @@ For reference, please see [StampReady's Developer Guide](https://www.stampready.
 
 ## Customisation
 
-StampReady has one of the best email template builders around, at the moment. It offers great flexibility and it even allows exporting the HTML to desktop, so you can then import it ready-customized in other services that have less capable builders, such as MailChimp or Campaign Monitor.
+StampReady has one of the best email template builders around, at the moment. It offers great flexibility 
+and it even allows exporting the HTML to desktop, so you can then import it ready-customized in other 
+services that have less capable builders, such as MailChimp or Campaign Monitor.
 
 ### HERO With Video
 
-Currently, StampReady's editor doesn't support editing HTML5 video in emails. It doesn't provide options for you to change the video source or poster image. Unfortunately, it even changes the HTML of this section, so you will need to add some attributes back.
+Currently, StampReady's editor doesn't support editing HTML5 video in emails. It doesn't provide options 
+for you to change the video source or poster image. Unfortunately, it even changes the HTML of this 
+section, so you will need to add some attributes back.
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Warning</p>
   <p class="m-0 text-md text-orange-dark">Don't try to play the video in StampReady's builder, it will mess up with the HTML and you will need to start over. If you need to preview, select Preview from the menu on the left.</p>
 </div>
 
-Hover the HERO With Video section in the builder, and click on the <kbd></></kbd> button on the right. In StampReady's current editor, you will see the code editing window slide down under the section:
+Hover the HERO With Video section in the builder, and click on the <kbd></></kbd> button on the right. 
+In StampReady's current editor, you will see the code editing window slide down under the section:
 
 ![Edit Video HERO in StampReady](/img/email/sartre/integrations/stampready/edit-video-hero-code.jpg)
 
-As you can see, the `<video>` and `<source>` tags are missing the `<poster="">` and `<src="">` attributes, respectively. The former is also missing the controls attribute, needed so users can actually play the video. We need to add those back in!
+As you can see, the `<video>` and `<source>` tags are missing the `<poster="">` and `<src="">` attributes, respectively. 
+The former is also missing the controls attribute, needed so users can actually play the video. 
+We need to add those back in!
 
 #### 1. Edit the `<video>` tag:
 Add the missing attributes to this tag, so that it looks like this:
 
 ```html
-<video class="column video" width="700" height="394" controls poster="URL TO YOUR POSTER IMAGE">
+<video class="column video" width="700" height="394" controls poster="https://URL TO YOUR POSTER IMAGE">
 ```
 
 #### 2. Edit the `<source>` tag:
@@ -105,12 +117,15 @@ Add the missing attributes to this tag, so that it looks like this:
 Same as with the `<video>` tag, change this one so it looks like this:
 
 ```html
-<source src="URL TO YOUR VIDEO FILE" type="video/mp4">
+<source src="https://URL TO YOUR VIDEO FILE" type="video/mp4">
 ```
 
 Of course, depending on your video file format, adjust the `<type="video/mp4">` attribute.
 
-Once done, hit the <kbd>↑</kbd> button on the top right of the editor, to apply changes. Again, *do not try to play the video in the editor, as you will lose your edits. Always test with from the Preview left menu, or by sending yourself an actual test email (Send &rarr; Send Test Email).*
+Once done, hit the <kbd>↑</kbd> button on the top right of the editor, to apply changes. 
+Again, *do not try to play the video in the editor, as you will lose your edits. 
+Always test with from the Preview left menu, or by sending yourself an actual 
+test email (by clicking Send &rarr; Send Test Email).*
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
@@ -125,7 +140,8 @@ Although StampReady's builder is quite advanced and flexible, it still has its d
 
 ### Conflicting Browser Plugins
 
-The [Grammarly](https://www.grammarly.com/) browser plugin severely affects online email editors, including MailChimp. By injecting itself into the page, it corrupts email HTML, resulting in a broken template.
+The [Grammarly](https://www.grammarly.com/) browser plugin severely affects online email editors, including StampReady. 
+By injecting itself into the page, it corrupts email HTML, resulting in a broken template.
 
 <div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert">
   <p class="font-sans font-bold m-0 text-md text-orange-dark">Warning</p>
@@ -134,7 +150,8 @@ The [Grammarly](https://www.grammarly.com/) browser plugin severely affects onli
 
 ### Hamburger Menu Icon
 
-The hamburger menu icon is visible only on the mobile breakpoint, so it can't be edited with MailChimp's visual editor. Instead, you need to edit it manually in the HTML:
+The hamburger menu icon is visible only on the mobile breakpoint, so it can't be edited with StampReady's visual editor. 
+Instead, you need to edit it manually in the HTML:
 
 ![Edit Hamburger Menu icon in StampReady](/img/email/sartre/integrations/stampready/edit-hamburger-icon.jpg)
 
@@ -142,9 +159,12 @@ The hamburger menu icon is visible only on the mobile breakpoint, so it can't be
 
 When exporting from StampReady, some required elements are changed or completely removed from our original template.
 
-For example, the `<!DOCTYPE html>` and `<html>` tags are being replaced with their own tags, which can break background images in Outlook or lead to unexpected behavior in various email clients.
+For example, the `<!DOCTYPE html>` and `<html>` tags are being replaced with their own tags, which can break 
+    background images in Outlook or lead to unexpected behavior in various email clients.
 
-We're covering the Outlook background images issue for you (our Outlook VML code has the `xmlns=""` attribute set inline), but to ensure nothing else is impacted and that you use the template as we intended, you will need to add our original tags back.
+We're covering the Outlook background images issue for you (our Outlook VML code has the `xmlns=""` attribute set inline), 
+but to ensure nothing else is impacted and that you use the template as we intended, you will need to add our original 
+tags back.
 
 Replace the doctype and html tags from what you've exported from StampReady:
 
@@ -164,9 +184,11 @@ With this:
 
 StampReady currently has limited support for what it allows in the `<head>` area.
 
-Sartre Email uses Acorn's Outlook-targeted style block, which defines typography and layout resets just for this email client. Additionally, it also keeps rendering consistent on hi-DPI screens.
+Kant Email uses Pine's Outlook-targeted style block, which defines typography and layout resets just for this email client. 
+Additionally, it also keeps rendering consistent on hi-DPI screens.
 
-Currently, StampReady removes this in the final email, so you need to add it back yourself. If you don't, Outlook rendering will be off and the font will fallback to Times New Roman.
+Currently, StampReady removes this in the final email, so you need to add it back yourself. If you don't, Outlook rendering 
+will be off and the font will fallback to Times New Roman.
 
 This is the code you need to add just before `<style type="text/css">`, in the `<head>` area:
 
@@ -178,14 +200,22 @@ This is the code you need to add just before `<style type="text/css">`, in the `
       <o:PixelsPerInch>96</o:PixelsPerInch>
     </o:OfficeDocumentSettings>
   </xml>
-<![endif]-->
+  <style>
+    table {border-collapse: collapse;}
+    .spacer,.divider {mso-line-height-rule: exactly;}
+    td,th,div,p,a {font-size: 13px; line-height: 23px;}
+    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family:"Segoe UI",Helvetica,Arial,sans-serif;}
+  </style>
+  <![endif]-->
 ```
 
 ### Code bloat
 
 It looks like, at least for now, StampReady's Builder does not clean up after itself when you export the HTML.
 
-We've noticed that all their editor `data-` attributes aren't removed from the exported HTML (this adds up to the email size), and there are sometimes even leftovers from the builder itself (like wrapper divs, inline styles, unnecessary extra code indentation).
+We've noticed that all their editor `data-` attributes aren't removed from the exported HTML 
+(this adds up to the email size), and there are sometimes even leftovers from the builder 
+itself (like wrapper divs, inline styles, unnecessary extra code indentation).
 
 With these in mind, we highly advise manually cleaning up the HTML, for optimal results.
 

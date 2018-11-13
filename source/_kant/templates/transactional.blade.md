@@ -1,6 +1,6 @@
 ---
 title: Transactional
-description: Transactional Templates in Sartre Email
+description: Transactional Templates in Kant Email
 tags: templates, transactional, notification
 page_order: 26
 navigation:
@@ -9,23 +9,23 @@ navigation:
 
 # Transactional email templates for your business
 
-Sartre Email comes with several pre-built transactional email templates, also known as notification templates:
+Kant Email comes with several pre-built transactional email templates, also known as notification templates:
 
-- Confirm Email
+- Confirmation Email
 - Password Reset
 - Abandoned Cart Reminder
 - Order Confirmation
-- Order Rating
 - \+ all notification emails for Shopify
 
-These are meant to be used with transactional email providers, such as [Mailgun](https://www.mailgun.com/), [SendGrid](https://sendgrid.com/), or [SparkPost](https://www.sparkpost.com/). For Shopify, please refer to our [Shopify documentation](../shopify).
+These are meant to be used with transactional email providers, such as [Mailgun](https://www.mailgun.com/), 
+[SendGrid](https://sendgrid.com/), or [SparkPost](https://www.sparkpost.com/). For Shopify, 
+please refer to our [Shopify documentation](../shopify).
 
 ### File structure
 
 - HTML version: `Files/html/templates/notifications`
-- MailChimp version: `Files/mailchimp/templates/notifications`
 - Mailster: choose the "Notification" layout from the template selection dropdown.
-- Campaign Monitor and StampReady: these versions each come with an all-in-one template .zip file, that can be found in `Files/name/all-in-one/`, which also includes the notification sections. You can use this template in these services' builders to create your own notification templates.
+- MailChimp, Campaign Monitor and StampReady: these versions each come with an all-in-one template .zip file, that can be found in `Files/name/all-in-one/`, which also includes the notification sections. You can use this template in these services' builders to create your own notification templates.
 - Shopify: the `Files/shopify` folder contains pre-built notification templates for all Shopify notifications
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">
