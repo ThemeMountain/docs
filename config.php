@@ -66,7 +66,7 @@ return [
             'version' => '2.1.0',
             'root' => 'pine',
             'path' => 'pine/{-filename}',
-            'thumbnail' => '/img/acorn/acorn-logo.png',
+            'thumbnail' => '/img/pine/pine.svg',
             'sort' => 'page_order',
             'search' => [
                 'algolia' => [

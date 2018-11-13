@@ -44,6 +44,10 @@ View the full documentation at https://tailwindcss.com.
 */
 
 let colors = {
+
+  'pine-lighter': '#daf7ea',
+  'pine-lightest': '#e8f7f0',
+
   'transparent': 'transparent',
 
   'black': '#22292f',
@@ -95,9 +99,6 @@ let colors = {
   'teal-light': '#64d5ca',
   'teal-lighter': '#a0f0ed',
   'teal-lighter': '#a0f0ed',
-
-  'pine-lighter': '#65b1a8',
-  'pine-lightest': '#7cdaaf',
 
   'blue-darkest': '#12283a',
   'blue-darker': '#1c3d5a',

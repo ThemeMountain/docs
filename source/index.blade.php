@@ -56,11 +56,11 @@ description: Listing of all ThemeMountain documentation sites
                     <a href="/acorn" class="text-sm text-blue hover:underline">Acorn documentation &rarr;</a>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 px-3 mb-6 opacity-25 pointer-events-none">
+            <div class="w-full md:w-1/3 px-3 mb-6">
                 <div class="flex flex-wrap content-between bg-white h-48 sm:h-64 p-6 rounded">
                     <h3 class="font-light">Pine</h3>
                     <p class="w-full text-grey-dark">12-column grid, responsive email framework.</p>
-                    <a href="" class="text-sm text-blue hover:underline">Pine documentation &rarr;</a>
+                    <a href="/pine" class="text-sm text-blue hover:underline">Pine documentation &rarr;</a>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-4 md:mb-0 opacity-25 pointer-events-none">
