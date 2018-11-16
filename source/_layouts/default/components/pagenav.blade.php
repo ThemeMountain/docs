@@ -1,4 +1,4 @@
- <div class="flex justify-between border-t border-grey-lighter py-6 mt-8">
+ {{-- <div class="flex justify-between border-t border-grey-lighter py-6 mt-8">
     <p>
         @if($page->getPrevious() && ! $page->getPrevious()->exclude_pagenav)
         <a href="{{ $page->getEnv() == 'offline' ? $page->getPrevious()->_meta->filename . '.html' : $page->getPrevious()->_meta->url }}">
@@ -13,4 +13,4 @@
         </a>
         @endif
     </p>
-</div>
+</div> --}}
