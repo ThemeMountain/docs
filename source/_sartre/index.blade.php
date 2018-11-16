@@ -23,7 +23,17 @@ exclude_pagenav: true
 @section('body')
 
     <div class="bg-gradient-purple h-screen">
-        @include('_layouts.default.partials.headers.master', ['color' => $page->color])
+        @include('_layouts.default.partials.headers.master',
+            [
+                'text' => [
+                    'default' => 'text-purple-lighter',
+                    'hover' => 'hover:text-purple-lightest',
+                ],
+                'border' => [
+                    'hover' => 'hover:border-purple',
+                ],
+            ]
+        )
 
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">

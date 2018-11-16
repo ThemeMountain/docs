@@ -24,7 +24,17 @@ exclude_pagenav: true
 
     <div class="bg-kant h-screen">
         <div class="z-30 relative">
-            @include('_layouts.default.partials.headers.master', ['color' => 'grey'])
+            @include('_layouts.default.partials.headers.master',
+                [
+                    'text' => [
+                        'default' => 'text-grey-lightest',
+                        'hover' => 'hover:text-green-lightest',
+                    ],
+                    'border' => [
+                        'hover' => 'hover:border-green',
+                    ],
+                ]
+            )
         </div>
 
         <div class="container flex h-screen items-center z-20 relative">

@@ -21,7 +21,17 @@ description: Listing of all ThemeMountain documentation sites
 @section('body')
 
 <div class="bg-gradient-light-ocean h-screen">
-    @include('_layouts.default.partials.headers.master', ['color' => $page->color])
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-blue-lighter',
+                'hover' => 'hover:text-blue-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-blue',
+            ],
+        ]
+    )
 
     <div class="flex h-screen items-center">
         <div class="mx-auto text-center content">

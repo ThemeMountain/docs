@@ -17,10 +17,6 @@ mix.webpackConfig({
   ]
 });
 
-let env = argv.e || argv.env || 'local';
-let config = JSON.parse(execSync('php ./tasks/php/config -e' + env));
-
-let colors = keyfinder(config, 'color').filter((v, i, a) => a.indexOf(v) === i).join('|');
 let extrasWhitelist = [
   'pre',
   'code',
@@ -29,7 +25,6 @@ let extrasWhitelist = [
   'text-grey',
 ].join('|');
 
-let purgeCssColorsWhitelist = new RegExp(colors);
 let purgeCssExtrasWhitelist = new RegExp(extrasWhitelist);
 
 mix.sass('source/_assets/sass/main.scss', 'css/')
@@ -45,7 +40,7 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
       path.join(__dirname, '/blade.php'),
     ],
     extensions: ['html', 'md', 'php', 'vue', 'svg'],
-    whitelistPatterns: [purgeCssColorsWhitelist, purgeCssExtrasWhitelist],
+    whitelistPatterns: [purgeCssExtrasWhitelist],
   })
   .js('source/_assets/js/app.js', 'js/')
   .version()

@@ -23,7 +23,17 @@ exclude_pagenav: true
 @section('body')
 
     <div class="bg-gradient-green h-screen">
-        @include('_layouts.default.partials.headers.master', ['color' => $page->color])
+        @include('_layouts.default.partials.headers.master',
+            [
+                'text' => [
+                    'default' => 'text-green-lighter',
+                    'hover' => 'hover:text-green-lightest',
+                ],
+                'border' => [
+                    'hover' => 'hover:border-green',
+                ],
+            ]
+        )
 
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
