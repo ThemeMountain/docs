@@ -101,21 +101,6 @@ return [
             ],
         ],
 
-        'wordpress' => [
-            'color' => 'blue',
-            'name' => 'WordPress',
-            'version' => '1.0.0',
-            'path' => 'wordpress/{-filename}',
-            'search' => [
-                'algolia' => [
-                    'appID' => 'GTXXW9109G',
-                    'appSecret' => '7120ac0458467cda5b77ae142c1a847f',
-                    'searchKey' => '9a2cb68a1f7b96bef2975c7369b19f55',
-                    'indexName' => 'wordpress_docs',
-                ],
-            ],
-        ],
-
     ],
 
     /*
