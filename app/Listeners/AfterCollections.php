@@ -50,24 +50,28 @@ class AfterCollections
                             'path' => $path,
                             'order' => $order,
                         ];
-                        usort($menu['categories'][$data->navigation['group']], create_function('$a, $b', '
+                        usort(
+                            $menu['categories'][$data->navigation['group']],
+                            function($a, $b) {
                                 $a = $a["order"];
                                 $b = $b["order"];
                                 if ($a == $b) return 0;
                                 return ($a < $b) ? -1 : 1;
-                            '));
+                            });
                     } else {
                         $menu['uncategorized'][] = [
                             'title' => $data->navigation['title'] ?? $data->title,
                             'path' => $path,
                             'order' => $order,
                         ];
-                        usort($menu['uncategorized'], create_function('$a, $b', '
+                        usort(
+                            $menu['uncategorized'],
+                            function($a, $b) {
                                 $a = $a["order"];
                                 $b = $b["order"];
                                 if ($a == $b) return 0;
                                 return ($a < $b) ? -1 : 1;
-                            '));
+                            });
                     }
 
                 }
