@@ -31,6 +31,9 @@ mix.sass('source/_assets/sass/main.scss', 'css/')
   })
   .purgeCss({
     folders: ['source'],
+    globs: [
+      path.join(__dirname, '/blade.php'),
+    ],
     extensions: ['html', 'md', 'php', 'vue', 'svg'],
     whitelistPatterns: [purgeCssWhitelist, /pre/, /code/, /copy/, /a(lgoli)?a/, /w-3\/5/, /text-grey/]
   })
