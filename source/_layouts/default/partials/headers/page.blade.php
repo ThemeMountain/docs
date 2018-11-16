@@ -2,7 +2,7 @@
     <div class="container flex py-1">
         <div class="flex flex-grow items-center justify-between">
             <div class="w-auto xl:w-2/5">
-                <a href="{{ $page->getFirst()->getUrl() }}" class="flex float-left items-center hover:text-{{ $page->color }}">
+                <a href="/{{ $page->root }}/" class="flex float-left items-center hover:text-{{ $page->color }}">
                     <img src="{{ $page->thumbnail }}" alt="{{ $page->name }}" class="w-8">
                     <h2 class="hidden md:block p-0 pl-3 text-base font-bold">
                         {{ $page->name }}
