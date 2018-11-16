@@ -25,7 +25,7 @@
     "html-minifier": "^3.5.16",
     "keyfinder": "^1.0.0",
     "laravel-mix": "^2.1.11",
-    "laravel-mix-purgecss": "^2.2.3",
+    "laravel-mix-purgecss": "^3.0.0",
     "lodash": "^4.17.5",
     "node-cmd": "^3.0.0",
     "on-build-webpack": "^0.1.0",
