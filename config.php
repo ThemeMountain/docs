@@ -329,8 +329,7 @@ return [
         return '';
     },
     'getNavigation' => function($page) {
-        $site = $page->collections[$page->getCollection()];
-        return $site->nav;
+        return $page->nav[$page->getCollection()];
     },
     'getSVG' => function($name) {
         return __DIR__ . '/source/img/icons/'.$name.'.svg';

@@ -14,13 +14,14 @@ class BeforeBuild
     {
         $this->jigsaw = $jigsaw;
 
-        $this->writeConfigFile();
+        $this->setNavKey();
         $this->setChangelogConfig();
+        $this->writeConfigFile();
     }
 
-    public function writeConfigFile()
+    public function setNavKey()
     {
-        $this->jigsaw->writeSourceFile('_assets/data/config.json', $this->jigsaw->getConfig());
+        $this->jigsaw->setConfig('nav', []);
     }
 
     public function setChangelogConfig()
@@ -53,5 +54,10 @@ class BeforeBuild
 
             $this->jigsaw->setConfig('collections.'.$key.'.changelog', $items);
         });
+    }
+
+    public function writeConfigFile()
+    {
+        $this->jigsaw->writeSourceFile('_assets/data/config.json', $this->jigsaw->getConfig());
     }
 }

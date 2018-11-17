@@ -12,18 +12,10 @@ class AfterCollections
     {
         $this->jigsaw = $jigsaw;
 
-        $this->writeCollectionsFile();
         $this->setNavigationConfig();
+        $this->writeCollectionsFile();
     }
 
-    private function writeCollectionsFile()
-    {
-        $this->jigsaw->writeSourceFile('_assets/data/collections.json', $this->jigsaw->getCollections());
-    }
-
-    // this needs to sit in own config key
-    // we're now doing indirect modification of overloaded element
-    // config key idea: $page[nav][collection name]
     private function setNavigationConfig()
     {
         $env = $this->jigsaw->getEnvironment();
@@ -77,7 +69,12 @@ class AfterCollections
                 }
             }
 
-            $this->jigsaw->setConfig('collections.'.$key.'.nav', $menu);
+            $this->jigsaw->setConfig('nav.'.$key, $menu);
         });
+    }
+
+    private function writeCollectionsFile()
+    {
+        $this->jigsaw->writeSourceFile('_assets/data/collections.json', $this->jigsaw->getConfig());
     }
 }
