@@ -44,7 +44,7 @@ exclude_pagenav: true
                 </a>
                 <h1 class="text-white text-3xl md:text-5xl font-sans font-light leading-tight py-4">{{ $page->name }} <br class="hidden sm:block">Template Documentation</h1>
                 <p class="w-2/3 mx-auto text-white text-base md:text-2xl font-hind-madurai mb-8">Learn how to use {{ $page->name }} and build a unique email that looks good on both desktop and mobile.</p>
-                <a href="{{ $page->getNext()->getUrl() }}" class="text-white hover:text-{{ $page->color }} bg-transparent hover:bg-white hover:shadow-lg text-xs py-3 px-6 border border-white rounded inline-flex items-center">Get Started &rarr;</a>
+                <a href="{{ $page->getNext()->getUrl() }}/" class="text-white hover:text-{{ $page->color }} bg-transparent hover:bg-white hover:shadow-lg text-xs py-3 px-6 border border-white rounded inline-flex items-center">Get Started &rarr;</a>
             </div>
         </div>
     </div>
