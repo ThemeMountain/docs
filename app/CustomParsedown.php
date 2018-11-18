@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Highlight\Highlighter;
+// use Highlight\Highlighter;
 use ParsedownExtra as BaseParsedown;
 
 class CustomParsedown extends BaseParsedown
@@ -10,17 +10,17 @@ class CustomParsedown extends BaseParsedown
     /**
      * @var  \Highlight\Highlighter
      */
-    protected $highlighter;
+    // protected $highlighter;
 
     /**
      * Parsedown constructor.
      *
      * Prepare a fresh instance of the syntax highlighter.
      */
-    public function __construct()
-    {
-        $this->highlighter = new Highlighter();
-    }
+    // public function __construct()
+    // {
+    //     $this->highlighter = new Highlighter;
+    // }
 
     /**
      * Add syntax highlighting to a fenced code block.
@@ -29,28 +29,30 @@ class CustomParsedown extends BaseParsedown
      * @param  array $Block
      * @return  array
      */
-    /*protected function blockFencedCodeComplete($Block)
-    {
-        try {
-            if ($class = array_get($Block, 'element.text.attributes.class', false)) {
-                if (starts_with($class, 'language-')) {
-
-                    $code = array_get($Block, 'element.text.text', '');
-                    $code = $this->highlighter->highlight(str_after($class, 'language-'), $code)->value;
-                    array_set($Block, 'element.text.text', $code);
-                    $Block['element']['text']['attributes']['class'] = "hljs {$class}";
-
-                } else {
-                    $Block = parent::blockFencedCodeComplete($Block);
-                }
-            }
-
-        } catch (\Exception $e) {
-           $Block = parent::blockFencedCodeComplete($Block);
-        }
-
-        return $Block;
-    }*/
+    // protected function blockFencedCodeComplete($block)
+    // {
+    //     // var_dump($block['element']['element']['attributes']);
+    //     try {
+    //         $el = $block['element']['element'];
+    //         if ($el && isset($el['attributes']))
+    //         {
+    //             $code = $el['text'];
+    //             $attributes = $el['attributes'];
+    //             $languageClass = $attributes['class'];
+    //             $language = explode('-', $languageClass);
+    //             $highlighted = $this->highlighter->highlight($language[1], $code);
+    //             $block['element']['element']['attributes']['class'] = vsprintf('%s hljs %s', [
+    //                 $languageClass,
+    //                 $highlighted->language,
+    //             ]);
+    //             $block['element']['element']['rawHtml'] = $highlighted->value;
+    //             unset($block['element']['element']['text']);
+    //         }
+    //     } catch (DomainException $e) {
+    //         //
+    //     }
+    //     return $block;
+    // }
 
     /**
      * Extra link handling

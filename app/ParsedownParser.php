@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Mni\FrontYAML\Markdown\MarkdownParser;
 use App\CustomParsedown;
+use Mni\FrontYAML\Markdown\MarkdownParser;
 
 class ParsedownParser implements MarkdownParser
 {
