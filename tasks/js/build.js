@@ -1,5 +1,4 @@
 let bin = require('./bin')
-let fs = require('fs-extra')
 let argv = require('yargs').argv
 let command = require('node-cmd')
 let execSync = require('child_process').execSync
@@ -10,7 +9,6 @@ let BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 let Watch = require('webpack-watch')
 
 let SearchIndexer = require('./build-search-index')
-let OfflineImages = require('./offline-images')
 let HTMLMinifier = require('./minify-html')
 
 let browserSyncInstance
@@ -31,7 +29,6 @@ module.exports = {
       console.log(stdout)
 
       SearchIndexer.run(env)
-      OfflineImages.fixPaths(build_path, env)
       HTMLMinifier.minify(build_path, env)
 
       if (browserSyncInstance) {

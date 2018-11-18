@@ -23,7 +23,7 @@
             <div class="md:w-32 xl:w-1/3 md:pl-2 xl:pl-16 xl:-mr-6">
                 <div class="hidden md:flex md:w-full justify-between">
                     @foreach($page->social as $name => $url)
-                        <a href="{{ $url }}" class="text-grey-dark hover:text-{{ $page->color }}" title="{{ title_case($name) }}" target="_blank" rel="noopener nofollow">
+                        <a href="{{ $url }}" class="text-grey-dark hover:text-{{ $page->color }}" target="_blank" rel="noopener nofollow">
                             @fileContents('source/img/icons/'.$name.'.svg')
                         </a>
                     @endforeach

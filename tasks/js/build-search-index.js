@@ -49,13 +49,6 @@ module.exports.run = (env) => {
     fs.ensureFileSync(JSONSearchFile)
     fs.writeFileSync(JSONSearchFile, JSON.stringify(data))
 
-    // Create .js search index where needed
-    if(!site.hasOwnProperty('search') || site.search == 'offline') {
-      let JSSearchFile = JSONSearchFile.replace('.json', '.js')
-      fs.ensureFileSync(JSSearchFile)
-      fs.outputFile(JSSearchFile, 'window.searchData = ' + JSON.stringify(data))
-    }
-
     // Add site to Algolia sync list
     if(site.hasOwnProperty('search') && site.search.hasOwnProperty('algolia')) {
       algoliaSites.push(site)

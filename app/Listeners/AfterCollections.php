@@ -18,10 +18,9 @@ class AfterCollections
 
     private function setNavigationConfig()
     {
-        $env = $this->jigsaw->getEnvironment();
         $collections = $this->jigsaw->getCollections();
 
-        $collections->each(function ($item, $key) use ($env) {
+        $collections->each(function ($item, $key) {
 
             $menu = [
                 'categories' => [],
@@ -32,7 +31,7 @@ class AfterCollections
 
                 if ($data->has('navigation')) {
 
-                    $path = $env == 'offline' ? '../' . $data->_meta->collection . '/' . $data->_meta->filename . '.html' : $data->_meta->path->first();
+                    $path = $data->_meta->path->first();
 
                     $order = isset($data->navigation['order']) && is_numeric($data->navigation['order']) ? $data->navigation['order'] : $data->title;
 

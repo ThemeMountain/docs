@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\JigsawConfig;
 use Highlight\Highlighter;
 use ParsedownExtra as BaseParsedown;
 
@@ -13,8 +12,6 @@ class CustomParsedown extends BaseParsedown
      */
     protected $highlighter;
 
-    protected $config;
-
     /**
      * Parsedown constructor.
      *
@@ -23,9 +20,6 @@ class CustomParsedown extends BaseParsedown
     public function __construct()
     {
         $this->highlighter = new Highlighter();
-
-        $jigsawConfig = new JigsawConfig();
-        $this->config = $jigsawConfig->get();
     }
 
     /**
@@ -89,17 +83,12 @@ class CustomParsedown extends BaseParsedown
                 $isAnchorLink = true;
             }
 
-            // 3. Correct relative paths based on build environment
-            if (! $isImage && $this->config) {
-                if (! $this->config->pretty) {
-                    $Link['element']['attributes']['href'] = str_replace('/', '.html', ltrim($href, '/'));
-                } else {
-                    // Set href depending on whether it's a link to some-other-page/#anchor or just an in-page #anchor
-                    if (preg_match('/^(.+)?(?=#)/', $href, $hits)) {
-                        $href = $hits[0] ? '../' . $href : $href;
-                    }
-                    $Link['element']['attributes']['href'] =  $href;
+            // 3. Set href depending on whether it's a link to some-other-page/#anchor or just an in-page #anchor
+            if (! $isImage) {
+                if (preg_match('/^(.+)?(?=#)/', $href, $hits)) {
+                    $href = $hits[0] ? '../' . $href : $href;
                 }
+                $Link['element']['attributes']['href'] =  $href;
             }
 
         }

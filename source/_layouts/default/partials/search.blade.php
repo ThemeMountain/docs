@@ -1,11 +1,3 @@
-@if(! $page->has('search') || $page->search == 'offline')
-{{-- offline search/custom autocomplete, maybe with fuse.io --}}
-@endif
-
-@if($page->has('search') && $page->search == 'online')
-{{-- online AJAX search in JSON file --}}
-@endif
-
 @if($page->has('search') && 'object' == gettype($page->search))
 
     @if($page->search->has('algolia'))
