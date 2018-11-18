@@ -784,6 +784,7 @@ module.exports = {
 
   zIndex: {
     'auto': 'auto',
+    '-1': -1,
     '0': 0,
     '10': 10,
     '20': 20,
@@ -899,7 +900,7 @@ module.exports = {
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
-    opacity: ['responsive'],
+    opacity: ['responsive', 'group-hover'],
     overflow: ['responsive'],
     padding: ['responsive'],
     pointerEvents: ['responsive'],
@@ -918,7 +919,7 @@ module.exports = {
     visibility: ['responsive'],
     whitespace: ['responsive'],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    zIndex: ['responsive', 'group-hover'],
   },
 
 

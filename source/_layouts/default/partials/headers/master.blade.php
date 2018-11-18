@@ -10,9 +10,9 @@
                 <li class="mx-4 md:mx-6">
                     <a href="{{ $page->support_url }}" class="font-bold text-sm {{ $text['default'] }} {{ $text['hover'] }} pb-4 inline-block" target="_blank" rel="noopener nofollow">Support</a>
                 </li>
-                <li class="dropdown mx-4 md:mx-6 relative">
+                <li class="group mx-4 md:mx-6 relative">
                     <a href="{{ $page->social->envato }}" class="font-bold text-sm {{ $text['default'] }} {{ $text['hover'] }} pb-4 inline-block">Our Products</a>
-                    <ul class="list-reset invisible opacity-0 transition-all absolute bg-white shadow-md rounded -ml-4 py-3 w-48">
+                    <ul class="list-reset opacity-0 group-hover:opacity-100 z--1 group-hover:z-0 transition-all absolute bg-white shadow-md rounded -ml-4 py-3 w-48">
                         <li>
                             <a href="https://themeforest.net/collections/5986290-our-html-templates?ref=thememountain" class="text-sm text-grey-dark hover:text-grey-darker transition-all block border-l-2 border-white {{ $border['hover'] }} px-4 py-2">Site Templates</a>
                         </li>
