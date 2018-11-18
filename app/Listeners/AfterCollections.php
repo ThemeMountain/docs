@@ -69,12 +69,15 @@ class AfterCollections
                 }
             }
 
-            $this->jigsaw->setConfig('nav.'.$key, $menu);
+            foreach ($item as $page => $data) {
+                $data['nav'] = $menu;
+            }
+
         });
     }
 
     private function writeCollectionsFile()
     {
-        $this->jigsaw->writeSourceFile('_assets/data/collections.json', $this->jigsaw->getConfig());
+        $this->jigsaw->writeSourceFile('_assets/data/collections.json', $this->jigsaw->getCollections());
     }
 }

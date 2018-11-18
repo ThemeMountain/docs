@@ -2,7 +2,7 @@
     <div class="fixed sticky md:top-20 pr-0 lg:pr-16 lg:min-w-64">
         <div class="overflow-y-auto wrapper scrolling-touch">
             <ul class="pb-32 md:py-8 md:mt-6 list-reset">
-            @foreach($page->getNavigation() as $category => $sections)
+            @foreach($page->nav as $category => $sections)
                 @if($category == 'categories')
                     @foreach($sections as $heading => $items)
                     <li class="py-2">
