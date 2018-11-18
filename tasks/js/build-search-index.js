@@ -64,8 +64,7 @@ module.exports.run = (env) => {
     data = []
   }
 
-  // Sync to Algolia in production build
-  if (algoliaSites.length > 0 && env == 'production') {
+  if (algoliaSites.length > 0 && env == 'deploy') {
     AlgoliaSync.sync(algoliaSites)
   }
 }
