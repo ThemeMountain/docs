@@ -22,21 +22,19 @@ exclude_pagenav: true
 
 @section('body')
 
-    <div class="bg-kant h-screen">
-        <div class="z-30 relative">
-            @include('_layouts.default.partials.headers.master',
-                [
-                    'text' => [
-                        'default' => 'text-grey-lightest',
-                        'hover' => 'hover:text-green-lightest',
-                    ],
-                    'border' => [
-                        'hover' => 'hover:border-green',
-                    ],
-                ]
-            )
-        </div>
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-grey-lightest',
+                'hover' => 'hover:text-green-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-green',
+            ],
+        ]
+    )
 
+    <div class="bg-kant h-screen">
         <div class="container flex h-screen items-center z-20 relative">
             <div class="mx-auto text-center content">
                 <a href="changelog/" class="bg-transparent hover:bg-white text-sm text-white font-semibold hover:text-{{ $page->color }} py-1 px-2 border border-white rounded no-underline">

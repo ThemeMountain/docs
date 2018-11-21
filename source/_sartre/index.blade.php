@@ -22,19 +22,19 @@ exclude_pagenav: true
 
 @section('body')
 
-    <div class="bg-gradient-purple h-screen">
-        @include('_layouts.default.partials.headers.master',
-            [
-                'text' => [
-                    'default' => 'text-purple-lighter',
-                    'hover' => 'hover:text-purple-lightest',
-                ],
-                'border' => [
-                    'hover' => 'hover:border-purple',
-                ],
-            ]
-        )
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-purple-lighter',
+                'hover' => 'hover:text-purple-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-purple',
+            ],
+        ]
+    )
 
+    <div class="bg-gradient-purple h-screen">
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
                 <a href="changelog/" class="bg-transparent hover:bg-white text-sm text-white font-semibold hover:text-{{ $page->color }} py-1 px-2 border border-white rounded no-underline">

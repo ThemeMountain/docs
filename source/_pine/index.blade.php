@@ -22,19 +22,19 @@ exclude_pagenav: true
 
 @section('body')
 
-    <div class="bg-gradient-pine h-screen">
-        @include('_layouts.default.partials.headers.master',
-            [
-                'text' => [
-                    'default' => 'text-pine-teal-lightest',
-                    'hover' => 'hover:text-pine-teal-lightest',
-                ],
-                'border' => [
-                    'hover' => 'hover:border-teal',
-                ],
-            ]
-        )
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-pine-teal-lightest',
+                'hover' => 'hover:text-pine-teal-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-teal',
+            ],
+        ]
+    )
 
+    <div class="bg-gradient-pine h-screen">
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
                 <a href="{{ $page->social->github }}/releases" target="_blank" rel="noopener" class="bg-transparent hover:bg-white text-sm text-white font-semibold hover:text-{{ $page->color }} py-1 px-2 border border-white rounded no-underline">
