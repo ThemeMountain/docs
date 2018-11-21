@@ -38,10 +38,9 @@
             </div>
         </aside>
     </div>
-
-    @push('scripts')
-        <script src="@mix('/js/app.js')"></script>
-        @include('_layouts.default.partials.search')
-    @endpush
-
 @endsection
+
+@push('scripts')
+    <script src="@mix('/js/app.js')"></script>
+    @include('_layouts.default.partials.search')
+@endpush

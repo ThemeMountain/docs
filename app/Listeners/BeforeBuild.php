@@ -14,40 +14,7 @@ class BeforeBuild
     {
         $this->jigsaw = $jigsaw;
 
-        $this->setChangelogConfig();
         $this->writeConfigFile();
-    }
-
-    private function setChangelogConfig()
-    {
-        $collections = $this->jigsaw->getCollections();
-        $parser = new Parser(null, new ParsedownParser());
-
-        $collections->each(function ($key) use ($parser) {
-
-            $items = [];
-
-            if (file_exists('source/_' . $key . '/changelog')) {
-
-                foreach(glob('source/_' . $key . '/changelog/*') as $file) {
-                    $md = file_get_contents($file);
-
-                    $document = $parser->parse($md);
-
-                    $yaml = $document->getYAML();
-                    $html = $document->getContent();
-
-                    $items[] = [
-                        'version' => $yaml['version'] ?? '',
-                        'date' => $yaml['date'] ?? '',
-                        'content' => $html,
-                    ];
-                }
-
-            }
-
-            $this->jigsaw->setConfig('collections.'.$key.'.changelog', $items);
-        });
     }
 
     private function writeConfigFile()
