@@ -22,18 +22,6 @@ exclude_pagenav: true
 
 @section('body')
 
-    @include('_layouts.default.partials.headers.master',
-        [
-            'text' => [
-                'default' => 'text-pine-teal-lightest',
-                'hover' => 'hover:text-pine-teal-lightest',
-            ],
-            'border' => [
-                'hover' => 'hover:border-teal',
-            ],
-        ]
-    )
-
     <div class="bg-gradient-pine h-screen">
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
@@ -47,5 +35,17 @@ exclude_pagenav: true
             </div>
         </div>
     </div>
+
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-pine-teal-lightest',
+                'hover' => 'hover:text-pine-teal-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-teal',
+            ],
+        ]
+    )
 
 @endsection

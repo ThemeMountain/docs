@@ -20,18 +20,6 @@ description: Listing of all ThemeMountain documentation sites
 
 @section('body')
 
-@include('_layouts.default.partials.headers.master',
-    [
-        'text' => [
-            'default' => 'text-blue-lighter',
-            'hover' => 'hover:text-blue-lightest',
-        ],
-        'border' => [
-            'hover' => 'hover:border-blue',
-        ],
-    ]
-)
-
 <div class="bg-gradient-light-ocean h-screen">
     <div class="flex h-screen items-center">
         <div class="mx-auto text-center content">
@@ -154,6 +142,18 @@ description: Listing of all ThemeMountain documentation sites
         </div>
     </div>
 </div>
+
+@include('_layouts.default.partials.headers.master',
+    [
+        'text' => [
+            'default' => 'text-blue-lighter',
+            'hover' => 'hover:text-blue-lightest',
+        ],
+        'border' => [
+            'hover' => 'hover:border-blue',
+        ],
+    ]
+)
 
 @include('_layouts.default.partials.footer')
 

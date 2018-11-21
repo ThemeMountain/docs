@@ -22,18 +22,6 @@ exclude_pagenav: true
 
 @section('body')
 
-    @include('_layouts.default.partials.headers.master',
-        [
-            'text' => [
-                'default' => 'text-grey-lightest',
-                'hover' => 'hover:text-green-lightest',
-            ],
-            'border' => [
-                'hover' => 'hover:border-green',
-            ],
-        ]
-    )
-
     <div class="bg-kant h-screen">
         <div class="container flex h-screen items-center z-20 relative">
             <div class="mx-auto text-center content">
@@ -46,5 +34,17 @@ exclude_pagenav: true
             </div>
         </div>
     </div>
+
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-grey-lightest',
+                'hover' => 'hover:text-green-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-green',
+            ],
+        ]
+    )
 
 @endsection

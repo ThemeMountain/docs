@@ -1,4 +1,4 @@
-<nav class="{{ isset($type) && $type == 'fixed' ? 'fixed' : 'absolute' }} w-full">
+<nav class="{{ isset($type) && $type == 'fixed' ? 'fixed' : 'absolute' }} w-full pin-t">
     <div class="container flex flex-col md:flex-row py-4">
         <div class="w-full md:w-1/4 text-center md:text-left">
             <a href="{{ $page->baseUrl }}">

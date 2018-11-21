@@ -22,18 +22,6 @@ exclude_pagenav: true
 
 @section('body')
 
-    @include('_layouts.default.partials.headers.master',
-        [
-            'text' => [
-                'default' => 'text-purple-lighter',
-                'hover' => 'hover:text-purple-lightest',
-            ],
-            'border' => [
-                'hover' => 'hover:border-purple',
-            ],
-        ]
-    )
-
     <div class="bg-gradient-purple h-screen">
         <div class="container flex h-screen items-center">
             <div class="mx-auto text-center content">
@@ -46,5 +34,17 @@ exclude_pagenav: true
             </div>
         </div>
     </div>
+
+    @include('_layouts.default.partials.headers.master',
+        [
+            'text' => [
+                'default' => 'text-purple-lighter',
+                'hover' => 'hover:text-purple-lightest',
+            ],
+            'border' => [
+                'hover' => 'hover:border-purple',
+            ],
+        ]
+    )
 
 @endsection
