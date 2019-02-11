@@ -75,6 +75,33 @@ Mailster offers a solid and easy-to-use email builder, accessible right from you
 
 For advanced users, it also offers the possibility to edit the HTML source code of each section.
 
+### Notification Templates
+
+The Mailster notification template that comes with Sartre Email contains all modules, for maximum flexibility. 
+It just lists the transactional layout sections first.
+
+If you tried setting the default template for Mailster to be Sartre, and then chose to 'use Mailster for all outgoing mails' (under General/System Mails), 
+you might have noticed that the emails being sent contain all modules.
+
+This is because Mailster uses the entire file you select in that setting (so, `notification.html`).
+You will need to create your own notification email layout, with Mailster's email builder, and save it as a new template file:
+
+1. Create a new campaign (name doesn't matter), and choose to use Sartre with the Notification template
+2. Design your own layout for future transactional emails. These require at least the `{content}` and `{headline}` variables, 
+so you can use the "Confirm Email" section, or just add them in yourself in a different section. You can of course add a header with logo, or a footer module - anything you want - but those two variables need to exist.
+3. When done, next to the dropdown where you can change the template being used, you have a floppy disk icon. 
+This allows for saving the current layout that you built, as a new template file (<a href="https://kb.mailster.co/saving-new-template-files/">documentation</a>).
+4. Click it, and fill in the details like in the screenshot. It's important that you do not check 'include original modules', and that you save as new template file:
+
+![Save as new template in Mailster](/img/email/sartre/integrations/mailster/save-new-template.png)
+
+Save it, and Mailster will create a new template file, called `notification-transactional.html`, which you can select to use as the template for transactional emails, in the General settings for Mailster:
+
+![Select new template for notification emails in Mailster](/img/email/sartre/integrations/mailster/select-new-template-for-notification-emails.png)
+
+<br>
+Your transactional emails should now use the new layout that you have just created.
+
 ### HERO With Video
 
 There is currently no way to visually edit the HERO With Video in Mailster, so you will need to edit it entirely through code. To bring up the code editing window, click the <kbd></></kbd> button on the right, when hovering the section:

@@ -86,6 +86,7 @@ class CustomParsedown extends BaseParsedown
             }
 
             // 3. Set href depending on whether it's a link to some-other-page/#anchor or just an in-page #anchor
+            // CAN REMOVE THIS, Maizzle doesn't use it!
             if (! $isImage) {
                 if (preg_match('/^(.+)?(?=#)/', $href, $hits)) {
                     $href = $hits[0] ? '../' . $href : $href;
