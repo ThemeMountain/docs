@@ -13,7 +13,7 @@ Kant Email is integrated with StampReady, so you can use it in their modern emai
 
 <div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert" id="prerequisite">
   <p class="font-sans font-bold m-0 text-md text-blue-dark">Prerequisite</p>
-  <p class="m-0 text-md text-blue-dark">In order to use StampReady's builder, you need to first <a href="https://www.stampready.net/" target="_blank" rel="noopener">sign up for a free account ↗</a> on their site. Once you have an account, you can proceed to <a href="#uploading" class="scroll-to">upload &darr;</a> and start using our product with their platform.</p>
+  <p class="m-0 text-md text-blue-dark">In order to use StampReady's builder, you need to first <a href="https://www.stampready.net/" target="_blank" rel="noopener">sign up for an account ↗</a> on their site. Once you have an account, you can proceed to <a href="#uploading" class="scroll-to">upload &darr;</a> and start using our product with their platform.</p>
 </div>
 
 ---
@@ -127,16 +127,20 @@ Again, *do not try to play the video in the editor, as you will lose your edits.
 Always test with from the Preview left menu, or by sending yourself an actual 
 test email (by clicking Send &rarr; Send Test Email).*
 
-<div class="bg-blue-lightest border-l-4 border-blue p-4 mb-4" role="alert">
-  <p class="font-sans font-bold m-0 text-md text-blue-dark">Note</p>
-  <p class="m-0 text-md text-blue-dark">StampReady's Editor 3.0 (Beta) provides a better code editing interface and doesn't remove attributes from the <code>&lt;video&gt;</code> and <code>&lt;source&gt;</code> tags. If you see it at the bottom of your Account/Settings page, we encourage you to enable it.</p>
-</div>
-
 ---
 
 ## Limitations & Other Notes
 
 Although StampReady's builder is quite advanced and flexible, it still has its drawbacks, at least for now.
+
+### Builder 3.0
+
+The new version of StampReady's email builder, although more feature-packed, has many issues and bugs. 
+We've tested it and we cannot recommend it for use in production.
+
+<div class="bg-orange-lightest border-l-4 border-orange p-4 mb-4" role="alert">
+    <p class="m-0 text-md text-orange-dark">We advise disabling the new editor by going to your <a href="https://www.stampready.net/dashboard/account/settings/index.php" target="_blank" rel="nofollow noopener">Account Settings</a>, scrolling all the way down and turning off 'Use New Editor'</p>
+</div>
 
 ### Conflicting Browser Plugins
 
@@ -159,8 +163,7 @@ Instead, you need to edit it manually in the HTML:
 
 When exporting from StampReady, some required elements are changed or completely removed from our original template.
 
-For example, the `<!DOCTYPE html>` and `<html>` tags are being replaced with their own tags, which can break 
-    background images in Outlook or lead to unexpected behavior in various email clients.
+For example, the `<!DOCTYPE html>` and `<html>` tags are being replaced with their own tags, which can break background images in Outlook or lead to unexpected behavior in various email clients.
 
 We're covering the Outlook background images issue for you (our Outlook VML code has the `xmlns=""` attribute set inline), 
 but to ensure nothing else is impacted and that you use the template as we intended, you will need to add our original 
